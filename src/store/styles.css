@@ -1,19 +1,25 @@
 body{
-    margin: 0%;
-    
-}
-.card-group{
-    width: 50em;
-    height: 50em;
-    display: flex;   
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 .card{
-    margin: 1em;
+    width: 300px;  
+    height: 400px;
+    font-size: large;
 }
-.card-title{
-    font-size: 1.5em;
-    padding: 0.5em;
+.card:hover{
+    border: 2px solid #FA7F72;
 }
-.card-text{
-    padding: 0.5em;
+.card-body{
+    font-size: larger;
+    text-align: center;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-around;
+}
+.card-footer_input{
+    width: 150px;
+    background-color:#FA7F72;
+    border: none;
+    border-radius: 15px; 
 }
