@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="courses">
+      <div class="courses__container">
+        
+        <div class="courses__box">
+          <h3 class="courses__title">SMR</h3>
+          <article class="article">
+            <h4 class="article__title">Sistemas Microinformáticos y Redes</h4>
+            <h5 class="article__subtitle">Grado Medio</h5>
+            <p class="courses__text">
+              Este ciclo te permite un primer contacto “serio” con el mundo de la informática. La ventaja es que es abarca buena parte de las principales áreas que cubre la informática.
+            </p>
+            <div class="courses__buttons">
+              <button type="button" class="courses__btn" data-bs-toggle="modal" data-bs-target="#smrEstudiar">
+                ¿Qué estudiaras?
+              </button>
+              <button type="button" class="courses__btn" data-bs-toggle="modal" data-bs-target="#smrTrabajar">
+                ¿De qué trabajaras?
+              </button>
+            </div> 
+          </article>
+          <img
+            src="../assets/images/courses_SMR.jpg"
+            alt="imagen smr"
+            class="courses__img"
+          />
+        </div>
+
+        <div class="courses__box">
+          <h3 class="courses__title">ASIR</h3>
+          <article class="article">
+            <h4 class="article__title">Sistemas Microinformáticos y Redes</h4>
+            <h5 class="article__subtitle">Grado Medio</h5>
+            <p class="courses__text">
+              Este ciclo te permite un primer contacto “serio” con el mundo de la informática. La ventaja es que es abarca buena parte de las principales áreas que cubre la informática.
+            </p>
+            <div class="courses__buttons">
+              <button type="button" class="courses__btn" data-bs-toggle="modal" data-bs-target="#smrEstudiar">
+                ¿Qué estudiaras?
+              </button>
+              <button type="button" class="courses__btn" data-bs-toggle="modal" data-bs-target="#smrTrabajar">
+                ¿De qué trabajaras?
+              </button>
+            </div> 
+          </article>
+          <img
+            src="../assets/images/courses_ASIR.jpg"
+            alt="imagen smr"
+            class="courses__img"
+          />
+        </div>
+        <div class="courses__box">
+          <h3 class="courses__title">DAW</h3>
+          <article class="article">
+            <h4 class="article__title">Sistemas Microinformáticos y Redes</h4>
+            <h5 class="article__subtitle">Grado Medio</h5>
+            <p class="courses__text">
+              Este ciclo te permite un primer contacto “serio” con el mundo de la informática. La ventaja es que es abarca buena parte de las principales áreas que cubre la informática.
+            </p>
+            <div class="courses__buttons">
+              <button type="button" class="courses__btn" data-bs-toggle="modal" data-bs-target="#smrEstudiar">
+                ¿Qué estudiaras?
+              </button>
+              <button type="button" class="courses__btn" data-bs-toggle="modal" data-bs-target="#smrTrabajar">
+                ¿De qué trabajaras?
+              </button>
+            </div> 
+          </article>
+          <img
+            src="../assets/images/courses_DAW.jpg"
+            alt="imagen smr"
+            class="courses__img"
+          />
+        </div>
+        <div class="courses__box">
+          <h3 class="courses__title">DAM</h3>
+          <article class="article">
+            <h4 class="article__title">Sistemas Microinformáticos y Redes</h4>
+            <h5 class="article__subtitle">Grado Medio</h5>
+            <p class="courses__text">
+              Este ciclo te permite un primer contacto “serio” con el mundo de la informática. La ventaja es que es abarca buena parte de las principales áreas que cubre la informática.
+            </p>
+            <div class="courses__buttons">
+              <button type="button" class="courses__btn" data-bs-toggle="modal" data-bs-target="#smrEstudiar">
+                ¿Qué estudiaras?
+              </button>
+              <button type="button" class="courses__btn" data-bs-toggle="modal" data-bs-target="#smrTrabajar">
+                ¿De qué trabajaras?
+              </button>
+            </div> 
+          </article>
+          <img
+            src="../assets/images/courses_DAM.png"
+            alt="imagen smr"
+            class="courses__img"
+          />
+        </div>
+
+        <div class="courses__infor" id="courses__info"></div>
+      </div>
+    </section>
+
+<!-- Modal -->
+<div class="modal fade" id="smrEstudiar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">En SMR estudiarás, entre otras cosas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="modal__list">
+          <li class="modal__item"><span class="modal__item--bold">Montaje y mantenimiento de equipos.</span>Cuáles son los principales componentes de un ordenador y cómo montarlos, saber identificar los principales fallos, etc.</li>
+          <li class="modal__item"><span class="modal__item--bold">Redes locales.</span>Montar una red local de ordenadores, realizando el cableado de red y configurando el protocolo TCP/IP, resolver incidencias de una red de área local, etc.</li>
+          <li class="modal__item"><span class="modal__item--bold">Sistemas operativos</span>Conocer cuáles son los principales sistemas operativos que existen en el mercado, y cuál utilizar en cada caso, configurarlos, etc..</li>
+          <li class="modal__item"><span class="modal__item--bold">Aplicaciones web.</span>Conocer qué son los gestores de contenido (blogs, foros, …), webmail, calendario web, etc.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+  </body>
+</html>
