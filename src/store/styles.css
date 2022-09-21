@@ -1,0 +1,19 @@
+body{
+    margin: 0%;
+    
+}
+.card-group{
+    width: 50em;
+    height: 50em;
+    display: flex;   
+}
+.card{
+    margin: 1em;
+}
+.card-title{
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+.card-text{
+    padding: 0.5em;
+}
