@@ -2,22 +2,26 @@ body{
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+
 div.container{
-    margin-top: 7%;
+    margin-top: 5%;
+}
+h2 , h4{
+    color: #389393;
 }
 
 div.row{
     display: flex;
 }
-div.imagen{
+div#imagen{
     display: flex;
     justify-content: center;
 }
-div.imagen img{
+div#imagen img#proPrincipal{
     border-radius: 5px;
 
 }
-div.info{
+div#info{
     display: flex;
     flex-direction: column;
     
@@ -51,7 +55,7 @@ div.btn-group button.naranja:hover{
 div.aside{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid #FA7F72;
     padding-top: 10px;
 
     border-radius: 5px;
@@ -60,3 +64,35 @@ div.aside{
 p.precio{
     font-size: 200%;
 }
+
+h5.enStock{
+    color: seagreen;
+}
+
+div#relacionados{
+    background-color: #ebebeb;
+    margin-top: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+div#relacionados h2{
+    padding-top: 2%;
+}
+div#relacionados div#producRel{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    
+}
+div.card{
+    border:1px solid #FA7F72;
+}
+div.card:hover{
+    box-shadow: #389393 0px 5px 15px;
+}
+footer{
+    margin-top: -6%;
+}
+
+
