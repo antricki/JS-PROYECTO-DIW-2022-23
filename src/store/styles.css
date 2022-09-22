@@ -1,6 +1,69 @@
+*{
+    box-sizing: border-box;
+}
 body{
+    margin: 0%;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
+/* css navbar */
+/* css sección 1: Nuestro producto estrella */
+.oferta_container_title{
+    height: 5rem;
+}
+.figure-img{
+    width: 30rem;
+    height: 30rem;
+    box-shadow:2px 2px 30px #d7f0f08e;
+}
+.raya{
+    height: 1px;
+    size:"10";
+    background-color: #389393;
+}
+.oferta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#389393;
+    color: white;
+}
+.explicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .explicacion_title{
+    color: #FA7F72;
+  }
+  .enlace_btn{
+    font-size: larger;
+    color: #FA7F72;
+  }
+/* css de la clasificación por estrellas */
+
+input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
+/* css seccion 2: lo que más gusta a otros clientes */
 .card{
     width: 300px;  
     height: 400px;
@@ -23,15 +86,3 @@ body{
     border: none;
     border-radius: 15px; 
 }
-.topcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: bisque;
-  }
-  .col .card { 
-    background-color: aqua;
-  }
-  .col .explicacion {
-    background-color: aqua;
-  }

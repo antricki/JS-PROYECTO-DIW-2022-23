@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-    rel="stylesheet"
-    href="../../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <title>Store</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,37 +13,66 @@
 </head>
 <body>
     <!-- Navbar -->
-    <div class="row top">
-      <div class="col">
-        <div class="card" style="width: 18rem">
-          <img
-            src="products/ingeniero-informatico-ingeniero-informatico.webp"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Camiseta</h5>
-            <p class="card-text">hrgiugthierghyigit</p>
-            <a href="#" class="btn btn-primary">Añadir al carrito</a>
-          </div>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/images/logo_transparente.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        </a>
+      </div>
+    </nav>
+    <!-- sección 1: PRODUCTO ESTRELLA -->
+<section class="oferta container-fluid row">
+    <div class="oferta_container_title container-fluid">
+      <h2 class="destacados_title">Nuestro Producto Estrella</h2>
+    </div>
+  <div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 top">
+      <div class="col d-flex justify-content-around">
+        <div class="destacados_title__img">
+          <figure class="figure img-fluid">
+            <img src="products/ingeniero-informatico-ingeniero-informatico.webp" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption">
+              <!-- código de la clasificación de estrellas -->
+              <form class="destacados_estrellas">
+                <p class="clasificacion">
+                   <input id="radio1" type="radio" name="estrellas" value="5">
+                    <label for="radio1">★</label>
+                    <input id="radio2" type="radio" name="estrellas" value="4">
+                    <label for="radio2">★</label>
+                    <input id="radio3" type="radio" name="estrellas" value="3">
+                    <label for="radio3">★</label>
+                    <input id="radio4" type="radio" name="estrellas" value="2">
+                    <label for="radio4">★</label>
+                    <input id="radio5" type="radio" name="estrellas" value="1">
+                    <label for="radio5">★</label>
+                </p>
+              </form>
+            </figcaption>
+          </figure>
         </div>
       </div>
-
-      <div class="col">
-        <div class="container-fluid explicacion">
-          <h2>Producto Estrella</h2>
-          <p class="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            dolor voluptates unde harum, atque dolores nulla nesciunt, sed nisi
-            deleniti iusto. Ducimus rerum excepturi pariatur perspiciatis ex
-            porro sint rem?
-          </p>
+      <div class="explicacion">
+        <h2 class="explicacion_title">Nuestra sudadera 100% de algodón</h2>
+        <p class="text_explicacion">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+          dolor voluptates unde harum, atque dolores nulla nesciunt, sed nisi
+          deleniti iusto. Ducimus rerum excepturi pariatur perspiciatis ex
+          porro sint rem?</p>
+        <div class="enlace">
+          <a href="#" class="btn enlace_btn">Añadir al carrito</a>
         </div>
       </div>
     </div>
+  </div>
+</section>
+  	
+<hr class="raya"/>
+<!-- sección 2: LO QUE MÁS GUSTA -->
+<section class="gusta row">
     <div class="container-fluid destacados" >
-        <!-- carmen -->
+      <div class="container_title">
         <h2 class="destacados_title">Lo que más gusta a otros clientes</h2>
+      </div>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 rounded d-flex d-inline-flex">
           <div class="col">
             <div class="card h-100">
@@ -92,9 +119,16 @@
             </div>
           </div>
         </div>
-    <div class="container-fluid productos">
+</section>
+  	
+<hr class="raya" size="10" />
+<!-- sección 3: OTROS PRODUCTOS -->
+<section class="otros_productos">
+      <div class="container_title">
+        <h2 class="destacados_title">Otros productos</h2>
+      </div>
         
-    </div>
+</section>
     <!-- Footer -->
 </body>
 </html>
