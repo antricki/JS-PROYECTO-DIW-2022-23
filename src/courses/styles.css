@@ -1,8 +1,17 @@
+:root {
+    --grey: #EBEBEB;
+    --orange: #F5A25D;
+    --lightOrange: #f2be93;
+    --red: #FA7F72;
+    --blue:#389393;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
+    background-color: var(--grey);
     margin: 0;   
 
 }
@@ -60,7 +69,7 @@ body {
     position: absolute;
     transition: all 1.5s ease-in-out;
     transform: translateY(-90px);
-    color: antiquewhite;
+    color: var(--red);
 }
 
 .courses__box:hover .courses__img {
@@ -89,14 +98,18 @@ body {
 
 .article__title {
     font-size: 1.2rem;
+    color: var(--orange);
 }
 
 .article__subtitle {
     font-size: 1rem;
+    color: var(--lightOrange);
+    
 }
 
 .courses__text {
     font-size: .7rem;
+    
 }
 
 .courses__buttons {
@@ -107,15 +120,30 @@ body {
 
 .courses__btn {
     padding: .5em 2em;
-    background-color: antiquewhite;
+    background-color: var(--orange);
     border: none;
     border-radius: 15px;
     font-size: .7rem;
+    color: aliceblue;
+    font-weight: 500;
 
 }
 
 .courses__btn:hover {
-    background-color: rgba(250, 235, 215, 0.867);
+    background-color: var(--red);
+}
+
+
+
+
+.modal__window {
+    background-color:var(--grey);
+    border: none;
+    box-shadow: 4px 3px 3px rgb(0 0 0 / .5);
+}
+
+.text--bold {
+    font-weight: 500;
 }
 
 
