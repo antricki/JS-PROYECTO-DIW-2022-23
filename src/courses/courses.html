@@ -15,82 +15,85 @@
   </head>
   <body>
     <section class="courses">
-      <div class="courses__container">
-        <div class="courses__box">
-          <h3 class="courses__title">SMR</h3>
-          <article class="article">
-            <h4 class="article__title">Sistemas Microinformáticos y Redes</h4>
-            <h5 class="article__subtitle">Grado Medio</h5>
-            <p class="courses__text">
-              Este ciclo te permite un primer contacto “serio” con el mundo de
-              la informática. La ventaja es que es abarca buena parte de las
-              principales áreas que cubre la informática.
-            </p>
-            <div class="courses__buttons">
-              <button
-                type="button"
-                class="courses__btn"
-                data-bs-toggle="modal"
-                data-bs-target="#smrEstudiar"
-              >
-                ¿Qué estudiaras?
-              </button>
-              <button
-                type="button"
-                class="courses__btn"
-                data-bs-toggle="modal"
-                data-bs-target="#smrTrabajar"
-              >
-                ¿De qué trabajaras?
-              </button>
-            </div>
-          </article>
-          <img
-            src="../assets/images/courses_SMR.jpg"
-            alt="imagen smr"
-            class="courses__img"
-          />
-        </div>
+      <div class="container courses__container">
+        <div class="row fila">
+          <div class="courses__box col-sm-12 col-md-5">
+            <h3 class="courses__title">SMR</h3>
+            <article class="article">
+              <h4 class="article__title">Sistemas Microinformáticos y Redes</h4>
+              <h5 class="article__subtitle">Grado Medio</h5>
+              <p class="courses__text">
+                Este ciclo te permite un primer contacto “serio” con el mundo de
+                la informática. La ventaja es que es abarca buena parte de las
+                principales áreas que cubre la informática.
+              </p>
+              <div class="courses__buttons">
+                <button
+                  type="button"
+                  class="courses__btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#smrEstudiar"
+                >
+                  ¿Qué estudiaras?
+                </button>
+                <button
+                  type="button"
+                  class="courses__btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#smrTrabajar"
+                >
+                  ¿De qué trabajaras?
+                </button>
+              </div>
+            </article>
+            <img
+              src="../assets/images/courses_SMR.jpg"
+              alt="imagen smr"
+              class="courses__img"
+            />
+          </div>
 
-        <div class="courses__box">
-          <h3 class="courses__title">ASIR</h3>
-          <article class="article">
-            <h4 class="article__title">
-              Administración de Sistemas Informáticos en Red
-            </h4>
-            <h5 class="article__subtitle">Grado Superior</h5>
-            <p class="courses__text">
-              En este ciclo te permitirá trabajar en empresas de distintos
-              sectores dentro del departamento de informática o de procesos de
-              datos, desempeñando funciones tales como instalación,
-              mantenimiento, explotación y soporte del usuario informático.
-            </p>
-            <div class="courses__buttons">
-              <button
-                type="button"
-                class="courses__btn"
-                data-bs-toggle="modal"
-                data-bs-target="#asirEstudiar"
-              >
-                ¿Qué estudiaras?
-              </button>
-              <button
-                type="button"
-                class="courses__btn"
-                data-bs-toggle="modal"
-                data-bs-target="#asirTrabajar"
-              >
-                ¿De qué trabajaras?
-              </button>
-            </div>
-          </article>
-          <img
-            src="../assets/images/courses_ASIR.jpg"
-            alt="imagen smr"
-            class="courses__img"
-          />
+          <div class="courses__box col-sm-12 col-md-5">
+            <h3 class="courses__title">ASIR</h3>
+            <article class="article">
+              <h4 class="article__title">
+                Administración de Sistemas Informáticos en Red
+              </h4>
+              <h5 class="article__subtitle">Grado Superior</h5>
+              <p class="courses__text">
+                En este ciclo te permitirá trabajar en empresas de distintos
+                sectores dentro del departamento de informática o de procesos de
+                datos, desempeñando funciones tales como instalación,
+                mantenimiento, explotación y soporte del usuario informático.
+              </p>
+              <div class="courses__buttons">
+                <button
+                  type="button"
+                  class="courses__btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#asirEstudiar"
+                >
+                  ¿Qué estudiaras?
+                </button>
+                <button
+                  type="button"
+                  class="courses__btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#asirTrabajar"
+                >
+                  ¿De qué trabajaras?
+                </button>
+              </div>
+            </article>
+            <img
+              src="../assets/images/courses_ASIR.jpg"
+              alt="imagen smr"
+              class="courses__img"
+            />
+          </div>
         </div>
-        <div class="courses__box">
+        <div class="row">
+        <div class="courses__box col-sm-12 col-md-5">
           <h3 class="courses__title">DAW</h3>
           <article class="article">
             <h4 class="article__title">Desarrollo de Aplicaciones Web</h4>
@@ -125,7 +128,7 @@
             class="courses__img"
           />
         </div>
-        <div class="courses__box">
+        <div class="courses__box col-sm-12 col-md-5">
           <h3 class="courses__title">DAM</h3>
           <article class="article">
             <h4 class="article__title">
@@ -163,8 +166,8 @@
             class="courses__img"
           />
         </div>
+      </div>
 
-        <div class="courses__infor" id="courses__info"></div>
       </div>
     </section>
 
@@ -205,7 +208,7 @@
                 red de área local, etc.
               </li>
               <li class="modal__item">
-                <span class="text--bold">Sistemas operativos</span> Conocer
+                <span class="text--bold">Sistemas operativos.</span> Conocer
                 cuáles son los principales sistemas operativos que existen en el
                 mercado, y cuál utilizar en cada caso, configurarlos, etc..
               </li>
@@ -434,103 +437,99 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div
-        class="modal fade"
-        id="dawTrabajar"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content modal__window">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Una vez termines tu formación profesional en DAW, estarás
-                preparado para trabajar como:
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <ul class="modal__list">
-                <li class="modal__item">Programador y deseñador web</li>
-                <li class="modal__item">
-                  Gestor del acceso a bases de datos para entornos web.
-                </li>
-                <li class="modal__item">Programador web freelance.</li>
-                <li class="modal__item">Programador full-stack.</li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="courses__btn"
-                data-bs-dismiss="modal"
-              >
-                Cerrar
-              </button>
-            </div>
+    <div
+      class="modal fade"
+      id="dawTrabajar"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content modal__window">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Una vez termines tu formación profesional en DAW, estarás
+              preparado para trabajar como:
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="modal__list">
+              <li class="modal__item">Programador y deseñador web</li>
+              <li class="modal__item">
+                Gestor del acceso a bases de datos para entornos web.
+              </li>
+              <li class="modal__item">Programador web freelance.</li>
+              <li class="modal__item">Programador full-stack.</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="courses__btn" data-bs-dismiss="modal">
+              Cerrar
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Modal DAM -->
-
-      <div
-        class="modal fade"
-        id="damEstudiar"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content modal__window">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                En DAM estudiarás, entre otras cosas:
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <ul class="modal__list">
-                <li class="modal__item">
-                  <span class="text--bold">Programación. </span>Identificar los
-                  elementos de un programa informático, conocer las estructuras
-                  de control, desarrollar clases, lectura y escritura de
-                  información, etc.
-                </li>
-                <li class="modal__item">
-                  <span class="text--bold">Desarrollo de interfaces.</span>
-                  Desarrollar interfaces de usuario, generación interfaces a
-                  partir de documentos XML, crear componentes visuales,
-                  confeccionar informes, etc.
-                </li>
-                <li class="modal__item">
-                  <span class="text--bold"
-                    >Programación multimedia y dispositivos móviles.</span
-                  >
-                  Programar aplicaciones para dispositivos móviles, utilizar
-                  librerías multimedia integradas, desarrollar juegos en 2D y
-                  3D, etc.
-                </li>
-                <li class="modal__item">
-                  <span class="text--bold">Mucho más</span> como bases de datos,
-                  desarrollo web en entorno servidor, despliegue de aplicaciones
-                  web, etc.
-                </li>
-              </ul>
-            </div>
-            text--bold="modal-footer">
+    <!-- Modal DAM -->
+    <div
+      class="modal fade"
+      id="damEstudiar"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content modal__window">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              En DAM estudiarás, entre otras cosas:
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="modal__list">
+              <li class="modal__item">
+                <span class="text--bold">Programación. </span>Identificar los
+                elementos de un programa informático, conocer las estructuras de
+                control, desarrollar clases, lectura y escritura de información,
+                etc.
+              </li>
+              <li class="modal__item">
+                <span class="text--bold">Desarrollo de interfaces.</span>
+                Desarrollar interfaces de usuario, generación interfaces a
+                partir de documentos XML, crear componentes visuales,
+                confeccionar informes, etc.
+              </li>
+              <li class="modal__item">
+                <span class="text--bold"
+                  >Programación multimedia y dispositivos móviles.</span
+                >
+                Programar aplicaciones para dispositivos móviles, utilizar
+                librerías multimedia integradas, desarrollar juegos en 2D y 3D,
+                etc.
+              </li>
+              <li class="modal__item">
+                <span class="text--bold">Mucho más</span> como bases de datos,
+                desarrollo web en entorno servidor, despliegue de aplicaciones
+                web, etc.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
             <button type="button" class="courses__btn" data-bs-dismiss="modal">
               Cerrar
             </button>
@@ -588,6 +587,8 @@
         </div>
       </div>
     </div>
+
+
 
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>
