@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+/* css navbar */
+/* css sección 1: Nuestro producto estrella */
+.oferta_container_title{
+    height: 5rem;
+}
+.figure-img{
+    width: 30rem;
+    height: 30rem;
+    box-shadow:2px 2px 30px #d7f0f08e;
+}
+.raya{
+    height: 1px;
+    size:"10";
+    background-color: #389393;
+    box-shadow: 1px 1px 1px #FA7F72;
+}
+.oferta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#389393;
+    color: white;
+}
+.explicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .explicacion_title{
+    color: #FA7F72;
+  }
+  .enlace_btn{
+    font-size: larger;
+    color: #FA7F72;
+  }
+/* css de la clasificación por estrellas */
+
+input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
+/* css seccion 2: lo que más gusta a otros clientes */
+.destacados{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.card{
+    width: 300px;  
+    height: 400px;
+    font-size: large;
+}
+.card:hover{
+    border: 2px solid #FA7F72;
+}
+.card-body{
+    font-size: larger;
+    text-align: center;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-around;
+}
+.card-footer_input{
+    width: 150px;
+    background-color:#FA7F72;
+    border: none;
+    border-radius: 15px; 
+}
+/* css sección 3: OTROS PRODUCTOS */
+.otros_productos__figure{
+  width: 15rem;
+  height: 15rem;
+  transition: transform .5s;
+}
+.otros_productos__figure:hover{
+  transform: scale(1.5);
+
+}
+/* css pre-footer */
+.pre-footer{
+  display: flex;
+  justify-content: space-around;
+}
+.pre_footer__card{
+  width: 30rem;
+  height: 13rem;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pre_footer__card:hover{
+  border: none;
+}
+.pre-footer_img{
+  width: 6rem;
+}
+.pre-footer__body{
+  color: #fa807286;
+  font-size: smaller;
+}
+.pre-footer__title{
+  color: #fa8072cc;
+}
+/* css footer */
