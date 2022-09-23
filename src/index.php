@@ -52,6 +52,8 @@
     </div>
   </div>
 
+  <a href="https://codepen.io/weimil/pen/BaxdOVY">[Carrousel 01]</a>
+  <a href="https://codepen.io/weimil/pen/KKRvJdL">[Carrousel 02]</a>
   <!-- <div id="carrousel">
     <div class="container">
       <div class="title col-md-12 text-center"> Waterwheel Owl Carousel 2</div>
