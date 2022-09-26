@@ -23,14 +23,18 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="../../assets/images/logo.svg" alt=""></a>
         <h1 class="d-flex d-lg-none">Dpto. Informática</h1>
-        <button class="navbar-toggler d-flex" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggler-button">
-            <a class="d-lg-none" href="#" id="sm-login"><img src="../../assets/icons/circle-user-regular.svg" alt="" class="icon"></a>
-            <a type="button" class="d-lg-none" id="toggle" onclick="useToggle(this,document.getElementById('toggler-button'))"><span></span></a>
+        <a class="d-lg-none ms-auto" href="#" id="sm-login"><img src="../../assets/icons/circle-user-regular.svg" alt=""
+            class="icon"></a>
+        <button class="navbar-toggler d-flex" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation" id="toggler-button" onclick="useToggle(document.getElementById('toggle'))">
+            <span></span>
         </button>
         <form class="d-none d-lg-flex">
-            <button onclick="buscar()" id="search-icon" type="button"><img src="../../assets/icons/magnifying-glass-solid.svg" alt=""></button>
-            <input class="form-control me-2 search none" type="search" placeholder="Búsqueda" aria-label="Search" id="main-search">
+            <button onclick="buscar()" id="search-icon" type="button"><img
+                    src="../../assets/icons/magnifying-glass-solid.svg" alt=""></button>
+            <input class="form-control me-2 search none" type="search" placeholder="Búsqueda" aria-label="Search"
+                id="main-search">
         </form>
 
         <!-- Right side -->
@@ -51,7 +55,8 @@
                         <a class="nav-link" href="#">Galería</a>
                     </li>
                     <li class="nav-item d-none d-lg-block icon">
-                        <a class="nav-link" href="#" id="lg-login"><img src="../../assets/icons/circle-user-regular.svg" alt=""></a>
+                        <a class="nav-link" href="#" id="lg-login"><img src="../../assets/icons/circle-user-regular.svg"
+                                alt=""></a>
                     </li>
                 </ul>
             </div>

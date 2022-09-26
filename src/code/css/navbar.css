@@ -96,8 +96,6 @@ li {
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #F5A25D !important;
 }
-
-
 /* toggle */
 #toggle {
     display: block;
@@ -141,4 +139,4 @@ li {
   }
   #toggle.on span:after {
     transform: rotate(-45deg) translate(7px, -8px);
-  }
+  } 
