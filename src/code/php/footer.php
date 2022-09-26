@@ -13,10 +13,10 @@
             </div>
             <div class="col-md-8 pags">
                 <h3 class="mb-3">Páginas de interés</h3>
-                <a href=""><img src="../../assets/icons/saofct.png" alt=""></a>
-                <a href=""><img src="../../assets/icons/itaca.png" alt=""></a>
-                <a href=""><img src="../../assets/icons/aules.png" alt=""></a>
-                <a href=""><img src="../../assets/icons/TICgva.png" alt=""></a>
+                <a href="https://foremp.edu.gva.es/"><img src="../../assets/icons/saofct.png" alt=""></a>
+                <a href="https://familia.edu.gva.es/wf-front/myitaca/login_wf?idioma=C"><img src="../../assets/icons/itaca.png" alt=""></a>
+                <a href="https://aules.edu.gva.es/fp/login/index.php"><img src="../../assets/icons/aules.png" alt=""></a>
+                <a href="https://portal.edu.gva.es/cvtic/es/herramientas/"><img src="../../assets/icons/TICgva.png" alt=""></a>
             </div>
         </div>
         <div class="row footer-down">
