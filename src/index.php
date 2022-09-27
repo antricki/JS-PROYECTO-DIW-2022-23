@@ -1,4 +1,3 @@
-<?php ?>
 <html>
 
 <head>
@@ -9,7 +8,7 @@
   <script src="/src/code/js/wScript.js"></script>
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="/src/code/css/wStyles.css">
-  <link rel="stylesheet" href="/src/code/css/wStyles.css">
+  
 </head>
 
 <body>
@@ -52,28 +51,24 @@
     </div>
   </div>
 
-  <a href="https://codepen.io/weimil/pen/BaxdOVY">[Carrousel 01]</a>
-  <a href="https://codepen.io/weimil/pen/KKRvJdL">[Carrousel 02]</a>
-  <!-- <div id="carrousel">
-    <div class="container">
-      <div class="title col-md-12 text-center"> Waterwheel Owl Carousel 2</div>
-      <div class="col-md-12">
-        <div class="owl-carousel owl-theme">
-          <img src="https://picsum.photos/800/450/?random&1">
-          <img src="https://picsum.photos/800/450/?random&2">
-          <img src="https://picsum.photos/800/450/?random&3">
-          <img src="https://picsum.photos/800/450/?random&4">
-          <img src="https://picsum.photos/800/450/?random&5">
-          <img src="https://picsum.photos/800/450/?random&6">
-          <img src="https://picsum.photos/800/450/?random&7">
-          <img src="https://picsum.photos/800/450/?random&8">
-        </div>
-      </div>
-      <div class="text-center">
-        <div class="status"></div>
+  <div id="carrousel" class="parent">
+    <div class="title col-md-12 text-center"> Waterwheel Owl Carousel 2</div>
+    <div class="col-md-12">
+      <div class="owl-carousel owl-theme">
+        <img src="https://picsum.photos/800/450/?random&1">
+        <img src="https://picsum.photos/800/450/?random&2">
+        <img src="https://picsum.photos/800/450/?random&3">
+        <img src="https://picsum.photos/800/450/?random&4">
+        <img src="https://picsum.photos/800/450/?random&5">
+        <img src="https://picsum.photos/800/450/?random&6">
+        <img src="https://picsum.photos/800/450/?random&7">
+        <img src="https://picsum.photos/800/450/?random&8">
       </div>
     </div>
-  </div> -->
+    <div class="text-center">
+      <div class="status"></div>
+    </div>
+  </div>
 
   <div id="contact">
     <div class="container text-center">
@@ -122,7 +117,6 @@
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
