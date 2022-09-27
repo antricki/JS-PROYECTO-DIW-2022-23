@@ -26,6 +26,14 @@ div#info{
     flex-direction: column;
     
 }
+
+#tallas{
+    border:1px solid #FA7F72;
+}
+option[value="xl"]:hover{
+    background-color: yellow !important; 
+}
+
 div.btn-group {
     display: flex;
     justify-content: left;
