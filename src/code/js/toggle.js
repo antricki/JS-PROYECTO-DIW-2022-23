@@ -33,20 +33,9 @@ function toggleClass(elem, className) {
 
 let use = true;
 
-function useToggle(elem, elem2) {
-    if (use) {
-        elem.setAttribute("style", "pointer-events: none");
-        elem2.setAttribute("disabled", "");
-        use = false;
-        elem.onclick = function () {
-            toggleClass(this, 'on');
-            return false;
-        }
+function useToggle(elem) {
+    elem.onclick = function () {
+        toggleClass(this, 'on');
+        return false;
     }
-}
-
-function removeAtts(elem1, elem2) {
-    elem1.removeAttribute("style");
-    elem2.removeAttribute("disabled");
-    use = true;
 }
