@@ -35,6 +35,10 @@
     }
 }
 
+.parent {
+    position: relative;
+}
+
 #carrousel .title {
     margin-bottom: 10px;
     font-size: 30px;
