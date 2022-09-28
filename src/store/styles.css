@@ -17,9 +17,11 @@ body{
 }
 .raya{
     height: 1px;
+    width:75%;
     size:"10";
     background-color: #389393;
     box-shadow: 1px 1px 1px #FA7F72;
+    margin: 50px auto;
 }
 .oferta{
     display: flex;
@@ -75,9 +77,10 @@ input[type="radio"] {
     width: 300px;  
     height: 400px;
     font-size: large;
+    border: 1px solid #FA7F72;
 }
 .card:hover{
-    border: 2px solid #FA7F72;
+    box-shadow: 2px 2px 30px#389393;
 }
 .card-body{
     font-size: larger;
@@ -94,6 +97,9 @@ input[type="radio"] {
     border-radius: 15px; 
 }
 /* css sección 3: OTROS PRODUCTOS */
+.otros_productos{
+  background-image: linear-gradient(#EBEBEB, #abebeba8,#EBEBEB);
+}
 .otros_productos__figure{
   width: 15rem;
   height: 15rem;
@@ -115,6 +121,7 @@ input[type="radio"] {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 .pre_footer__card:hover{
   border: none;
