@@ -1,0 +1,62 @@
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+div.container{
+    margin-top: 7%;
+}
+
+div.row{
+    display: flex;
+}
+div.imagen{
+    display: flex;
+    justify-content: center;
+}
+div.imagen img{
+    border-radius: 5px;
+
+}
+div.info{
+    display: flex;
+    flex-direction: column;
+    
+}
+div.btn-group {
+    display: flex;
+    justify-content: left;
+    width: 15%;
+}
+
+div.btn-group button.azul:hover{
+    border: 1px solid #389393;
+    color: #389393;
+}
+div.btn-group button.verde:hover{
+    border: 1px solid seagreen;
+    color: seagreen;
+}
+div.btn-group button.negro:hover{
+    border: 1px solid black;
+    color: black;
+}
+div.btn-group button.rojo:hover{
+    border: 1px solid #FA7F72;
+    color: #FA7F72;
+}
+div.btn-group button.naranja:hover{
+    border: 1px solid #F5A25D;
+    color: #F5A25D;
+}
+div.aside{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding-top: 10px;
+
+    border-radius: 5px;
+}
+
+p.precio{
+    font-size: 200%;
+}
