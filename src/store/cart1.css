@@ -1,0 +1,62 @@
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+h2 , h4{
+    color: #389393;
+}
+hr{
+    color: #FA7F72;
+}
+div.container{
+    margin-top: 2%;
+}
+/*relacionados*/
+div#relacionados{
+    background-color: #ebebeb;
+    margin-top: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+div#relacionados h2{
+    padding-top: 2%;
+}
+div#relacionados div#producRel{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    
+}
+div.card{
+    border:1px solid #FA7F72;
+}
+div.card:hover{
+    box-shadow: #389393 0px 5px 15px;
+}
+/*estrellas*/
+form.destacados_estrellas{
+    margin-right: 50%;
+}
+input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
