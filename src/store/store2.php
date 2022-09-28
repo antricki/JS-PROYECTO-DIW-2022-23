@@ -11,18 +11,18 @@
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="../code/css/navbar.css">
 </head>
 <body> 
     <!--Nav-->
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-    </nav> 
-    <div class="container">
+    <?php
+    include "../code/php/navbar.php";
 
+    ?>
 
     <div class="row">
         <!--Imagen-->
-        <div class="col-lg-4 col-md-6" id="imagen">
+        <div class="col-lg-4 col-md-6 col-" id="imagen">
             <img src="products/camiseta2.webp" id="proPrincipal" >
         </div>
         <!--Info-->
