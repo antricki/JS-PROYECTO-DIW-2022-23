@@ -54,6 +54,7 @@
   <pre>    
     https://codepen.io/weimil/pen/KKRvJdL
     https://codepen.io/weimil/pen/BaxdOVY
+    https://codepen.io/dreamer22001/pen/GBzbRV
   </pre>
 
   <div id="carrousel" class="parent">
