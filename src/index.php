@@ -51,6 +51,11 @@
     </div>
   </div>
 
+  <pre>    
+    https://codepen.io/weimil/pen/KKRvJdL
+    https://codepen.io/weimil/pen/BaxdOVY
+  </pre>
+
   <div id="carrousel" class="parent">
     <div class="title col-md-12 text-center"> Waterwheel Owl Carousel 2</div>
     <div class="col-md-12">
