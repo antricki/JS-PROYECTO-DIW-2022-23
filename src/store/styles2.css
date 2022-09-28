@@ -42,9 +42,6 @@ div#info{
     border:1px solid #FA7F72;
     box-shadow: 0px 1px 1px #FA7F72 inset,0px 0px 10px #FA7F72 ;
 }
-option[value="xl"]:hover{
-    background-color: yellow !important; 
-}
 
 #cantidades{
     height: 125%;
@@ -55,9 +52,6 @@ option[value="xl"]:hover{
 #cantidades:focus{
     border:1px solid #FA7F72;
     box-shadow: 0px 1px 1px #FA7F72 inset,0px 0px 10px #FA7F72 ;
-}
-option[value="xl"]:hover{
-    background-color: yellow !important; 
 }
 
 
@@ -93,7 +87,6 @@ div.aside{
     flex-direction: column;
     border: 1px solid #FA7F72;
     padding-top: 10px;
-
     border-radius: 5px;
 }
 
@@ -120,7 +113,7 @@ h5.enStock{
     background-color: white;
 }
 #ticketregalo:focus{
-    box-shadow: 0px 1px 1px #FA7F72 inset,0px 0px 10px #FA7F72 ;
+    box-shadow: 0px 1px 1px #F5A25D inset,0px 0px 10px #F5A25D ;
 }
 #ticketregalo:checked{
     background-color: #389393;
@@ -154,13 +147,21 @@ footer{
 }
 /*estrellas*/
 form.destacados_estrellas{
-    margin-right: 50%;
+    margin-right: 30%;
+    
+}
+
+div.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 input[type="radio"] {
     display: none;
   }
   
-  label {
+  label{
     color: grey;
   }
   

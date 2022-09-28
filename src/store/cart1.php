@@ -16,36 +16,83 @@
 </head>
 
 <body>
-    <!--Nav
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-  </nav>-->
+    <!--Nav-->
     <?php
     include "../code/php/navbar.php"
     ?>
 
-
     <div class="container">
         <div class="row">
-            <div class="col-10">
+            <!--Productos cesta-->
+            <div class="col-lg-10 col-xs-12">
                 <h2>Cesta</h2>
-                <hr>
+                <p id="precioIzquierda">Precio</p>
+                <hr style="color:#FA7F72;">
+                <div class="row">
+                    <div class="col-3" id="imgChek">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkarticulo">
+                        </div>
+                        <img src="products/pen.jpg" class="imagen" alt="">
+                    </div>
+                    <div class="col-7" id="texto">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, quas libero.<br> Veniam fugit magni
+                        quaerat omnis deleniti sed totam necessitatibus porro nam,<br>
+                        dolore esse fugiat reiciendis nisi distinctio aperiam eos.</div>
+                    <div class="col-2" id="imgChek">
+                    <p class="precio">8,99€</p>
+                    </div>
+                </div>
+                <hr style="color:#FA7F72;">
+                <div class="row">
+                    <div class="col-3" id="imgChek">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkarticulo">
+                        </div>
+                        <img src="products/alfombrilla.jpg" class="imagen" alt="">
+                    </div>
+                    <div class="col-7" id="texto">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, quas libero.<br> Veniam fugit magni
+                        quaerat omnis deleniti sed totam necessitatibus porro nam,<br>
+                        dolore esse fugiat reiciendis nisi distinctio aperiam eos.</div>
+                    <div class="col-2" id="imgChek">
+                        <p class="precio">5,99€</p>
+                    </div>
+                </div>
+                <hr style="color:#FA7F72;">
+                
             </div>
-            <div class="col-2"></div>
+            <div class="col-lg-2 col-xs-12" id="aside">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sed mollitia suscipit in, fuga deleniti! Praesentium ab delectus quod magni et laborum, dolorum voluptas quam, qui quibusdam voluptatum hic molestias.
+                <input class="btn " id="botonpagar" type="submit" value="Tramitar pedido">
+            </div>
         </div>
 
     </div>
 
     <!--Relacionados-->
     <div class="row" id="relacionados">
-        <h2>Productos relacionados con tu cesta </h2>
+        <h2>Productos relacionados con tu cesta</h2>
         <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
             <div class="card" style="width: 18rem;">
                 <img src="products/sudadera3.webp" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sudadera Informatico</h5>
-                    estrellas
                     <p class="precio">25,95€</p>
+                    <form>
+                        <p class="clasificacion">
+                            <input id="radio1" type="radio" name="estrellas" value="5">
+                            <label class="estrellaColor" for="radio1">★</label>
+                            <input id="radio2" type="radio" name="estrellas" value="4">
+                            <label class="estrellaColor" for="radio2">★</label>
+                            <input id="radio3" type="radio" name="estrellas" value="3">
+                            <label class="estrellaColor" for="radio3">★</label>
+                            <input id="radio4" type="radio" name="estrellas" value="2">
+                            <label class="estrellaColor" for="radio4">★</label>
+                            <input id="radio5" type="radio" name="estrellas" value="1">
+                            <label class="estrellaColor" for="radio5">★</label>
+                        </p>
+                    </form>
                 </div>
             </div>
 
@@ -56,8 +103,22 @@
                 <img src="products/camiseta.webp" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Camiseta Ingeniero</h5>
-                    estrellas
                     <p class="precio">13,95€</p>
+                    <form>
+                        <p class="clasificacion">
+                            <input id="radio1" type="radio" name="estrellas" value="5">
+                            <label class="estrellaColor" for="radio1">★</label>
+                            <input id="radio2" type="radio" name="estrellas" value="4">
+                            <label class="estrellaColor" for="radio2">★</label>
+                            <input id="radio3" type="radio" name="estrellas" value="3">
+                            <label class="estrellaColor" for="radio3">★</label>
+                            <input id="radio4" type="radio" name="estrellas" value="2">
+                            <label class="estrellaColor" for="radio4">★</label>
+                            <input id="radio5" type="radio" name="estrellas" value="1">
+                            <label class="estrellaColor" for="radio5">★</label>
+                        </p>
+                    </form>
+
                 </div>
             </div>
 
@@ -68,8 +129,21 @@
                 <img src="products/sudadesra.webp" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sudadera Programacion</h5>
-                    estrellas
                     <p class="precio">23,95€</p>
+                    <form id="estres">
+                        <p class="clasificacion">
+                            <input id="radio1" type="radio" name="estrellas" value="5">
+                            <label class="estrellaColor" for="radio1">★</label>
+                            <input id="radio2" type="radio" name="estrellas" value="4">
+                            <label class="estrellaColor" for="radio2">★</label>
+                            <input id="radio3" type="radio" name="estrellas" value="3">
+                            <label class="estrellaColor" for="radio3">★</label>
+                            <input id="radio4" type="radio" name="estrellas" value="2">
+                            <label class="estrellaColor" for="radio4">★</label>
+                            <input id="radio5" type="radio" name="estrellas" value="1">
+                            <label class="estrellaColor" for="radio5">★</label>
+                        </p>
+                    </form>
                 </div>
             </div>
 
@@ -80,8 +154,21 @@
                 <img src="products/ingeniero-informatico-ingeniero-informatico.webp" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sudadera Ingeniero</h5>
-                    estrellas
                     <p class="precio">21,95€</p>
+                    <form>
+                        <p class="clasificacion">
+                            <input id="radio1" type="radio" name="estrellas" value="5">
+                            <label class="estrellaColor" for="radio1">★</label>
+                            <input id="radio2" type="radio" name="estrellas" value="4">
+                            <label class="estrellaColor" for="radio2">★</label>
+                            <input id="radio3" type="radio" name="estrellas" value="3">
+                            <label class="estrellaColor" for="radio3">★</label>
+                            <input id="radio4" type="radio" name="estrellas" value="2">
+                            <label class="estrellaColor" for="radio4">★</label>
+                            <input id="radio5" type="radio" name="estrellas" value="1">
+                            <label class="estrellaColor" for="radio5">★</label>
+                        </p>
+                    </form>
 
                 </div>
             </div>
