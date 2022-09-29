@@ -1,7 +1,21 @@
-<script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<link href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="../js/toggle.js"></script>
-<link rel="stylesheet" href="../css/navbar.css">
+<?php
+    // $dirtemp = explode('/',str_replace('\\', '/', __DIR__));
+    // $num = 0;
+    // for ($i=0; $i < count($dirtemp); $i++) { 
+    //     if ($dirtemp[$i] === "src"){
+    //         $num = $i + 1;
+    //     }
+    // }
+    // $num = count($dirtemp) - $num;
+    // $dir = "";
+    // for ($i=0; $i < $num; $i++) { 
+    //     $dir = $dir . "../";
+    // }
+    $dircode = "../";
+    $dirassets = "../../";
+?>
+<script src="<?php echo $dircode . 'code/js/toggle.js'?>"></script>
+<link rel="stylesheet" href="<?php echo $dircode . 'code/css/navbar.css'?>">
 <script>
     let pormostrar = true;
 
@@ -21,10 +35,9 @@
 </script>
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="../../assets/images/logo.svg" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="<?php echo $dirassets . 'assets/images/logo.svg'?>" alt=""></a>
         <h1 class="d-flex d-lg-none">Dpto. Informática</h1>
-        <a class="d-lg-none ms-auto" href="#" id="sm-login"><img src="../../assets/icons/circle-user-regular.svg" alt=""
-            class="icon"></a>
+        <a class="d-lg-none ms-auto" href="#" id="sm-login"><img src="<?php echo $dirassets . 'assets/icons/circle-user-regular.svg'?>" alt="" class="icon"></a>
         <button class="navbar-toggler d-flex" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation" id="toggler-button" onclick="useToggle(document.getElementById('toggle'))">
@@ -32,7 +45,7 @@
         </button>
         <form class="d-none d-lg-flex">
             <button onclick="buscar()" id="search-icon" type="button"><img
-                    src="../../assets/icons/magnifying-glass-solid.svg" alt=""></button>
+                    src="<?php echo $dirassets . 'assets/icons/magnifying-glass-solid.svg'?>" alt=""></button>
             <input class="form-control me-2 search none" type="search" placeholder="Búsqueda" aria-label="Search"
                 id="main-search">
         </form>
@@ -55,8 +68,7 @@
                         <a class="nav-link" href="#">Galería</a>
                     </li>
                     <li class="nav-item d-none d-lg-block icon">
-                        <a class="nav-link" href="#" id="lg-login"><img src="../../assets/icons/circle-user-regular.svg"
-                                alt=""></a>
+                        <a class="nav-link" href="#" id="lg-login"><img src="<?php echo $dirassets . 'assets/icons/circle-user-regular.svg'?>" alt=""></a>
                     </li>
                 </ul>
             </div>
