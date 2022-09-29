@@ -16,13 +16,12 @@
 </head>
 
 <body>
-  <!--Nav
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-  </nav>-->
+  <!--Nav-->
   <?php
-  include "../code/php/navbar.php"
-  ?>
+    $d=__DIR__;
+    include "../code/php/route.php";
+    include "../code/php/navbar.php";
+    ?>
 
 
   <div class="container">
@@ -40,11 +39,11 @@
         <div class="row">
           <div class="col-4">
             <select class="form-contol" id="tallas" aria-label=" select example">
-              <option class="talla" value="xl">XL</option>
-              <option class="talla" value="L">L</option>
-              <option class="talla" value="M">M</option>
-              <option class="talla" value="S">S</option>
-              <option class="talla" value="XS">XS</option>
+              <option  value="xl">XL</option>
+              <option  value="L">L</option>
+              <option  value="M">M</option>
+              <option  value="S">S</option>
+              <option  value="XS">XS</option>
             </select>
           </div>
           <div class="col-8"></div>
@@ -96,11 +95,11 @@
         <h5>Cantidad:</h5>
         <div class="col-4">
           <select class="form-contol" id="cantidades" aria-label=" select example">
-            <option class="talla" value="xl">1</option>
-            <option class="talla" value="L">2</option>
-            <option class="talla" value="M">3</option>
-            <option class="talla" value="S">4</option>
-            <option class="talla" value="XS">5</option>
+            <option  value="1">1</option>
+            <option  value="2">2</option>
+            <option  value="3">3</option>
+            <option  value="4">4</option>
+            <option  value="5">5</option>
           </select>
         </div>
         <br>
@@ -222,20 +221,9 @@
     </div>
   </div>
 
-  <footer class="bg-dark text-center text-white">
-    <div class="container p-4">
-      <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-          eum harum corrupti dicta, aliquam sequi voluptate quas.
-        </p>
-    </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-  </footer>
+  <?php
+  include "../code/php/footer.php";
+  ?>
 
 </body>
 

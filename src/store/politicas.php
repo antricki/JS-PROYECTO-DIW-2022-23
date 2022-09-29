@@ -13,7 +13,9 @@
 </head>
 <body>
     <?php
-    include "../code/php/navbar.php";
+        $d=__DIR__;
+        include "../code/php/route.php";
+        include "../code/php/navbar.php";
     ?>
 
     <main class="informacion">
@@ -84,7 +86,6 @@
     </main>
     <?php
     include "../code/php/footer.php";
-
     ?>
 </body>
 </html>

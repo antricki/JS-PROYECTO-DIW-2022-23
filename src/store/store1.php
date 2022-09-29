@@ -24,6 +24,11 @@
     <!-- Navbar -->
 <header>
   <!-- Navbar -->
+  <?php
+    $d=__DIR__;
+    include "../code/php/route.php";
+    include "../code/php/navbar.php";
+    ?>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
@@ -349,6 +354,9 @@
         </div>
       </div>
     </div>
+    <?php
+    include "../code/php/footer.php";
+  ?>
     <footer class="bg-dark text-center text-white">
       <div class="container p-4">
         <section class="mb-4">
