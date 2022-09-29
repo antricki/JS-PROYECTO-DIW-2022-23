@@ -16,15 +16,16 @@ dLeft.addEventListener('click', (e) => {
     const imgFirst = document.querySelectorAll('.img')[0];
     
     //Aplicamos la animación
-    images.style.transition = "transform .5s linear";
-    images.style.transform = "translateX(-340px)";     
+    images.style.transition = "transform 1s linear";
+    images.style.transform = "translateX(-240px)";
+    actualizarEstilos('left');     
     
     //Colocamos la primera imagen en última posición
     setTimeout(() =>{    
         images.insertAdjacentElement('beforeend', imgFirst);    
         images.style.transition = "none";        
         images.style.transform = "translateX(0px)";
-    },500);
+    },1000);
 })
 
 //Evento botón derecho
@@ -36,22 +37,23 @@ dRight.addEventListener('click', (e) => {
     //Aplicamos la animación
     images.style.transition = "transform 1s linear";
     images.style.transform = "translateX(240px)";
-    actualizarEstilos();  
+    actualizarEstilos("right");  
     
     
     //Colocamos la útlima imagen en primera posición
-    setTimeout(() =>{        
-        images.style.transition = "none";
-        images.insertAdjacentElement('afterbegin', imgLast);
+    setTimeout(() =>{  
+        images.insertAdjacentElement('afterbegin', imgLast);      
+        images.style.transition = "none";        
         images.style.transform = "translateX(0px)";
         
     },1000);
 })
 
-const actualizarEstilos = () => {
+const actualizarEstilos = (direcction) => {
     const img = document.querySelectorAll('.img');
-    const n = (Math.round(img.length / 2)) - 2;
-    console.log(n)
+    const n = (direcction === 'right') ? 
+        (Math.round(img.length / 2)) - 2 : 
+        (Math.round(img.length / 2));
     const big = img[n];
     const normal = [img[(n-1)], img[(n+1)]];
     // const small = [img[(n-2)], img[(n+2)]];
