@@ -1,23 +1,23 @@
-nav {
+nav.allnav {
     background-color: #EBEBEB;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
     font-size: larger;
 }
 
-nav a {
+nav.allnav a {
     color: #F5A25D !important;
 }
 
-h1 {
+h1.allnav {
     color: #F5A25D;
 }
 
-li {
+li.allnav {
     margin: 0px 7px;
 }
 
-#search-icon {
+#search-icon-allnav {
     position: relative;
     background-color: transparent;
     border: none;
@@ -28,13 +28,13 @@ li {
     transition:all 1.7s linear;
 }
 
-#search-icon img {
+#search-icon-allnav img {
     width: 30px;
     height: 30px;
     filter: invert(89%) sepia(9%) saturate(5883%) hue-rotate(315deg) brightness(98%) contrast(96%);
 }
 
-#main-search {
+#main-search-allnav {
     position: relative;
     top: 9px;
     margin-left: 20px;
@@ -42,46 +42,46 @@ li {
     transition: all 2s;
 }
 
-#sm-login {
+#sm-login-allnav {
     margin-right: 20px;
 }
 
-#lg-login {
+#lg-login-allnav {
     height: 42px;
 }
 
-#lg-login img {
+#lg-login-allnav img {
     width: 30px;
     height: 30px;
 }
 
-.icon {
+.icon-allnav {
     width: 40px;
     height: 40px;
     filter: invert(89%) sepia(9%) saturate(5883%) hue-rotate(315deg) brightness(98%) contrast(96%);
     /*para cambiar el color https://codepen.io/sosuke/pen/Pjoqqp*/
 }
 
-.navbar-brand img {
+.navbar-brand.allnav img {
     width: 50px;
     height: auto;
 }
 
-.search {
+.search-allnav {
     color: #F5A25D;
     border: 1px solid #F5A25D;
 }
 
-.none {
+.none-allnav {
     width: 0px !important;
     visibility: hidden;
 }
 
-.abierto {
+.abierto-allnav {
     left: 385px !important;
 } 
 
-.navbar-toggler{
+.navbar-toggler.allnav{
     border: none;
     flex-direction: row;
 }
@@ -97,31 +97,31 @@ li {
     color: #F5A25D !important;
 }
 /* toggle */
-#toggle {
+#toggle-allnav {
     display: block;
     width: 38px;
     height: 40px;
   }
   
-  #toggle span:after,
-  #toggle span:before {
+  #toggle-allnav span:after,
+  #toggle-allnav span:before {
     content: "";
     position: absolute;
     left: 0;
     top: -9px;
   }
-  #toggle span:after{
+  #toggle-allnav span:after{
     top: 9px;
   }
-  #toggle span {
+  #toggle-allnav span {
     position: relative;
     display: block;
     margin-top: 14px;
   }
   
-  #toggle span,
-  #toggle span:after,
-  #toggle span:before {
+  #toggle-allnav span,
+  #toggle-allnav span:after,
+  #toggle-allnav span:before {
     width: 100%;
     height: 5px;
     background-color: #F5A25D;
@@ -131,12 +131,12 @@ li {
   }
   
   /* on activation */
-  #toggle.on span {
+  #toggle-allnav.on span {
     background-color: transparent;
   }
-  #toggle.on span:before {
+  #toggle-allnav.on span:before {
     transform: rotate(45deg) translate(5px, 5px);
   }
-  #toggle.on span:after {
+  #toggle-allnav.on span:after {
     transform: rotate(-45deg) translate(7px, -8px);
   } 
