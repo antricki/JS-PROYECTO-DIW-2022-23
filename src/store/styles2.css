@@ -36,6 +36,7 @@ div#info{
     height: 125%;
     width: 40%;
     border-radius: 3px;
+    color: #389393;
     border:1px solid #FA7F72;
 }
 #tallas:focus{
@@ -47,6 +48,7 @@ div#info{
     height: 125%;
     width: 60%;
     border-radius: 3px;
+    color: #389393;
     border:1px solid #FA7F72;
 }
 #cantidades:focus{

@@ -40,11 +40,11 @@
         <div class="row">
           <div class="col-4">
             <select class="form-contol" id="tallas" aria-label=" select example">
-              <option class="talla" value="xl">XL</option>
-              <option class="talla" value="L">L</option>
-              <option class="talla" value="M">M</option>
-              <option class="talla" value="S">S</option>
-              <option class="talla" value="XS">XS</option>
+              <option  value="xl">XL</option>
+              <option  value="L">L</option>
+              <option  value="M">M</option>
+              <option  value="S">S</option>
+              <option  value="XS">XS</option>
             </select>
           </div>
           <div class="col-8"></div>
@@ -96,11 +96,11 @@
         <h5>Cantidad:</h5>
         <div class="col-4">
           <select class="form-contol" id="cantidades" aria-label=" select example">
-            <option class="talla" value="xl">1</option>
-            <option class="talla" value="L">2</option>
-            <option class="talla" value="M">3</option>
-            <option class="talla" value="S">4</option>
-            <option class="talla" value="XS">5</option>
+            <option  value="1">1</option>
+            <option  value="2">2</option>
+            <option  value="3">3</option>
+            <option  value="4">4</option>
+            <option  value="5">5</option>
           </select>
         </div>
         <br>
