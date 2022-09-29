@@ -8,7 +8,7 @@
   <script src="/src/code/js/wScript.js"></script>
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="/src/code/css/wStyles.css">
-  
+
 </head>
 
 <body>
@@ -51,44 +51,60 @@
     </div>
   </div>
 
-  <pre>    
+  <pre>
     https://codepen.io/weimil/pen/KKRvJdL
     https://codepen.io/weimil/pen/BaxdOVY
     https://codepen.io/dreamer22001/pen/GBzbRV
   </pre>
 
-  <div id="carrousel" class="parent">
-    <div class="title col-md-12 text-center"> Waterwheel Owl Carousel 2</div>
-    <div class="col-md-12">
-      <div class="owl-carousel owl-theme">
-        <img src="https://picsum.photos/800/450/?random&1">
-        <img src="https://picsum.photos/800/450/?random&2">
-        <img src="https://picsum.photos/800/450/?random&3">
-        <img src="https://picsum.photos/800/450/?random&4">
-        <img src="https://picsum.photos/800/450/?random&5">
-        <img src="https://picsum.photos/800/450/?random&6">
-        <img src="https://picsum.photos/800/450/?random&7">
-        <img src="https://picsum.photos/800/450/?random&8">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/800/450/?random&1" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/800/450/?random&1" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/800/450/?random&1" class="d-block w-100" alt="...">
       </div>
     </div>
-    <div class="text-center">
-      <div class="status"></div>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
   <div id="contact">
     <div class="container text-center">
       <div class="container text-center">
-        <button type="button" data-bs-toggle="collapse" data-bs-target="#contactForm" aria-controls="contactForm"
-          aria-expanded="false" aria-label="Toggle contactForm">
+        <button type="button" data-bs-toggle="collapse" data-bs-target="#contactForm" aria-controls="contactForm" aria-expanded="false" aria-label="Toggle contactForm">
           Contact Us
         </button>
       </div>
     </div>
     <div class="collapse container text-center" id="contactForm">
       <div class="p-4 bg-dark">
-        <h5 class="text-white h4">Collapsed content</h5>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </div>
   </div>
