@@ -6,6 +6,21 @@ body{
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 /* css navbar */
+/*css banner*/
+.fondo__banner{
+  background: url(products/5575656_1658.jpg);
+}
+.texto__banner{
+  text-shadow: 2px 2px 20px #1b0101;
+  font-family: 'Bungee Spice', cursive;
+}
+.raya__header{
+  background-color: #389393;
+  box-shadow: 1px 1px 1px #FA7F72;
+  height: 2px;
+  width:75%;
+  margin: 10px auto;
+}
 /* css sección 1: Nuestro producto estrella */
 .oferta_container_title{
     height: 5rem;
@@ -16,7 +31,7 @@ body{
     box-shadow:2px 2px 30px #d7f0f08e;
 }
 .raya{
-    height: 1px;
+    height: 2px;
     width:75%;
     size:"10";
     background-color: #389393;
@@ -116,15 +131,14 @@ input[type="radio"] {
 }
 .pre_footer__card{
   width: 30rem;
-  height: 13rem;
+  height: 15rem;
   border: none;
+  font-size: 1.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-}
-.pre_footer__card:hover{
-  border: none;
 }
 .pre-footer_img{
   width: 6rem;
@@ -135,5 +149,13 @@ input[type="radio"] {
 }
 .pre-footer__title{
   color: #fa8072cc;
+}
+.pre_footer__card-link{
+  color:#FA7F72;
+  text-decoration: none;
+}
+.pre_footer__card-link:hover{
+  color:#389393;
+  text-decoration: none;
 }
 /* css footer */
