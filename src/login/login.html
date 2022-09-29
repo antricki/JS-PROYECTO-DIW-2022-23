@@ -11,31 +11,85 @@
 </head>
 <body>
 
-<section class="modal-dialog text-center">
+<section class="text-center">
     <div class="col-sm-3 main-section">
-        <div class="modal-content">           
+                 
             <div class="col-12 user-img" id="bloqueImg">
                 <img src="../assets/images/pfpDefault2.png" alt="" class="img-fluid" id="imgUser">
             </div>
+
+            <div class="form-box login-form">
+                <div class="form-title">
+                    <h2 class="fw-bold mb-3">Cónectate</h2>
+                </div>
                 <form class="col-12" id="formulario">
                     <div class="form-group" id="user-group">
+                        <span class="bloqueIcon">
+                            <img src="../assets/icons/circle-user-regular.svg" alt="" class="userIcon">
+                          </span>
                             <input type="email" placeholder="amoliner@gmail.com" class="form-control my-3 p-2">
                     </div>
                     <div class="form-group" id="pass-group">
                             <input type="password" placeholder="***********" class="form-control my-3 p-2">
-                    </div>          
+                    </div>
+                    
+                    <div class="row">
+                    <div class="col-4">
+                      <label for=""><input type="checkbox" name="" id="">Recuérdame</label>  
+                    </div>
+                    <div class="col-8">
+                        <a href="#">¿Olvidaste la contraseña?</a>
+                    </div>
+                    </div>
+
                     <div class="form-group">
                             <button type="button" class="btn1 mt-3 mb-5">Login</button>
                     </div>
-                    <a href="#">¿Olvidaste la contraseña?</a>
-                    <p>¿Todavía no estás registrado? <a href="#">Regístrate aquí</a></p> 
+                    
+                    <br>
 
+                    <div class="secundario">
+                    <span>¿Todavía no estás registrado?</span> <a href="#" onclick ="showRegis()" id="bSignup-show">Regístrate aquí</a> 
+                    </div>
 
                 </form>
-        </div>
+            </div>
+            
+            <div class="form-box registration-form">
+                <div class="form-title">
+                    <h2 class="fw-bold mb-3">Crea tu cuenta</h2>
+                </div>
+
+                <form action="" class="col-12" id="formulario">
+                    <div class="form-group" id="user-group">
+                        <input type="text" placeholder="Nombre de usuario" class="form-control my-3 p-2">
+                    </div>
+                    <div class="form-group" id="user-group">
+                        <input type="email" placeholder="amoliner@gmail.com" class="form-control my-3 p-2">
+                    </div>
+                    <div class="form-group" id="pass-group">
+                        <input type="password" placeholder="***********" class="form-control my-3 p-2">
+                    </div>          
+                    <div class="form-group">
+                        <button type="button" class="btn1 mt-3 mb-5">Sign up</button>
+                    </div>
+                
+                <span>¿Ya tienes cuenta?</span> <a href="#" onclick ="showLogin()" id="bLogin-show">Cónectate aquí</a>
+                <br>
+                
+
+                <div class="secundario">
+                <p>Al registrarte aceptas nuestra <a href="#">política de privacidad</a> y <a href="#">política de cookies</a> </p>
+                </div>
+
+                </form>
+            </div>
+        
     </div>
 </section>
 
+
+<script src="login.js"></script>
   
 </body>
 </html>

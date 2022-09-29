@@ -10,17 +10,24 @@ body{
 
 
 .main-section{
-    background: #76a5a5;
+    background: rgba(118, 165, 165, 0.75);
     border-radius: 30px;
     box-shadow: 12px 12px 12px #205454;
     margin: 0 auto;
     margin-top: 10%;
     padding: 15px;
+    
 }
 
 a{
     /* color: #4751b0; */
-    color: #F5A25D;
+    color: #fc7708 ;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #fc7708;
+    text-decoration:underline;
 }
 #bloqueImg{
     margin-top: -30%;   
@@ -48,4 +55,39 @@ a{
     height: auto;
     box-shadow: 2px 2px 2px #205454; 
     border-radius: 50%;
+}
+.form-control:focus {
+    border-color: #F5A25D;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 12px #F5A25D;
+
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+.registration-form{
+
+    display: none;
+}
+
+.secundario{
+    color: #6e6e6e
+    ;
+
+    font-size: x-small;
+}
+.userIcon{
+    width: 30px;
+
+}
+.bloqueIcon{
+    position: absolute;
+    align-items: center;
+    display: flex;
+    margin-left: 8px;
+    margin-top: 6px;
+}
+
+input{
+    
 }
