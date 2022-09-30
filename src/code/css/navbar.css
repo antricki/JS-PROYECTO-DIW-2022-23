@@ -22,7 +22,6 @@ li.allnav {
     background-color: transparent;
     border: none;
     color: #F5A25D;
-    top: 9px;
     left: 0px;
     z-index: 1;
     transition:all 1.7s linear;
@@ -36,7 +35,6 @@ li.allnav {
 
 #main-search-allnav {
     position: relative;
-    top: 9px;
     margin-left: 20px;
     width: 368px;
     transition: all 2s;
