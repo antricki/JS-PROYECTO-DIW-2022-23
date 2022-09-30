@@ -11,91 +11,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../code/css/navbar.css">
     <link rel="stylesheet" href="cart1.css">
 </head>
 
 <body>
     <!--Nav-->
     <?php
-    $dir=__DIR__;
-    include "../code/php/";
-    include "../code/php/navbar.php";
+        $d=__DIR__;
+        include "../code/php/route.php";
+        include "../code/php/navbar.php";
     ?>
 
     <div class="container">
         <div class="row">
             <!--Productos cesta-->
-            <div class="col-lg-9 col-xs-12">
+            <div class="col-lg-10 col-xs-12">
                 <h2>Cesta</h2>
-                <div class="row-rev">
-                    <p id="precioIzquierda">Precio</p>
-                </div>
-
+                <p id="precioIzquierda">Precio</p>
                 <hr style="color:#FA7F72;">
                 <div class="row">
                     <div class="col-3" id="imgChek">
                         <div class="form-check">
-                            <input class="form-check-input" checked type="checkbox" value="" id="checkarticulo">
+                            <input class="form-check-input" type="checkbox" value="" id="checkarticulo">
                         </div>
                         <img src="products/pen.jpg" class="imagen" alt="">
                     </div>
                     <div class="col-7" id="texto">
-                        <h2>Pen de gran programador</h2>
-                        <p> <span class="enStock">En Stock </span> <br>
-                            <b> Tamaño:</b> S <br>
-                            <b> Color:</b> Verde
-
-                        </p>
-                        <select class="form-contol" id="cantidades" aria-label=" select example">
-                            <option class="talla" value="xl">1</option>
-                            <option class="talla" value="L">2</option>
-                            <option class="talla" value="M">3</option>
-                            <option class="talla" value="S">4</option>
-                            <option class="talla" value="XS">5</option>
-                        </select>
-                        <input class="eliminar" type="submit" name="eliminar" value="Eliminar">
-
-                    </div>
-                    <div class="col-2" id="contenedorprecio">
-                        <p class="precio">8,99€</p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, quas libero.<br> Veniam fugit magni
+                        quaerat omnis deleniti sed totam necessitatibus porro nam,<br>
+                        dolore esse fugiat reiciendis nisi distinctio aperiam eos.</div>
+                    <div class="col-2" id="imgChek">
+                    <p class="precio">8,99€</p>
                     </div>
                 </div>
                 <hr style="color:#FA7F72;">
                 <div class="row">
                     <div class="col-3" id="imgChek">
                         <div class="form-check">
-                            <input class="form-check-input" checked type="checkbox" value="" id="checkarticulo">
+                            <input class="form-check-input" type="checkbox" value="" id="checkarticulo">
                         </div>
                         <img src="products/alfombrilla.jpg" class="imagen" alt="">
                     </div>
                     <div class="col-7" id="texto">
-                        <h2>Alfombrilla de gran programador</h2>
-                        <p> <span class="enStock">En Stock </span> <br>
-                            <b> Tamaño:</b> M <br>
-                            <b> Color:</b> Negra 
-                        </p>
-                        <select class="form-contol" id="cantidades" aria-label=" select example">
-                            <option class="talla" value="xl">1</option>
-                            <option class="talla" value="L">2</option>
-                            <option class="talla" value="M">3</option>
-                            <option class="talla" value="S">4</option>
-                            <option class="talla" value="XS">5</option>
-                        </select>
-                        <input class="eliminar" type="submit" name="eliminar" value="Eliminar">
-
-                    </div>
-                    <div class="col-2" id="contenedorprecio">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, quas libero.<br> Veniam fugit magni
+                        quaerat omnis deleniti sed totam necessitatibus porro nam,<br>
+                        dolore esse fugiat reiciendis nisi distinctio aperiam eos.</div>
+                    <div class="col-2" id="imgChek">
                         <p class="precio">5,99€</p>
                     </div>
                 </div>
                 <hr style="color:#FA7F72;">
-                <div class="row-rev">
-                    <p class="precio">Subtotal (2 productos):14,98€</p>
-                </div>
+
             </div>
-            <!--Asisde-->
-            <div class="col-lg-3 col-xs-12" id="aside">
-            <p class="precio">Subtotal (2 productos):14,98€</p>
+            <div class="col-lg-2 col-xs-12" id="aside">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sed mollitia suscipit in, fuga deleniti! Praesentium ab delectus quod magni et laborum, dolorum voluptas quam, qui quibusdam voluptatum hic molestias.
                 <input class="btn " id="botonpagar" type="submit" value="Tramitar pedido">
             </div>
         </div>
@@ -207,7 +177,9 @@
 
         </div>
     </div>
-
+    <?php
+    include "../code/php/footer.php";
+  ?>
     <footer class="bg-dark text-center text-white">
         <div class="container p-4">
             <section class="mb-4">

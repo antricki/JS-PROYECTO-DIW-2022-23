@@ -16,13 +16,12 @@
 </head>
 
 <body>
-  <!--Nav
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-  </nav>-->
+  <!--Nav-->
   <?php
-  include "../code/php/navbar.php"
-  ?>
+    $d=__DIR__;
+    include "../code/php/route.php";
+    include "../code/php/navbar.php";
+    ?>
 
 
   <div class="container">
@@ -222,20 +221,9 @@
     </div>
   </div>
 
-  <footer class="bg-dark text-center text-white">
-    <div class="container p-4">
-      <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-          eum harum corrupti dicta, aliquam sequi voluptate quas.
-        </p>
-    </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-  </footer>
+  <?php
+  include "../code/php/footer.php";
+  ?>
 
 </body>
 
