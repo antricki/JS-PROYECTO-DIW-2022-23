@@ -77,15 +77,17 @@ body {
 .courses__box:hover .courses__title,
 .courses__box:active .courses__title {
     position: absolute;
-    transition: all 1.5s ease-in-out;
-    transform: translateY(-90px);
+    transition: all 1s ease-in-out;
+    transform: translateY(-100px);
     color: var(--red);
 }
 
 .courses__box:hover .courses__img,
 .courses__box:active .courses__img {
-    transition: all 1.5s ease-in-out;
-    filter: blur(3px);
+    transition: all 1s linear;
+    filter: blur(3px) contrast(20%);
+    
+
 }
 
 .article {
@@ -104,8 +106,8 @@ body {
     text-shadow: 1px 1px 1px black;  
     font-size: .8rem;
     transition-property: opacity, z-index;
-    transition-duration: 1.5s;
-    transition-delay: 1s;
+    transition-duration: .8s;
+    transition-delay: .5s;
     transition-timing-function: ease-in-out;
     opacity: 1;
     z-index: 1;  
@@ -179,14 +181,14 @@ body {
 
 .modal__item::before {
     content: url(../assets/icons/caret-right-fill.svg);
-
-
 }
 
 .modal__item {
     list-style: none;
     padding-bottom: 10px;
 }
+
+
 
 
 

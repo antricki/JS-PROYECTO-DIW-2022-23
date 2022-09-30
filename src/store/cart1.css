@@ -1,0 +1,148 @@
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+h2,
+h4 {
+  color: #389393;
+}
+section.container {
+  margin-top: 2%;
+}
+
+#precioIzquierda {
+  padding-left: 88%;
+  font-size: 125%;
+}
+#imgChek {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #389393;*/
+}
+input#checkarticulo {
+  border: 1px solid #f5a25d;
+}
+input#checkarticulo::before {
+  background-color: white;
+}
+input#checkarticulo:focus {
+  box-shadow: 0px 1px 1px #f5a25d inset, 0px 0px 10px #f5a25d;
+}
+input#checkarticulo:checked {
+  background-color: #389393;
+}
+/* texto*/
+.enStock {
+  font-size: 120%;
+  color: seagreen;
+}
+#cantidades {
+  border-radius: 3px;
+  color: #389393;
+  border: 1px solid #fa7f72;
+}
+#cantidades:focus {
+  border: 1px solid #fa7f72;
+  box-shadow: 0px 1px 1px #fa7f72 inset, 0px 0px 10px #fa7f72;
+}
+
+.eliminar {
+  border: 0px;
+  background-color: white;
+  color: #389393;
+}
+.eliminar:hover {
+  color: #fa7f72;
+}
+/*precios*/
+#contenedorprecio {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+div.row-rev {
+  display: flex;
+  flex-direction: row-reverse;
+}
+p.precio {
+  font-size: 150%;
+}
+
+/*imagenes*/
+img.imagen {
+  width: 70%;
+}
+/*aside*/
+#aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f5a25d;
+  height:fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 4%;
+}
+#botonpagar {
+  color: white;
+  background-color: #389393;
+}
+#botonpagar:hover {
+  color: #f5a25d;
+}
+/*relacionados*/
+div#relacionados {
+  background-color: #ebebeb;
+  margin-top: 4%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+div#relacionados h2 {
+  padding-top: 2%;
+}
+div#relacionados div#producRel {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+div.card {
+  border: 1px solid #fa7f72;
+}
+div.card:hover {
+  box-shadow: #389393 0px 5px 15px;
+}
+/*estrellas*/
+
+form.destacados_estrellas {
+  margin-right: 30%;
+}
+
+div.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}

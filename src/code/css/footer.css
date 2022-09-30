@@ -1,38 +1,38 @@
-footer {
+footer.allfooter {
     background-color: #389393;
     color: white;
     text-align: center;
 }
 
-a {
+a.allfooter {
     margin: 0 5px;
 }
 
-.contacto img {
+.contacto-allfooter img {
     width: 2.5rem;
     height: 2.5rem;
     filter: invert(97%) sepia(2%) saturate(470%) hue-rotate(275deg) brightness(116%) contrast(100%);
     /* cambiar color : https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
-.pags img {
+.pags-allfooter img {
     height: 2.5rem;
     width: auto;
 }
 
-.legal {
+.legal-allfooter {
     cursor: pointer;
 }
 
-.footer-down {
+.footer-down-allfooter {
     
     font-size: .7rem;
 }
 
-.footer-up {
+.footer-up-allfooter {
     margin-bottom: 20px;
 }
 
-.container {
+.container.allfooter {
     padding: 20px 0;
 }
