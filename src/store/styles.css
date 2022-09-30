@@ -159,3 +159,23 @@ input[type="radio"] {
   text-decoration: none;
 }
 /* css footer */
+
+/* css página tramitarPedido */
+.banner__title{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #389393;
+}
+
+.tramitar_pedido-fila{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+.pago__img-icon{
+  width: 50px;
+  height: 50px;
+}
