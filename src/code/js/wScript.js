@@ -1,45 +1,42 @@
-function coverFlowEfx(e) {
-    if ($(".owl-dots")) {
-        $(".owl-dots").remove();
+function toggleExtraInfoSelector(obj) {
+    let selectors = document.getElementsByClassName("children-selector");
+    for (let i = 0; i < selectors.length; i++) {
+        addClass(selectors[i], "display-none")
     }
-
-    idx = e.item.index;
-    
-    $(".owl-item.big").removeClass("big");
-    $(".owl-item.medium").removeClass("medium");
-    $(".owl-item.mdright").removeClass("mdright");
-    $(".owl-item.mdleft").removeClass("mdleft");
-    $(".owl-item.smallRight").removeClass("smallRight");
-    $(".owl-item.smallLeft").removeClass("smallLeft");
-    $(".owl-item").eq(idx - 1).addClass("medium mdleft");
-    $(".owl-item").eq(idx).addClass("big");
-    $(".owl-item").eq(idx + 1).addClass("medium mdright");
-    $(".owl-item").eq(idx + 2).addClass("smallRight");
-    $(".owl-item").eq(idx - 2).addClass("smallLeft");
+    // 
+    let selectors2 = document.getElementsByClassName("info-pannel");
+    for (let i = 0; i < selectors2.length; i++) {
+        addClass(selectors2[i], "display-none")
+    }
+    if (obj.value === "none") return;
+    removeClass(document.getElementById(obj.value), "display-none")
 }
 
-$(".owl-carousel").owlCarousel({
-    center: true,
-    loop: true,
-    nav: true,
-    items: 3,
-    navText: [
-        '<i class="fas fa-chevron-left"></i>',
-        '<i class="fas fa-chevron-right"></i>'
-    ],
-    responsive: {
-        0: {
-            items: 1
-        },
-        768: {
-            items: 2
-        },
-        990: {
-            items: 3
-        }
-    },
-    onInitialized: coverFlowEfx,
-    onTranslate: coverFlowEfx
-});
+function toggleInfoPanel(obj) {
+    let selectors2 = document.getElementsByClassName("info-pannel");
+    for (let i = 0; i < selectors2.length; i++) {
+        addClass(selectors2[i], "display-none")
+    }
+    if (obj.value === "none") return;
+    removeClass(document.getElementById(obj.value), "display-none")
+}
 
-alert("aaaaaaaaa");
+function hasClass(elem, className) {
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+
+function addClass(elem, className) {
+    if (!hasClass(elem, className)) {
+        elem.className += ' ' + className;
+    }
+}
+
+function removeClass(elem, className) {
+    var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}

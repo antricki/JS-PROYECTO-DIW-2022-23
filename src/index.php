@@ -4,21 +4,20 @@
   <title>Inicio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/src/code/js/wScript.js"></script>
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="/src/code/css/wStyles.css">
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
   
+  <script src="code/js/wScript.js"></script>
+  <link rel="stylesheet" href="code/css/wStyles.css">
 </head>
 
 <body>
 
   <div id="video">
     <video controls class="video">
-      <source src="/src/assets/videos/movie.mp4" type="video/mp4">
+      <source src="assets/videos/movie.mp4" type="video/mp4">
     </video>
   </div>
-
 
   <div id="presentation" class="container text-center">
     <div class="row">
@@ -51,46 +50,111 @@
     </div>
   </div>
 
-  <pre>    
-    https://codepen.io/weimil/pen/KKRvJdL
-    https://codepen.io/weimil/pen/BaxdOVY
-    https://codepen.io/dreamer22001/pen/GBzbRV
-  </pre>
-
-  <div id="carrousel" class="parent">
-    <div class="title col-md-12 text-center"> Waterwheel Owl Carousel 2</div>
-    <div class="col-md-12">
-      <div class="owl-carousel owl-theme">
-        <img src="https://picsum.photos/800/450/?random&1">
-        <img src="https://picsum.photos/800/450/?random&2">
-        <img src="https://picsum.photos/800/450/?random&3">
-        <img src="https://picsum.photos/800/450/?random&4">
-        <img src="https://picsum.photos/800/450/?random&5">
-        <img src="https://picsum.photos/800/450/?random&6">
-        <img src="https://picsum.photos/800/450/?random&7">
-        <img src="https://picsum.photos/800/450/?random&8">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/800/450/?random&1" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/800/450/?random&1" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/800/450/?random&1" class="d-block w-100" alt="...">
       </div>
     </div>
-    <div class="text-center">
-      <div class="status"></div>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
   <div id="contact">
+  <div id="contact">
     <div class="container text-center">
-      <div class="container text-center">
-        <button type="button" data-bs-toggle="collapse" data-bs-target="#contactForm" aria-controls="contactForm"
-          aria-expanded="false" aria-label="Toggle contactForm">
-          Contact Us
-        </button>
-      </div>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        Contact Us
+      </a>
     </div>
-    <div class="collapse container text-center" id="contactForm">
-      <div class="p-4 bg-dark">
-        <h5 class="text-white h4">Collapsed content</h5>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
+
+    <div class="collapse container text-center" id="collapseExample">
+      <div class="row">
+        <div class="col-4 bg-danger p-1">
+          <div class="m-1 p-1 bg-success">
+            <div class="m-1">
+              <select class="form-select" id="main-selector" onchange="toggleExtraInfoSelector(this)">
+                <option value="none" selected>Open this select menu</option>
+                <option value="selector-courses-info">Couses</option>
+                <option value="selector-general-info">Genral</option>
+              </select>
+
+              <select class="form-select display-none children-selector" id="selector-courses-info" onchange="toggleInfoPanel(this)">
+                <option value="none" selected>Open this select menu</option>
+                <option value="smr-info">SMR</option>
+                <option value="dam-info">DAM</option>
+                <option value="daw-info">DAW</option>
+                <option value="asir-info">ASIR</option>
+              </select>
+
+              <select class="form-select display-none children-selector" id="selector-general-info" onchange="toggleInfoPanel(this)">
+                <option value="none" selected>Open this select menu</option>
+                <option value="location">Ubicación</option>
+                <option value="patata">Patata</option>
+                <option value="tomate">Tomate</option>
+                <option value="cebolla">Cebolla</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-8 bg-danger p-1">
+          <div class="m-1 bg-success" id="test">
+            <div class="display-none info-pannel" id="smr-info">
+              [SMR] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus adipisci doloribus nesciunt
+              sapiente labore accusantium illo. Quibusdam dicta unde, sapiente tenetur, cumque praesentium sunt
+              molestias illum odit nulla vel numquam!
+            </div>
+            <div class="display-none info-pannel" id="dam-info">
+              [DAM] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus adipisci doloribus nesciunt
+              sapiente labore accusantium illo. Quibusdam dicta unde, sapiente tenetur, cumque praesentium sunt
+              molestias illum odit nulla vel numquam!
+            </div>
+            <div class="display-none info-pannel" id="daw-info">
+              [DAW] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus adipisci doloribus nesciunt
+              sapiente labore accusantium illo. Quibusdam dicta unde, sapiente tenetur, cumque praesentium sunt
+              molestias illum odit nulla vel numquam!
+            </div>
+            <div class="display-none info-pannel" id="asir-info">
+              [ASIR] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus adipisci doloribus nesciunt
+              sapiente labore accusantium illo. Quibusdam dicta unde, sapiente tenetur, cumque praesentium sunt
+              molestias illum odit nulla vel numquam!
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form> -->
     </div>
+  </div>
   </div>
 
   <div id="presentation" class="container text-center">
