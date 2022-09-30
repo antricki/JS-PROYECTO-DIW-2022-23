@@ -83,6 +83,11 @@ img.imagen {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 4%;
+  border-radius: 5px;
+}
+.badge{
+  margin-left: 35%;
+  background-color: #fa7f72;
 }
 #botonpagar {
   color: white;

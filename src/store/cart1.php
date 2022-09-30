@@ -87,14 +87,23 @@
                     <hr style="color:#FA7F72;">
                 </div>
                 <div class="row-rev">
-                    <p class="precio">Subtotal (2 productos):14,98€</p>
+                    <p class="precio">Subtotal (<span class="numProductos">2</span> productos):14,98€</p>
+
                 </div>
             </div>
             <!--Espacio-->
             <div class="col-lg-1"></div>
             <!--Asisde-->
             <div class="col-lg-3 col-xs-12" id="aside">
-                <p class="precio">Subtotal (2 productos):14,98€</p>
+
+                <p class="precio">Subtotal (<span class="numProductos">2</span> productos):14,98€</p>
+                <div class="container-fluid">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Pen de programador <span class="badge rounded-pill">1</span></li> 
+                    <li class="list-group-item">Pen de programador <span class="badge rounded-pill">1</span></li>
+                </ul>
+                </div>
+                <br>
                 <input class="btn " id="botonpagar" type="submit" value="Tramitar pedido">
             </div>
         </div>
