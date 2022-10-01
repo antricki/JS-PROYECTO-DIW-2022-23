@@ -11,6 +11,12 @@
 </head>
 <body>
 
+<?php
+  $d = __DIR__;
+  include "../code/php/route.php";
+  include "../code/php/navbar.php";
+  ?>
+
 <section class="text-center">
     <div class="col-sm-3 main-section">
                  
@@ -24,13 +30,35 @@
                 </div>
                 <form class="col-12" id="formulario">
                     <div class="form-group" id="user-group">
-                        <span class="bloqueIcon">
-                            <img src="../assets/icons/circle-user-regular.svg" alt="" class="userIcon">
-                          </span>
-                            <input type="email" placeholder="amoliner@gmail.com" class="form-control my-3 p-2">
+                        
+                        <div class="userPlaceholder">
+                            <div class="tempIcon">
+                                <img src="../assets/icons/circle-user-solid.svg" alt="" class="userIcon">
+                            </div>
+
+                            <div class="tempText">                        
+                                <span class="textoTemporal">
+                                    Correo electrónico o usuario
+                                </span>
+                            </div>
+                        </div>
+
+                            <input onclick="hideUserPlaceholder()" onblur="showUserPlaceholder()" id= "user" type="email" placeholder="" class="form-control my-3 p-2">
                     </div>
                     <div class="form-group" id="pass-group">
-                            <input type="password" placeholder="***********" class="form-control my-3 p-2">
+                        <div class="passPlaceholder">
+                            <div class="tempIcon">
+                                <img src="../assets/icons/lock-solid.svg" alt="" class="passIcon">
+                            </div>
+
+                            <div class="tempText">                        
+                                <span class="textoTemporal">
+                                    Contraseña
+                                </span>
+
+                        </div>
+                    </div>
+                            <input onclick="hidePassPlaceholder()" onblur="showPassPlaceholder()" id ="pass" type="password" placeholder="" class="form-control my-3 p-2">
                     </div>
                     
                     <div class="row">
@@ -62,10 +90,23 @@
 
                 <form action="" class="col-12" id="formulario">
                     <div class="form-group" id="user-group">
-                        <input type="text" placeholder="Nombre de usuario" class="form-control my-3 p-2">
+                        <div class="userPlaceholder">
+                                <div class="tempIcon">
+                                    <img src="../assets/icons/circle-user-solid.svg" alt="" class="userIcon">
+                                </div>
+
+                                <div class="tempText">                        
+                                    <span class="textoTemporal">
+                                        usuario
+                                    </span>
+                                </div>
+                        </div>
+
+                        <input onclick="hideUserPlaceholder()" onblur="showUserPlaceholder()" id= "user" type="text" placeholder="" class="form-control my-3 p-2">
+                        
                     </div>
                     <div class="form-group" id="user-group">
-                        <input type="email" placeholder="amoliner@gmail.com" class="form-control my-3 p-2">
+                        <input  type="email" placeholder="amoliner@gmail.com" class="form-control my-3 p-2">
                     </div>
                     <div class="form-group" id="pass-group">
                         <input type="password" placeholder="***********" class="form-control my-3 p-2">
@@ -87,9 +128,12 @@
         
     </div>
 </section>
-
+<br>
 
 <script src="login.js"></script>
-  
+ 
+<?php
+  include "../code/php/footer.php";
+  ?>
 </body>
 </html>
