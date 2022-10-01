@@ -13,7 +13,7 @@
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body >
+<body>
     <!-- navegador -->
     <!-- banner -->
     <section class="hero-banner bg-light py-5">
@@ -48,17 +48,14 @@
                         <input type="text" class="form-control" id="full_name_id" name="full_name">
                     </div>    
                 
-                    <div class="form-group"> <!-- Número de teléfono -->
-                        <label for="street1_id" class="control-label">Número de teléfono</label>
-                        <label for="street1_id" class="control-label"><a href="">¿Por qué?</a></label>
-                        <input type="text" class="form-control" id="street1_id" name="street1">
-                        <!-- mensaje de información, alerta -->
-                        <div id="liveAlertPlaceholder"></div>
-                        <button type="button" class="btn" id="liveAlertBtn">¿Por qué?</button>
+                    <div class="form-group "> <!-- Número de teléfono -->
+                        <label for="tlf" class="control-label">Télefono</label>
+                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Para que se ponga en contacto contigo la empresa de reparto en caso de necesidad.">¿Por qué?</a>
+                        <input type="text" class="form-control" id="street1_id" name="telefono">
                     </div>                    
                                             
                     <div class="form-group"> <!-- dirección -->
-                        <label for="street2_id" class="control-label">Dirección</label>
+                        <label for="dirección" class="control-label">Dirección</label>
                         <input type="text" class="form-control" id="street2_id" name="street2" placeholder="Nombre y número de la calle" required>
                         <input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartamento, suite, unidad, edificio o piso" required>
                     </div> 
@@ -128,13 +125,55 @@
                                 <option value="Zaragoza">Zaragoza</option>
                             </select>
                     <div>                                                                           
-                    <div class="form-group"> <!-- Submit Button -->
+                    <div class=""> <!-- Submit Button -->
                         <button type="submit" class="btn btn-warning">Usar esta dirección</button>
                     </div>      
                 </form>
         
             </section>
 
+        </div>
+        <!-- Resumen del pedido -->
+        <div class="col-md-3">
+            <div class="right border">
+                <div class="header">Resumen del pedido</div>
+                <div class="row item">
+                    <div class="col-4 align-self-center"><img class="img-fluid" src="products/botella2.jpg"></div>
+                    <div class="col-8">
+                        <div class="row"><b>26.99 €</b></div>
+                        <div class="row text-muted">Botella</div>
+                        <div class="row">Qty:1</div>
+                    </div>
+                </div>
+                <!-- sumario de la compra -->
+                <div class="row item">
+                    <div class="col-4 align-self-center"><img class="img-fluid" src="products/alfombrilla.jpg"></div>
+                    <div class="col-8">
+                        <div class="row"><b>19.99 €</b></div>
+                        <div class="row text-muted">Alfombrilla para ratón</div>
+                        <div class="row">Qty:1</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row lower">
+                    <div class="col text-left">Subtotal</div>
+                    <div class="col text-right">46.98 €</div>
+                </div>
+                <div class="row lower">
+                    <div class="col text-left">Envío</div>
+                    <div class="col text-right">Free</div>
+                </div>
+                <div class="row lower">
+                    <div class="col text-left">Descuento</div>
+                    <div class="col text-right">3.10€</div>
+                </div>
+                <div class="row lower">
+                    <div class="col text-left"><b>Importe total</b></div>
+                    <div class="col text-right"><b>43.88 €</b></div>
+                </div>
+                <button class="btn btn-pedido">Comprar</button>
+                <p class="text-muted text-center">Complimentary Shipping & Returns</p>
+            </div>
         </div>
         <hr class="raya"/>
         <div class="col-5">
@@ -181,7 +220,7 @@
                         </div> 
                         <label for="">Guardar para futuras compras</label>
                         <!-- mensaje de información, alerta -->
-                        <a href="#">Más Información</a>
+                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Tu información referente al pago está encriptada y es segura. Guardar tu método de pago te ayudará a realizar compras futuras más rápido.">Más información</a>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                             <label class="form-check-label" for="gridRadios1">
@@ -214,7 +253,7 @@
                 <div class="col-auto">
                     <button type="submit" class="btn btn-warning">Enviar</button>
                 </div>
-        </section>
+            </section>
 
         </div>
     </div>
