@@ -168,20 +168,19 @@ input[type="radio"] {
   align-items: center;
   color: #389393;
 }
-
-.tramitar_pedido-fila{
+.tramitar__pedido{
   display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
 }
-.pago__img-icon{
-  width: 50px;
+.tramitar__pedido-contacto{
+  flex-direction: column;
+
+}
+.tramitar__pedido-resumen{
+  flex-direction: column;
+}
+.contacto__envio-pago__img{
+  width: 100px;
   height: 50px;
-}
-.accordion{
-  width: 200px;
-  border: none;
 }
 
 
