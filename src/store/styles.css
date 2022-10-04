@@ -161,6 +161,9 @@ input[type="radio"] {
 /* css footer */
 
 /* css página tramitarPedido */
+.banner{
+  background-color: #dbd8d88f;
+}
 .banner__title{
   height: 30px;
   display: flex;
@@ -168,6 +171,15 @@ input[type="radio"] {
   align-items: center;
   color: #389393;
 }
+.contacto__direccion-title__text{
+  color: #389393;
+}
+
+/* css para el formulario de facturacion y que desaparezca*/
+.datos_facturacion_hidden{
+  display: hidden;
+}
+
 .tramitar__pedido{
   display: flex;
 }
@@ -188,6 +200,23 @@ input[type="radio"] {
 }
 .contacto__direccion-title{
   display: flex;
+}
+.tramitar__pedido-resumen-inf{
+  display: flex;
+  
+}
+.tramitar__pedido-btn{
+  border: none;
+  width: 100%;
+  background-color: #389393;
+  color: #EBEBEB;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px black;
+  font-size: 1.5em;
+}
+.img_tramitar__pedido_icon{
+  width: 25px;
+  height: 25px;
 }
 
 
