@@ -20,7 +20,7 @@
   <?php
   $d = __DIR__;
   include "../code/php/route.php";
-  include "../code/php/navbar.php";
+  include "../code/php/navbar_store.php";
   ?>
 
 
@@ -107,7 +107,7 @@
         <br>
         <div class="form-check">
           <input class="form-check-input" id="ticketregalo" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
+          <label class="form-check-label" id="textoTicketRegalo" for="flexCheckDefault">
             Añade un ticket de regalo para facilitar las devoluciones
           </label>
         </div>
@@ -222,7 +222,42 @@
       </div>
     </div>
   </div>
+  <!--PreFooter-->
+  <div class="row pre-footer container-fluid">
+    <div class="col">
+      <div class="pre_footer__card">
+        <img src="products/camion-de-reparto.png" class="card-img-top pre-footer_img" alt="...">
+        <div class="card-body pre-footer__body">
+          <h5 class="card-title pre-footer__title">Envío gratis con 2 o más artículos</h5>
+          <p class="card-text">Da igual lo que compres, con solo 2 artículos en tu pedido, envío gratis :)</p>
+          <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+        </div>
+      </div>
 
+    </div>
+    <div class="col">
+      <div class="pre_footer__card">
+        <img src="products/reloj-de-pared.png" class="card-img-top pre-footer_img" alt="...">
+        <div class="card-body pre-footer__body">
+          <h5 class="card-title pre-footer__title">Tu pedido en tu casa en 24h</h5>
+          <p class="card-text">Envío express con entrega al día siguiente si compras de lunes a jueves antes de las 17:00 (solo península)</p>
+          <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col">
+      <div class="pre_footer__card">
+        <img src="products/regreso.png" class="card-img-top pre-footer_img" alt="...">
+        <div class="card-body pre-footer__body">
+          <h5 class="card-title pre-footer__title">Devoluciones</h5>
+          <p class="card-text">60 días para efectuar cambios o devoluciones. ¡Sin preguntas!</p>
+          <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
   <?php
   include "../code/php/footer.php";
   ?>
