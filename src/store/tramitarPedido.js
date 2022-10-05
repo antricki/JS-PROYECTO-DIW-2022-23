@@ -1,10 +1,12 @@
-const datos_fact_envio = document.getElementById("misma_direccion"); //checkbox
-const datos_fact = document.getElementById('datos_facturacion_ver') //formulario facturacion
+const checkbox = document.querySelector('checkbox'); //checkbox
+const datos_fact_ver = document.getElementById('datos_facturacion_ver') //formulario facturacion
 
-
-// evento para que aparezca y desaparezca el nuevo formulario para la facturacion
-datos_fact_envio.addEventListener('click', (e)=>{
-    if(datos_fact_envio.checked){
-        datos_fact.classList.add('datos_facturacion_hidden');
+// funcion para que desaparezca y desaparezca el formulario de datos de envío
+function ocultaForm(){    
+    if(datos_fact_ver.style.display === "none"){ //si no se ve
+        datos_fact_ver.style.display="block";
+    }else{
+        datos_fact_ver.style.display="none"; //si se ve
     }
-})
+}
+

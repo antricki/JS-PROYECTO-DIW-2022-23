@@ -13,11 +13,22 @@
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+<!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
+    • Naranja: #F5A25D un 10% para aquello que llama a la acción.
+    • Rojo: #FA7F72 solo para pequeños detalles o pequeños bloques de texto
+    • Azul: #389393 para el footer 
+    https://www.shutterstock.com/es/create/home para crear imagenes-->
 <body>
     <header>
     <!-- navegador -->
+    <?php
+        $d=__DIR__;
+        include "../code/php/route.php";
+        include "../code/php/navbar_store.php";
+    ?>
+
     <!-- banner -->
-    <section class="hero-banner banner py-5">
+    <section class="hero-banner banner py-3">
         <div class="container-fluid">
             <div class="row row align-items-center">
                 <div class="col banner__title">
@@ -28,8 +39,8 @@
     </section>
     </header>
     <!-- Pago y envío -->
-    <main>
-        <div class="container-fluid tramitar__pedido posicion">
+    <main class="main__tramitar__pedido d-flex">
+        <div class="container-fluid tramitar__pedido d-flex posicion">
             <div class="row tramitar__pedido-contacto">
                 <!-- datos de contacto y envío -->
                 <div class="col contacto__direccion form-control">
@@ -43,13 +54,13 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2"     placeholder="Apellidos" required>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2"     placeholder="Télefono" required>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Télefono" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2"     placeholder="Calle" required>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle" required>
                             </div>
                             <div class="mb-3">
                                 <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ciudad" required>
@@ -63,11 +74,12 @@
                         </form>
                           <div class="custom-control custom-checkbox">
                             <div class="container_checkbox">
-                                <input type="checkbox" class="custom-control-input" id="misma-direccion" checked>
+                                <input type="checkbox" class="custom-control-input checkbox" id="checkbox" value="" onclick="ocultaForm()">
                                 <label for="misma-direccion" class="custom-control-label" id="datos_facturacion_envio">Los datos de facturación y envío son los mismos.</label>
                             </div>
                             <!-- formulario de faturacion que se ve y hago click desaparece -->
-                            <div id="datos_facturacion_ver">
+                            <div id="datos_facturacion_ver" class="datos_facturacion_ver">
+                                <h3 class="contacto__direccion-title__text">Datos de envío</h3>
                                 <form action="#" method="post" class="datos_facturacion_envio" >
                                     <div class="mb-3">
                                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre" required>
@@ -163,8 +175,7 @@
                                 </div>
                                 <!-- mensaje de información, alerta -->
                                 <div class="mb-3">
-                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta.
-                                    El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece.">¿Qué es CVC/CVV?</a>
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece.">¿Qué es CVC/CVV?</a>
                                 </div>
                             </div>
                         </div>
@@ -214,6 +225,9 @@
     </main>
     <!-- FIN pago y envío -->
     <!-- footer -->
+    <?php
+    include "../code/php/footer.php";
+    ?>
     <!-- ENLACE PARA EL JS -->
     <script src="tramitarPedido.js"></script>
 </body>
