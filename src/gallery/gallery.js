@@ -20,12 +20,10 @@ const debounce = (func, delay) => {
   };
 };
 
-//Evento botón izquierdo
-dLeft.addEventListener(
-  "click",
-  debounce(() => {
-    //Identificamos el primer elemento
-    const imgFirst = document.querySelectorAll(".img")[0];
+//Controla el movimiento izquierdo
+const moveLeft = () => {
+      //Identificamos el primer elemento
+      const imgFirst = document.querySelectorAll(".img")[0];
 
     //Aplicamos la animación
     images.style.transition = "transform .5s linear";
