@@ -1,73 +1,81 @@
 //DECLARACIÓN DE CONSTANTES
 
-//Contenedor con todas las imágenes
-const images = document.getElementById("images");
-
 //Identificamos los botones
-const dLeft = document.getElementById("dotLeft");
-const dRight = document.getElementById("dotRight");
+const dLeft = document.querySelectorAll(".dotLeft");
+const dRight = document.querySelectorAll(".dotRight");
 
-//EVENTOS
+//********EVENTOS********
 
-//Función antirrebote
-const debounce = (func, delay) => {
-  let debounceTimer;
-  return function () {
-    const context = this;
-    const args = arguments;
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => func.apply(context, args), delay);
-  };
-};
+//--Objetos y funciones para los eventos--
 
-//Controla el movimiento izquierdo
-const moveLeft = () => {
-      //Identificamos el primer elemento
-      const imgFirst = document.querySelectorAll(".img")[0];
+//Objeto para que los evento se ejecuten una sóla vez
+//Al desactivar el evento una vez se ejecute
+const onceTime = {
+  once: true
+}
 
-    //Aplicamos la animación
-    images.style.transition = "transform .5s linear";
-    images.style.transform = "translateX(-240px)";
-    actualizarEstilos("left");
+//Movimiento a la izquierda
+const moveLeft = (e) => {
+  //Identificamos el carrusel seleccionado
+  let carrusel;
+  if(e.target.nodeName === 'IMG') carrusel = e.target.parentElement.parentElement.nextElementSibling;
+  else carrusel = e.target.parentElement.nextElementSibling;
+  //Identificamos el primer elemento
+  const imgFirst = carrusel.querySelectorAll(".img")[0];
+  
 
-    //Colocamos la primera imagen en última posición
-    setTimeout(() => {
-      images.insertAdjacentElement("beforeend", imgFirst);
-      images.style.transition = "none";
-      images.style.transform = "translateX(0px)";
-    }, 500);
-  }, 3000)
-);
+  //Aplicamos la animación
+  carrusel.style.transition = "transform .5s linear";
+  carrusel.style.transform = "translateX(-240px)";
+  actualizarEstilos("left", carrusel);
 
-//Evento botón derecho
-dRight.addEventListener("click", debounce(() => {
+  //Colocamos la primera imagen en última posición
+  setTimeout(() => {
+    carrusel.insertAdjacentElement("beforeend", imgFirst);
+    carrusel.style.transition = "none";
+    carrusel.style.transform = "translateX(0px)";
+    //Volvemos a activar el evento, si no sólo se ejecutaría el evento una vez
+    if(e.target.nodeName === 'IMG') e.target.parentElement.addEventListener("click", moveLeft, onceTime);
+    else e.target.addEventListener("click", moveLeft, onceTime);    
+  }, 500);
+}
+
+//Movimiento a la derecha
+const moveRight = (e) => {
+  //Identificamos el carrusel seleccionado
+  let carrusel;
+  if(e.target.nodeName === 'IMG') carrusel = e.target.parentElement.parentElement.nextElementSibling;
+  else carrusel = e.target.parentElement.nextElementSibling;
+  
   //Identificamos el último elemento
-  const img = document.querySelectorAll(".img");
+  const img = carrusel.querySelectorAll(".img");
   const imgLast = img[img.length - 1];
 
   //Aplicamos la animación
-  images.style.transition = "transform .5s linear";
-  images.style.transform = "translateX(240px)";
-  actualizarEstilos("right");
+  carrusel.style.transition = "transform .5s linear";
+  carrusel.style.transform = "translateX(240px)";
+  actualizarEstilos("right", carrusel);
 
   //Colocamos la útlima imagen en primera posición
   setTimeout(() => {
-    images.insertAdjacentElement("afterbegin", imgLast);
-    images.style.transition = "none";
-    images.style.transform = "translateX(0px)";
+    carrusel.insertAdjacentElement("afterbegin", imgLast);
+    carrusel.style.transition = "none";
+    carrusel.style.transform = "translateX(0px)";
+    //Volvemos a activar el evento, si no sólo se ejecutaría el evento una vez
+    if(e.target.nodeName === 'IMG') e.target.parentElement.addEventListener("click", moveRight, onceTime);
+    else e.target.addEventListener("click", moveRight, onceTime);
   }, 500);
-}, 300)
-);
+}
 
-const actualizarEstilos = (direcction) => {
-  const img = document.querySelectorAll(".img");
+//Actualiza los estilos
+const actualizarEstilos = (direcction, grupImages) => {
+  const img = grupImages.querySelectorAll(".img");
   const n =
     direcction === "right"
       ? Math.round(img.length / 2) - 2
       : Math.round(img.length / 2);
   const big = img[n];
   const normal = [img[n - 1], img[n + 1]];
-  // const small = [img[(n-2)], img[(n+2)]];
   img.forEach((image) => {
     image.classList.remove("img--big", "img--normal");
   });
@@ -76,3 +84,11 @@ const actualizarEstilos = (direcction) => {
     image.classList.add("img--normal");
   });
 };
+
+//--Eventos--
+
+//Evento a los botones izquierdos
+dLeft.forEach((btn) => btn.addEventListener("click", moveLeft, onceTime));
+
+//Evento a los botones derechos
+dRight.forEach((btn) => btn.addEventListener("click", moveRight, onceTime));
