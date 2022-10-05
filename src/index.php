@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Inicio</title>
+  <title>Index</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -87,7 +87,7 @@
             <div class="m-2">
               <select class="form-select" id="main-selector" onchange="toggleExtraInfoSelector(this)">
                 <option value="none" selected>[None]</option>
-                <option value="course-selector">[Couses]</option>
+                <option value="course-selector">[Courses]</option>
                 <option value="second-selector">[Second]</option>
                 <option value="third-selector">[Third]</option>
               </select>
@@ -118,7 +118,7 @@
                 <option value="boron-info">[Boron]</option>
                 <option value="carbon-info">[Carbon]</option>
                 <option value="nitrogen-info">[Nitrogen]</option>
-                <option value="oxigen-info">[Oxigen]</option>
+                <option value="oxygen-info">[Oxygen]</option>
               </select>
             </div>
           </div>
@@ -126,22 +126,22 @@
 
         <div class="col-8 bg-danger p-1 text-center">
           <div class="m-1 bg-success text-center p-5" id="test">
-            <div class="info-pannel bg-warning" id="none">[None]</div>
+            <div class="info-panel bg-warning" id="none">[None]</div>
 
-            <div class="display-none info-pannel bg-warning" id="smr-info">[SMR]</div>
-            <div class="display-none info-pannel bg-warning" id="dam-info">[DAM]</div>
-            <div class="display-none info-pannel bg-warning" id="daw-info">[DAW]</div>
-            <div class="display-none info-pannel bg-warning" id="asir-info">[ASIR]</div>
+            <div class="display-none info-panel bg-warning" id="smr-info">[SMR]</div>
+            <div class="display-none info-panel bg-warning" id="dam-info">[DAM]</div>
+            <div class="display-none info-panel bg-warning" id="daw-info">[DAW]</div>
+            <div class="display-none info-panel bg-warning" id="asir-info">[ASIR]</div>
 
-            <div class="display-none info-pannel bg-warning" id="hydrogen-info">[Hydrogen]</div>
-            <div class="display-none info-pannel bg-warning" id="helium-info">[Helium]</div>
-            <div class="display-none info-pannel bg-warning" id="lithium-info">[Lithium]</div>
-            <div class="display-none info-pannel bg-warning" id="beryllium-info">[Beryllium]</div>
+            <div class="display-none info-panel bg-warning" id="hydrogen-info">[Hydrogen]</div>
+            <div class="display-none info-panel bg-warning" id="helium-info">[Helium]</div>
+            <div class="display-none info-panel bg-warning" id="lithium-info">[Lithium]</div>
+            <div class="display-none info-panel bg-warning" id="beryllium-info">[Beryllium]</div>
 
-            <div class="display-none info-pannel bg-warning" id="boron-info">[Boron]</div>
-            <div class="display-none info-pannel bg-warning" id="carbon-info">[Carbon]</div>
-            <div class="display-none info-pannel bg-warning" id="nitrogen-info">[Nitrogen]</div>
-            <div class="display-none info-pannel bg-warning" id="oxigen-info">[Oxigen]</div>
+            <div class="display-none info-panel bg-warning" id="boron-info">[Boron]</div>
+            <div class="display-none info-panel bg-warning" id="carbon-info">[Carbon]</div>
+            <div class="display-none info-panel bg-warning" id="nitrogen-info">[Nitrogen]</div>
+            <div class="display-none info-panel bg-warning" id="oxygen-info">[Oxygen]</div>
           </div>
         </div>
       </div>
@@ -164,7 +164,6 @@
         </form> -->
     </div>
   </div>
-
   <div id="presentation" class="container text-center">
     <div class="row">
       <div class="col bg-danger">

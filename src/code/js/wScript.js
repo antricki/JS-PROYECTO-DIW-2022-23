@@ -8,7 +8,7 @@ function toggleExtraInfoSelector(obj = null) {
 }
 
 function toggleInfoPanel(obj = null) {
-    let selectors = document.getElementsByClassName("info-pannel");
+    let selectors = document.getElementsByClassName("info-panel");
     for (let i = 0; i < selectors.length; i++) {
         addClass(selectors[i], "display-none");
     }
