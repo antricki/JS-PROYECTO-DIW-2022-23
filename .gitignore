@@ -134,3 +134,13 @@ private
 */private
 *.private
 *.private.*
+
+# Ignore big files 
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Ignore IDE files
+.vscode
+.idea
