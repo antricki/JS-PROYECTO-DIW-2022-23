@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="../code/js/cart1.js"></script>
+    <script src="cart1.js"></script>
     <link rel="stylesheet" href="cart1.css">
 </head>
 
@@ -36,7 +36,7 @@
                 <div class="row" id="producto1">
                     <div class="col-3" id="imgChek">
                         <div class="form-check">
-                            <input class="form-check-input" checked type="checkbox" value="" id="checkarticulo">
+                            <input class="form-check-input" checked onclick="contarProductos()" type="checkbox" value="" id="checkarticulo">
                         </div>
                         <img src="products/pen.jpg" class="imagen" alt="">
                     </div>
@@ -52,7 +52,7 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <input class="eliminar" type="submit" onclick="eliminarProducto()" name="eliminar" value="Eliminar">
+                            <input class="eliminar" type="submit" onclick="eliminarProducto('producto1','enlace1')" name="eliminar" value="Eliminar">
                         </p>
                     </div>
                     <div class="col-2" id="contenedorprecio">
@@ -60,15 +60,19 @@
                     </div>
                     <hr style="color:#FA7F72;">
                 </div>
-                <div class="row" id="producto2" >
+                <div class="row-fluid" id="enlace1" style="display:none;">
+                        <a href="store2.php">Pen de programador</a>
+                    <hr style="color:#FA7F72;">
+                </div>
+                <div class="row" id="producto2">
                     <div class="col-3" id="imgChek">
                         <div class="form-check">
-                            <input class="form-check-input" checked type="checkbox" value="" id="checkarticulo">
+                            <input class="form-check-input" onclick="contarProductos()" checked type="checkbox" value="" id="checkarticulo">
                         </div>
                         <img src="products/pen.jpg" class="imagen" alt="">
                     </div>
                     <div class="col-7" id="texto">
-                        <h2>Pen de gran programador</h2>
+                        <h2>Pen de gran programador 2</h2>
                         <p> <span class="enStock">En Stock </span> <br>
                             <b> Tamaño:</b> S <br>
                             <b> Color:</b> Verde <br>
@@ -79,17 +83,20 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <input class="eliminar" type="button" onclick="eliminarProducto()" name="eliminar" value="Eliminar">
+                            <input class="eliminar" type="button" onclick="eliminarProducto('producto2','enlace2')" name="eliminar" value="Eliminar">
                         </p>
                     </div>
                     <div class="col-2" id="contenedorprecio">
                         <p class="precio">8,99€</p>
                     </div>
+                    <hr style="color:#FA7F72;">
+                </div>
+                <div class="row-fluid" id="enlace2" style="display:none;">
+                        <a href="store2.php">Pen de programador</a>
                     <hr style="color:#FA7F72;">
                 </div>
                 <div class="row-rev">
-                    <p class="precio">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p> 
-
+                    <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p>
                 </div>
             </div>
             <!--Espacio-->
@@ -97,12 +104,12 @@
             <!--Asisde-->
             <div class="col-lg-3 col-xs-12" id="aside">
 
-            <p class="precio">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p> 
+                <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p>
                 <div class="container-fluid">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Pen de programador <span class="badge rounded-pill">1</span></li> 
-                    <li class="list-group-item">Pen de programador <span class="badge rounded-pill">1</span></li>
-                </ul>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Pen de programador <span class="badge rounded-pill">1</span></li>
+                        <li class="list-group-item">Pen de programador <span class="badge rounded-pill">1</span></li>
+                    </ul>
                 </div>
                 <br>
                 <input class="btn " id="botonpagar" type="submit" value="Tramitar pedido">
@@ -219,42 +226,42 @@
         </div>
     </section>
 
-<!--PreFooter-->
-<div class="row pre-footer container-fluid">
-      <div class="col">
-        <div class="pre_footer__card">
-          <img src="products/camion-de-reparto.png" class="card-img-top pre-footer_img" alt="...">
-          <div class="card-body pre-footer__body">
-            <h5 class="card-title pre-footer__title">Envío gratis con 2 o más artículos</h5>
-            <p class="card-text">Da igual lo que compres, con solo 2 artículos en tu pedido, envío gratis :)</p>
-            <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
-          </div>
-        </div>
+    <!--PreFooter-->
+    <div class="row pre-footer container-fluid">
+        <div class="col">
+            <div class="pre_footer__card">
+                <img src="products/camion-de-reparto.png" class="card-img-top pre-footer_img" alt="...">
+                <div class="card-body pre-footer__body">
+                    <h5 class="card-title pre-footer__title">Envío gratis con 2 o más artículos</h5>
+                    <p class="card-text">Da igual lo que compres, con solo 2 artículos en tu pedido, envío gratis :)</p>
+                    <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+                </div>
+            </div>
 
-      </div>
-      <div class="col">
-        <div class="pre_footer__card">
-          <img src="products/reloj-de-pared.png" class="card-img-top pre-footer_img" alt="...">
-          <div class="card-body pre-footer__body">
-            <h5 class="card-title pre-footer__title">Tu pedido en tu casa en 24h</h5>
-            <p class="card-text">Envío express con entrega al día siguiente si compras de lunes a jueves antes de las 17:00 (solo península)</p>
-            <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
-          </div>
         </div>
+        <div class="col">
+            <div class="pre_footer__card">
+                <img src="products/reloj-de-pared.png" class="card-img-top pre-footer_img" alt="...">
+                <div class="card-body pre-footer__body">
+                    <h5 class="card-title pre-footer__title">Tu pedido en tu casa en 24h</h5>
+                    <p class="card-text">Envío express con entrega al día siguiente si compras de lunes a jueves antes de las 17:00 (solo península)</p>
+                    <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+                </div>
+            </div>
 
-      </div>
-      <div class="col">
-        <div class="pre_footer__card">
-          <img src="products/regreso.png" class="card-img-top pre-footer_img" alt="...">
-          <div class="card-body pre-footer__body">
-            <h5 class="card-title pre-footer__title">Devoluciones</h5>
-            <p class="card-text">60 días para efectuar cambios o devoluciones. ¡Sin preguntas!</p>
-            <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
-          </div>
         </div>
-      </div>
+        <div class="col">
+            <div class="pre_footer__card">
+                <img src="products/regreso.png" class="card-img-top pre-footer_img" alt="...">
+                <div class="card-body pre-footer__body">
+                    <h5 class="card-title pre-footer__title">Devoluciones</h5>
+                    <p class="card-text">60 días para efectuar cambios o devoluciones. ¡Sin preguntas!</p>
+                    <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+                </div>
+            </div>
+        </div>
     </div>
-<!--Footer-->
+    <!--Footer-->
     <?php
     include "../code/php/footer.php";
     ?>
