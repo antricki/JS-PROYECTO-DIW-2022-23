@@ -145,7 +145,7 @@
                             <input type="button" class="btn btn-warning boton_hidden" value="Sí"></input>
                              <input type="button" class="btn btn-warning boton_hidden" value="No"></input>
                         </div>
-                        <div id="text_area" class="mb-3 div_hidden">
+                        <div id="text_area" class="mb-3 div_hidden div_hidden-css">
                             <label for="" class="form-label">Gracias por informarnos.</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="¿Qué podemos hacer para que este artículo resulte más útil? (Opcional)"></textarea>
                             <label for="" class="form-label">Recuerda que no debes incluir ningún dato personal en tus comentarios.</label>
