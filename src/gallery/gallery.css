@@ -216,12 +216,46 @@ body {
   }
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 799px) and (min-width: 450px) {
   body {
     overflow-x: hidden;
   }
   .carrusel__items {
     max-width: 650px;
+  }
+  .img {
+    width: 100px;
+    height: 100px;
+  }
+  .img--normal {
+    width: 180px;
+    height: 180px;
+  }
+  .img--big {
+    width: 350px;
+    height: 350px;
+  }
+
+  .arrow {
+    height: 180px;
+    width: 250px;
+    line-height: 100px;
+  }
+}
+
+.arrow img {
+    width: 50%;
+}
+
+@media screen and (max-width: 449px) {
+  body {
+    overflow-x: hidden;
+  }
+  .title{
+    margin-left: 0;
+  }
+  .carrusel__items {
+    max-width: 350px;
   }
   .img {
     width: 100px;
