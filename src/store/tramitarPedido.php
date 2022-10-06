@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tramitar pedido 2</title>
+    <title>Tramitar pedido</title>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,44 +38,55 @@
         </div>
     </section>
     </header>
-    <!-- Pago y envío -->
-    <main class="main__tramitar__pedido d-flex">
-        <div class="container-fluid tramitar__pedido d-flex posicion">
-            <div class="row tramitar__pedido-contacto">
-                <!-- datos de contacto y envío -->
-                <div class="col contacto__direccion form-control">
-                    <div class="contacto__direccion-title">
-                        <img src="products/icons/person.svg" alt="" class="contacto__direccion-icon">
-                        <h3 class="contacto__direccion-title__text">Datos de contacto</h3>
-                    </div>
-                    <div class="contacto__direccion-body">
-                        <form action="#" method="post" id="form_inicial">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Télefono" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ciudad" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Código Postal" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="País">
-                            </div>
-                        </form>
-                          <div class="custom-control custom-checkbox">
+    <!-- Pago y envío. MAIN ES EL CONTENEDOR PRINCIPAL-->
+    <main class="main__tramitar__pedido container-fluid">
+        <div class="row d-flex justify-content-evenly">
+
+            <div class="col-4 contenedor__datos">
+
+                <!-- primera fila DATOS DE CONTACTO Y ENVÍO-->
+                <div class="row d-flex flex-column g-5">
+                    <div class="col datos__contacto-envío p-4">
+                        <!-- titulo -->
+                        <div class="contacto__direccion-title">
+                            <img src="products/icons/person.svg" alt="" class="contacto__direccion-icon">
+                            <h3 class="contacto__direccion-title__text">Datos de contacto</h3>
+                        </div>
+                        <!-- cuerpo / primer formulario-->
+                        <div class="contacto__direccion-body">
+                            <form action="#" method="post" id="form_inicial">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Télefono" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ciudad" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Código Postal" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="País">
+                                </div>
+                            </form>
+                        </div>
+                            <!-- segundo formulario -->
+                        <div class="custom-control custom-checkbox">
                             <div class="container_checkbox">
                                 <input type="checkbox" class="custom-control-input checkbox" id="checkbox" value="" onclick="ocultaForm()">
                                 <label for="misma-direccion" class="custom-control-label" id="datos_facturacion_envio">Los datos de facturación y envío son los mismos.</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="guardar-informacion">
+                                <label for="guardar-informacion" class="custom-control-label">Guardar informacion para la siguiente compra</label>
                             </div>
                             <!-- formulario de faturacion que se ve y hago click desaparece -->
                             <div id="datos_facturacion_ver" class="datos_facturacion_ver">
@@ -105,125 +116,116 @@
                                 </form>
                             </div>
                         </div>
-    
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="guardar-informacion">
-                            <label for="guardar-informacion" class="custom-control-label">Guardar informacion para la siguiente compra</label>
-                        </div>
                     </div>
-                </div>
-                <!-- FIN DE CONTACTO -->
-                <!-- Método de envío -->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col contacto__envio form-control">
-                            <div class="contacto__direccion-title">
-                                <img src="products/icons/truck.svg" alt="" class="contacto__direccion-icon">
-                                <h3 class="contacto__direccion-title__text">Método de envío</h3>
-                            </div>
-                            <div class="row contacto__envio-pago">
-                                <div class="col form-check">
-                                    <div class="form-check_input">
-                                        <input class="form-check-label" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                                        <label for="flexRadioDefault1" class="form-check-label">Entrega a domicilio</label>
-                                    </div>
-                                    <div class="form-check_input">
-                                        <img src="products/icons/GLS.png" alt="" class="contacto__envio-pago__img">
-                                    </div>
-                                    <div class="contacto__pago-envio__text">
-                                        <p>Recibirás tu pedido durante las 24hrs siguientes a la realizacion de tu pedido. <span>Sujeto a modificaciones.</span></p>  
-                                    </div>
-                                </div>
-                                <div class="col form-check">
-                                    <div class="form-check_input">
-                                        <input class="form-check-label"type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                        <label for="flexRadioDefault2" class="form-check-label">Punto de recogida</label>
-                                    </div>
-                                    <div class="form-check_img">
-                                        <img src="products/icons/inpost-seeklogo.com.png" alt="" class="contacto__envio-pago__img">
-                                    </div>
-                                    <div class="contacto__pago-envio__text">
-                                        <p>Recibirás tu pedido en el punto de recogida indicado durante las 24hrs siguientes a la realizacion de tu pedido.</p>  
-                                    </div>
+                    <!-- FIN DE CONTACTO -->
+                    <!-- Método de envío -->
+                    <div class="col metodo__envio p-4">
+                        <div class="row d-flex flex-column g-2 ">
+                            <!-- título -->
+                            <div class="col">
+                                <div class="contacto__direccion-title">
+                                    <img src="products/icons/truck.svg" alt="" class="contacto__direccion-icon">
+                                    <h3 class="contacto__direccion-title__text">Método de envío</h3>
                                 </div>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- FIN DE MÉTODO DE ENVÍO -->
-                <!-- método de pago -->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col contacto__pago form-control">
-                            <div class="contacto__direccion-title contacto__pago-title">
-                                <img src="products/icons/credit-card.svg" alt="" class="contacto__direccion-icon">
-                                <h3 class="contacto__direccion-title__text">Método de pago</h3>
+                            <!-- cuerpo -->
+                            <div class="col">
+                                <div class="form-check_input">
+                                    <input class="form-check-label" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                    <label for="flexRadioDefault1" class="form-check-label">Entrega a domicilio</label>
+                                </div>
+                                <div class="form-check_input">
+                                    <img src="products/icons/GLS.png" alt="" class="contacto__envio-pago__img">
+                                </div>
+                                <div class="contacto__pago-envio__text">
+                                    <p>Recibirás tu pedido durante las 24hrs siguientes a la realizacion de tu pedido. <span>Sujeto a modificaciones.</span></p>  
+                                </div>
                             </div>
-                            <div class="contacto__pago-body">
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre y apellidos" required>
+                            <div class="col">
+                                <div class="form-check_input">
+                                    <input class="form-check-label"type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                    <label for="flexRadioDefault2" class="form-check-label">Punto de recogida</label>
                                 </div>
-                                <div class="mb-3">
-                                   <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0000 0000 0000 0000" required>
+                                <div class="form-check_img">
+                                    <img src="products/icons/inpost-seeklogo.com.png" alt="" class="contacto__envio-pago__img">
                                 </div>
-                                <div class="mb-3">
-                                   <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="MM/AA" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123" required>
-                                </div>
-                                <!-- mensaje de información, alerta -->
-                                <div class="mb-3">
-                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece.">¿Qué es CVC/CVV?</a>
+                                <div class="contacto__pago-envio__text">
+                                    <p>Recibirás tu pedido en el punto de recogida indicado durante las 24hrs siguientes a la realizacion de tu pedido.</p>  
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- fin método de pago -->
-            </div>
-        </div>
-        <!-- FIN PRIMERA SECCIÓN -->
-
-        <!-- iNICIO DE SEGUNDA SECCIÓN (ASIDE) -->
-        <div class="container-fluid posicion">
-            <div class="row tramitar__pedido-resumen form-control">
-                <div class="col">
-                <!-- Resumen del pedido -->
-                    <div class="contacto__direccion-title contacto__pago-title">
-                    <img src="products/icons/credit-card.svg" alt="carrito compra"  class="contacto__direccion-icon">
-                    <h3 class="contacto__direccion-title__text">Resumen del pedido</h3>
-                </div>
-                <div class="col tramitar__pedido-resumen__inf">
-                    <div class="pedido_subtotal">
-                        <label for="">Subtotal</label>
-                        <label for="">50.98 €</label></div>
+                    <!-- FIN DE MÉTODO DE ENVÍO -->
+                    <!-- método de pago -->
+                    <div class="col metodo__pago p-4">
+                        <!-- titulo -->
+                        <div class="contacto__direccion-title contacto__pago-title">
+                            <img src="products/icons/credit-card.svg" alt="" class="contacto__direccion-icon">
+                            <h3 class="contacto__direccion-title__text">Método de pago</h3>
+                        </div>
+                        <!-- formulario de pago, cuerpo -->
+                        <div class="contacto__pago-body">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre y apellidos" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0000 0000 0000 0000" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="MM/AA" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123" required>
+                            </div>
+                            <!-- mensaje de información, alerta -->
+                            <div class="mb-3">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece.">¿Qué es CVC/CVV?</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pedido_gastos-envio">
-                        <label for="">Gastos de envío</label>
-                        <label for="">Gratis</label></div>
-                    </div>
-                    <div class="pedido_total">
-                        <label for="">Total</label>
-                        <label for="">50.98 €</label>
-                    </div>
-                    <p class="pedido_total-pie">Precios con IVA incluido</p>
-                    <p class="tramitar__pedido-text">Haciendo click en "Realizar pedido" confirma que ha leído y comprendido las <a href="">condiciones generales</a> de contratación publicadas que regulan la compra de los productos adquiridos así como la <a href="">política de privacidad</a> sobre el tratamiento de sus datos</p>
-                    <div class="tramitar__pedido_btn">
-                        <input type="button" value="Realizar pedido" id="tramitar__pedido_btn"
+                    <!-- fin método de pago -->
+                </div> 
+            </div>  <!-- FIN PRIMERA SECCIÓN -->             
+            <!-- iNICIO DE SEGUNDA SECCIÓN (ASIDE) Resumen pedido-->
+            <div class="col-4 contenedor__resumen border"> 
+                <div class="row">
+                    <div class="col p-3">
+                        <!-- titulo -->
+                        <div class="contacto__direccion-title contacto__pago-title">
+                            <img src="products/icons/credit-card.svg" alt="carrito compra"  class="contacto__direccion-icon">
+                            <h3 class="contacto__direccion-title__text">Resumen del pedido</h3>
+                        </div>
+                        <!-- cuerpo -->
+                        <div class="pedido_subtotal">
+                            <label for="">Subtotal</label>
+                            <label for="">50.98 €</label></div>
+                        </div>
+                        <div class="pedido_gastos-envio">
+                            <label for="">Gastos de envío</label>
+                            <label for="">Gratis</label></div>
+                        </div>
+                        <hr class="raya_tramitar-pedido"/>
+                        <div class="pedido_total">
+                            <label for="">Total</label>
+                            <label for="">50.98 €</label>
+                        </div>
+                        <hr class="raya_tramitar-pedido"/>
+                        <p class="pedido_total-pie">Precios con IVA incluido</p>
+                        <p class="tramitar__pedido-text">Haciendo click en "Realizar pedido" confirma que ha leído y comprendido las <a href="">condiciones generales</a> de contratación publicadas que regulan la compra de los productos adquiridos así como la <a href="">política de privacidad</a> sobre el tratamiento de sus datos</p>
+                        <div class="tramitar__pedido_btn">
+                            <input type="button" value="Realizar pedido" id="tramitar__pedido_btn"
                         class="tramitar__pedido-btn">
-                    </div>
-                    <div class="tramitar__pedido_compraSegura">
-                        <img src="products/icons/comprasegura.png" alt="" class="img_tramitar__pedido_icon">
-                        <label for="">Compra segura 100% garantizada</label>
+                        </div>
+                        <div class="tramitar__pedido_compraSegura">
+                            <img src="products/icons/comprasegura.png" alt="" class="img_tramitar__pedido_icon">
+                            <label for="">Compra segura 100% garantizada</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- FIN SEGUNDA SECCION (ASIDE) -->
-    </main>
-    <!-- FIN pago y envío -->
+            </div> <!-- FIN SEGUNDA SECCION (ASIDE) -->  
+        </div>  <!-- fin row -->    
+    </main> <!-- FIN pago y envío -->
+    
     <!-- footer -->
     <?php
     include "../code/php/footer.php";
