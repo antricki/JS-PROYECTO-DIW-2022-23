@@ -56,7 +56,7 @@ div#info{
     box-shadow: 0px 1px 1px #FA7F72 inset,0px 0px 10px #FA7F72 ;
 }
 
-
+/*cantidades*/
 
 div.btn-group {
     display: flex;
@@ -68,7 +68,15 @@ div.btn-group button.azul:hover{
     border: 1px solid #389393;
     color: #389393;
 }
+div.btn-group button.azul:focus{
+    border: 1px solid #389393;
+    color: #389393;
+}
 div.btn-group button.verde:hover{
+    border: 1px solid seagreen;
+    color: seagreen;
+}
+div.btn-group button.verde:focus{
     border: 1px solid seagreen;
     color: seagreen;
 }
@@ -76,11 +84,23 @@ div.btn-group button.negro:hover{
     border: 1px solid black;
     color: black;
 }
+div.btn-group button.negro:focus{
+    border: 1px solid black;
+    color: black;
+}
 div.btn-group button.rojo:hover{
     border: 1px solid #FA7F72;
     color: #FA7F72;
 }
+div.btn-group button.rojo:focus{
+    border: 1px solid #FA7F72;
+    color: #FA7F72;
+}
 div.btn-group button.naranja:hover{
+    border: 1px solid #F5A25D;
+    color: #F5A25D;
+}
+div.btn-group button.naranja:focus{
     border: 1px solid #F5A25D;
     color: #F5A25D;
 }

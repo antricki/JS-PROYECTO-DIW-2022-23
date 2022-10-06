@@ -47,7 +47,7 @@ function quitarProductoAside(producto){
     const badges = document.querySelectorAll(".badge");
    badges.forEach(badge => {
         if(((badge.id).substr(badge.id.length -1 ))===producto.substr(producto.length -1 )){
-            badge.parentNode.style.display='none';
+            badge.parentNode.parentNode.style.display='none';
         }
    });
 }

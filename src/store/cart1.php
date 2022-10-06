@@ -111,8 +111,22 @@
                 <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p>
                 <div class="container-fluid">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Pen de programador <span class="badge rounded-pill" id="cantidadProd1">1</span></li>
-                        <li class="list-group-item">Pen de programador <span class="badge rounded-pill" id="cantidadProd2">1</span></li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-10">
+                                    Pen de programador
+                                </div>
+                                <div class="col-2"><span class="badge rounded-pill" id="cantidadProd1">1</span></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-10">
+                                    Alfombrilla de programador
+                                </div>
+                                <div class="col-2"><span class="badge rounded-pill" id="cantidadProd2">1</span></div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <br>
