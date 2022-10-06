@@ -33,6 +33,7 @@
                     <p id="precioIzquierda">Precio</p>
                 </div>
                 <hr style="color:#fa7f72;">
+                <!--producto 1-->
                 <div class="row" id="producto1">
                     <div class="col-3" id="imgChek">
                         <div class="form-check">
@@ -45,14 +46,14 @@
                         <p> <span class="enStock">En Stock </span> <br>
                             <b> Tamaño:</b> S <br>
                             <b> Color:</b> Verde <br>
-                            <select class="form-contol" id="cantidades" aria-label=" select example">
+                            <select class="form-contol cantidades" onchange="peep(this.id)" id="cantidades1" aria-label=" select example">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <input class="eliminar" type="submit" onclick="eliminarProducto('producto1','enlace1')" name="eliminar" value="Eliminar">
+                            <input class="eliminar" type="submit" onclick="lanzar('producto1','enlace1')" name="eliminar" value="Eliminar">
                         </p>
                     </div>
                     <div class="col-2" id="contenedorprecio">
@@ -60,30 +61,32 @@
                     </div>
                     <hr style="color:#FA7F72;">
                 </div>
+                <!--enlace 1-->
                 <div class="row-fluid" id="enlace1" style="display:none;">
-                        <a href="store2.php">Pen de programador</a>
+                    <a href="store2.php">Pen de programador</a>
                     <hr style="color:#FA7F72;">
                 </div>
+                <!--producto 2-->
                 <div class="row" id="producto2">
                     <div class="col-3" id="imgChek">
                         <div class="form-check">
                             <input class="form-check-input" onclick="contarProductos()" checked type="checkbox" value="" id="checkarticulo">
                         </div>
-                        <img src="products/pen.jpg" class="imagen" alt="">
+                        <img src="products/alfombrilla.jpg" class="imagen" alt="">
                     </div>
                     <div class="col-7" id="texto">
-                        <h2>Pen de gran programador 2</h2>
+                        <h2>Alfombrilla de programador</h2>
                         <p> <span class="enStock">En Stock </span> <br>
-                            <b> Tamaño:</b> S <br>
-                            <b> Color:</b> Verde <br>
-                            <select class="form-contol" id="cantidades" aria-label=" select example">
+                            <b> Tamaño:</b> M <br>
+                            <b> Color:</b> Rojo <br>
+                            <select class="form-contol cantidades" id="cantidades2" onchange="peep(this.id)" aria-label=" select example">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <input class="eliminar" type="button" onclick="eliminarProducto('producto2','enlace2')" name="eliminar" value="Eliminar">
+                            <input class="eliminar" type="button" onclick="lanzar('producto2','enlace2')" name="eliminar" value="Eliminar">
                         </p>
                     </div>
                     <div class="col-2" id="contenedorprecio">
@@ -91,8 +94,9 @@
                     </div>
                     <hr style="color:#FA7F72;">
                 </div>
+                <!--enlace 2-->
                 <div class="row-fluid" id="enlace2" style="display:none;">
-                        <a href="store2.php">Pen de programador</a>
+                    <a href="store2.php">Pen de programador</a>
                     <hr style="color:#FA7F72;">
                 </div>
                 <div class="row-rev">
@@ -107,8 +111,8 @@
                 <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p>
                 <div class="container-fluid">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Pen de programador <span class="badge rounded-pill">1</span></li>
-                        <li class="list-group-item">Pen de programador <span class="badge rounded-pill">1</span></li>
+                        <li class="list-group-item">Pen de programador <span class="badge rounded-pill" id="cantidadProd1">1</span></li>
+                        <li class="list-group-item">Pen de programador <span class="badge rounded-pill" id="cantidadProd2">1</span></li>
                     </ul>
                 </div>
                 <br>
