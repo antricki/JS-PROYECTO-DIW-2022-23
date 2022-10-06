@@ -12,7 +12,7 @@
     <!-- fin fuente -->
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css"/>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="politicas.css">
+    <link rel="stylesheet" href="css/politicas.css">
 </head>
 <body>
     <!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
@@ -23,7 +23,7 @@
     <?php
         $d=__DIR__;
         include "../code/php/route.php";
-        include "../code/php/navbar.php";
+        include "../code/php/navbar_store.php";
     ?>
 
     <main class="informacion">
@@ -57,16 +57,7 @@
                         <p>Las devoluciones se pueden dejar en cualquier lugar de recogida una vez imprimida la etiqueta de devolución desde el sitio web de autoservicio. 
                         Pega la etiqueta en el paquete y llévalo al lugar de recogida que mejor te venga en un plazo de cinco días.</p>
                         <h3>Política estándar de devoluciones</h3>
-                        <p> Las devoluciones pueden tramitarse a través de nuestro sitio web Estado del pedido en un simple paso.
-                        Las devoluciones están sujetas a la Política de ventas y reembolsos de Apple. Si cambias de opinión, puedes devolvernos tu equipo estándar en un plazo de 
-                        14 días naturales a partir de la fecha de entrega. Las devoluciones de software también se aceptan en este periodo, pero solo si el software no ha sido desprecintado. Está opción se suma a tus derechos legales como consumidor en cuanto a la devolución de productos defectuosos. Haz clic aquí para obtener más información, y lee también el apartado «¿Qué ocurre si recibo un artículo defectuoso?» que aparece a continuación.
-                        Si deseas devolver el pedido o algunos de los artículos, utiliza nuestra página web de contacto con nosotros. Deberás facilitarnos los siguientes datos:
-                        N.º de pedido web
-                        La dirección completa en la que podemos recoger los artículos
-                        Un número de teléfono de contacto
-                        La hora a la que prefieres que pase el transportista
-                        Cuando recibamos tu correo electrónico, te facilitaremos un número de autorización para la recogida de material (RMA). 
-                        Indica claramente este número en el embalaje de los artículos que vas a devolver para agilizar el procesamiento de la devolución.</p>
+                        <p>Dispones de 365 días, desde el momento de la recepción de tu pedido para solicitar la devolución. Una vez revisado el producto realizaremos el reembolso del importe</p>
                     </p>
                 </div>
                 
@@ -82,14 +73,7 @@
                         <p class="text">Cuando recibimos tu artículo, se tramita un reembolso inmediatamente. Si has cancelado un artículo de recogida y ya te lo hemos facturado, 
                         tramitamos un reembolso en cuantoenvías tu solicitud de cancelación. La forma de procesar el reembolso depende del método de pago empleado:
                         Si has pagado con tarjeta de crédito o débito, el reembolso se remite a la entidad emisora de la tarjeta en un plazo de cinco días laborables a partir de la recepción 
-                        del artículo devuelto o de la solicitud de cancelación. Para saber cuándo   se abonará el crédito a tu cuenta, ponte en contacto con la entidad emisora de la tarjeta.
-                        Los productos adquiridos en apple.com con una Apple Gift Card se te reembolsan mediante una Apple Gift Card por email. 
-                        Si prefieres que te enviemos una Apple Gift Card por correo, pídeselo al representante que te está ayudando.</p>
-                        <h3>Cambiar un artículo</h3>
-                        <p>Si has comprado un artículo en un Apple Store, puedes cambiarlo en cualquier Apple Store del mismo país. 
-                         Los cambios de artículos están sujetos a la disponibilidad del producto en la tienda. Conviene comprobar la disponibilidad llamando al 900 521 321
-                        o buscando el producto en el Apple Online Store para ver si está disponible para su recogida por la zona. Es posible que los artículos personalizados y los Mac configurados a medida no sean válidos para cambios en un Apple Store.
-                         Los artículos comprados en el Apple Online Store que lleguen dañados o sean incorrectos se pueden devolver en cualquier Apple Store del mismo país o a través de Atención al Cliente.</p>
+                        del artículo devuelto o de la solicitud de cancelación. Para saber cuándo   se abonará el crédito a tu cuenta, ponte en contacto con la entidad emisora de la tarjeta.</p>
                     </div>
                 </div>
 
@@ -101,7 +85,7 @@
                     <h2 class="title" id="tardar">¿Cuánto tardarán en procesar el reembolso?</h2>
                 </div>
                 <div class="col col-4">
-                    <p class="text">Procesaremos la devolución una vez los artículos hayan regresado a los almacenes de Apple. La transferencia tardará de 5 a 7 días en hacerse efectiva.</p>
+                    <p class="text">Procesaremos la devolución una vez los artículos hayan regresado a nuestros almacenes. La transferencia tardará de 5 a 7 días en hacerse efectiva.</p>
                 </div>
             </div>
         
@@ -111,12 +95,12 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col col-4 align-self-start">
-                    <h2 class="title" id="defectuoso">¿Qué ocurre si recibo un aartículo defectuoso?</h2>
+                    <h2 class="title" id="defectuoso">¿Qué ocurre si recibo un artículo defectuoso?</h2>
                 </div>
                 <div class="col col-4">
-                    <p class="text">Si tienes algún problema con tu nuevo producto de Apple o crees que presenta algún defecto, llama a AppleCare lo antes posible para informarnos. 
+                    <p class="text">Si tienes algún problema con tu nuevo producto o crees que presenta algún defecto, llama a <span class="tlf_defectuoso">687 123 788</span> lo antes posible para informarnos. 
                     Si el problema o el defecto es con productos de otros fabricantes, 
-                    llama al servicio de atención al cliente del Apple Online Store lo antes posible para informarnos</p>
+                    llama al servicio de atención al cliente de nuestra tienda online lo antes posible para informarnos</p>
                 </div>
             </div>
 
@@ -166,6 +150,6 @@
     <?php
     include "../code/php/footer.php";
     ?>
-    <script src="politicas.js"></script>
+    <script src="js/politicas.js"></script>
 </body>
 </html>

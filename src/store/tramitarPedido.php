@@ -11,14 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
     • Naranja: #F5A25D un 10% para aquello que llama a la acción.
     • Rojo: #FA7F72 solo para pequeños detalles o pequeños bloques de texto
     • Azul: #389393 para el footer 
     https://www.shutterstock.com/es/create/home para crear imagenes-->
-<body>
+<body class="body__tramitar_pedido">
     <header>
     <!-- navegador -->
     <?php
@@ -42,7 +42,7 @@
     <main class="main__tramitar__pedido container-fluid">
         <div class="row d-flex justify-content-evenly">
 
-            <div class="col-4 contenedor__datos">
+            <div class="col-lg-4 col-sm-2 contenedor__datos">
 
                 <!-- primera fila DATOS DE CONTACTO Y ENVÍO-->
                 <div class="row d-flex flex-column g-5">
@@ -81,7 +81,7 @@
                             <!-- segundo formulario -->
                         <div class="custom-control custom-checkbox">
                             <div class="container_checkbox">
-                                <input type="checkbox" class="custom-control-input checkbox" id="checkbox" value="" onclick="ocultaForm()">
+                                <input type="checkbox" class="custom-control-input check_form" id="checkbox" value="" onclick="ocultaForm()">
                                 <label for="misma-direccion" class="custom-control-label" id="datos_facturacion_envio">Los datos de facturación y envío son los mismos.</label>
                             </div>
                             <div class="custom-control custom-checkbox">
@@ -120,7 +120,7 @@
                     <!-- FIN DE CONTACTO -->
                     <!-- Método de envío -->
                     <div class="col metodo__envio p-4">
-                        <div class="row d-flex flex-column g-2 ">
+                        <div class="row d-flex flex-column">
                             <!-- título -->
                             <div class="col">
                                 <div class="contacto__direccion-title">
@@ -129,21 +129,21 @@
                                 </div>
                             </div>
                             <!-- cuerpo -->
-                            <div class="col">
+                            <div class="col tipo__entrega1 metodo__envio-entregas" id="tipo__entrega1">
                                 <div class="form-check_input">
-                                    <input class="form-check-label" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                    <input class="form-check-label check_entrega1" type="radio" name="flexRadioDefault" id="flexRadioDefault1 check_entrega1">
                                     <label for="flexRadioDefault1" class="form-check-label">Entrega a domicilio</label>
                                 </div>
                                 <div class="form-check_input">
                                     <img src="products/icons/GLS.png" alt="" class="contacto__envio-pago__img">
                                 </div>
                                 <div class="contacto__pago-envio__text">
-                                    <p>Recibirás tu pedido durante las 24hrs siguientes a la realizacion de tu pedido. <span>Sujeto a modificaciones.</span></p>  
+                                    <p>Recibirás tu pedido durante las 24hrs siguientes a la realizacion de tu pedido. Sujeto a modificaciones.</p>  
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col metodo__envio-entregas" id="tipo__entrega2">
                                 <div class="form-check_input">
-                                    <input class="form-check-label"type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                    <input class="form-check-label check_entrega2" type="radio" name="flexRadioDefault" id="flexRadioDefault2 check_entrega2">
                                     <label for="flexRadioDefault2" class="form-check-label">Punto de recogida</label>
                                 </div>
                                 <div class="form-check_img">
@@ -187,22 +187,22 @@
                 </div> 
             </div>  <!-- FIN PRIMERA SECCIÓN -->             
             <!-- iNICIO DE SEGUNDA SECCIÓN (ASIDE) Resumen pedido-->
-            <div class="col-4 contenedor__resumen border"> 
+            <div class="col-lg-4 col-sm-2 contenedor__resumen"> 
                 <div class="row">
-                    <div class="col p-3">
+                    <div class="col">
                         <!-- titulo -->
                         <div class="contacto__direccion-title contacto__pago-title">
-                            <img src="products/icons/credit-card.svg" alt="carrito compra"  class="contacto__direccion-icon">
+                            <img src="products/icons/carrito2.png" alt="carrito compra"  class="contacto__direccion-icon">
                             <h3 class="contacto__direccion-title__text">Resumen del pedido</h3>
                         </div>
                         <!-- cuerpo -->
                         <div class="pedido_subtotal">
                             <label for="">Subtotal</label>
-                            <label for="">50.98 €</label></div>
+                            <label for="">50.98 €</label>
                         </div>
                         <div class="pedido_gastos-envio">
                             <label for="">Gastos de envío</label>
-                            <label for="">Gratis</label></div>
+                            <label for="">Gratis</label>
                         </div>
                         <hr class="raya_tramitar-pedido"/>
                         <div class="pedido_total">
@@ -213,8 +213,7 @@
                         <p class="pedido_total-pie">Precios con IVA incluido</p>
                         <p class="tramitar__pedido-text">Haciendo click en "Realizar pedido" confirma que ha leído y comprendido las <a href="">condiciones generales</a> de contratación publicadas que regulan la compra de los productos adquiridos así como la <a href="">política de privacidad</a> sobre el tratamiento de sus datos</p>
                         <div class="tramitar__pedido_btn">
-                            <input type="button" value="Realizar pedido" id="tramitar__pedido_btn"
-                        class="tramitar__pedido-btn">
+                            <input type="submit" value="Realizar pedido" id="tramitar__pedido_btn" class="tramitar__pedido-btn" onclick="location.href='pedidoCompletado.php'">
                         </div>
                         <div class="tramitar__pedido_compraSegura">
                             <img src="products/icons/comprasegura.png" alt="" class="img_tramitar__pedido_icon">
@@ -226,11 +225,46 @@
         </div>  <!-- fin row -->    
     </main> <!-- FIN pago y envío -->
     
+    <!-- prefooter -->
+    <div class="row pre-footer container-fluid">
+      <div class="col">
+        <div class="pre_footer__card">
+          <img src="products/camion-de-reparto.png" class="card-img-top pre-footer_img" alt="...">
+          <div class="card-body pre-footer__body">
+            <h5 class="card-title pre-footer__title">Envío gratis con 2 o más artículos</h5>
+            <p class="card-text">Da igual lo que compres, con solo 2 artículos en tu pedido, envío gratis :)</p>
+            <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="pre_footer__card">
+          <img src="products/reloj-de-pared.png" class="card-img-top pre-footer_img" alt="...">
+          <div class="card-body pre-footer__body">
+            <h5 class="card-title pre-footer__title">Tu pedido en tu casa en 24h</h5>
+            <p class="card-text">Envío express con entrega al día siguiente si compras de lunes a jueves antes de las 17:00 (solo península)</p>
+            <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="pre_footer__card">
+          <img src="products/regreso.png" class="card-img-top pre-footer_img" alt="...">
+          <div class="card-body pre-footer__body">
+            <h5 class="card-title pre-footer__title">Devoluciones</h5>
+            <p class="card-text">60 días para efectuar cambios o devoluciones. ¡Sin preguntas!</p>
+            <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- footer -->
     <?php
     include "../code/php/footer.php";
     ?>
     <!-- ENLACE PARA EL JS -->
-    <script src="tramitarPedido.js"></script>
+    <script src="js/tramitarPedido.js"></script>
 </body>
 </html>
