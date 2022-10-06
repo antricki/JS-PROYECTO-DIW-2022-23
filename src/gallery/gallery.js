@@ -4,7 +4,7 @@
 const dLeft = document.querySelectorAll(".dotLeft");
 const dRight = document.querySelectorAll(".dotRight");
 
-//********EVENTOS********
+//****************EVENTOS****************
 
 //--Objetos y funciones para los eventos--
 
@@ -95,6 +95,14 @@ const actualizarEstilos = (direcction, grupImages) => {
     image.classList.add("img--normal");
   });
 };
+
+//--Eventos--
+
+//Evento a los botones izquierdos
+dLeft.forEach((btn) => btn.addEventListener("click", moveLeft, onceTime));
+
+//Evento a los botones derechos
+dRight.forEach((btn) => btn.addEventListener("click", moveRight, onceTime));
 
 //--Eventos--
 
