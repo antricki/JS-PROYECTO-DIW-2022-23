@@ -81,6 +81,21 @@ a:hover{
     filter: invert(90%) sepia(21%) saturate(4230%) hue-rotate(316deg) brightness(100%) contrast(92%);
     margin-left: 3px;
 }
+.emailIcon{
+    width: 30px;
+    filter: invert(90%) sepia(21%) saturate(4230%) hue-rotate(316deg) brightness(100%) contrast(92%);
+    margin-left: 1.2px;
+}
+.iconValido{
+    width: 30px;
+    filter: invert(100%) sepia(68%) saturate(3677%) hue-rotate(45deg) brightness(104%) contrast(110%);
+}
+.iconInValido{
+    width: 20px;
+    filter: invert(17%) sepia(99%) saturate(4361%) hue-rotate(7deg) brightness(102%) contrast(110%);
+    margin-left: 305px;
+    margin-top: 2px;
+}
 .tempIcon{
     position: absolute;
     align-items: center;
@@ -88,6 +103,7 @@ a:hover{
     margin-left: 10px;
     margin-top: 6px;
 }
+
 .tempText{
     position: absolute;
     align-items: center;
@@ -102,15 +118,13 @@ a:hover{
     opacity: .8;
 }
 
-.userPlaceholder{
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-     user-select: none;
-
+.dummytext{
+    pointer-events: none;
 }
 
-.passPlaceholder{
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-     user-select: none;
+.campoValido{
+    display: none;
+}
+.campoInValido{
+    display: none;
 }

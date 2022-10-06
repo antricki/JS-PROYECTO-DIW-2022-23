@@ -31,7 +31,7 @@
                 <form class="col-12" id="formulario">
                     <div class="form-group" id="user-group">
                         
-                        <div class="userPlaceholder">
+                        <div class="userPlaceholderLogin dummytext">
                             <div class="tempIcon">
                                 <img src="../assets/icons/circle-user-solid.svg" alt="" class="userIcon">
                             </div>
@@ -43,10 +43,10 @@
                             </div>
                         </div>
 
-                            <input onclick="hideUserPlaceholder()" onblur="showUserPlaceholder()" id= "user" type="email" placeholder="" class="form-control my-3 p-2">
+                            <input onclick="hideUserPlaceholderLogin()" onblur="showUserPlaceholderLogin()" id= "userLogin" type="email" placeholder="" class="form-control my-3 p-2">
                     </div>
                     <div class="form-group" id="pass-group">
-                        <div class="passPlaceholder">
+                        <div class="passPlaceholderLogin dummytext">
                             <div class="tempIcon">
                                 <img src="../assets/icons/lock-solid.svg" alt="" class="passIcon">
                             </div>
@@ -56,16 +56,16 @@
                                     Contraseña
                                 </span>
 
+                            </div>
                         </div>
-                    </div>
-                            <input onclick="hidePassPlaceholder()" onblur="showPassPlaceholder()" id ="pass" type="password" placeholder="" class="form-control my-3 p-2">
+                            <input onclick="hidePassPlaceholderLogin()" onblur="showPassPlaceholderLogin()" id ="passLogin" type="password" placeholder="" class="form-control my-3 p-2">
                     </div>
                     
                     <div class="row">
-                    <div class="col-4">
+                    <div class="col-5">
                       <label for=""><input type="checkbox" name="" id="">Recuérdame</label>  
                     </div>
-                    <div class="col-8">
+                    <div class="col-7">
                         <a href="#">¿Olvidaste la contraseña?</a>
                     </div>
                     </div>
@@ -90,26 +90,60 @@
 
                 <form action="" class="col-12" id="formulario">
                     <div class="form-group" id="user-group">
-                        <div class="userPlaceholder">
+                        <div class="userPlaceholderRegis dummytext">
                                 <div class="tempIcon">
                                     <img src="../assets/icons/circle-user-solid.svg" alt="" class="userIcon">
                                 </div>
 
                                 <div class="tempText">                        
                                     <span class="textoTemporal">
-                                        usuario
+                                        Usuario
                                     </span>
                                 </div>
                         </div>
 
-                        <input onclick="hideUserPlaceholder()" onblur="showUserPlaceholder()" id= "user" type="text" placeholder="" class="form-control my-3 p-2">
+                        <input onclick="hideUserPlaceholderRegis()" onblur="showUserPlaceholderRegis()" id= "userRegis" type="text" placeholder="" class="form-control my-3 p-2">
                         
                     </div>
                     <div class="form-group" id="user-group">
-                        <input  type="email" placeholder="amoliner@gmail.com" class="form-control my-3 p-2">
+                    <div class="emailPlaceholderRegis dummytext">
+                                <div class="tempIcon">
+                                    <img src="../assets/icons/envelope-solid.svg" alt="" class="emailIcon">
+                                </div>
+
+                                <div class="tempText">                        
+                                    <span class="textoTemporal">
+                                        Correo electrónico
+                                    </span>
+                                </div>
+                    </div>
+
+                    <div class="campoValido dummytext">
+                        <div class="tempIcon">
+                            <img src="../assets/icons/check-solid.svg" alt="" class="iconValido">
+                        </div>
+                    </div>
+                    <div class="campoInValido dummytext">
+                        <div class="tempIcon">
+                            <img src="../assets/icons/x-solid.svg" alt="" class="iconInValido">
+                        </div>
+                    </div>
+                        <input onclick="hideEmailPlaceholderRegis()" onblur="emailValidation()" id="emailRegis" type="email" placeholder="" class="emailRegis form-control my-3 p-2">
                     </div>
                     <div class="form-group" id="pass-group">
-                        <input type="password" placeholder="***********" class="form-control my-3 p-2">
+                    <div class="passPlaceholderRegis dummytext">
+                            <div class="tempIcon">
+                                <img src="../assets/icons/lock-solid.svg" alt="" class="passIcon">
+                            </div>
+
+                            <div class="tempText">                        
+                                <span class="textoTemporal">
+                                    Contraseña
+                                </span>
+
+                            </div>
+                        </div>
+                        <input onclick="hidePassPlaceholderRegis()" onblur="showPassPlaceholderRegis()" id="passRegis"type="password" placeholder="" class="form-control my-3 p-2">
                     </div>          
                     <div class="form-group">
                         <button type="button" class="btn1 mt-3 mb-5">Sign up</button>
