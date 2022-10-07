@@ -131,6 +131,6 @@ dist
 
 # Ignore private folders and files
 private
-*/prvate
+*/private
 *.private
 *.private.*
