@@ -6,12 +6,18 @@
 
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-  
+
   <script src="code/js/wScript.js"></script>
   <link rel="stylesheet" href="code/css/wStyles.css">
 </head>
 
 <body>
+  <?php
+  $d = __DIR__;
+  include "code/php/route.php";
+  include "code/php/navbar.php";
+  ?>
+
 
   <div id="video">
     <video controls class="video">
@@ -20,7 +26,7 @@
   </div>
 
   <div id="presentation" class="container text-center">
-    <div class="row">
+    <div class="row m-5">
       <div class="col tmp">
         <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium, repellat
@@ -50,16 +56,16 @@
     </div>
   </div>
 
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide container" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://picsum.photos/800/450/?random&1" class="d-block w-100" alt="...">
+        <img src="https://picsum.photos/1600/900/?random&1" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://picsum.photos/800/450/?random&2" class="d-block w-100" alt="...">
+        <img src="https://picsum.photos/1600/900/?random&2" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://picsum.photos/800/450/?random&3" class="d-block w-100" alt="...">
+        <img src="https://picsum.photos/1600/900/?random&3" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -74,14 +80,13 @@
 
   <div id="contact">
     <div class="container text-center">
-      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-        aria-controls="collapseExample">
+      <a class="btn btn-primary m-5 px-5" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
         Contact Us
       </a>
     </div>
 
     <div class="collapse container text-center" id="collapseExample">
-      <div class="row">
+      <div class="row mb-5">
         <div class="col-4 bg-danger p-1 text-center">
           <div class="m-1 p-1 bg-success">
             <div class="m-2">
@@ -92,10 +97,9 @@
                 <option value="third-selector">[Third]</option>
               </select>
             </div>
-            
+
             <div class="m-2">
-              <select class="form-select display-none children-selector" id="course-selector"
-                onchange="toggleInfoPanel(this)">
+              <select class="form-select display-none children-selector" id="course-selector" onchange="toggleInfoPanel(this)">
                 <option value="none" selected>[None]</option>
                 <option value="smr-info">[SMR]</option>
                 <option value="dam-info">[DAM]</option>
@@ -103,8 +107,7 @@
                 <option value="asir-info">[ASIR]</option>
               </select>
 
-              <select class="form-select display-none children-selector" id="second-selector"
-                onchange="toggleInfoPanel(this)">
+              <select class="form-select display-none children-selector" id="second-selector" onchange="toggleInfoPanel(this)">
                 <option value="none" selected>[None]</option>
                 <option value="hydrogen-info">[Hydrogen]</option>
                 <option value="helium-info">[Helium]</option>
@@ -112,8 +115,7 @@
                 <option value="beryllium-info">[Beryllium]</option>
               </select>
 
-              <select class="form-select display-none children-selector" id="third-selector"
-                onchange="toggleInfoPanel(this)">
+              <select class="form-select display-none children-selector" id="third-selector" onchange="toggleInfoPanel(this)">
                 <option value="none" selected>[None]</option>
                 <option value="boron-info">[Boron]</option>
                 <option value="carbon-info">[Carbon]</option>
@@ -164,7 +166,7 @@
         </form> -->
     </div>
   </div>
-  <div id="presentation" class="container text-center">
+  <!-- <div id="presentation" class="container text-center">
     <div class="row">
       <div class="col bg-danger">
         <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
@@ -193,7 +195,9 @@
           odit. Nesciunt facere dolores non?</p>
       </div>
     </div>
-  </div>
+  </div> -->
+  <?php include "code/php/footer.php"; ?>
+
 </body>
 
 </html>
