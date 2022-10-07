@@ -62,6 +62,8 @@ function showUserPlaceholderRegis(){
 
     if(userInputRegis.value == ""){
     userPlaceholderRegis.style.display = "block";
+    campoInValido.style.display ="none";
+    campoValido.style.display ="none";
     }
     
 }
@@ -101,6 +103,9 @@ function checkEmail(){
         if(emailInputRegis.value != ""){
         emailInputRegis.value = "Invalido";
         campoInValido.style.display ="block";
+        }else{
+            campoInValido.style.display ="none";
+            
         }
     }
 }

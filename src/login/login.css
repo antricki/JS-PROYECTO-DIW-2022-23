@@ -93,7 +93,7 @@ a:hover{
 .iconInValido{
     width: 20px;
     filter: invert(17%) sepia(99%) saturate(4361%) hue-rotate(7deg) brightness(102%) contrast(110%);
-    margin-left: 305px;
+    margin-left: 15px;
     margin-top: 2px;
 }
 .tempIcon{
@@ -124,7 +124,20 @@ a:hover{
 
 .campoValido{
     display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: 55px;
 }
 .campoInValido{
     display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: 55px;
+}
+.boxForm{
+    position: relative;
 }
