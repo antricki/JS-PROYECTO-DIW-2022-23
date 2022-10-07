@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="cart1.css">
+    <script src="./js/cart1.js"></script>
+    <link rel="stylesheet" href="./css/cart1.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <?php
     $d = __DIR__;
     include "../code/php/route.php";
-    include "../code/php/navbar.php";
+    include "../code/php/navbar_store.php";
     ?>
 
 
@@ -31,11 +32,12 @@
                 <div class="row-rev">
                     <p id="precioIzquierda">Precio</p>
                 </div>
-                <hr style="color:#FA7F72;">
-                <div class="row">
+                <hr style="color:#fa7f72;">
+                <!--producto 1-->
+                <div class="row" id="producto1">
                     <div class="col-3" id="imgChek">
                         <div class="form-check">
-                            <input class="form-check-input" checked type="checkbox" value="" id="checkarticulo">
+                            <input class="form-check-input" checked onclick="contarProductos()" type="checkbox" value="" id="checkarticulo">
                         </div>
                         <img src="products/pen.jpg" class="imagen" alt="">
                     </div>
@@ -44,14 +46,14 @@
                         <p> <span class="enStock">En Stock </span> <br>
                             <b> Tamaño:</b> S <br>
                             <b> Color:</b> Verde <br>
-                            <select class="form-contol" id="cantidades" aria-label=" select example">
+                            <select class="form-contol cantidades" onchange="peep(this.id)" id="cantidades1" aria-label=" select example">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <input class="eliminar" type="submit" name="eliminar" value="Eliminar">
+                            <input class="eliminar" type="submit" onclick="lanzar('producto1','enlace1')" name="eliminar" value="Eliminar">
                         </p>
                     </div>
                     <div class="col-2" id="contenedorprecio">
@@ -59,43 +61,76 @@
                     </div>
                     <hr style="color:#FA7F72;">
                 </div>
-                <div class="row">
+                <!--enlace 1-->
+                <div class="row-fluid" id="enlace1" style="display:none;">
+                    <a href="store2.php">Pen de programador</a>
+                    <hr style="color:#FA7F72;">
+                </div>
+                <!--producto 2-->
+                <div class="row" id="producto2">
                     <div class="col-3" id="imgChek">
                         <div class="form-check">
-                            <input class="form-check-input" checked type="checkbox" value="" id="checkarticulo">
+                            <input class="form-check-input" onclick="contarProductos()" checked type="checkbox" value="" id="checkarticulo">
                         </div>
-                        <img src="products/pen.jpg" class="imagen" alt="">
+                        <img src="products/alfombrilla.jpg" class="imagen" alt="">
                     </div>
                     <div class="col-7" id="texto">
-                        <h2>Pen de gran programador</h2>
+                        <h2>Alfombrilla de programador</h2>
                         <p> <span class="enStock">En Stock </span> <br>
-                            <b> Tamaño:</b> S <br>
-                            <b> Color:</b> Verde <br>
-                            <select class="form-contol" id="cantidades" aria-label=" select example">
+                            <b> Tamaño:</b> M <br>
+                            <b> Color:</b> Rojo <br>
+                            <select class="form-contol cantidades" id="cantidades2" onchange="peep(this.id)" aria-label=" select example">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <input class="eliminar" type="submit" name="eliminar" value="Eliminar">
+                            <input class="eliminar" type="button" onclick="lanzar('producto2','enlace2')" name="eliminar" value="Eliminar">
                         </p>
                     </div>
                     <div class="col-2" id="contenedorprecio">
                         <p class="precio">8,99€</p>
                     </div>
+                    <hr style="color:#FA7F72;">
+                </div>
+                <!--enlace 2-->
+                <div class="row-fluid" id="enlace2" style="display:none;">
+                    <a href="store2.php">Alfombrilla de programador</a>
                     <hr style="color:#FA7F72;">
                 </div>
                 <div class="row-rev">
-                    <p class="precio">Subtotal (2 productos):14,98€</p>
+                    <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p>
                 </div>
             </div>
             <!--Espacio-->
             <div class="col-lg-1"></div>
             <!--Asisde-->
             <div class="col-lg-3 col-xs-12" id="aside">
-                <p class="precio">Subtotal (2 productos):14,98€</p>
-                <input class="btn " id="botonpagar" type="submit" value="Tramitar pedido">
+
+                <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p>
+                <div class="container-fluid">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-10">
+                                    Pen de programador
+                                </div>
+                                <div class="col-2"><span class="badge rounded-pill" id="cantidadProd1">1</span></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-10">
+                                    Alfombrilla de programador
+                                </div>
+                                <div class="col-2"><span class="badge rounded-pill" id="cantidadProd2">1</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <input class="btn" src="tramitarPedido.php"  id="botonpagar" type="submit" value="Tramitar pedido">
             </div>
         </div>
 
@@ -209,6 +244,42 @@
         </div>
     </section>
 
+    <!--PreFooter-->
+    <div class="row pre-footer container-fluid">
+        <div class="col">
+            <div class="pre_footer__card">
+                <img src="products/camion-de-reparto.png" class="card-img-top pre-footer_img" alt="...">
+                <div class="card-body pre-footer__body">
+                    <h5 class="card-title pre-footer__title">Envío gratis con 2 o más artículos</h5>
+                    <p class="card-text">Da igual lo que compres, con solo 2 artículos en tu pedido, envío gratis :)</p>
+                    <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="pre_footer__card">
+                <img src="products/reloj-de-pared.png" class="card-img-top pre-footer_img" alt="...">
+                <div class="card-body pre-footer__body">
+                    <h5 class="card-title pre-footer__title">Tu pedido en tu casa en 24h</h5>
+                    <p class="card-text">Envío express con entrega al día siguiente si compras de lunes a jueves antes de las 17:00 (solo península)</p>
+                    <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="pre_footer__card">
+                <img src="products/regreso.png" class="card-img-top pre-footer_img" alt="...">
+                <div class="card-body pre-footer__body">
+                    <h5 class="card-title pre-footer__title">Devoluciones</h5>
+                    <p class="card-text">60 días para efectuar cambios o devoluciones. ¡Sin preguntas!</p>
+                    <a href="politicas.php" class="pre_footer__card-link">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
     <?php
     include "../code/php/footer.php";
     ?>

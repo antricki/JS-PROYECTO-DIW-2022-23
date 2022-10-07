@@ -12,3 +12,10 @@ enviar.addEventListener('click', ()=>{
     textArea.classList.add('div_hidden');
     textThanks.classList.remove('div_hidden');
 })
+
+// js para tooltip tlf
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
