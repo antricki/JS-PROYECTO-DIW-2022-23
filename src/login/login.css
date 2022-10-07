@@ -89,6 +89,7 @@ a:hover{
 .iconValido{
     width: 30px;
     filter: invert(100%) sepia(68%) saturate(3677%) hue-rotate(45deg) brightness(104%) contrast(110%);
+    margin-left: 10px;
 }
 .iconInValido{
     width: 20px;
