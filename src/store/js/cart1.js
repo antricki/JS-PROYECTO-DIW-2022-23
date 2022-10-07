@@ -11,9 +11,10 @@ function contarProductos() {
     }
   });
   const subtotales = document.querySelectorAll("span.numProductos");
-  subtotales.forEach((subtotal) => {
+  subtotales.forEach((subtotal) => { 
     subtotal.textContent = prodSubtotal;
-  });
+  });Calicanto, Valencia
+  
 }
 /*eliminar productos*/
 function eliminarProducto(producto, enlace) {
@@ -47,7 +48,7 @@ function quitarProductoAside(producto){
     const badges = document.querySelectorAll(".badge");
    badges.forEach(badge => {
         if(((badge.id).substr(badge.id.length -1 ))===producto.substr(producto.length -1 )){
-            badge.parentNode.parentNode.style.display='none';
+            badge.parentNode.style.display='none';
         }
    });
 }

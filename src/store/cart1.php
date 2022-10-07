@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="cart1.js"></script>
-    <link rel="stylesheet" href="cart1.css">
+    <script src="./js/cart1.js"></script>
+    <link rel="stylesheet" href="./css/cart1.css">
 </head>
 
 <body>
@@ -96,7 +96,7 @@
                 </div>
                 <!--enlace 2-->
                 <div class="row-fluid" id="enlace2" style="display:none;">
-                    <a href="store2.php">Pen de programador</a>
+                    <a href="store2.php">Alfombrilla de programador</a>
                     <hr style="color:#FA7F72;">
                 </div>
                 <div class="row-rev">
@@ -130,7 +130,7 @@
                     </ul>
                 </div>
                 <br>
-                <input class="btn " id="botonpagar" type="submit" value="Tramitar pedido">
+                <input class="btn" src="tramitarPedido.php"  id="botonpagar" type="submit" value="Tramitar pedido">
             </div>
         </div>
 

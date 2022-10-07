@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   <link rel="stylesheet" href="../code/css/navbar.css">
-  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="./css/styles2.css">
 </head>
 
 <body>
@@ -103,7 +103,7 @@
           </select>
         </div>
         <br>
-        <input class="btn " id="botoncarrito" type="submit" value="Añadir al carrito">
+        <input class="btn"  id="botoncarrito" type="submit" value="Añadir al carrito">
         <br>
         <div class="form-check">
           <input class="form-check-input" id="ticketregalo" type="checkbox" value="" id="flexCheckDefault">
