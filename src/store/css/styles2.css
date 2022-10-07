@@ -112,6 +112,10 @@ div.aside{
     padding-top: 10px;
     border-radius: 5px;
 }
+div.aside input{
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
 
 p.precio{
     font-size: 190%;

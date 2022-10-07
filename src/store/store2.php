@@ -102,9 +102,7 @@
             <option value="5">5</option>
           </select>
         </div>
-        <br>
         <input class="btn"  id="botoncarrito" type="submit" value="Añadir al carrito">
-        <br>
         <div class="form-check">
           <input class="form-check-input" id="ticketregalo" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" id="textoTicketRegalo" for="flexCheckDefault">
