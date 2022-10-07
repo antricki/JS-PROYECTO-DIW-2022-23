@@ -11,7 +11,12 @@
 
 
 </head>
-<body>    
+<body>
+  <?php
+    $d = __DIR__;
+    include "../code/php/route.php";
+    include "../code/php/navbar.php";
+  ?>
     
     <section class="gallery">
       
@@ -103,7 +108,10 @@
       
     </section>
 
-    
+    <?php
+    $d = __DIR__;
+    include "../code/php/footer.php";
+  ?>
 
     
 
