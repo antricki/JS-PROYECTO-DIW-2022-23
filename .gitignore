@@ -131,6 +131,16 @@ dist
 
 # Ignore private folders and files
 private
-*/prvate
+*/private
 *.private
 *.private.*
+
+# Ignore big files 
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Ignore IDE files
+.vscode
+.idea

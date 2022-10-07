@@ -1,24 +1,18 @@
-function toggleExtraInfoSelector(obj) {
+function toggleExtraInfoSelector(obj = null) {
     let selectors = document.getElementsByClassName("children-selector");
     for (let i = 0; i < selectors.length; i++) {
-        addClass(selectors[i], "display-none")
+        addClass(selectors[i], "display-none");
     }
-    // 
-    let selectors2 = document.getElementsByClassName("info-pannel");
-    for (let i = 0; i < selectors2.length; i++) {
-        addClass(selectors2[i], "display-none")
-    }
-    if (obj.value === "none") return;
-    removeClass(document.getElementById(obj.value), "display-none")
+    removeClass(document.getElementById(obj.value), "display-none");
+    toggleInfoPanel();
 }
 
-function toggleInfoPanel(obj) {
-    let selectors2 = document.getElementsByClassName("info-pannel");
-    for (let i = 0; i < selectors2.length; i++) {
-        addClass(selectors2[i], "display-none")
+function toggleInfoPanel(obj = null) {
+    let selectors = document.getElementsByClassName("info-panel");
+    for (let i = 0; i < selectors.length; i++) {
+        addClass(selectors[i], "display-none");
     }
-    if (obj.value === "none") return;
-    removeClass(document.getElementById(obj.value), "display-none")
+    removeClass(document.getElementById(obj === null ? "none" : obj.value), "display-none");
 }
 
 function hasClass(elem, className) {
