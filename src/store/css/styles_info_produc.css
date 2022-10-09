@@ -127,6 +127,7 @@ h5.enStock{
 
 #botoncarrito{
     color: white;
+    cursor: no-drop;
     background-color: #389393;
 }
 #botoncarrito:hover{

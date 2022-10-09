@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   <link rel="stylesheet" href="../code/css/navbar.css">
-  <link rel="stylesheet" href="./css/styles2.css">
+  <script src="./js/store2.js"></script>
+  <link rel="stylesheet" href="./css/styles_info_produc.css">
 </head>
 
 <body>
@@ -32,7 +33,7 @@
       </div>
       <!--Info-->
       <div class="col-lg-6 col-md-6" id="info">
-        <h2>Camiseta de programacion</h2>
+        <h2 id="nombre">Camiseta de programacion</h2>
         <hr>
         <p class="precio">15,95€</p>
         <h4>Tamaño:</h4>
@@ -50,12 +51,12 @@
         </div>
         <p>
         <h4>Color:</h4>
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn azul">Azul</button>
-          <button type="button" class="btn verde">Verde</button>
-          <button type="button" class="btn negro">Negro</button>
-          <button type="button" class="btn rojo">Rojo</button>
-          <button type="button" class="btn naranja">Naranja</button>
+       <div class="btn-group" id="color" role="group" aria-label="Basic example">
+          <button type="button" onclick="añadircolor(this)" class="btn azul">Azul</button>
+          <button type="button" onclick="añadircolor(this)"  class="btn verde">Verde</button>
+          <button type="button" onclick="añadircolor(this)"  class="btn negro">Negro</button>
+          <button type="button" onclick="añadircolor(this)"  class="btn rojo">Rojo</button>
+          <button type="button" onclick="añadircolor(this)"  class="btn naranja">Naranja</button>
         </div>
         </p>
         <h4>Detalles del producto</h4>
@@ -77,7 +78,6 @@
         <p>Entrega GRATIS el lunes, 26 de septiembre en pedidos superiores a 29€.
         <h5 class="enStock">En Stock</h5>
         </p>
-
         <form class="destacados_estrellas">
           <p class="clasificacion">
             <input id="radio1" type="radio" name="estrellas" value="5">
@@ -102,7 +102,7 @@
             <option value="5">5</option>
           </select>
         </div>
-        <input class="btn"  id="botoncarrito" type="submit" value="Añadir al carrito">
+        <input class="btn" onclick="añadirCarrito()" id="botoncarrito" type="submit" value="Añadir al carrito">
         <div class="form-check">
           <input class="form-check-input" id="ticketregalo" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" id="textoTicketRegalo" for="flexCheckDefault">
@@ -112,6 +112,13 @@
       </div>
     </div>
   </div>
+  <form  name="datosProducto" action="./cart1.php" method="POST" style="display: none;">
+    <input class="detalles" type="text" id="nombre">
+    <input class="detalles" type="text" id="tamaño">
+    <input class="detalles" type="text" id="color">
+    <input class="detalles" type="text" id="cantidad">
+    <input class="detalles" type="text" id="ticket">
+  </form>
 
   <!--Relacionados-->
   <div class="container-fluid">

@@ -21,6 +21,7 @@
     $d = __DIR__;
     include "../code/php/route.php";
     include "../code/php/navbar_store.php";
+
     ?>
 
 
@@ -74,7 +75,7 @@
                         </div>
                         <img src="products/alfombrilla.jpg" class="imagen" alt="">
                     </div>
-                    <div class="col-7" id="texto">
+                    <div class="col-7" id="texto"> 
                         <h2>Alfombrilla de programador</h2>
                         <p> <span class="enStock">En Stock </span> <br>
                             <b> Tamaño:</b> M <br>

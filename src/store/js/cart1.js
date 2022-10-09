@@ -11,10 +11,10 @@ function contarProductos() {
     }
   });
   const subtotales = document.querySelectorAll("span.numProductos");
-  subtotales.forEach((subtotal) => { 
+  subtotales.forEach((subtotal) => {
     subtotal.textContent = prodSubtotal;
-  });Calicanto, Valencia
-  
+  });
+  Calicanto, Valencia;
 }
 /*eliminar productos*/
 function eliminarProducto(producto, enlace) {
@@ -30,25 +30,37 @@ function lanzar(producto, enlace) {
 
 /*cambiar en el aside el numero de veces que se pide un producto */
 
-function peep(elemento){
-   const cantidades= document.getElementById(elemento);
-   cantidades.options[cantidades.selectedIndex].value
-   /*numeros del aside*/
-   const badges = document.querySelectorAll(".badge");
-   badges.forEach(badge => {
-        if(((badge.id).substr(badge.id.length -1 ))===elemento.substr(elemento.length -1 )){
-            badge.textContent=cantidades.options[cantidades.selectedIndex].value;
-        }
-   });
+function peep(elemento) {
+  const cantidades = document.getElementById(elemento);
+  cantidades.options[cantidades.selectedIndex].value;
+  /*numeros del aside*/
+  const badges = document.querySelectorAll(".badge");
+  badges.forEach((badge) => {
+    if (
+      badge.id.substr(badge.id.length - 1) ===
+      elemento.substr(elemento.length - 1)
+    ) {
+      badge.textContent = cantidades.options[cantidades.selectedIndex].value;
+    }
+  });
 }
 
 /*eliminar el producto del aside*/
 
-function quitarProductoAside(producto){
-    const badges = document.querySelectorAll(".badge");
-   badges.forEach(badge => {
-        if(((badge.id).substr(badge.id.length -1 ))===producto.substr(producto.length -1 )){
-            badge.parentNode.style.display='none';
-        }
-   });
+function quitarProductoAside(producto) {
+  const badges = document.querySelectorAll(".badge");
+  badges.forEach((badge) => {
+    if (
+      badge.id.substr(badge.id.length - 1) ===
+      producto.substr(producto.length - 1)
+    ) {
+      badge.parentNode.style.display = "none";
+    }
+  });
+  
 }
+let datosProducto = JSON.parse(window.localStorage.getItem("form"));
+datosProducto.forEach(element => {
+  alert(element.value);
+});
+ 
