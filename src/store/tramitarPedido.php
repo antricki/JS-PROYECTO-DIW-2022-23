@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../store/css/styles__web_princ_store.css">
 </head>
 <!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
     • Naranja: #F5A25D un 10% para aquello que llama a la acción.
@@ -28,9 +28,9 @@
     ?>
 
     <!-- banner -->
-    <section class="hero-banner banner py-3">
+    <section class="banner_tramitar_pedido py-3">
         <div class="container-fluid">
-            <div class="row row align-items-center">
+            <div class="row">
                 <div class="col banner__title">
                     <h1 class="mt-3">Tramitar pedido</h1>
                 </div>
@@ -179,7 +179,7 @@
                             </div>
                             <!-- mensaje de información, alerta -->
                             <div class="mb-3">
-                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece.">¿Qué es CVC/CVV?</a>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece." class="metodo__pago_link">¿Qué es CVC/CVV?</a>
                             </div>
                         </div>
                     </div>
@@ -226,8 +226,9 @@
     </main> <!-- FIN pago y envío -->
     
     <!-- prefooter -->
-    <div class="row pre-footer container-fluid">
-      <div class="col">
+    <div class="container-fluid">
+        <div class="row pre-footer d-flex justify-content-evenly">
+      <div class="col-lg-3 col-md-8">
         <div class="pre_footer__card">
           <img src="products/camion-de-reparto.png" class="card-img-top pre-footer_img" alt="...">
           <div class="card-body pre-footer__body">
@@ -238,7 +239,7 @@
         </div>
 
       </div>
-      <div class="col">
+      <div class="col-lg-3 col-md-8">
         <div class="pre_footer__card">
           <img src="products/reloj-de-pared.png" class="card-img-top pre-footer_img" alt="...">
           <div class="card-body pre-footer__body">
@@ -249,7 +250,7 @@
         </div>
 
       </div>
-      <div class="col">
+      <div class="col-lg-3 col-md-8">
         <div class="pre_footer__card">
           <img src="products/regreso.png" class="card-img-top pre-footer_img" alt="...">
           <div class="card-body pre-footer__body">
@@ -259,7 +260,9 @@
           </div>
         </div>
       </div>
+        </div>
     </div>
+
     <!-- footer -->
     <?php
     include "../code/php/footer.php";
