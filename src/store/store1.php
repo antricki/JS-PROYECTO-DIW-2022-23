@@ -27,36 +27,11 @@
     <!-- Navbar -->
 <header>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-        data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">
-              <img src="../assets/images/logo_transparente.png" alt="" width="30" height="24" class="d-inline-block align-text-top navbar-img">
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <?php
+        $d=__DIR__;
+        include "../code/php/route.php";
+        include "../code/php/navbar_store.php";
+    ?>
   <!-- Navbar -->
 
   <!-- Background image -->
@@ -90,16 +65,16 @@
               <!-- código de la clasificación de estrellas -->
               <form class="destacados_estrellas">
                 <p class="clasificacion">
-                   <input id="radio1" type="radio" name="estrellas" value="5">
-                    <label for="radio1">★</label>
-                    <input id="radio2" type="radio" name="estrellas" value="4">
-                    <label for="radio2">★</label>
-                    <input id="radio3" type="radio" name="estrellas" value="3">
-                    <label for="radio3">★</label>
-                    <input id="radio4" type="radio" name="estrellas" value="2">
-                    <label for="radio4">★</label>
-                    <input id="radio5" type="radio" name="estrellas" value="1">
-                    <label for="radio5">★</label>
+                   <input id="radio1" type="radio" name="estrellas" value="5" class="estrellas">
+                    <label for="radio1" class="estrellas__label">★</label>
+                    <input id="radio2" type="radio" name="estrellas" value="4" class="estrellas">
+                    <label for="radio2" class="estrellas__label">★</label>
+                    <input id="radio3" type="radio" name="estrellas" value="3" class="estrellas">
+                    <label for="radio3" class="estrellas__label">★</label>
+                    <input id="radio4" type="radio" name="estrellas" value="2" class="estrellas">
+                    <label for="radio4" class="estrellas__label">★</label>
+                    <input id="radio5" type="radio" name="estrellas" value="1" class="estrellas">
+                    <label for="radio5" class="estrellas__label">★</label>
                 </p>
               </form>
             </figcaption>
@@ -133,16 +108,16 @@
                 <p class="card-text">Sudadera con capucha unisex.</p>
                 <form class="destacados_estrellas">
                   <p class="clasificacion">
-                     <input id="radio1" type="radio" name="estrellas" value="5">
-                      <label for="radio1">★</label>
-                      <input id="radio2" type="radio" name="estrellas" value="4">
-                      <label for="radio2">★</label>
-                      <input id="radio3" type="radio" name="estrellas" value="3">
-                      <label for="radio3">★</label>
-                      <input id="radio4" type="radio" name="estrellas" value="2">
-                      <label for="radio4">★</label>
-                      <input id="radio5" type="radio" name="estrellas" value="1">
-                      <label for="radio5">★</label>
+                     <input id="radio1" type="radio" name="estrellas" value="5" class="estrellas">
+                      <label for="radio1" class="estrellas__label">★</label>
+                      <input id="radio2" type="radio" name="estrellas" value="4" class="estrellas">
+                      <label for="radio2"  class="estrellas__label">★</label>
+                      <input id="radio3" type="radio" name="estrellas" value="3" class="estrellas">
+                      <label for="radio3"  class="estrellas__label">★</label>
+                      <input id="radio4" type="radio" name="estrellas" value="2" class="estrellas">
+                      <label for="radio4"  class="estrellas__label">★</label>
+                      <input id="radio5" type="radio" name="estrellas" value="1" class="estrellas">
+                      <label for="radio5"  class="estrellas__label">★</label>
                   </p>
                 </form>
               </div>
@@ -158,16 +133,16 @@
                 <p class="card-text">Sudadera con capucha unisex.</p>
                 <form class="destacados_estrellas">
                   <p class="clasificacion">
-                     <input id="radio1" type="radio" name="estrellas" value="5">
-                      <label for="radio1">★</label>
-                      <input id="radio2" type="radio" name="estrellas" value="4">
-                      <label for="radio2">★</label>
-                      <input id="radio3" type="radio" name="estrellas" value="3">
-                      <label for="radio3">★</label>
-                      <input id="radio4" type="radio" name="estrellas" value="2">
-                      <label for="radio4">★</label>
-                      <input id="radio5" type="radio" name="estrellas" value="1">
-                      <label for="radio5">★</label>
+                     <input id="radio1" type="radio" name="estrellas" value="5" class="estrellas">
+                      <label for="radio1"  class="estrellas__label">★</label>
+                      <input id="radio2" type="radio" name="estrellas" value="4" class="estrellas">
+                      <label for="radio2"  class="estrellas__label">★</label>
+                      <input id="radio3" type="radio" name="estrellas" value="3" class="estrellas">
+                      <label for="radio3"  class="estrellas__label">★</label>
+                      <input id="radio4" type="radio" name="estrellas" value="2" class="estrellas">
+                      <label for="radio4"  class="estrellas__label">★</label>
+                      <input id="radio5" type="radio" name="estrellas" value="1" class="estrellas">
+                      <label for="radio5"  class="estrellas__label">★</label>
                   </p>
                 </form>
               </div>
@@ -183,16 +158,16 @@
                 <p class="card-text">Sudadera con capucha unisex.</p>
                 <form class="destacados_estrellas">
                   <p class="clasificacion">
-                     <input id="radio1" type="radio" name="estrellas" value="5">
-                      <label for="radio1">★</label>
-                      <input id="radio2" type="radio" name="estrellas" value="4">
-                      <label for="radio2">★</label>
-                      <input id="radio3" type="radio" name="estrellas" value="3">
-                      <label for="radio3">★</label>
-                      <input id="radio4" type="radio" name="estrellas" value="2">
-                      <label for="radio4">★</label>
-                      <input id="radio5" type="radio" name="estrellas" value="1">
-                      <label for="radio5">★</label>
+                     <input id="radio1" type="radio" name="estrellas" value="5"class="estrellas">
+                      <label for="radio1" class="estrellas__label">★</label>
+                      <input id="radio2" type="radio" name="estrellas" value="4" class="estrellas">
+                      <label for="radio2" class="estrellas__label">★</label>
+                      <input id="radio3" type="radio" name="estrellas" value="3" class="estrellas">
+                      <label for="radio3" class="estrellas__label">★</label>
+                      <input id="radio4" type="radio" name="estrellas" value="2" class="estrellas">
+                      <label for="radio4" class="estrellas__label">★</label>
+                      <input id="radio5" type="radio" name="estrellas" value="1" class="estrellas">
+                      <label for="radio5" class="estrellas__label">★</label>
                   </p>
                 </form>
               </div>
@@ -208,16 +183,16 @@
                 <p class="card-text">Sudadera con capucha unisex.</p>
                 <form class="destacados_estrellas">
                   <p class="clasificacion">
-                     <input id="radio1" type="radio" name="estrellas" value="5">
-                      <label for="radio1">★</label>
-                      <input id="radio2" type="radio" name="estrellas" value="4">
-                      <label for="radio2">★</label>
-                      <input id="radio3" type="radio" name="estrellas" value="3">
-                      <label for="radio3">★</label>
-                      <input id="radio4" type="radio" name="estrellas" value="2">
-                      <label for="radio4">★</label>
-                      <input id="radio5" type="radio" name="estrellas" value="1">
-                      <label for="radio5">★</label>
+                     <input id="radio1" type="radio" name="estrellas" value="5" class="estrellas">
+                      <label for="radio1" class="estrellas__label">★</label>
+                      <input id="radio2" type="radio" name="estrellas" value="4" class="estrellas">
+                      <label for="radio2" class="estrellas__label">★</label>
+                      <input id="radio3" type="radio" name="estrellas" value="3" class="estrellas">
+                      <label for="radio3" class="estrellas__label">★</label>
+                      <input id="radio4" type="radio" name="estrellas" value="2" class="estrellas">
+                      <label for="radio4" class="estrellas__label">★</label>
+                      <input id="radio5" type="radio" name="estrellas" value="1" class="estrellas">
+                      <label for="radio5" class="estrellas__label">★</label>
                   </p>
                 </form>
               </div>
@@ -354,6 +329,6 @@
     </div>
     <?php
     include "../code/php/footer.php";
-  ?>
+    ?>
 </body>
 </html>

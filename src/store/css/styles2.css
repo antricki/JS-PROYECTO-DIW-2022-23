@@ -56,7 +56,7 @@ div#info{
     box-shadow: 0px 1px 1px #FA7F72 inset,0px 0px 10px #FA7F72 ;
 }
 
-
+/*cantidades*/
 
 div.btn-group {
     display: flex;
@@ -68,7 +68,15 @@ div.btn-group button.azul:hover{
     border: 1px solid #389393;
     color: #389393;
 }
+div.btn-group button.azul:focus{
+    border: 1px solid #389393;
+    color: #389393;
+}
 div.btn-group button.verde:hover{
+    border: 1px solid seagreen;
+    color: seagreen;
+}
+div.btn-group button.verde:focus{
     border: 1px solid seagreen;
     color: seagreen;
 }
@@ -76,7 +84,15 @@ div.btn-group button.negro:hover{
     border: 1px solid black;
     color: black;
 }
+div.btn-group button.negro:focus{
+    border: 1px solid black;
+    color: black;
+}
 div.btn-group button.rojo:hover{
+    border: 1px solid #FA7F72;
+    color: #FA7F72;
+}
+div.btn-group button.rojo:focus{
     border: 1px solid #FA7F72;
     color: #FA7F72;
 }
@@ -84,6 +100,11 @@ div.btn-group button.naranja:hover{
     border: 1px solid #F5A25D;
     color: #F5A25D;
 }
+div.btn-group button.naranja:focus{
+    border: 1px solid #F5A25D;
+    color: #F5A25D;
+}
+/*aside*/
 div.aside{
     display: flex;
     flex-direction: column;
@@ -93,7 +114,7 @@ div.aside{
 }
 
 p.precio{
-    font-size: 200%;
+    font-size: 190%;
 }
 
 h5.enStock{
@@ -105,20 +126,24 @@ h5.enStock{
     background-color: #389393;
 }
 #botoncarrito:hover{
-    color: #F5A25D;
+    color: #FA7F72;
 }
 
 #ticketregalo{
-    border: 1px solid #F5A25D;
+    border: 1px solid #FA7F72;
 }
 #ticketregalo::before{
     background-color: white;
 }
 #ticketregalo:focus{
-    box-shadow: 0px 1px 1px #F5A25D inset,0px 0px 10px #F5A25D ;
+    box-shadow: 0px 1px 1px #FA7F72 inset,0px 0px 10px #FA7F72 ;
 }
 #ticketregalo:checked{
     background-color: #389393;
+}
+
+#textoTicketRegalo:hover{
+color: #FA7F72;
 }
 
 /*relacionados*/
@@ -144,9 +169,7 @@ div.card{
 div.card:hover{
     box-shadow: #389393 0px 5px 15px;
 }
-footer{
-    margin-top: -6%;
-}
+
 /*estrellas*/
 form.destacados_estrellas{
     margin-right: 30%;
@@ -181,3 +204,52 @@ input[type="radio"] {
     color: orange;
   }
 
+
+  /* css pre-footer */
+.pre-footer{
+    display: flex;
+    margin-top: 3%;
+    padding-left: 6%;
+    justify-content: space-around;
+  }
+  .pre_footer__card{
+    width: 30rem;
+    height: 15rem;
+    border: none;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .pre-footer .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pre-footer_img{
+    width: 6rem;
+  }
+  .pre-footer__body{
+    color: #fa807286;
+    font-size: smaller;
+  }
+  .pre-footer__title{
+    color: #fa8072cc;
+  }
+  .pre_footer__card-link{
+    color:#FA7F72;
+    text-decoration: none;
+  }
+  .pre_footer__card-link:hover{
+    color:#389393;
+    text-decoration: none;
+  }
+
+/*footer*/
+footer{
+    margin-top: -4%;
+}
+  

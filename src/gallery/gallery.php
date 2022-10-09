@@ -108,7 +108,10 @@
       
     </section>
 
-    
+    <?php
+    $d = __DIR__;
+    include "../code/php/footer.php";
+  ?>
 
     
 

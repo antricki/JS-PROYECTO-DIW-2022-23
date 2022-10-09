@@ -37,10 +37,15 @@ body{
     color: #FA7F72;
 }
 .btn{
-    width: 100px;   
+    width: 100px;  
 }
 .div_hidden{
     display: none;
+
 }
+.tlf_defectuoso{
+    color: #F5A25D;
+}
+
 
 

@@ -59,11 +59,11 @@ body{
   }
 /* css de la clasificación por estrellas */
 
-input[type="radio"] {
+.estrellas {
     display: none;
   }
   
-  label {
+ .estrellas__label {
     color: grey;
   }
   
@@ -72,12 +72,12 @@ input[type="radio"] {
     unicode-bidi: bidi-override;
   }
   
-  label:hover,
-  label:hover ~ label {
+.estrellas__label:hover,
+.estrellas__label:hover ~ .estrellas__label {
     color: orange;
   }
   
-  input[type="radio"]:checked ~ label {
+  .estrellas:checked ~ .estrellas__label {
     color: orange;
   }
 
@@ -159,3 +159,94 @@ input[type="radio"] {
   text-decoration: none;
 }
 /* css footer */
+
+/* css página tramitarPedido */
+.body__tramitar_pedido{
+  background-color: #EBEBEB;
+}
+.banner{
+  background: linear-gradient( #FA7F72, #EBEBEB);
+}
+.banner__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #389393;
+}
+.tipo__entrega1{
+  background-color: #EBEBEB;
+  border-radius: 15px;
+}
+.form-check_input{
+  padding: 10px;
+}
+.contacto__direccion-title,
+.pedido_subtotal,
+.pedido_gastos-envio,
+.pedido_total{
+  display: flex;
+  justify-content: space-between;
+}
+.pedido_total label{
+  font-size: larger;
+  font-weight: 800;
+  color: #FA7F72;
+}
+.contacto__direccion-title__text{
+  color: #389393;
+}
+.contacto__envio-pago__img{
+  width: 100px;
+  height: 50px;
+}
+.contacto__direccion-icon{
+  width: 50px;
+  height: 50px;
+}
+.tramitar__pedido-btn{
+  border: none;
+  width: 100%;
+  background-color: #389393;
+  color: #EBEBEB;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px black;
+  font-size: 1.5em;
+}
+.img_tramitar__pedido_icon{
+  width: 25px;
+  height: 25px;
+}
+.raya_tramitar-pedido{
+  width: 100%;
+  height: 2px;
+  background-color: #FA7F72;
+}
+
+.contenedor__datos{
+  margin-top: 50px;
+}
+.contenedor__resumen{
+  border: 1px solid #f76a5a;
+  border-radius: 15px;
+  height: 50%;
+  margin-top: 50px;
+  padding: 1.5em;
+}
+.datos__contacto-envío,
+.metodo__envio{
+  border: 1px solid #FA7F72;
+  border-radius: 15px;
+}
+.metodo__pago{
+  border: 1px solid #FA7F72;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+.pedido_total-pie{
+  text-align: right;
+}
+.pedido_total-pie,
+.tramitar__pedido-text{
+  color: grey;
+}
+

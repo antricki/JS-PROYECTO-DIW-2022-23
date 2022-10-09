@@ -2,23 +2,6 @@
     width: 100%;
 }
 
-.tmp {
-    background-color: red;
-    text-align: center;
-    margin: 0.25rem;
-    padding: 0.25rem;
-}
-
-.tmp>p {
-    background-color: burlywood;
-    padding: 0.25rem;
-}
-
-.tmp>h2 {
-    background-color: rgb(92, 204, 41);
-    padding: 0.25rem;
-}
-
 .display-none {
     display: none;
 }
