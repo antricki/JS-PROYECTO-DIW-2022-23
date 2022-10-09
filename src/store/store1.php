@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,600;1,700&family=Orbitron:wght@400;600;900&display=swap" rel="stylesheet">
+
+
     <!-- fin fuentes -->
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="css/styles__web_princ_store.css">
@@ -24,8 +24,25 @@
     • Azul: #389393 para el footer 
     https://www.shutterstock.com/es/create/home para crear imagenes-->
 <body>
-    <!-- Navbar -->
 <header>
+<div class="banner_linea_aparece banner_aparece" id="banner_aparece">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner banner_carousel_aparece d-flex">
+              <div class="carousel-item active">
+                <a href="#" class="d-block banner__aparece_link">OFERTA FLASH!!! -30%</a>
+              </div>
+              <div class="carousel-item">
+                <a href="politicas.php" class="d-block banner__aparece_link">ENVÍO GRATIS CON 2 O MÁS ARTÍCULOS</a>
+              </div>
+              <div class="carousel-item">
+               <a href="politicas.php" class="d-block banner__aparece_link">TU PEDIDO EN 24 HRS</a> 
+              </div>
+              <div class="carousel-item">
+                <a href="politicas.php" class="d-block banner__aparece_link">DEVOLUCIONES</a>
+              </div>
+      </div>
+    </div>
+  </div>
   <!-- Navbar -->
   <?php
         $d=__DIR__;
@@ -35,14 +52,14 @@
   <!-- Navbar -->
 
   <!-- Background image -->
-  <div class="fondo__banner p-5 text-center bg-image">
-    <div class="mask">
+  <div class="fondo__banner p-4 text-center" id="banner_desaparece">
+    <div class="">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="texto__banner">
           <h1 class="mb-3">OFERTA FLASH!!!</h1>
           <h4 class="mb-3">Por tiempo limitado en todas tus compras</h4>
-          <h1 class="mb-3">-50%</h1>
-          <a class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a>
+          <h1 class="mb-3">-30%</h1>
+          <a class="btn btn-lg" href="#!" role="button">Call to action</a>
         </div>
       </div>
     </div>
@@ -95,7 +112,7 @@
   	
 <hr class="raya"/>
 <!-- sección 2: LO QUE MÁS GUSTA -->
-<section class="gusta">
+<section class="gusta>
   <div class="container-fluid destacados-container_title">
     <h2 class="destacados_title">Lo que más gusta a otros clientes</h2>
   </div>
@@ -293,8 +310,9 @@
 </section>
 <hr class="raya"/>
     <!-- Footer -->
-    <div class="row pre-footer container-fluid">
-      <div class="col">
+    <div class="container-fluid">
+    <div class="row pre-footer d-flex justify-content-evenly">
+      <div class="col-lg-3 col-md-8">
         <div class="pre_footer__card">
           <img src="products/camion-de-reparto.png" class="card-img-top pre-footer_img" alt="...">
           <div class="card-body pre-footer__body">
@@ -305,7 +323,7 @@
         </div>
 
       </div>
-      <div class="col">
+      <div class="col-lg-3 col-md-8">
         <div class="pre_footer__card">
           <img src="products/reloj-de-pared.png" class="card-img-top pre-footer_img" alt="...">
           <div class="card-body pre-footer__body">
@@ -316,7 +334,7 @@
         </div>
 
       </div>
-      <div class="col">
+      <div class="col-lg-3 col-md-8">
         <div class="pre_footer__card">
           <img src="products/regreso.png" class="card-img-top pre-footer_img" alt="...">
           <div class="card-body pre-footer__body">
@@ -327,8 +345,11 @@
         </div>
       </div>
     </div>
+
+    </div>
     <?php
     include "../code/php/footer.php";
     ?>
+    <script src="js/store1.js"></script>
 </body>
 </html>
