@@ -7,8 +7,8 @@
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 
-  <script src="code/js/wScript.js"></script>
-  <link rel="stylesheet" href="code/css/wStyles.css">
+  <script src="code/js/index.js"></script>
+  <link rel="stylesheet" href="code/css/index.css">
 </head>
 
 <body>
@@ -17,7 +17,6 @@
   include "code/php/route.php";
   include "code/php/navbar.php";
   ?>
-
 
   <div id="video">
     <video controls class="video">
