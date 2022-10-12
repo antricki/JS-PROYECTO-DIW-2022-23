@@ -71,7 +71,7 @@
 <section class="oferta">
   <div class="container-fluid">
     <div class="oferta_container_title container-fluid">
-      <h2 class="destacados_title">Nuestro Producto Estrella...</h2>
+      <h2 class="">Nuestro Producto Estrella...</h2>
     </div>
     <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 top">
       <div class="col d-flex justify-content-around">
@@ -112,14 +112,14 @@
   	
 <hr class="raya"/>
 <!-- sección 2: LO QUE MÁS GUSTA -->
-<section class="gusta>
+<section class="gusta">
   <div class="container-fluid destacados-container_title">
-    <h2 class="destacados_title">Lo que más gusta a otros clientes</h2>
+    <h2 class="">Lo que más gusta a otros clientes</h2>
   </div>
     <div class="container-fluid destacados" >
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 rounded d-flex d-inline-flex">
           <div class="col">
-            <div class="card h-100">
+            <a href="#" class="card card__link">
               <img src="products/camiseta.webp" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Sudadera con capucha unisex.</p>
@@ -138,13 +138,13 @@
                   </p>
                 </form>
               </div>
-              <div class="card-footer">
+              <!-- <div class="card-footer">
                 <input class="card-footer_input" type="submit" value="Añadir" name="añadir">
-              </div>
-            </div>
+              </div> -->
+            </a>
           </div>
           <div class="col">
-            <div class="card h-100">
+            <a href="#" class="card card__link">
               <img src="products/sudadera3.webp" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Sudadera con capucha unisex.</p>
@@ -163,13 +163,13 @@
                   </p>
                 </form>
               </div>
-              <div class="card-footer">
+              <!-- <div class="card-footer">
                 <input class="card-footer_input" type="submit" value="Añadir" name="añadir">
-              </div>
-            </div>
+              </div> -->
+            </a>
           </div>
           <div class="col">
-            <div class="card h-100">
+            <a href="#" class="card card__link">
               <img src="products/sudadesra.webp" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Sudadera con capucha unisex.</p>
@@ -188,13 +188,13 @@
                   </p>
                 </form>
               </div>
-              <div class="card-footer">
+              <!-- <div class="card-footer">
                 <input class="card-footer_input" type="submit" value="Añadir" name="añadir">
-              </div>
-            </div>
+              </div> -->
+            </a>
           </div>
           <div class="col">
-            <div class="card h-100">
+            <a href="#" class="card card__link">
               <img src="products/camiseta2.webp" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Sudadera con capucha unisex.</p>
@@ -213,10 +213,10 @@
                   </p>
                 </form>
               </div>
-              <div class="card-footer">
+              <!-- <div class="card-footer">
                 <input class="card-footer_input" type="submit" value="Añadir" name="añadir">
-              </div>
-            </div>
+              </div> -->
+            </a>
           </div>
         </div>
 </section>
@@ -224,8 +224,8 @@
 <hr class="raya"/>
 <!-- sección 3: OTROS PRODUCTOS -->
 <section class="otros_productos">
-      <div class="container-fluid container_title">
-        <h2 class="destacados_title">Otros productos</h2>
+      <div class="container-fluid otros__container_title">
+        <h2 class="">Otros productos</h2>
       </div>
       <div class="container container-fluid otros_productos__container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-md-center">

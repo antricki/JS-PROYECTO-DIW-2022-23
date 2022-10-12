@@ -15,7 +15,6 @@ body{
 }
 .texto__banner{
   text-shadow: 3px 20px 10px #ebebe0;
-  font-family: 'Orbitron', sans-serif;
   font-weight: 900;
 }
 .banner_aparece{
@@ -45,8 +44,11 @@ body{
   margin: 10px auto;
 }
 /* css sección 1: Nuestro producto estrella */
-.oferta_container_title{
-    height: 5rem;
+.oferta_container_title,
+.destacados-container_title,
+.otros__container_title{
+  margin: 1.5em;
+
 }
 .figure-img{
     width: 30rem;
@@ -57,8 +59,7 @@ body{
     height: 2px;
     width:75%;
     size:"10";
-    background-color: #389393;
-    box-shadow: 1px 1px 1px #FA7F72;
+    background-color: #276969;
     margin: 50px auto;
 }
 .oferta{
@@ -68,7 +69,7 @@ body{
     background-color:#389393;
     color: white;
 }
-.explicacion {
+.explicacion{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,35 +106,41 @@ body{
   }
 
 /* css seccion 2: lo que más gusta a otros clientes */
+
 .destacados{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
+.card__link{
+  text-decoration: none;
+  color: #f76a5a;
+}
 .card{
-    width: 300px;  
-    height: 400px;
+    width: 350px;  
+    height: 500px;
     font-size: large;
     border: 1px solid #FA7F72;
 }
 .card:hover{
     box-shadow: 2px 2px 30px#389393;
+    color: #389393;
 }
 .card-body{
     font-size: larger;
     text-align: center;
 }
-.card-footer{
+/* .card-footer{
     display: flex;
     justify-content: space-around;
-}
-.card-footer_input{
+} */
+/* .card-footer_input{
     width: 150px;
     background-color:#FA7F72;
     border: none;
     border-radius: 15px; 
-}
+} */
 /* css sección 3: OTROS PRODUCTOS */
 .otros_productos{
   background-image: linear-gradient(#EBEBEB, #abebeba8,#EBEBEB);
@@ -162,7 +169,7 @@ body{
 
 }
 .pre-footer_img{
-  width: 4rem;
+  width: 3rem;
 }
 
 .pre-footer__title{
