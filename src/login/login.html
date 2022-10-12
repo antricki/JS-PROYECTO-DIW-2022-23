@@ -156,7 +156,7 @@
                 </div>
               </div>
 
-              <div class="campoValido dummytext">
+              <div class="campoValido campoValidoEmailRegis dummytext">
                 <div class="tempIcon">
                   <img
                     src="../assets/icons/check-solid.svg"
@@ -165,7 +165,7 @@
                   />
                 </div>
               </div>
-              <div class="campoInValido dummytext">
+              <div class="campoInValido campoInValidoEmailRegis dummytext">
                 <div class="tempIcon">
                   <img
                     src="../assets/icons/x-solid.svg"
@@ -184,7 +184,7 @@
               />
             </div>
 
-            <div class="form-group" id="pass-group">
+            <div class="form-group boxForm" id="pass-group">
               <div class="passPlaceholderRegis dummytext">
                 <div class="tempIcon">
                   <img
@@ -197,10 +197,29 @@
                 <div class="tempText">
                   <span class="textoTemporal"> Contraseña </span>
                 </div>
+                
+              </div>
+              <div class="campoValido campoValidoPassRegis dummytext">
+                <div class="tempIcon">
+                  <img
+                    src="../assets/icons/check-solid.svg"
+                    alt=""
+                    class="iconValido"
+                  />
+                </div>
+              </div>
+              <div class="campoInValido campoInValidoPassRegis dummytext">
+                <div class="tempIcon">
+                  <img
+                    src="../assets/icons/x-solid.svg"
+                    alt=""
+                    class="iconInValido"
+                  />
+                </div>
               </div>
               <input
                 onclick="hidePassPlaceholderRegis()"
-                onblur="showPassPlaceholderRegis()"
+                onblur="passValidation()"
                 id="passRegis"
                 type="password"
                 placeholder=""

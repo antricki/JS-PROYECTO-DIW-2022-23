@@ -62,8 +62,8 @@ function showUserPlaceholderRegis(){
 
     if(userInputRegis.value == ""){
     userPlaceholderRegis.style.display = "block";
-    campoInValido.style.display ="none";
-    campoValido.style.display ="none";
+    campoInValidoEmailRegis.style.display ="none";
+    campoValidoEmailRegis.style.display ="none";
     }
     
 }
@@ -90,21 +90,21 @@ function showEmailPlaceholderRegis(){
 function checkEmail(){
     let correo = emailInputRegis.value;
     const patron =/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    let campoValido = document.querySelector(".campoValido");
-    let campoInValido = document.querySelector(".campoInValido");
+    let campoValidoEmailRegis = document.querySelector(".campoValidoEmailRegis");
+    let campoInValidoEmailRegis = document.querySelector(".campoInValidoEmailRegis");
 
 
     if(correo.match(patron)){
-        campoValido.style.display = "block";
-        campoInValido.style.display ="none";
+        campoValidoEmailRegis.style.display = "block";
+        campoInValidoEmailRegis.style.display ="none";
     }else{
-        campoValido.style.display = "none";
+        campoValidoEmailRegis.style.display = "none";
 
         if(emailInputRegis.value != ""){
         emailInputRegis.value = "Invalido";
-        campoInValido.style.display ="block";
+        campoInValidoEmailRegis.style.display ="block";
         }else{
-            campoInValido.style.display ="none";
+            campoInValidoEmailRegis.style.display ="none";
             
         }
     }
@@ -136,5 +136,33 @@ function showPassPlaceholderRegis(){
     if(passInputRegis.value ==""){
         passPlaceholderRegis.style.display = "block";
     }
+}
+
+function checkPass(){
+    let pass = passInputRegis.value;
+
+    let campoValidoPassRegis = document.querySelector(".campoValidoPassRegis");
+    let campoInValidoPassRegis = document.querySelector(".campoInValidoPassRegis");
+
+    if(pass != ""){
+        if(pass.length < 8){
+            campoInValidoPassRegis.style.display = "block";
+            campoValidoPassRegis.style.display = "none";
+            alert("La contraseña debe contener más de 8 carácteres.")
+        }
+        else{
+            campoValidoPassRegis.style.display = "block";
+            campoInValidoPassRegis.style.display = "none";
+       
+        }
+    }else{
+        campoValidoPassRegis.style.display = "none";
+        campoInValidoPassRegis.style.display = "none";
+    }
+}
+
+function passValidation(){
+    showPassPlaceholderRegis();
+    checkPass();
 }
 // [FIN]
