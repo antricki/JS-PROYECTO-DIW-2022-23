@@ -69,8 +69,8 @@
     <!-- sección 1: PRODUCTO ESTRELLA -->
 <hr class="raya__header"/>   
 <section class="oferta">
-  <div class="container-fluid">
-    <div class="oferta_container_title container-fluid">
+  <a href="#" class="container-fluid oferta__link">
+    <div class="oferta_container_title">
       <h2 class="">Nuestro Producto Estrella...</h2>
     </div>
     <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 top">
@@ -102,12 +102,9 @@
         <h2 class="explicacion_title">...será tu nueva SUDADERA favorita!!</h2>
         <p class="text_explicacion">Nuestra SUDADERA de informático. Ofrece la flexibilidad para dar libertad de movimiento. Con ella te sentirás como en casa, comfortable y calentita, mientras realizas tus trabajos ante el ordenador.
         </p>
-        <div class="enlace">
-          <a href="#" class="btn enlace_btn">Añadir al carrito</a>
-        </div>
       </div>
     </div>
-  </div>
+  </a>
 </section>
   	
 <hr class="raya"/>
