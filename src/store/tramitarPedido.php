@@ -54,28 +54,32 @@
                         </div>
                         <!-- cuerpo / primer formulario-->
                         <div class="contacto__direccion-body">
-                            <form action="#" method="post" id="form_inicial">
+                            <form action="#" method="post" id="form_inicial" name="fInicial">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre" required>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" required>
+                                    <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Télefono" required>
+                                    <input type="tel" class="form-control" id="telefono" placeholder="Télefono" name="tlf" maxlength="9" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle" required>
+                                    <input type="text" class="form-control" id="calle" placeholder="Calle" name="calle" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ciudad" required>
+                                    <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" name="ciudad" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Código Postal" required>
+                                    <input type="text" class="form-control" id="codigoPostal" placeholder="Código Postal" name="cp" maxlength="5" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="País">
+                                    <input type="text" class="form-control" id="pais" placeholder="País" name="pais" required>
                                 </div>
+                                <div class="mb-3">
+                                    <input type="submit" class="form__enviar" id="enviar" value="Enviar" name="enviar">
+                                </div>
+                                
                             </form>
                         </div>
                             <!-- segundo formulario -->

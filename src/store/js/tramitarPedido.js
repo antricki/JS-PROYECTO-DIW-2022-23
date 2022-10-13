@@ -32,5 +32,27 @@ entrega2.addEventListener('click', (e) => {
     tipo_entrega1.classList.remove('tipo__entrega1');
 })
 
+// comprobar formulario
+const nombre = document.getElementById('nombre').value;
+const apellidos = document.getElementById('apellidos').value;
+const tlf = document.getElementById('telefono').value;
+const calle = document.getElementById('calle').value;
+const ciudad = document.getElementById('ciudad').value;
+const cp = document.getElementById('codigoPostal').value;
+const pais = document.getElementById('pais').value;
 
+const check = document.getElementById('checkbox');
+const boton = document.getElementById('enviar');
+
+boton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+})
+
+function contieneNum(text) {
+    return /[0-9]/.test(text);
+}
+function contieneSoloNum(text) {
+    return /^\d+$/.test(text);
+}
 

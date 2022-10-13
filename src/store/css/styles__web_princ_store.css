@@ -197,6 +197,21 @@ body{
   align-items: center;
   color: #389393;
 }
+.form-control:valid{
+  border: 1px solid #276969;
+}
+.form-control:required:invalid{
+  border: 1px solid #FA7F72;
+}
+.form__enviar{
+  width: 100%;
+  border: none;
+  background-color: #389393;
+  color: #EBEBEB;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px black;
+  font-size: 1.5em;
+}
 .tipo__entrega1{
   background-color: #389393;
   color: #EBEBEB;
