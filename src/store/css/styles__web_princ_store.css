@@ -44,6 +44,10 @@ body{
   margin: 10px auto;
 }
 /* css sección 1: Nuestro producto estrella */
+.oferta__link{
+  text-decoration: none;
+  color: #EBEBEB;
+}
 .oferta_container_title,
 .destacados-container_title,
 .otros__container_title{
@@ -70,6 +74,8 @@ body{
     color: white;
 }
 .explicacion{
+    width: 30rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,9 +83,8 @@ body{
   .explicacion_title{
     color: #FA7F72;
   }
-  .enlace_btn{
-    font-size: larger;
-    color: #FA7F72;
+  text_explicacion{
+    color: #EBEBEB;
   }
 /* css de la clasificación por estrellas */
 
