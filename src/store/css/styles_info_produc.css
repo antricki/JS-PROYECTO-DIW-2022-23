@@ -172,9 +172,13 @@ div.card{
     border:1px solid #FA7F72;
 }
 div.card:hover{
-    box-shadow: #389393 0px 5px 15px;
+    box-shadow: #389393 2px 2px 30px;
+    color: #389393;
 }
-
+.card__link{
+    text-decoration: none;
+    color: #f76a5a;
+  }
 /*estrellas*/
 form.destacados_estrellas{
     margin-right: 30%;
