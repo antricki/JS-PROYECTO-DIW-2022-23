@@ -11,7 +11,6 @@ body{
   background-image: url(../products/fondos/fondo-tecnologia-conexion-red-tierra-digital-global_1017-23328.webp) ;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background: radial-gradient(59% 100% ,#056d4aa2 0,#020f58 68%,#075786cc 100%); */
 }
 .texto__banner{
   text-shadow: 3px 20px 10px #ebebe0;
@@ -36,13 +35,6 @@ body{
   text-align: center;
 }
 /* FIN css banner */
-.raya__header{
-  background-color: #389393;
-  box-shadow: 1px 1px 1px #FA7F72;
-  height: 2px;
-  width:75%;
-  margin: 10px auto;
-}
 /* css sección 1: Nuestro producto estrella */
 .oferta__link{
   text-decoration: none;
@@ -66,25 +58,36 @@ body{
     background-color: #276969;
     margin: 50px auto;
 }
+
 .oferta{
+    color: #EBEBEB;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color:#389393;
-    color: white;
+}
+.oferta__title{
+  color: #FA7F72;
 }
 .explicacion{
-    width: 30rem;
+    position: relative;
+    margin-top: 3.5em;
+    width: 35rem;
     height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #EBEBEB;
+    font-size: 1.5em;
+    /* background-color: rgba(235, 235, 235,.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3); */
+    border-radius: 0.3em;
   }
   .explicacion_title{
     color: #FA7F72;
-  }
-  text_explicacion{
-    color: #EBEBEB;
+    
   }
 /* css de la clasificación por estrellas */
 
@@ -136,19 +139,10 @@ body{
     font-size: larger;
     text-align: center;
 }
-/* .card-footer{
-    display: flex;
-    justify-content: space-around;
-} */
-/* .card-footer_input{
-    width: 150px;
-    background-color:#FA7F72;
-    border: none;
-    border-radius: 15px; 
-} */
+
 /* css sección 3: OTROS PRODUCTOS */
 .otros_productos{
-  background-image: linear-gradient(#EBEBEB, #abebeba8,#EBEBEB);
+  background-image: radial-gradient(#F5A25D,#EBEBEB);
 }
 .otros_productos__figure{
   width: 15rem;

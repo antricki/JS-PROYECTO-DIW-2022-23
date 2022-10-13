@@ -59,7 +59,7 @@
           <h1 class="mb-3">OFERTA FLASH!!!</h1>
           <h4 class="mb-3">Por tiempo limitado en todas tus compras</h4>
           <h1 class="mb-3">-30%</h1>
-          <a class="btn btn-lg" href="#!" role="button">Call to action</a>
+          <a class="btn btn-lg" href="#!">Call to action</a>
         </div>
       </div>
     </div>
@@ -67,13 +67,13 @@
   <!-- Background image -->
 </header>
     <!-- sección 1: PRODUCTO ESTRELLA -->
-<hr class="raya__header"/>   
+<hr class="raya"/>  
 <section class="oferta">
   <a href="#" class="container-fluid oferta__link">
     <div class="oferta_container_title">
-      <h2 class="">Nuestro Producto Estrella...</h2>
+      <h2 class="oferta__title">Nuestro Producto Estrella...</h2>
     </div>
-    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 top">
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-4 justify-content-evenly">
       <div class="col d-flex justify-content-around">
         <div class="destacados_title__img">
           <figure class="figure img-fluid">
@@ -220,12 +220,12 @@
   	
 <hr class="raya"/>
 <!-- sección 3: OTROS PRODUCTOS -->
-<section class="otros_productos">
-      <div class="container-fluid otros__container_title">
+<section class="otros_productos container-fluid ">
+      <div class="otros__container_title">
         <h2 class="">Otros productos</h2>
       </div>
-      <div class="container container-fluid otros_productos__container">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-md-center">
+      <div class="container-fluid otros_productos__container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 justify-content-center">
           <div class="col">
             <a href="#">
             <figure class="figure">
@@ -235,7 +235,7 @@
           </a>
           </div>
           <div class="col">
-            <a href="http://">
+            <a href="#">
             <figure class="figure">
               <img src="products/puff.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Puff para móvil</figcaption>
@@ -243,7 +243,7 @@
           </a>
           </div>
           <div class="col">
-            <a href="http://">
+            <a href="#">
             <figure class="figure">
               <img src="products/taza2.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Taza</figcaption>
@@ -251,9 +251,9 @@
           </a>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-md-center">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 justify-content-center">
           <div class="col">
-            <a href="http://">
+            <a href="#">
             <figure class="figure">
               <img src="products/alfombrilla.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Alfombrilla para ratón</figcaption>
@@ -261,7 +261,7 @@
           </a>
           </div>
           <div class="col">
-            <a href="http://">
+            <a href="#">
             <figure class="figure">
               <img src="products/cargador.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Cargador</figcaption>
@@ -269,7 +269,7 @@
           </a>
           </div>
           <div class="col">
-            <a href="http://">
+            <a href="#">
             <figure class="figure">
               <img src="products/pen2.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Pen 32GB</figcaption>
@@ -277,9 +277,9 @@
           </a>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-md-center">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 justify-content-center">
           <div class="col">
-            <a href="http://">
+            <a href="#">
             <figure class="figure">
               <img src="products/fundaPortatil.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Funda para pórtatil</figcaption>
@@ -287,7 +287,7 @@
           </a>
           </div>
           <div class="col">
-            <a href="http://">
+            <a href="#">
             <figure class="figure">
               <img src="products/manta.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Manta</figcaption>
@@ -295,7 +295,7 @@
           </a>
           </div>
           <div class="col">
-            <a href="http://">
+            <a href="#">
             <figure class="figure">
               <img src="products/powerbank.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">PowerBank</figcaption>

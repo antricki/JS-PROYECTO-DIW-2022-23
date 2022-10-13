@@ -224,7 +224,7 @@
             </div> <!-- FIN SEGUNDA SECCION (ASIDE) -->  
         </div>  <!-- fin row -->    
     </main> <!-- FIN pago y envío -->
-    
+    <hr class="raya">
     <!-- prefooter -->
     <div class="container-fluid">
         <div class="row pre-footer d-flex justify-content-evenly">
