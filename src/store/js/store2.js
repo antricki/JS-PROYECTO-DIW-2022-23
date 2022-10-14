@@ -26,16 +26,4 @@ function rellenarForm() {
   }
 }
 
-function guardarDatos() {
-  const inputs = document.querySelectorAll("input.detalles");
-  let form = [...inputs].map((item) => {
-    return { id: item.id, value: item.value };
-  });
-  window.localStorage.setItem("form", JSON.stringify(form));
-}
-/*agrupo rrelenar el formulario y depues guardar los datos en un solo click */
 
-function añadirCarrito() {
-  rellenarForm();
-  guardarDatos();
-}

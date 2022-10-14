@@ -22,6 +22,7 @@
   $d = __DIR__;
   include "../code/php/route.php";
   include "../code/php/navbar_store.php";
+
   ?>
 
 
@@ -102,7 +103,15 @@
             <option value="5">5</option>
           </select>
         </div>
-        <input class="btn" onclick="añadirCarrito()" id="botoncarrito" type="submit" value="Añadir al carrito">
+        <form name="datosProducto" action="cart1.php"   method="post">
+          <input class="detalles" type="text" style="display: none;" id="nombre">
+          <input class="detalles" type="text" style="display: none;" id="tamaño">
+          <input class="detalles" type="text" style="display: none;" id="color">
+          <input class="detalles" type="text" style="display: none;" id="cantidad">
+          <input class="detalles" type="text" style="display: none;" id="ticket">
+          <input class="btn" name="añadir" onclick="rellenarForm()" id="botoncarrito" type="submit" value="Añadir al carrito">
+        </form>
+
         <div class="form-check">
           <input class="form-check-input" id="ticketregalo" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" id="textoTicketRegalo" for="flexCheckDefault">
@@ -112,7 +121,7 @@
       </div>
     </div>
   </div>
-  <form name="datosProducto" action="./cart1.php" method="POST" style="display: none;">
+  <form name="datosProducto" action="cart1.php" method="post" style="display: none;">
     <input class="detalles" type="text" id="nombre">
     <input class="detalles" type="text" id="tamaño">
     <input class="detalles" type="text" id="color">

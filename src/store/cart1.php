@@ -22,6 +22,16 @@
     include "../code/php/route.php";
     include "../code/php/navbar_store.php";
 
+
+    
+
+    if (isset($_POST['añadir'])) {
+        $name = !empty($_POST['nombre']) ? $_POST['nombre'] : null;
+        echo"<script type='text/javascript'>
+        alert(".$name .");
+        </script>";
+    }
+
     ?>
 
 
@@ -45,7 +55,7 @@
                     <div class="col-7" id="texto">
                         <h2>Pen de gran programador</h2>
                         <p> <span class="enStock">En Stock </span> <br>
-                            <b> Tamaño:</b> S <br>
+                            <b> Tamaño:</b> <?= $name ?> <br>
                             <b> Color:</b> Verde <br>
                             <select class="form-contol cantidades" onchange="peep(this.id)" id="cantidades1" aria-label=" select example">
                                 <option value="1">1</option>
@@ -75,7 +85,7 @@
                         </div>
                         <img src="products/alfombrilla.jpg" class="imagen" alt="">
                     </div>
-                    <div class="col-7" id="texto"> 
+                    <div class="col-7" id="texto">
                         <h2>Alfombrilla de programador</h2>
                         <p> <span class="enStock">En Stock </span> <br>
                             <b> Tamaño:</b> M <br>
@@ -131,7 +141,7 @@
                     </ul>
                 </div>
                 <br>
-                <input class="btn" src="tramitarPedido.php"  id="botonpagar" type="submit" value="Tramitar pedido">
+                <input class="btn" src="tramitarPedido.php" id="botonpagar" type="submit" value="Tramitar pedido">
             </div>
         </div>
 

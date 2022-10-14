@@ -57,10 +57,8 @@ function quitarProductoAside(producto) {
       badge.parentNode.style.display = "none";
     }
   });
-  
 }
-let datosProducto = JSON.parse(window.localStorage.getItem("form"));
+/*let datosProducto = JSON.parse(window.localStorage.getItem("form"));
 datosProducto.forEach(element => {
   alert(element.value);
-});
- 
+})*/
