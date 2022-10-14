@@ -47,15 +47,15 @@
 
                 <div class="tempText">
                   <span class="textoTemporal">
-                    Correo electrónico o usuario
+                    Correo electrónico
                   </span>
                 </div>
               </div>
 
               <input
                 onclick="hideUserPlaceholderLogin()"
-                onblur="showUserPlaceholderLogin()"
-                id="userLogin"
+                onblur="emailLoginValidation()"
+                id="emailLogin"
                 type="email"
                 placeholder=""
                 class="form-control my-3 p-2"
@@ -92,7 +92,7 @@
                 >
               </div>
               <div class="col-7">
-                <a href="#">¿Olvidaste la contraseña?</a>
+                <a href="#" class="enlace">¿Olvidaste la contraseña?</a>
               </div>
             </div>
 
@@ -104,7 +104,7 @@
 
             <div class="secundario">
               <span>¿Todavía no estás registrado?</span>
-              <a href="#" onclick="showRegis()" id="bSignup-show"
+              <a href="#" class="enlace" onclick="showRegis()" id="bSignup-show"
                 >Regístrate aquí</a
               >
             </div>
@@ -117,7 +117,7 @@
           </div>
 
           <form action="" class="col-12" id="formulario">
-            <div class="form-group" id="user-group">
+            <div class="form-group boxForm" id="user-group">
               <div class="userPlaceholderRegis dummytext">
                 <div class="tempIcon">
                   <img
@@ -132,9 +132,28 @@
                 </div>
               </div>
 
+              <div class="campoValido campoValidoUserRegis dummytext">
+                <div class="tempIcon">
+                  <img
+                    src="../assets/icons/check-solid.svg"
+                    alt=""
+                    class="iconValido"
+                  />
+                </div>
+              </div>
+              <div class="campoInValido campoInValidoUserRegis dummytext">
+                <div class="tempIcon">
+                  <img
+                    src="../assets/icons/x-solid.svg"
+                    alt=""
+                    class="iconInValido"
+                  />
+                </div>
+              </div>
+
               <input
                 onclick="hideUserPlaceholderRegis()"
-                onblur="showUserPlaceholderRegis()"
+                onblur="userValidationRegis()"
                 id="userRegis"
                 type="text"
                 placeholder=""
@@ -231,7 +250,7 @@
             </div>
 
             <span>¿Ya tienes cuenta?</span>
-            <a href="#" onclick="showLogin()" id="bLogin-show"
+            <a href="#" class="enlace" onclick="showLogin()" id="bLogin-show"
               >Cónectate aquí</a
             >
             <br />
@@ -239,8 +258,8 @@
             <div class="secundario">
               <p>
                 Al registrarte aceptas nuestra
-                <a href="#">política de privacidad</a> y
-                <a href="#">política de cookies</a>
+                <a href="#" class="enlace">política de privacidad</a> y
+                <a href="#" class="enlace">política de cookies</a>
               </p>
             </div>
           </form>

@@ -17,13 +17,13 @@
     
 }
 
-a{
+.enlace{
     /* color: #4751b0; */
     color: #fc7708 ;
     text-decoration: none;
 }
 
-a:hover{
+.enlace:hover{
     color: #fc7708;
     text-decoration:underline;
 }
