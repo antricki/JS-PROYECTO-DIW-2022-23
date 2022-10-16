@@ -80,6 +80,9 @@ div.row-rev {
 p.precio {
   font-size: 190%;
 }
+p.precioRel {
+  font-size: 190%;
+}
 p.subtotal {
   font-size: 150%;
 }
@@ -131,7 +134,12 @@ div.card {
 }
 div.card:hover {
   box-shadow: #389393 0px 5px 15px;
+  color: #389393;
 }
+.card__link{
+    text-decoration: none;
+    color: #f76a5a;
+  }
 /*estrellas*/
 
 form.destacados_estrellas {

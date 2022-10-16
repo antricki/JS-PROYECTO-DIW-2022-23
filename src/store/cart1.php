@@ -55,9 +55,9 @@
                     <div class="col-7" id="texto">
                         <h2>Pen de gran programador</h2>
                         <p> <span class="enStock">En Stock </span> <br>
-                            <b> Tamaño:</b> <?= $name ?> <br>
+                            <b> Tamaño:</b>S<!-- <?= $name ?> --><br>
                             <b> Color:</b> Verde <br>
-                            <select class="form-contol cantidades" onchange="peep(this.id)" id="cantidades1" aria-label=" select example">
+                            <select class="form-contol cantidades" onchange="cantidades(this.id)" id="cantidades1" aria-label=" select example">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -68,7 +68,7 @@
                         </p>
                     </div>
                     <div class="col-2" id="contenedorprecio">
-                        <p class="precio">8,99€</p>
+                    <p class="precio"> <span class="precio">8.99</span>€</p>
                     </div>
                     <hr style="color:#FA7F72;">
                 </div>
@@ -90,7 +90,7 @@
                         <p> <span class="enStock">En Stock </span> <br>
                             <b> Tamaño:</b> M <br>
                             <b> Color:</b> Rojo <br>
-                            <select class="form-contol cantidades" id="cantidades2" onchange="peep(this.id)" aria-label=" select example">
+                            <select class="form-contol cantidades" id="cantidades2" onchange="cantidades(this.id)" aria-label=" select example">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -101,7 +101,7 @@
                         </p>
                     </div>
                     <div class="col-2" id="contenedorprecio">
-                        <p class="precio">8,99€</p>
+                        <p class="precio"> <span class="precio">8.99</span>€</p>
                     </div>
                     <hr style="color:#FA7F72;">
                 </div>
@@ -111,7 +111,7 @@
                     <hr style="color:#FA7F72;">
                 </div>
                 <div class="row-rev">
-                    <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p>
+                    <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span class="preciosubtotal">17,98</span>€</p>
                 </div>
             </div>
             <!--Espacio-->
@@ -119,7 +119,7 @@
             <!--Asisde-->
             <div class="col-lg-3 col-xs-12" id="aside">
 
-                <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span id="preciosubtotal">14,98€</span></p>
+                <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span class="preciosubtotal">17,98</span>€</p>
                 <div class="container-fluid">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
@@ -149,111 +149,46 @@
 
     <!--Relacionados-->
     <section class="container-fluid">
-        <div class="row" id="relacionados">
-            <h2>Productos relacionados con tu cesta</h2>
-            <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-                <div class="card" style="width: 18rem;">
-                    <img src="products/sudadera3.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Sudadera Informatico</h5>
-                        <p class="precio">25,95€</p>
-                        <form>
-                            <p class="clasificacion">
-                                <input id="radio1" type="radio" name="estrellas" value="5">
-                                <label class="estrellaColor" for="radio1">★</label>
-                                <input id="radio2" type="radio" name="estrellas" value="4">
-                                <label class="estrellaColor" for="radio2">★</label>
-                                <input id="radio3" type="radio" name="estrellas" value="3">
-                                <label class="estrellaColor" for="radio3">★</label>
-                                <input id="radio4" type="radio" name="estrellas" value="2">
-                                <label class="estrellaColor" for="radio4">★</label>
-                                <input id="radio5" type="radio" name="estrellas" value="1">
-                                <label class="estrellaColor" for="radio5">★</label>
-                            </p>
-                        </form>
-                    </div>
-                </div>
-
+    <div class="row" id="relacionados">
+      <h2>Productos relacionados con este producto</h2>
+      <?php
+      $relacionados = array(
+        "producto1" => array("nombre" => "Sudadera Informatico", "precio" => "25,95", "imagen" => "products/sudadera3.webp"),
+        "producto2" => array("nombre" => "Camiseta Ingeniero", "precio" => "13,95", "imagen" => "products/camiseta.webp"),
+        "producto3" => array("nombre" => "Sudadera Programacion", "precio" => "23,95", "imagen" => "products/sudadesra.webp"),
+        "producto4" => array("nombre" => "Sudadera Ingeniero", "precio" => "21,95", "imagen" => "products/ingeniero-informatico-ingeniero-informatico.webp")
+      );
+      foreach ($relacionados as $producto => $elemento) {
+      ?>
+        <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
+          <a href="#" class="card card__link">
+            <div class="card" style="width: 18rem;">
+              <img src="<?= $elemento['imagen'] ?>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><?= $elemento['nombre'] ?></h5>
+                <p class="precioRel"><?= $elemento['precio'] ?>€</p>
+                <form>
+                  <p class="clasificacion">
+                    <input id="radio1" type="radio" name="estrellas" value="5">
+                    <label class="estrellaColor" for="radio1">★</label>
+                    <input id="radio2" type="radio" name="estrellas" value="4">
+                    <label class="estrellaColor" for="radio2">★</label>
+                    <input id="radio3" type="radio" name="estrellas" value="3">
+                    <label class="estrellaColor" for="radio3">★</label>
+                    <input id="radio4" type="radio" name="estrellas" value="2">
+                    <label class="estrellaColor" for="radio4">★</label>
+                    <input id="radio5" type="radio" name="estrellas" value="1">
+                    <label class="estrellaColor" for="radio5">★</label>
+                  </p>
+                </form>
+              </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
 
-                <div class="card" style="width: 18rem;">
-                    <img src="products/camiseta.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Camiseta Ingeniero</h5>
-                        <p class="precio">13,95€</p>
-                        <form>
-                            <p class="clasificacion">
-                                <input id="radio1" type="radio" name="estrellas" value="5">
-                                <label class="estrellaColor" for="radio1">★</label>
-                                <input id="radio2" type="radio" name="estrellas" value="4">
-                                <label class="estrellaColor" for="radio2">★</label>
-                                <input id="radio3" type="radio" name="estrellas" value="3">
-                                <label class="estrellaColor" for="radio3">★</label>
-                                <input id="radio4" type="radio" name="estrellas" value="2">
-                                <label class="estrellaColor" for="radio4">★</label>
-                                <input id="radio5" type="radio" name="estrellas" value="1">
-                                <label class="estrellaColor" for="radio5">★</label>
-                            </p>
-                        </form>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-
-                <div class="card" style="width: 18rem;">
-                    <img src="products/sudadesra.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Sudadera Programacion</h5>
-                        <p class="precio">23,95€</p>
-                        <form id="estres">
-                            <p class="clasificacion">
-                                <input id="radio1" type="radio" name="estrellas" value="5">
-                                <label class="estrellaColor" for="radio1">★</label>
-                                <input id="radio2" type="radio" name="estrellas" value="4">
-                                <label class="estrellaColor" for="radio2">★</label>
-                                <input id="radio3" type="radio" name="estrellas" value="3">
-                                <label class="estrellaColor" for="radio3">★</label>
-                                <input id="radio4" type="radio" name="estrellas" value="2">
-                                <label class="estrellaColor" for="radio4">★</label>
-                                <input id="radio5" type="radio" name="estrellas" value="1">
-                                <label class="estrellaColor" for="radio5">★</label>
-                            </p>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-
-                <div class="card" style="width: 18rem;">
-                    <img src="products/ingeniero-informatico-ingeniero-informatico.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Sudadera Ingeniero</h5>
-                        <p class="precio">21,95€</p>
-                        <form>
-                            <p class="clasificacion">
-                                <input id="radio1" type="radio" name="estrellas" value="5">
-                                <label class="estrellaColor" for="radio1">★</label>
-                                <input id="radio2" type="radio" name="estrellas" value="4">
-                                <label class="estrellaColor" for="radio2">★</label>
-                                <input id="radio3" type="radio" name="estrellas" value="3">
-                                <label class="estrellaColor" for="radio3">★</label>
-                                <input id="radio4" type="radio" name="estrellas" value="2">
-                                <label class="estrellaColor" for="radio4">★</label>
-                                <input id="radio5" type="radio" name="estrellas" value="1">
-                                <label class="estrellaColor" for="radio5">★</label>
-                            </p>
-                        </form>
-
-                    </div>
-                </div>
-
-            </div>
+          </a>
         </div>
-    </section>
+      <?php } ?>
+    </div>
+  </section>
 
     <!--PreFooter-->
     <div class="row pre-footer container-fluid">
