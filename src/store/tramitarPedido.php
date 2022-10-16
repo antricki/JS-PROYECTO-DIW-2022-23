@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="../store/css/styles__web_princ_store.css">
+    <link rel="stylesheet" href="../store/css/tramitarPedido.css">
 </head>
 <!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
     • Naranja: #F5A25D un 10% para aquello que llama a la acción.
@@ -42,8 +42,7 @@
     <main class="main__tramitar__pedido container-fluid">
         <div class="row d-flex justify-content-evenly">
 
-            <div class="col-lg-4 col-sm-2 contenedor__datos">
-
+            <div class="col-lg-4 col-sm-6 contenedor__datos">
                 <!-- primera fila DATOS DE CONTACTO Y ENVÍO-->
                 <div class="row d-flex flex-column g-5">
                     <div class="col datos__contacto-envío p-4">
@@ -191,8 +190,8 @@
                 </div> 
             </div>  <!-- FIN PRIMERA SECCIÓN -->             
             <!-- iNICIO DE SEGUNDA SECCIÓN (ASIDE) Resumen pedido-->
-            <div class="col-lg-4 col-sm-2 contenedor__resumen"> 
-                <div class="row">
+            <div class="col-lg-4 col-sm-6 contenedor__resumen"> 
+                <div class="row d-flex">
                     <div class="col">
                         <!-- titulo -->
                         <div class="contacto__direccion-title contacto__pago-title">
@@ -231,7 +230,7 @@
     <hr class="raya">
     <!-- prefooter -->
     <div class="container-fluid">
-        <div class="row pre-footer d-flex justify-content-evenly">
+    <div class="row pre-footer d-flex justify-content-evenly">
       <div class="col-lg-3 col-md-8">
         <div class="pre_footer__card">
           <img src="products/camion-de-reparto.png" class="card-img-top pre-footer_img" alt="...">
@@ -264,7 +263,7 @@
           </div>
         </div>
       </div>
-        </div>
+    </div>
     </div>
 
     <!-- footer -->
