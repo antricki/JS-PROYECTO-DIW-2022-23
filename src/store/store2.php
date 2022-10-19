@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Producto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
@@ -105,11 +105,11 @@
         </div>
         <!--Formulario (que no se muestra) con los datos de cada producto  -->
         <form name="datosProducto" action="cart1.php" method="post">
-          <input class="detalles" type="text" style="display: none;" id="nombre">
-          <input class="detalles" type="text" style="display: none;" id="tamaño">
-          <input class="detalles" type="text" style="display: none;" id="color">
-          <input class="detalles" type="text" style="display: none;" id="cantidad">
-          <input class="detalles" type="text" style="display: none;" id="ticket">
+          <input class="detalles" type="text" style="display: none;" name="nombre"  id="nombre">
+          <input class="detalles" type="text" style="display: none;" name="tamaño" id="tamaño">
+          <input class="detalles" type="text" style="display: none;" name="color" id="color">
+          <input class="detalles" type="text" style="display: none;" name="cantidad" id="cantidad">
+          <input class="detalles" type="text" style="display: none;" name="ticket" id="ticket">
           <!--Con este boton se rellena el formulario  -->
           <input class="btn" name="añadir" onclick="rellenarForm()" id="botoncarrito" type="submit" value="Añadir al carrito">
         </form>
@@ -121,15 +121,9 @@
           </label>
         </div>
       </div>
+
     </div>
   </div>
-  <form name="datosProducto" action="cart1.php" method="post" style="display: none;">
-    <input class="detalles" type="text" id="nombre">
-    <input class="detalles" type="text" id="tamaño">
-    <input class="detalles" type="text" id="color">
-    <input class="detalles" type="text" id="cantidad">
-    <input class="detalles" type="text" id="ticket">
-  </form>
 
   <!--Relacionados-->
   <section class="container-fluid">

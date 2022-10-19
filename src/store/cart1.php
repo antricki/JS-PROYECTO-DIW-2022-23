@@ -22,14 +22,40 @@
     include "../code/php/route.php";
     include "../code/php/navbar_store.php";
 
+    class Producto{
 
+        public $nombre;
+        public $tamaño;
+        public $color;
+        public $cantidad;
+        public $ticket;
+        public $precio;
+
+        function __construct($nombre,$tamaño,$color,$cantidad,$ticket,$precio)
+        {
+            $this->nombre=$nombre;
+            $this->tamaño=$tamaño;
+            $this->color=$color;
+            $this->cantidad=$cantidad;
+            $this->ticket=$ticket;
+            $this->precio=$precio;
+        }
+
+    }
+    /*if (!isset($_COOKIE['productos'])) {
+        setcookie('productos', "", time() + (31536000));
+    }*/
+    //@$_COOKIE['productos[]'];
     
 
     if (isset($_POST['añadir'])) {
-        $name = !empty($_POST['nombre']) ? $_POST['nombre'] : null;
-        echo"<script type='text/javascript'>
-        alert(".$name .");
-        </script>";
+        $producto=new Producto($_POST['nombre'],$_POST['tamaño'],$_POST['color'],$_POST['cantidad'],$_POST['ticket'],'');
+        setcookie('productos', $_POST['tamaño'], time() + (31536000));
+        foreach ($_COOKIE['productos'] as $key) {
+            echo $key;
+        }
+       // echo $_COOKIE['productos'] ;
+        //echo $productos[1]->tamaño ;
     }
 
     ?>
@@ -53,10 +79,10 @@
                         <img src="products/pen.jpg" class="imagen" alt="">
                     </div>
                     <div class="col-7" id="texto">
-                        <h2>Pen de gran programador</h2>
+                        <h2><?= $producto->nombre ?></h2>
                         <p> <span class="enStock">En Stock </span> <br>
-                            <b> Tamaño:</b>S<!-- <?= $name ?> --><br>
-                            <b> Color:</b> Verde <br>
+                            <b> Tamaño:</b> <?= $producto->tamaño ?> <br>
+                            <b> Color:</b> <?= $producto->color ?> <br>
                             <select class="form-contol cantidades" onchange="cantidades(this.id)" id="cantidades1" aria-label=" select example">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -77,41 +103,9 @@
                     <a href="store2.php">Pen de programador</a>
                     <hr style="color:#FA7F72;">
                 </div>
-                <!--producto 2-->
-                <div class="row" id="producto2">
-                    <div class="col-3" id="imgChek">
-                        <div class="form-check">
-                            <input class="form-check-input" onclick="contarProductos()" checked type="checkbox" value="" id="checkarticulo">
-                        </div>
-                        <img src="products/alfombrilla.jpg" class="imagen" alt="">
-                    </div>
-                    <div class="col-7" id="texto">
-                        <h2>Alfombrilla de programador</h2>
-                        <p> <span class="enStock">En Stock </span> <br>
-                            <b> Tamaño:</b> M <br>
-                            <b> Color:</b> Rojo <br>
-                            <select class="form-contol cantidades" id="cantidades2" onchange="cantidades(this.id)" aria-label=" select example">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                            <input class="eliminar" type="button" onclick="lanzar('producto2','enlace2')" name="eliminar" value="Eliminar">
-                        </p>
-                    </div>
-                    <div class="col-2" id="contenedorprecio">
-                        <p class="precio"> <span class="precio">8.99</span>€</p>
-                    </div>
-                    <hr style="color:#FA7F72;">
-                </div>
-                <!--enlace 2-->
-                <div class="row-fluid" id="enlace2" style="display:none;">
-                    <a href="store2.php">Alfombrilla de programador</a>
-                    <hr style="color:#FA7F72;">
-                </div>
+                <!--subtotal-->
                 <div class="row-rev">
-                    <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span class="preciosubtotal">17,98</span>€</p>
+                    <p class="subtotal">Subtotal (<span class="numProductos">1</span> productos):<span class="preciosubtotal">8,99</span>€</p>
                 </div>
             </div>
             <!--Espacio-->
@@ -119,7 +113,7 @@
             <!--Asisde-->
             <div class="col-lg-3 col-xs-12" id="aside">
 
-                <p class="subtotal">Subtotal (<span class="numProductos">2</span> productos):<span class="preciosubtotal">17,98</span>€</p>
+                <p class="subtotal">Subtotal (<span class="numProductos">1</span> productos):<span class="preciosubtotal">8,99</span>€</p>
                 <div class="container-fluid">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
@@ -128,14 +122,6 @@
                                     Pen de programador
                                 </div>
                                 <div class="col-2"><span class="badge rounded-pill" id="cantidadProd1">1</span></div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col-10">
-                                    Alfombrilla de programador
-                                </div>
-                                <div class="col-2"><span class="badge rounded-pill" id="cantidadProd2">1</span></div>
                             </div>
                         </li>
                     </ul>
