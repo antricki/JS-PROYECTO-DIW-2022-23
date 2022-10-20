@@ -22,7 +22,8 @@
     include "../code/php/route.php";
     include "../code/php/navbar_store.php";
 
-    class Producto{
+    class Producto
+    {
 
         public $nombre;
         public $tamaño;
@@ -31,36 +32,33 @@
         public $ticket;
         public $precio;
 
-        function __construct($nombre,$tamaño,$color,$cantidad,$ticket,$precio)
+        function __construct($nombre, $tamaño, $color, $cantidad, $ticket, $precio)
         {
-            $this->nombre=$nombre;
-            $this->tamaño=$tamaño;
-            $this->color=$color;
-            $this->cantidad=$cantidad;
-            $this->ticket=$ticket;
-            $this->precio=$precio;
+            $this->nombre = $nombre;
+            $this->tamaño = $tamaño;
+            $this->color = $color;
+            $this->cantidad = $cantidad;
+            $this->ticket = $ticket;
+            $this->precio = $precio;
         }
-
+        /* function __toString()
+        {
+            return $this->nombre . " " . $this->tamaño . " " . $this->color . " " . $this->cantidad . " "
+                . $this->ticket . " " . $this->precio . "/";
+        }*/
     }
-    /*if (!isset($_COOKIE['productos'])) {
-        setcookie('productos', "", time() + (31536000));
-    }*/
-    //@$_COOKIE['productos[]'];
-    
+
+    session_start();
+    if (!$_SESSION['productos']) {
+        $_SESSION['productos'] = [];
+    }
 
     if (isset($_POST['añadir'])) {
-        $producto=new Producto($_POST['nombre'],$_POST['tamaño'],$_POST['color'],$_POST['cantidad'],$_POST['ticket'],'');
-        setcookie('productos', $_POST['tamaño'], time() + (31536000));
-        foreach ($_COOKIE['productos'] as $key) {
-            echo $key;
-        }
-       // echo $_COOKIE['productos'] ;
-        //echo $productos[1]->tamaño ;
+        $producto = new Producto($_POST['nombre'], $_POST['tamaño'], $_POST['color'], $_POST['cantidad'], $_POST['ticket'], '');
+        array_push($_SESSION['productos'], $producto);
     }
 
     ?>
-
-
     <section class="container">
         <div class="row">
             <!--Productos cesta-->
@@ -71,41 +69,61 @@
                 </div>
                 <hr style="color:#fa7f72;">
                 <!--producto 1-->
-                <div class="row" id="producto1">
-                    <div class="col-3" id="imgChek">
-                        <div class="form-check">
-                            <input class="form-check-input" checked onclick="contarProductos()" type="checkbox" value="" id="checkarticulo">
+                <?php
+                
+                $eliminar = !empty($_POST['eliminar']) ? $_POST['eliminar'] : null;
+                $indexEliminar = !empty($_POST['indexEliminar']) ? $_POST['indexEliminar'] : null;
+                if ($eliminar == 'Eliminar') {
+                    unset($_SESSION['productos'][(int)($indexEliminar)]);
+                }
+                foreach ($_SESSION['productos'] as $key => $producto) {
+                    if ($producto!=null) {
+                    
+                ?>
+                    <div class="row" id="producto1">
+                        <div class="col-3" id="imgChek">
+                            <div class="form-check">
+                                <input class="form-check-input" checked onclick="contarProductos()" type="checkbox" value="" id="checkarticulo">
+                            </div>
+                            <img src="products/pen.jpg" class="imagen" alt="">
                         </div>
-                        <img src="products/pen.jpg" class="imagen" alt="">
+                        <div class="col-7" id="texto">
+                            <h2><?= $producto->nombre ?></h2>
+                            <p> <span class="enStock">En Stock </span> <br>
+                                <b> Tamaño:</b> <?= $producto->tamaño ?> <br>
+                                <b> Color:</b> <?= $producto->color ?>
+                            <form method="post">
+                                <select class="form-contol cantidades" onchange="cantidades(this.id)" id="cantidades1" aria-label=" select example">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <input class="eliminar" type="submit" name="eliminar" value="Eliminar"><!--onclick="lanzar(producto1,enlace1)" -->
+                                <input type="text" name="indexEliminar" value="<?php echo $key ?> " hidden>
+                            </form>
+                            </p>
+                        </div>
+                        <div class="col-2" id="contenedorprecio">
+                            <p class="precio"> <span class="precio">8.99</span>€</p>
+                        </div>
+                        <hr style="color:#FA7F72;">
                     </div>
-                    <div class="col-7" id="texto">
-                        <h2><?= $producto->nombre ?></h2>
-                        <p> <span class="enStock">En Stock </span> <br>
-                            <b> Tamaño:</b> <?= $producto->tamaño ?> <br>
-                            <b> Color:</b> <?= $producto->color ?> <br>
-                            <select class="form-contol cantidades" onchange="cantidades(this.id)" id="cantidades1" aria-label=" select example">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                            <input class="eliminar" type="submit" onclick="lanzar('producto1','enlace1')" name="eliminar" value="Eliminar">
-                        </p>
+                    <!--enlace 1-->
+                    <div class="row-fluid" id="enlace1" style="display:none;">
+                        <a href="store2.php"><?= $producto->nombre ?></a>
+                        <hr style="color:#FA7F72;">
                     </div>
-                    <div class="col-2" id="contenedorprecio">
-                    <p class="precio"> <span class="precio">8.99</span>€</p>
-                    </div>
-                    <hr style="color:#FA7F72;">
-                </div>
-                <!--enlace 1-->
-                <div class="row-fluid" id="enlace1" style="display:none;">
-                    <a href="store2.php">Pen de programador</a>
-                    <hr style="color:#FA7F72;">
-                </div>
+                <?php
+                    }
+                }
+
+
+                ?>
                 <!--subtotal-->
                 <div class="row-rev">
-                    <p class="subtotal">Subtotal (<span class="numProductos">1</span> productos):<span class="preciosubtotal">8,99</span>€</p>
+                    <p class="subtotal">Subtotal (<span class="numProductos"><?php echo count($_SESSION['productos'])-1  ?></span> productos):<span class="preciosubtotal">8,99</span>€</p>
                 </div>
             </div>
             <!--Espacio-->
@@ -113,7 +131,7 @@
             <!--Asisde-->
             <div class="col-lg-3 col-xs-12" id="aside">
 
-                <p class="subtotal">Subtotal (<span class="numProductos">1</span> productos):<span class="preciosubtotal">8,99</span>€</p>
+                <p class="subtotal">Subtotal (<span class="numProductos"><?php echo count($_SESSION['productos'])-1  ?></span> productos):<span class="preciosubtotal">8,99</span>€</p>
                 <div class="container-fluid">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
@@ -133,48 +151,49 @@
 
     </section>
 
+
     <!--Relacionados-->
     <section class="container-fluid">
-    <div class="row" id="relacionados">
-      <h2>Productos relacionados con este producto</h2>
-      <?php
-      $relacionados = array(
-        "producto1" => array("nombre" => "Sudadera Informatico", "precio" => "25,95", "imagen" => "products/sudadera3.webp"),
-        "producto2" => array("nombre" => "Camiseta Ingeniero", "precio" => "13,95", "imagen" => "products/camiseta.webp"),
-        "producto3" => array("nombre" => "Sudadera Programacion", "precio" => "23,95", "imagen" => "products/sudadesra.webp"),
-        "producto4" => array("nombre" => "Sudadera Ingeniero", "precio" => "21,95", "imagen" => "products/ingeniero-informatico-ingeniero-informatico.webp")
-      );
-      foreach ($relacionados as $producto => $elemento) {
-      ?>
-        <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-          <a href="#" class="card card__link">
-            <div class="card" style="width: 18rem;">
-              <img src="<?= $elemento['imagen'] ?>" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title"><?= $elemento['nombre'] ?></h5>
-                <p class="precioRel"><?= $elemento['precio'] ?>€</p>
-                <form>
-                  <p class="clasificacion">
-                    <input id="radio1" type="radio" name="estrellas" value="5">
-                    <label class="estrellaColor" for="radio1">★</label>
-                    <input id="radio2" type="radio" name="estrellas" value="4">
-                    <label class="estrellaColor" for="radio2">★</label>
-                    <input id="radio3" type="radio" name="estrellas" value="3">
-                    <label class="estrellaColor" for="radio3">★</label>
-                    <input id="radio4" type="radio" name="estrellas" value="2">
-                    <label class="estrellaColor" for="radio4">★</label>
-                    <input id="radio5" type="radio" name="estrellas" value="1">
-                    <label class="estrellaColor" for="radio5">★</label>
-                  </p>
-                </form>
-              </div>
-            </div>
+        <div class="row" id="relacionados">
+            <h2>Productos relacionados con este producto</h2>
+            <?php
+            $relacionados = array(
+                "producto1" => array("nombre" => "Sudadera Informatico", "precio" => "25,95", "imagen" => "products/sudadera3.webp"),
+                "producto2" => array("nombre" => "Camiseta Ingeniero", "precio" => "13,95", "imagen" => "products/camiseta.webp"),
+                "producto3" => array("nombre" => "Sudadera Programacion", "precio" => "23,95", "imagen" => "products/sudadesra.webp"),
+                "producto4" => array("nombre" => "Sudadera Ingeniero", "precio" => "21,95", "imagen" => "products/ingeniero-informatico-ingeniero-informatico.webp")
+            );
+            foreach ($relacionados as $producto => $elemento) {
+            ?>
+                <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
+                    <a href="#" class="card card__link">
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?= $elemento['imagen'] ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $elemento['nombre'] ?></h5>
+                                <p class="precioRel"><?= $elemento['precio'] ?>€</p>
+                                <form>
+                                    <p class="clasificacion">
+                                        <input id="radio1" type="radio" name="estrellas" value="5">
+                                        <label class="estrellaColor" for="radio1">★</label>
+                                        <input id="radio2" type="radio" name="estrellas" value="4">
+                                        <label class="estrellaColor" for="radio2">★</label>
+                                        <input id="radio3" type="radio" name="estrellas" value="3">
+                                        <label class="estrellaColor" for="radio3">★</label>
+                                        <input id="radio4" type="radio" name="estrellas" value="2">
+                                        <label class="estrellaColor" for="radio4">★</label>
+                                        <input id="radio5" type="radio" name="estrellas" value="1">
+                                        <label class="estrellaColor" for="radio5">★</label>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
 
-          </a>
+                    </a>
+                </div>
+            <?php } ?>
         </div>
-      <?php } ?>
-    </div>
-  </section>
+    </section>
 
     <!--PreFooter-->
     <div class="row pre-footer container-fluid">
