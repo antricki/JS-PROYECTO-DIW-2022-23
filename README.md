@@ -1,4 +1,4 @@
-![Logo del proyecto](.\src\assets\images\logo.svg)
+![Logo del proyecto](.\src\assets\images\logo_transparente.png)
 # **Proyecto DIW**
 ## by 2ºDAW del CIPFP de Cheste, promoción 2022-2023
 
