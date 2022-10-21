@@ -1,0 +1,34 @@
+// VARIABLES
+$colors: (
+    grey: #EBEBEB,
+    orange: #F5A25D,
+    lightOrange: #f2be93,
+    red: #FA7F72,
+    blue:#389393   
+);
+
+$fontSize: (
+    text: .8rem,
+    title: 3rem,
+    subtitle: 2rem
+);
+
+
+
+
+// MIXINS
+
+@mixin centerFlex ($direction: row) {
+    @if $direction == column {
+        display: flex;
+        flex-direction: $direction;
+        justify-content:space-around;
+        align-items: center;
+    } @else {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
