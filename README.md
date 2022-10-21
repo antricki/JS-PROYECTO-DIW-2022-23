@@ -26,7 +26,7 @@ El proyecto consiste en la elaboración de una página web del departamento de i
 | 1- Índice       |     Alex y Pau     | 
 | 2- Login        |       Pablo        |
 | 3- Galería      |       Emilio       |
-| 4- Oferta form. |       Emilio       |
+| 4- Oferta       |       Emilio       |
 | 5- Tienda       | Carmen y Guillermo |
 
 
