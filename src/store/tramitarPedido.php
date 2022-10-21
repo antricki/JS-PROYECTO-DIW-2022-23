@@ -190,7 +190,7 @@
                 </div> 
             </div>  <!-- FIN PRIMERA SECCIÓN -->             
             <!-- iNICIO DE SEGUNDA SECCIÓN (ASIDE) Resumen pedido-->
-            <div class="col-lg-4 col-sm-6 contenedor__resumen"> t
+            <div class="col-lg-4 col-sm-6 contenedor__resumen"> 
                 <div class="row d-flex">
                     <div class="col">
                         <!-- titulo -->

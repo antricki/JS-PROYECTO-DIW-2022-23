@@ -11,7 +11,7 @@ function ocultaForm() {
     }
         
 }
-// función y variables para pintar el fondo gris del método de pago según el que elija
+// función y variables para pintar el fondo verde del método de pago según el que elija
 // variables de los radios, que me sirven para añadirles el evento posterior
 const entrega1 = document.querySelector('.check_entrega1');
 const entrega2 = document.querySelector('.check_entrega2');
@@ -41,18 +41,29 @@ const ciudad = document.getElementById('ciudad').value;
 const cp = document.getElementById('codigoPostal').value;
 const pais = document.getElementById('pais').value;
 
-const check = document.getElementById('checkbox');
 const boton = document.getElementById('enviar');
 
 boton.addEventListener('click', (e) => {
     e.preventDefault();
+    if(apellidos.length == 0){
+        console.log("Debes rellenar todos los campos");
+    }
+    if(!isNaN(nombre)){
+        console.log("el nombre no puede contener números");
+    }
+    if(!isNaN(apellidos)){
+        console.log("los apellidos no pueden contener números");
+    }
+    if(isNaN(tlf)){
+        console.log("El telefono deben ser todo números");
+    }
+    if(isNaN(cp)){
+        console.log("El Código Postal no es válido");
+    }
+    
+
 
 })
 
-function contieneNum(text) {
-    return /[0-9]/.test(text);
-}
-function contieneSoloNum(text) {
-    return /^\d+$/.test(text);
-}
+
 
