@@ -34,7 +34,7 @@
           <div class="form-title">
             <h2 class="fw-bold mb-3">Cónectate</h2>
           </div>
-          <form class="col-12" id="formulario">
+          <form method="post" class="col-12" id="formulario">
             <div class="form-group" id="user-group">
               <div class="userPlaceholderLogin dummytext">
                 <div class="tempIcon">
@@ -116,7 +116,7 @@
             <h2 class="fw-bold mb-3">Crea tu cuenta</h2>
           </div>
 
-          <form action="" class="col-12" id="formulario">
+          <form method="post" action="" class="col-12" id="formulario">
             <div class="form-group boxForm" id="user-group">
               <div class="userPlaceholderRegis dummytext">
                 <div class="tempIcon">
@@ -249,7 +249,7 @@
               />
             </div>
             <div class="form-group">
-              <button type="button" class="btn1 mt-3 mb-5" name="signUpBtn">Sign up</button>
+              <button type="submit" class="btn1 mt-3 mb-5" name="signUpBtn">Sign up</button>
             </div>
 
             <span>¿Ya tienes cuenta?</span>
@@ -272,10 +272,37 @@
     <br />
 
     <script src="login.js"></script>
-    <script src="signUpLogic.php"></script>
+ 
 
     <?php
-  include "../code/php/footer.php";
+    include "../code/php/footer.php";
+    $DBhost = "localhost";
+    $DBuser = "root";
+    $DBpass = "";
+    $DBname= "proyecto";
+
+$conexion = mysqli_connect($DBhost, $DBuser, $DBpass, $DBname);
+
+if(!$conexion){
+    echo("connection error" .mysqli_connec_errno());
+
+}else{
+    if(isset($_POST["signUpBtn"])){
+        $usuario = $_POST["userRegis"];
+        $email = $_POST["emailRegis"];
+        $pass = $_POST["passRegis"];
+        
+        $sql = "INSERT INTO proyecto.users
+        VALUES ('$usuario', '$email', '$pass');";
+
+        $resultado = mysqli_query($conexion, $sql);
+    }
+}
   ?>
+
   </body>
 </html>
+
+
+
+
