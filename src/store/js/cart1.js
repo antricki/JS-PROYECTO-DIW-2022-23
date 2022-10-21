@@ -1,27 +1,33 @@
 /*saber los productos que quiere comprar*/
 function contarProductos() {
   const checks = document.querySelectorAll(".form-check-input");
+  const precios = document.querySelectorAll("span.precio");
   var prodSubtotal = 0;
-  checks.forEach((check) => {
-    if (check.parentNode.parentNode.parentNode.style.display === "none") {
+  var prodprecio=0;
+  for (let index = 0; index < checks.length; index++) {
+    if (checks[index].parentNode.parentNode.parentNode.style.display === "none") {
     } else {
-      if (check.checked) {
+      if (checks[index].checked) {
         prodSubtotal++;
+        prodprecio += parseFloat(precios[index].textContent);
       }
     }
-  });
+  }
   const subtotales = document.querySelectorAll("span.numProductos");
-  subtotales.forEach((subtotal) => {
-    subtotal.textContent = prodSubtotal;
-  });
-  Calicanto, Valencia;
+  const preciosub = document.querySelectorAll("span.preciosubtotal");
+  for (let index = 0; index < subtotales.length; index++) {
+   subtotales[index].textContent = prodSubtotal;
+    preciosub[index].textContent = prodprecio;
+  }
 }
+
 /*eliminar productos*/
 function eliminarProducto(producto, enlace) {
   document.getElementById(producto).style.display = "none";
   quitarProductoAside(producto);
   document.getElementById(enlace).style.display = "inline";
 }
+
 /* para lanzar que cuando se elimine un producto se actualize el subtotal*/
 function lanzar(producto, enlace) {
   eliminarProducto(producto, enlace);
@@ -30,7 +36,7 @@ function lanzar(producto, enlace) {
 
 /*cambiar en el aside el numero de veces que se pide un producto */
 
-function peep(elemento) {
+function cantidades(elemento) {
   const cantidades = document.getElementById(elemento);
   cantidades.options[cantidades.selectedIndex].value;
   /*numeros del aside*/
@@ -54,13 +60,11 @@ function quitarProductoAside(producto) {
       badge.id.substr(badge.id.length - 1) ===
       producto.substr(producto.length - 1)
     ) {
-      badge.parentNode.style.display = "none";
+      badge.parentNode.parentNode.style.display = "none";
     }
   });
-  
 }
-let datosProducto = JSON.parse(window.localStorage.getItem("form"));
+/*let datosProducto = JSON.parse(window.localStorage.getItem("form"));
 datosProducto.forEach(element => {
   alert(element.value);
-});
- 
+})*/

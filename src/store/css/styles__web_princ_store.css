@@ -11,7 +11,6 @@ body{
   background-image: url(../products/fondos/fondo-tecnologia-conexion-red-tierra-digital-global_1017-23328.webp) ;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background: radial-gradient(59% 100% ,#056d4aa2 0,#020f58 68%,#075786cc 100%); */
 }
 .texto__banner{
   text-shadow: 3px 20px 10px #ebebe0;
@@ -36,13 +35,6 @@ body{
   text-align: center;
 }
 /* FIN css banner */
-.raya__header{
-  background-color: #389393;
-  box-shadow: 1px 1px 1px #FA7F72;
-  height: 2px;
-  width:75%;
-  margin: 10px auto;
-}
 /* css sección 1: Nuestro producto estrella */
 .oferta__link{
   text-decoration: none;
@@ -66,25 +58,36 @@ body{
     background-color: #276969;
     margin: 50px auto;
 }
+
 .oferta{
+    color: #EBEBEB;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color:#389393;
-    color: white;
+}
+.oferta__title{
+  color: #FA7F72;
 }
 .explicacion{
-    width: 30rem;
+    position: relative;
+    margin-top: 3.5em;
+    width: 35rem;
     height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #EBEBEB;
+    font-size: 1.5em;
+    /* background-color: rgba(235, 235, 235,.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3); */
+    border-radius: 0.3em;
   }
   .explicacion_title{
     color: #FA7F72;
-  }
-  text_explicacion{
-    color: #EBEBEB;
+    
   }
 /* css de la clasificación por estrellas */
 
@@ -136,19 +139,10 @@ body{
     font-size: larger;
     text-align: center;
 }
-/* .card-footer{
-    display: flex;
-    justify-content: space-around;
-} */
-/* .card-footer_input{
-    width: 150px;
-    background-color:#FA7F72;
-    border: none;
-    border-radius: 15px; 
-} */
+
 /* css sección 3: OTROS PRODUCTOS */
 .otros_productos{
-  background-image: linear-gradient(#EBEBEB, #abebeba8,#EBEBEB);
+  background-image: radial-gradient(#F5A25D,#EBEBEB);
 }
 .otros_productos__figure{
   width: 15rem;
@@ -190,101 +184,5 @@ body{
 }
 /* css footer */
 
-/* css página tramitarPedido */
-.body__tramitar_pedido{
-  background-color: #EBEBEB;
-}
-.banner_tramitar_pedido{
-  background: linear-gradient( #FA7F72, #EBEBEB);
-}
-.banner__title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #389393;
-}
-.tipo__entrega1{
-  background-color: #389393;
-  color: #EBEBEB;
-  border-radius: 15px;
-}
-.form-check_input{
-  padding: 10px;
-}
-.contacto__direccion-title,
-.pedido_subtotal,
-.pedido_gastos-envio,
-.pedido_total{
-  display: flex;
-  justify-content: space-between;
-}
-.pedido_total label{
-  font-size: larger;
-  font-weight: 800;
-  color: #FA7F72;
-}
-.contacto__direccion-title__text{
-  color: #389393;
-}
-.contacto__envio-pago__img{
-  width: 100px;
-  height: 50px;
-}
-.contacto__direccion-icon{
-  width: 50px;
-  height: 50px;
-}
-.tramitar__pedido-btn{
-  border: none;
-  width: 100%;
-  background-color: #389393;
-  color: #EBEBEB;
-  border-radius: 8px;
-  box-shadow: 1px 1px 3px black;
-  font-size: 1.5em;
-}
-.img_tramitar__pedido_icon{
-  width: 25px;
-  height: 25px;
-}
-.raya_tramitar-pedido{
-  width: 100%;
-  height: 2px;
-  background-color: #FA7F72;
-}
 
-.contenedor__datos{
-  margin-top: 50px;
-}
-.contenedor__resumen{
-  border: 1px solid #f76a5a;
-  border-radius: 15px;
-  height: 50%;
-  margin-top: 50px;
-  padding: 1.5em;
-}
-.datos__contacto-envío,
-.metodo__envio{
-  border: 1px solid #FA7F72;
-  border-radius: 15px;
-}
-.metodo__pago{
-  border: 1px solid #FA7F72;
-  border-radius: 15px;
-  margin-bottom: 50px;
-}
-.metodo__pago_link{
-  color: #389393;
-  text-decoration: none;
-}
-.metodo__pago_link:hover{
-  color: #F5A25D;
-}
-.pedido_total-pie{
-  text-align: right;
-}
-.pedido_total-pie,
-.tramitar__pedido-text{
-  color: grey;
-}
 

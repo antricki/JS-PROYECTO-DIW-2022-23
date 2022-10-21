@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Producto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
@@ -22,6 +22,7 @@
   $d = __DIR__;
   include "../code/php/route.php";
   include "../code/php/navbar_store.php";
+
   ?>
 
 
@@ -51,12 +52,12 @@
         </div>
         <p>
         <h4>Color:</h4>
-       <div class="btn-group" id="color" role="group" aria-label="Basic example">
+        <div class="btn-group" id="color" role="group" aria-label="Basic example">
           <button type="button" onclick="añadircolor(this)" class="btn azul">Azul</button>
-          <button type="button" onclick="añadircolor(this)"  class="btn verde">Verde</button>
-          <button type="button" onclick="añadircolor(this)"  class="btn negro">Negro</button>
-          <button type="button" onclick="añadircolor(this)"  class="btn rojo">Rojo</button>
-          <button type="button" onclick="añadircolor(this)"  class="btn naranja">Naranja</button>
+          <button type="button" onclick="añadircolor(this)" class="btn verde">Verde</button>
+          <button type="button" onclick="añadircolor(this)" class="btn negro">Negro</button>
+          <button type="button" onclick="añadircolor(this)" class="btn rojo">Rojo</button>
+          <button type="button" onclick="añadircolor(this)" class="btn naranja">Naranja</button>
         </div>
         </p>
         <h4>Detalles del producto</h4>
@@ -102,7 +103,17 @@
             <option value="5">5</option>
           </select>
         </div>
-        <input class="btn" onclick="añadirCarrito()" id="botoncarrito" type="submit" value="Añadir al carrito">
+        <!--Formulario (que no se muestra) con los datos de cada producto  -->
+        <form name="datosProducto" action="cart1.php" method="post">
+          <input class="detalles" type="text" style="display: none;" name="nombre"  id="nombre">
+          <input class="detalles" type="text" style="display: none;" name="tamaño" id="tamaño">
+          <input class="detalles" type="text" style="display: none;" name="color" id="color">
+          <input class="detalles" type="text" style="display: none;" name="cantidad" id="cantidad">
+          <input class="detalles" type="text" style="display: none;" name="ticket" id="ticket">
+          <!--Con este boton se rellena el formulario  -->
+          <input class="btn" name="añadir" onclick="rellenarForm()" id="botoncarrito" type="submit" value="Añadir al carrito">
+        </form>
+
         <div class="form-check">
           <input class="form-check-input" id="ticketregalo" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" id="textoTicketRegalo" for="flexCheckDefault">
@@ -110,123 +121,52 @@
           </label>
         </div>
       </div>
+
     </div>
   </div>
-  <form  name="datosProducto" action="./cart1.php" method="POST" style="display: none;">
-    <input class="detalles" type="text" id="nombre">
-    <input class="detalles" type="text" id="tamaño">
-    <input class="detalles" type="text" id="color">
-    <input class="detalles" type="text" id="cantidad">
-    <input class="detalles" type="text" id="ticket">
-  </form>
 
   <!--Relacionados-->
-  <div class="container-fluid">
+  <section class="container-fluid">
     <div class="row" id="relacionados">
       <h2>Productos relacionados con este producto</h2>
-      <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-        <div class="card" style="width: 18rem;">
-          <img src="products/sudadera3.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Sudadera Informatico</h5>
-            <p class="precio">25,95€</p>
-            <form>
-              <p class="clasificacion">
-                <input id="radio1" type="radio" name="estrellas" value="5">
-                <label class="estrellaColor" for="radio1">★</label>
-                <input id="radio2" type="radio" name="estrellas" value="4">
-                <label class="estrellaColor" for="radio2">★</label>
-                <input id="radio3" type="radio" name="estrellas" value="3">
-                <label class="estrellaColor" for="radio3">★</label>
-                <input id="radio4" type="radio" name="estrellas" value="2">
-                <label class="estrellaColor" for="radio4">★</label>
-                <input id="radio5" type="radio" name="estrellas" value="1">
-                <label class="estrellaColor" for="radio5">★</label>
-              </p>
-            </form>
-          </div>
+      <?php
+      $relacionados = array(
+        "producto1" => array("nombre" => "Sudadera Informatico", "precio" => "25,95", "imagen" => "products/sudadera3.webp"),
+        "producto2" => array("nombre" => "Camiseta Ingeniero", "precio" => "13,95", "imagen" => "products/camiseta.webp"),
+        "producto3" => array("nombre" => "Sudadera Programacion", "precio" => "23,95", "imagen" => "products/sudadesra.webp"),
+        "producto4" => array("nombre" => "Sudadera Ingeniero", "precio" => "21,95", "imagen" => "products/ingeniero-informatico-ingeniero-informatico.webp")
+      );
+      foreach ($relacionados as $producto => $elemento) {
+      ?>
+        <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
+          <a href="#" class="card card__link">
+            <div class="card" style="width: 18rem;">
+              <img src="<?= $elemento['imagen'] ?>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><?= $elemento['nombre'] ?></h5>
+                <p class="precio"><?= $elemento['precio'] ?>€</p>
+                <form>
+                  <p class="clasificacion">
+                    <input id="radio1" type="radio" name="estrellas" value="5">
+                    <label class="estrellaColor" for="radio1">★</label>
+                    <input id="radio2" type="radio" name="estrellas" value="4">
+                    <label class="estrellaColor" for="radio2">★</label>
+                    <input id="radio3" type="radio" name="estrellas" value="3">
+                    <label class="estrellaColor" for="radio3">★</label>
+                    <input id="radio4" type="radio" name="estrellas" value="2">
+                    <label class="estrellaColor" for="radio4">★</label>
+                    <input id="radio5" type="radio" name="estrellas" value="1">
+                    <label class="estrellaColor" for="radio5">★</label>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+          </a>
         </div>
-
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-
-        <div class="card" style="width: 18rem;">
-          <img src="products/camiseta.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Camiseta Ingeniero</h5>
-            <p class="precio">13,95€</p>
-            <form>
-              <p class="clasificacion">
-                <input id="radio1" type="radio" name="estrellas" value="5">
-                <label class="estrellaColor" for="radio1">★</label>
-                <input id="radio2" type="radio" name="estrellas" value="4">
-                <label class="estrellaColor" for="radio2">★</label>
-                <input id="radio3" type="radio" name="estrellas" value="3">
-                <label class="estrellaColor" for="radio3">★</label>
-                <input id="radio4" type="radio" name="estrellas" value="2">
-                <label class="estrellaColor" for="radio4">★</label>
-                <input id="radio5" type="radio" name="estrellas" value="1">
-                <label class="estrellaColor" for="radio5">★</label>
-              </p>
-            </form>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-
-        <div class="card" style="width: 18rem;">
-          <img src="products/sudadesra.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Sudadera Programacion</h5>
-            <p class="precio">23,95€</p>
-            <form id="estres">
-              <p class="clasificacion">
-                <input id="radio1" type="radio" name="estrellas" value="5">
-                <label class="estrellaColor" for="radio1">★</label>
-                <input id="radio2" type="radio" name="estrellas" value="4">
-                <label class="estrellaColor" for="radio2">★</label>
-                <input id="radio3" type="radio" name="estrellas" value="3">
-                <label class="estrellaColor" for="radio3">★</label>
-                <input id="radio4" type="radio" name="estrellas" value="2">
-                <label class="estrellaColor" for="radio4">★</label>
-                <input id="radio5" type="radio" name="estrellas" value="1">
-                <label class="estrellaColor" for="radio5">★</label>
-              </p>
-            </form>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-
-        <div class="card" style="width: 18rem;">
-          <img src="products/ingeniero-informatico-ingeniero-informatico.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Sudadera Ingeniero</h5>
-            <p class="precio">21,95€</p>
-            <form>
-              <p class="clasificacion">
-                <input id="radio1" type="radio" name="estrellas" value="5">
-                <label class="estrellaColor" for="radio1">★</label>
-                <input id="radio2" type="radio" name="estrellas" value="4">
-                <label class="estrellaColor" for="radio2">★</label>
-                <input id="radio3" type="radio" name="estrellas" value="3">
-                <label class="estrellaColor" for="radio3">★</label>
-                <input id="radio4" type="radio" name="estrellas" value="2">
-                <label class="estrellaColor" for="radio4">★</label>
-                <input id="radio5" type="radio" name="estrellas" value="1">
-                <label class="estrellaColor" for="radio5">★</label>
-              </p>
-            </form>
-
-          </div>
-        </div>
-
-      </div>
+      <?php } ?>
     </div>
-  </div>
+  </section>
   <!--PreFooter-->
   <div class="row pre-footer container-fluid">
     <div class="col">
