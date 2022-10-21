@@ -21,6 +21,7 @@ function contarProductos() {
   }
 }
 
+
 /*eliminar productos*/
 function eliminarProducto(producto, enlace) {
   document.getElementById(producto).style.display = "none";

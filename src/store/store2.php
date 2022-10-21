@@ -36,7 +36,7 @@
       <div class="col-lg-6 col-md-6" id="info">
         <h2 id="nombre">Camiseta de programacion</h2>
         <hr>
-        <p class="precio">15,95€</p>
+        <p class="precio"><span id="precioProducto">15,95€</span> </p>
         <h4>Tamaño:</h4>
         <div class="row">
           <div class="col-4">
@@ -110,6 +110,7 @@
           <input class="detalles" type="text" style="display: none;" name="color" id="color">
           <input class="detalles" type="text" style="display: none;" name="cantidad" id="cantidad">
           <input class="detalles" type="text" style="display: none;" name="ticket" id="ticket">
+          <input class="detalles" type="text" style="display: none;" name="precio" id="precio">
           <!--Con este boton se rellena el formulario  -->
           <input class="btn" name="añadir" onclick="rellenarForm()" id="botoncarrito" type="submit" value="Añadir al carrito">
         </form>
