@@ -21,7 +21,11 @@
     $d = __DIR__;
     include "../code/php/route.php";
     include "../code/php/navbar_store.php";
-
+    /*se inicia sesion solo si no se ha hecho antes */
+    session_start();
+    if (!$_SESSION['productos']) {
+        $_SESSION['productos'] = [];
+    }
     class Producto
     {
 
@@ -31,6 +35,7 @@
         public $cantidad;
         public $ticket;
         public $precio;
+        public $añadido;
 
         function __construct($nombre, $tamaño, $color, $cantidad, $ticket, $precio)
         {
@@ -46,16 +51,17 @@
             return $this->nombre . " " . $this->tamaño . " " . $this->color . " " . $this->cantidad . " "
                 . $this->ticket . " " . $this->precio . "/";
         }*/
+        
+        function compararProductos($producto1, $producto2)
+        {
+        }
     }
-
-    session_start();
-    if (!$_SESSION['productos']) {
-        $_SESSION['productos'] = [];
-    }
-
-    if (isset($_POST['añadir'])) {
-        $producto = new Producto($_POST['nombre'], $_POST['tamaño'], $_POST['color'], $_POST['cantidad'], $_POST['ticket'], '');
+    /*para añadir un producto que te envian del store al array */
+    $añadir = !empty($_POST['añadir']) ? $_POST['añadir'] : null;
+    if ($añadir == 'Añadir al carrito') {
+        $producto = new Producto($_POST['nombre'], $_POST['tamaño'], $_POST['color'], $_POST['cantidad'], $_POST['ticket'], $_POST['precio']);
         array_push($_SESSION['productos'], $producto);
+        header("Location:store2.php");
     }
 
     ?>
@@ -68,53 +74,55 @@
                     <p id="precioIzquierda">Precio</p>
                 </div>
                 <hr style="color:#fa7f72;">
-                <!--producto 1-->
-                <?php
                 
+                <?php
+                /*para eliminar un producto del array */
                 $eliminar = !empty($_POST['eliminar']) ? $_POST['eliminar'] : null;
                 $indexEliminar = !empty($_POST['indexEliminar']) ? $_POST['indexEliminar'] : null;
                 if ($eliminar == 'Eliminar') {
                     unset($_SESSION['productos'][(int)($indexEliminar)]);
                 }
+                /*array de productos*/
                 foreach ($_SESSION['productos'] as $key => $producto) {
-                    if ($producto!=null) {
-                    
+                    if ($producto != null) {
+
                 ?>
-                    <div class="row" id="producto1">
-                        <div class="col-3" id="imgChek">
-                            <div class="form-check">
-                                <input class="form-check-input" checked onclick="contarProductos()" type="checkbox" value="" id="checkarticulo">
+                        <div class="row" id="producto1">
+                            <div class="col-3" id="imgChek">
+                                <div class="form-check">
+                                    <input class="form-check-input" checked onclick="contarProductos()" type="checkbox" value="" id="checkarticulo">
+                                </div>
+                                <img src="products/pen.jpg" class="imagen" alt="">
                             </div>
-                            <img src="products/pen.jpg" class="imagen" alt="">
+                            <div class="col-7" id="texto">
+                                <h2><?= $producto->nombre ?></h2>
+                                <p> <span class="enStock">En Stock </span> <br>
+                                    <b> Tamaño:</b> <?= $producto->tamaño ?> <br>
+                                    <b> Color:</b> <?= $producto->color ?>
+                                <form method="post">
+                                    <select class="form-contol cantidades" onchange="cantidades(this.id)" id="cantidades1" aria-label=" select example">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <input class="eliminar" type="submit" name="eliminar" value="Eliminar">
+                                    <!--onclick="lanzar(producto1,enlace1)" -->
+                                    <input type="text" name="indexEliminar" value="<?php echo $key ?> " hidden>
+                                </form>
+                                </p>
+                            </div>
+                            <div class="col-2" id="contenedorprecio">
+                                <p class="precio"> <span class="precio"><?= $producto->precio ?></span></p>
+                            </div>
+                            <hr style="color:#FA7F72;">
                         </div>
-                        <div class="col-7" id="texto">
-                            <h2><?= $producto->nombre ?></h2>
-                            <p> <span class="enStock">En Stock </span> <br>
-                                <b> Tamaño:</b> <?= $producto->tamaño ?> <br>
-                                <b> Color:</b> <?= $producto->color ?>
-                            <form method="post">
-                                <select class="form-contol cantidades" onchange="cantidades(this.id)" id="cantidades1" aria-label=" select example">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                                <input class="eliminar" type="submit" name="eliminar" value="Eliminar"><!--onclick="lanzar(producto1,enlace1)" -->
-                                <input type="text" name="indexEliminar" value="<?php echo $key ?> " hidden>
-                            </form>
-                            </p>
+                        <!--enlace 1-->
+                        <div class="row-fluid" id="enlace1" style="display:none;">
+                            <a href="store2.php"><?= $producto->nombre ?></a>
+                            <hr style="color:#FA7F72;">
                         </div>
-                        <div class="col-2" id="contenedorprecio">
-                            <p class="precio"> <span class="precio">8.99</span>€</p>
-                        </div>
-                        <hr style="color:#FA7F72;">
-                    </div>
-                    <!--enlace 1-->
-                    <div class="row-fluid" id="enlace1" style="display:none;">
-                        <a href="store2.php"><?= $producto->nombre ?></a>
-                        <hr style="color:#FA7F72;">
-                    </div>
                 <?php
                     }
                 }
@@ -123,7 +131,7 @@
                 ?>
                 <!--subtotal-->
                 <div class="row-rev">
-                    <p class="subtotal">Subtotal (<span class="numProductos"><?php echo count($_SESSION['productos'])-1  ?></span> productos):<span class="preciosubtotal">8,99</span>€</p>
+                    <p class="subtotal">Subtotal (<span class="numProductos"><?php echo count($_SESSION['productos']) ?></span> productos):<span class="preciosubtotal">0</span>€</p>
                 </div>
             </div>
             <!--Espacio-->
@@ -131,7 +139,7 @@
             <!--Asisde-->
             <div class="col-lg-3 col-xs-12" id="aside">
 
-                <p class="subtotal">Subtotal (<span class="numProductos"><?php echo count($_SESSION['productos'])-1  ?></span> productos):<span class="preciosubtotal">8,99</span>€</p>
+                <p class="subtotal">Subtotal (<span class="numProductos"><?php echo count($_SESSION['productos'])  ?></span> productos):<span class="preciosubtotal">0</span>€</p>
                 <div class="container-fluid">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
