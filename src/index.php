@@ -216,11 +216,11 @@ function formatOpinion(array $opinion): string
     return $text;
 }
 
-function repeatString(string $string = '?', int $amount = 1): string
+function repeatString(string $string = '?', int $num = 1): string
 {
     $text = '';
 
-    for ($i = 0; $i < $amount; $i++) {
+    for ($i = 0; $i < $num; $i++) {
         $text .= $string;
     }
 
