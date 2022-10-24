@@ -204,24 +204,24 @@ function formatOpinion(array $opinion): string
     $text .= "<div class='col p-4 d-flex flex-column position-static'>";
     $text .= "<h2 class='mb-3'>" . $opinion['title'] . "</h2>";
     $text .= "<h5 class='mb-3 text-muted'>" . $opinion['date'] . "</h5>";
-    $text .= "<p class='mb-auto'>" . $opinion['text'] . "</p>";
+    $text .= "<p class='mb-auto'>" . repeatString($opinion['text'] . '</br></br>', random_int(1, 3)) . "</p>";
     $text .= "</div></div>";
     $text .= "<div class='row m-3'><div class='col-auto'>";
-    $text .= "<span class='mb-3 text-muted pl-5'>" . printCharacters('★', ceil($opinion['score'])) . "</span>";
-    $text .= "<span class='mb-3 text-muted pl-5'>" . printCharacters(' x', 5 - ceil($opinion['score'])) . "</span>";
+    $text .= "<span class='mb-3 text-warning pl-5 fs-5'>" . repeatString('★', ceil($opinion['score'])) . "</span>";
+    $text .= "<span class='mb-3 text-muted pl-5 fs-5'>" . repeatString('★', 5 - ceil($opinion['score'])) . "</span>";
     $text .= "</div><div class='col-auto'>";
-    $text .= "<h5 class='mb-3 text-muted pl-5'>" . $opinion['score'] . "</h5>";
+    $text .= "<span class='mb-3 text-muted pl-5 fs-5'>" . $opinion['score'] . "</span>";
     $text .= "</div></div></div></div>";
 
     return $text;
 }
 
-function printCharacters(string $character = '?', int $amount = 1): string
+function repeatString(string $string = '?', int $amount = 1): string
 {
     $text = '';
 
     for ($i = 0; $i < $amount; $i++) {
-        $text .= $character;
+        $text .= $string;
     }
 
     return $text;
