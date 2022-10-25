@@ -103,18 +103,8 @@
             <option value="5">5</option>
           </select>
         </div>
-        <!--Formulario (que no se muestra) con los datos de cada producto  -->
-        <form name="datosProducto" action="cart1.php" method="post">
-          <input class="detalles" type="text" style="display: none;" name="nombre"  id="nombre">
-          <input class="detalles" type="text" style="display: none;" name="tamaño" id="tamaño">
-          <input class="detalles" type="text" style="display: none;" name="color" id="color">
-          <input class="detalles" type="text" style="display: none;" name="cantidad" id="cantidad">
-          <input class="detalles" type="text" style="display: none;" name="ticket" id="ticket">
-          <input class="detalles" type="text" style="display: none;" name="precio" id="precio">
-          <!--Con este boton se rellena el formulario  -->
-          <input class="btn" name="añadir" onclick="rellenarForm()" id="botoncarrito" type="submit" value="Añadir al carrito">
-        </form>
-
+        <!--Con este boton se envia la informacion al carrito  -->
+        <input class="btn" name="añadir" onclick="pasarInfo()" id="botoncarrito" type="submit" value="Añadir al carrito">
         <div class="form-check">
           <input class="form-check-input" id="ticketregalo" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" id="textoTicketRegalo" for="flexCheckDefault">
