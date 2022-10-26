@@ -23,6 +23,10 @@ function contarProductos() {
     preciosub[index].textContent = prodprecio;
   }
 }
+function inicializarPagina () {
+  añadirProductos();
+  contarProductos();
+}
 
 function añadirProductos() {
   
@@ -47,7 +51,7 @@ function mostrarProductos(){
 }
 function mostrarProducto(producto,contenedor,index){
   contenedor.insertAdjacentHTML('beforebegin', 
-  "<div class='row' id='producto1'>"+
+  "<div class='row' id='producto"+index+"'>"+
       "<div class='col-3' id='imgChek'>"+
           "<div class='form-check'>"+
             "<input class='form-check-input' checked onclick='contarProductos()' type='checkbox' id='checkarticulo'>"+
@@ -73,6 +77,10 @@ function mostrarProducto(producto,contenedor,index){
           "<p class='precio'><span class='precio'>"+producto[5]+"</span>€</p>"+
       "</div>"+
       "<hr style='color:#FA7F72;'>"+
+  "</div>"+
+  "<div class='row-fluid' id='enlace"+index+"' style='display:none;'>"+
+      "<a href='store2.php'>"+producto[0]+"</a>"+
+      "<hr style='color:#FA7F72;'>"+
   "</div>");
 }
 function eliminar(index){
@@ -81,6 +89,7 @@ function eliminar(index){
     if ((localStorage.clickcount)>0) {
       localStorage.removeItem(localStorage.getItem(index));
       localStorage.clickcount = Number(localStorage.clickcount) - 1; 
+      //lanzar(("producto"+index),("enlace"+index))
     }
   } else {
     localStorage.clickcount = 0;

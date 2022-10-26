@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/cart1.css">
 </head>
 
-<body onload="añadirProductos()">
+<body onload="inicializarPagina()">
     <!--Nav-->
     <?php
     $d = __DIR__;
@@ -32,11 +32,8 @@
                 </div>
               <!--Para añadir los productos depues de esto -->
                 <hr style="color:#fa7f72;" >
-                <!--enlace 1-->
-                <div class="row-fluid" id="enlace1" style="display:none;">
-                    <a href="store2.php"></a>
-                    <hr style="color:#FA7F72;">
-                </div>
+                 <!--Aqui se añadiran los productos -->
+                 <!--Aqui se añadiran los enlaces -->
                 <!--subtotal-->
                 <div class="row-rev" id="subtotal">
                     <p class="subtotal">Subtotal (<span class="numProductos"></span> productos):<span class="preciosubtotal">0</span>€</p>
