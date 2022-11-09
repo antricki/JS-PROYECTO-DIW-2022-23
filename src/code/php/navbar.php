@@ -70,7 +70,7 @@
 
                     <!-- dropdown items  -->
                     <li class="nav-item allnav">
-                        <a class="nav-link" href="#">Tienda</a>
+                        <a class="nav-link" href="<?php echo $dir . 'store/store.php'?>">Tienda</a>
                     </li>
                     <li class="nav-item allnav">
                         <a class="nav-link" href="<?php echo $dir . 'courses/courses.html'?>">Oferta Formativa</a>

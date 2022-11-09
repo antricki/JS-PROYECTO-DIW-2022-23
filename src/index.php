@@ -47,27 +47,18 @@
             <div class="row mt-5">
                 <div class="col-md-6">
                     <h2>Reconocimiento</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium,
-                        repellat
-                        blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-                        odit. Nesciunt facere dolores non?</p>
+                    <p>Somos un centro con reconocimiento internacional, en gran parte gracias a nuestro equipo de relaciones europeas</p>
                 </div>
                 <div class="d-block d-md-none mt-4"></div>
                 <div class="col-md-6">
                     <h2>Calidad</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium,
-                        repellat
-                        blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-                        odit. Nesciunt facere dolores non?</p>
+                    <p>En nuestro centro solo contratamos a los mejores profesores, los mejores cualificados para el correcto desarrollo del alumnado.</p>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-md-6">
                     <h2>Instalaciones</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium,
-                        repellat
-                        blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-                        odit. Nesciunt facere dolores non?</p>
+                    <p>Contamos con instalaciones recien reformadas y con visión moderna que permiten al alumnado un desarrollo magnífico de sus habilidades.</p>
                 </div>
                 <div class="d-block d-md-none mt-4"></div>
                 <div class="col-md-6">
@@ -103,7 +94,7 @@
 
         <div class="collapse container mt-5" id="collapse">
             <div class="row info-collapse">
-                <div class="col-3" id="info-menu">
+                <div class="col-md-3" id="info-menu">
                     <div class="flex-shrink-0 p-3">
                         <ul class="list-unstyled ps-0">
                             <?php
@@ -158,7 +149,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-9 bg-white" id="info-vessel"></div>
+                <div class="col-md-9 bg-white" id="info-vessel"></div>
             </div>
         </div>
     </section>
