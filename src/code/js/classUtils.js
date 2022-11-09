@@ -19,9 +19,9 @@ function removeClass(elem, className) {
 }
 
 export function toggleClass(elem, className) {
-    if (hasClass(elem,className)) {
-        removeClass(elem,className);
+    if (hasClass(elem, className)) {
+        removeClass(elem, className);
     } else {
-        addClass(elem,className);
+        addClass(elem, className);
     }
 }
