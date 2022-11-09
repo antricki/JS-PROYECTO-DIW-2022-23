@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #EBEBEB;
+  background-color: #f2be93;
   color: aliceblue;
 }
 
@@ -41,6 +41,38 @@ body {
   margin-bottom: 1em;
   max-width: 90%;
   padding: 0.8em;
+  /* Estilos de los contenedores activos */
+}
+.courses__box:hover .courses__title, .courses__box:active .courses__title {
+  position: absolute;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateY(-130px);
+          transform: translateY(-130px);
+  color: #FA7F72;
+}
+.courses__box:hover .courses__img, .courses__box:active .courses__img {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  -webkit-filter: blur(3px) contrast(20%);
+          filter: blur(3px) contrast(20%);
+}
+.courses__box:hover article, .courses__box:active article {
+  margin-top: 1.5em;
+  text-align: center;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-shadow: 1px 1px 1px black;
+  -webkit-transition-property: opacity, z-index;
+  transition-property: opacity, z-index;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  opacity: 1;
+  z-index: 1;
 }
 .courses__img {
   display: inline-block;
@@ -89,6 +121,9 @@ body {
   color: aliceblue;
   font-weight: 500;
 }
+.courses__btn:hover, .courses__btn:active {
+  background-color: #FA7F72;
+}
 
 /* Estilos del article, por defecto ocultos */
 .article {
@@ -118,55 +153,12 @@ body {
   color: #f2be93;
 }
 
-/* Estilos de los contenedores activos */
-.courses__box:hover .courses__title,
-.courses__box:active .courses__title {
-  position: absolute;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-transform: translateY(-130px);
-          transform: translateY(-130px);
-  color: var(--red);
-}
-
-.courses__box:hover .courses__img,
-.courses__box:active .courses__img {
-  -webkit-transition: all 1s linear;
-  transition: all 1s linear;
-  -webkit-filter: blur(3px) contrast(20%);
-          filter: blur(3px) contrast(20%);
-}
-
-.courses__box:hover article,
-.courses__box:active article {
-  margin-top: 1.5em;
-  text-align: center;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  text-shadow: 1px 1px 1px black;
-  -webkit-transition-property: opacity, z-index;
-  transition-property: opacity, z-index;
-  -webkit-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-  opacity: 1;
-  z-index: 1;
-}
-
-.courses__btn:hover,
-.courses__btn:active {
-  background-color: var(--red);
-}
-
 .modal-dialog {
-  max-width: 30%;
+  min-width: 40%;
 }
 
 .modal__window {
-  background-color: var(--grey);
+  background-color: #EBEBEB;
   color: #333;
   background-image: radial-gradient(circle at 50% 106.26%, #eff4f1 0, #eef4f2 4.17%, #eef4f3 8.33%, #eef4f3 12.5%, #eef4f4 16.67%, #edf4f4 20.83%, #eef4f5 25%, #eef4f6 29.17%, #eef4f6 33.33%, #eef4f6 37.5%, #eff3f7 41.67%, #eff3f7 45.83%, #f0f3f7 50%, #f1f3f7 54.17%, #f1f3f7 58.33%, #f2f2f7 62.5%, #f3f2f7 66.67%, #f4f2f6 70.83%, #f4f2f6 75%, #f5f2f6 79.17%, #f6f2f5 83.33%, #f6f1f4 87.5%, #f7f1f4 91.67%, #f7f1f3 95.83%, #f7f1f3 100%);
   border: none;
@@ -179,13 +171,13 @@ body {
 }
 
 .modal-title {
-  color: var(--orange);
+  color: #F5A25D;
   font-weight: 700;
 }
 
 .modal-header {
   border-bottom: 0;
-  padding: 1.5em 2.5em 0 3.1em;
+  padding: 1.5em 2.5em 1em 3.1em;
 }
 
 .modal-body {
@@ -197,7 +189,8 @@ body {
 }
 
 .modal__item::before {
-  content: url(../assets/icons/caret-right-fill.svg);
+  content: url(../../assets/icons/caret-right-fill.svg);
+  margin-right: 0.5em;
 }
 
 .modal__item {
@@ -210,6 +203,10 @@ body {
   .courses__box,
 .courses__img {
     height: 400px;
+  }
+  .modal-dialog {
+    margin: 0 2em;
+    max-width: 100%;
   }
 }
 @media (min-width: 993px) {

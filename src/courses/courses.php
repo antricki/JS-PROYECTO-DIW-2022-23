@@ -11,11 +11,17 @@
       href="../../node_modules/bootstrap/dist/css/bootstrap.css"
     />
 
-    <link rel="stylesheet" href="/src/code/css/courses.css"/>
+    <link rel="stylesheet" href="../code/css/courses.css" />
   </head>
   <body>
+  <?php
+    $d = __DIR__;
+    include "../code/php/route.php";
+    include "../code/php/navbar.php";
+  ?>
+    
     <!-- Contenedor con todos los cursos -->
-    <section class="courses">
+    <section class="courses p-5">
       <div class="container courses__container">
         <!-- Estable tamaño del grid, a partir de 992px, 2 ítems por columna, si no 1 ítem -->
         <div class="row">
@@ -96,81 +102,80 @@
         </div>
         <!-- Segunda fila de items -->
         <div class="row">
-        <div class="courses__box col-md-12 col-lg-5">
-          <h3 class="courses__title">DAW</h3>
-          <article class="article">
-            <h4 class="article__title">Desarrollo de Aplicaciones Web</h4>
-            <h5 class="article__subtitle">Grado Superior</h5>
-            <p class="courses__text">
-              Este ciclo está orientado al desarrollo, programación e
-              implementación de actividades informáticas en todo tipo de de
-              entornos web.
-            </p>
-            <div class="courses__buttons">
-              <button
-                type="button"
-                class="courses__btn"
-                data-bs-toggle="modal"
-                data-bs-target="#dawEstudiar"
-              >
-                ¿Qué estudiaras?
-              </button>
-              <button
-                type="button"
-                class="courses__btn"
-                data-bs-toggle="modal"
-                data-bs-target="#dawTrabajar"
-              >
-                ¿De qué trabajaras?
-              </button>
-            </div>
-          </article>
-          <img
-            src="../assets/images/courses_DAW.jpg"
-            alt="imagen smr"
-            class="courses__img"
-          />
+          <div class="courses__box col-md-12 col-lg-5">
+            <h3 class="courses__title">DAW</h3>
+            <article class="article">
+              <h4 class="article__title">Desarrollo de Aplicaciones Web</h4>
+              <h5 class="article__subtitle">Grado Superior</h5>
+              <p class="courses__text">
+                Este ciclo está orientado al desarrollo, programación e
+                implementación de actividades informáticas en todo tipo de de
+                entornos web.
+              </p>
+              <div class="courses__buttons">
+                <button
+                  type="button"
+                  class="courses__btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#dawEstudiar"
+                >
+                  ¿Qué estudiaras?
+                </button>
+                <button
+                  type="button"
+                  class="courses__btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#dawTrabajar"
+                >
+                  ¿De qué trabajaras?
+                </button>
+              </div>
+            </article>
+            <img
+              src="../assets/images/courses_DAW.jpg"
+              alt="imagen smr"
+              class="courses__img"
+            />
+          </div>
+          <div class="courses__box col-md-12 col-lg-5">
+            <h3 class="courses__title">DAM</h3>
+            <article class="article">
+              <h4 class="article__title">
+                Desarrollo de Aplicaciones Multiplataforma
+              </h4>
+              <h5 class="article__subtitle">Grado Superior</h5>
+              <p class="courses__text">
+                Aprenderás a programar y diseñar aplicaciones para distintos
+                sistemas (Windows, Android, Linux…). Se trata de un ciclo
+                formativo con una gran demanda en la actualidad y con muchas
+                posibilidades de futuro.
+              </p>
+              <div class="courses__buttons">
+                <button
+                  type="button"
+                  class="courses__btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#damEstudiar"
+                >
+                  ¿Qué estudiaras?
+                </button>
+                <button
+                  type="button"
+                  class="courses__btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#damTrabajar"
+                >
+                  ¿De qué trabajaras?
+                </button>
+              </div>
+            </article>
+            <img
+              src="../assets/images/courses_DAM.png"
+              alt="imagen smr"
+              class="courses__img"
+            />
+          </div>
         </div>
-        <div class="courses__box col-md-12 col-lg-5">
-          <h3 class="courses__title">DAM</h3>
-          <article class="article">
-            <h4 class="article__title">
-              Desarrollo de Aplicaciones Multiplataforma
-            </h4>
-            <h5 class="article__subtitle">Grado Superior</h5>
-            <p class="courses__text">
-              Aprenderás a programar y diseñar aplicaciones para distintos
-              sistemas (Windows, Android, Linux…). Se trata de un ciclo
-              formativo con una gran demanda en la actualidad y con muchas
-              posibilidades de futuro.
-            </p>
-            <div class="courses__buttons">
-              <button
-                type="button"
-                class="courses__btn"
-                data-bs-toggle="modal"
-                data-bs-target="#damEstudiar"
-              >
-                ¿Qué estudiaras?
-              </button>
-              <button
-                type="button"
-                class="courses__btn"
-                data-bs-toggle="modal"
-                data-bs-target="#damTrabajar"
-              >
-                ¿De qué trabajaras?
-              </button>
-            </div>
-          </article>
-          <img
-            src="../assets/images/courses_DAM.png"
-            alt="imagen smr"
-            class="courses__img"
-          />
-        </div>
-      </div>
-
       </div>
     </section>
 
@@ -255,17 +260,11 @@
           <div class="modal-body">
             <ul class="modal__list">
               <li class="modal__item">Instalador de sistemas informáticos</li>
-              <li class="modal__item">
-                Técnico en soporte de equipos informáticos.
-              </li>
+              <li class="modal__item">Técnico en soporte de equipos informáticos.</li>
               <li class="modal__item">Técnico en redes de datos.</li>
-              <li class="modal__item">
-                Reparador de periféricos de sistemas microinformáticos y redes.
-              </li>
+              <li class="modal__item">Reparador de periféricos de sistemas microinformáticos y redes.</li>
               <li class="modal__item">Comercial de productos del sector..</li>
-              <li class="modal__item">
-                Técnico operador de asistencia a distancia..
-              </li>
+              <li class="modal__item">Técnico operador de asistencia a distancia.</li>
               <li class="modal__item">Técnico de sistemas.</li>
             </ul>
           </div>
@@ -364,12 +363,8 @@
               <li class="modal__item">Técnico en adiminstración de sistemas</li>
               <li class="modal__item">Responsable de informática</li>
               <li class="modal__item">Técnico de servicios de internet</li>
-              <li class="modal__item">
-                Técnico en servicios de mensajeria electróncia
-              </li>
-              <li class="modal__item">
-                Técnico en administración de bases de datos
-              </li>
+              <li class="modal__item">Técnico en servicios de mensajeria electróncia</li>
+              <li class="modal__item">Técnico en administración de bases de datos</li>
               <li class="modal__item">Técnico de redes</li>
               <li class="modal__item">Supervisor de sistemas</li>
             </ul>
@@ -466,9 +461,7 @@
           <div class="modal-body">
             <ul class="modal__list">
               <li class="modal__item">Programador y deseñador web</li>
-              <li class="modal__item">
-                Gestor del acceso a bases de datos para entornos web.
-              </li>
+              <li class="modal__item">Gestor del acceso a bases de datos para entornos web.</li>
               <li class="modal__item">Programador web freelance.</li>
               <li class="modal__item">Programador full-stack.</li>
             </ul>
@@ -564,21 +557,13 @@
           </div>
           <div class="modal-body">
             <ul class="modal__list">
-              <li class="modal__item">
-                Desarrolador de apliaciones informáticas para la gestión
-                empresarial y de negocio
-              </li>
-              <li class="modal__item">
-                Desarrollador de aplicaciones de carácter general
-              </li>
+              <li class="modal__item">Desarrolador de apliaciones informáticas para la gestión
+                empresarial y de negocio</li>
+              <li class="modal__item">Desarrollador de aplicaciones de carácter general</li>
               <li class="modal__item">Técnico en redes de datos.</li>
-              <li class="modal__item">
-                Reparador de periféricos de sistemas microinformáticos y redes.
-              </li>
+              <li class="modal__item">Reparador de periféricos de sistemas microinformáticos y redes.</li>
               <li class="modal__item">Comercial de productos del sector..</li>
-              <li class="modal__item">
-                Técnico operador de asistencia a distancia..
-              </li>
+              <li class="modal__item">Técnico operador de asistencia a distancia.</li>
               <li class="modal__item">Técnico de sistemas.</li>
             </ul>
           </div>
@@ -590,8 +575,10 @@
         </div>
       </div>
     </div>
-
-
+    <?php
+    $d = __DIR__;
+    include "../code/php/footer.php";
+  ?>
 
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>
