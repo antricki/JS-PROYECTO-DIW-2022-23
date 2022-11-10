@@ -11,16 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="./js/cart1.js"></script>
-    <link rel="stylesheet" href="./css/cart1.css">
+    <script defer src="code/js/cart.js"></script>
+    <link rel="stylesheet" href="code/css/cart.css">
 </head>
 
 <body onload="inicializarPagina()">
     <!--Nav-->
     <?php
-    $d = __DIR__;
-    include "../code/php/route.php";
-    include "../code/php/navbar_store.php";
+    
+    include "code/php/navbar_store.php";
     ?>
     <section class="container">
         <div class="row">
@@ -70,16 +69,16 @@
         <div class="row" id="relacionados">
             <h2>Productos relacionados con este producto</h2>
             <?php
-            $relacionados = array(
-                "producto1" => array("nombre" => "Sudadera Informatico", "precio" => "25,95", "imagen" => "products/sudadera3.webp"),
-                "producto2" => array("nombre" => "Camiseta Ingeniero", "precio" => "13,95", "imagen" => "products/camiseta.webp"),
-                "producto3" => array("nombre" => "Sudadera Programacion", "precio" => "23,95", "imagen" => "products/sudadesra.webp"),
-                "producto4" => array("nombre" => "Sudadera Ingeniero", "precio" => "21,95", "imagen" => "products/ingeniero-informatico-ingeniero-informatico.webp")
-            );
+             $relacionados = array(
+                "producto1" => array("nombre" => "Sudadera Informatico", "precio" => "25,95", "imagen" => "assets/products/sudadera3.webp"),
+                "producto2" => array("nombre" => "Camiseta Ingeniero", "precio" => "13,95", "imagen" => "assets/products/camiseta.webp"),
+                "producto3" => array("nombre" => "Sudadera Programacion", "precio" => "23,95", "imagen" => "assets/products/sudadesra.webp"),
+                "producto4" => array("nombre" => "Sudadera Ingeniero", "precio" => "21,95", "imagen" => "assets/products/ingeniero-informatico-ingeniero-informatico.webp")
+              );
             foreach ($relacionados as $producto => $elemento) {
             ?>
                 <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-                    <a href="#" class="card card__link">
+                    <a href="product.php" class="card card__link">
                         <div class="card" style="width: 18rem;">
                             <img src="<?= $elemento['imagen'] ?>" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -145,9 +144,10 @@
     </div>
     <!--Footer-->
     <?php
+    $d = __DIR__;
+    include "../code/php/route.php";
     include "../code/php/footer.php";
     ?>
-
 </body>
 
 </html>

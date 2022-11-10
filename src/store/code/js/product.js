@@ -17,30 +17,8 @@ function añadircolor(boton) {
   document.getElementById("botoncarrito").style.cursor = "pointer";
 }
 
-/*function rellenarForm() {
-  /*para saber si le ha dado al color o no 
-  if (color == "") {
-    alert("Debes elegir un color");
-  } else {
-    /*cogo los datos de sus repectivos sitios  
-    const inputs = document.querySelectorAll("input.detalles");
-    const cantidad = document.getElementById("cantidades");
-    const tamaño = document.getElementById("tallas");
-    const nombre = document.getElementById("nombre");
-    const ticket = document.getElementById("ticketregalo");
-    const precio = document.getElementById("precioProducto");
-    /*meto los datos en el formulario 
-    inputs[0].value = nombre.textContent;
-    inputs[1].value = tamaño.options[tamaño.selectedIndex].value;
-    inputs[2].value = color;
-    inputs[3].value = cantidad.options[cantidad.selectedIndex].value;
-    inputs[4].value = ticket.checked;
-    inputs[5].value = precio.textContent;
-    alert("El producto se ha añadido");
-  }
-} */
 
-function pasarInfo() {
+function pasarInfoProduct() {
   if (typeof Storage !== "undefined") {
     if (color == "") {
       alert("Debes elegir un color");

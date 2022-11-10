@@ -12,16 +12,15 @@
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   <link rel="stylesheet" href="../code/css/navbar.css">
-  <script src="./js/store2.js"></script>
-  <link rel="stylesheet" href="./css/styles_info_produc.css">
+  <script src="code/js/product.js"></script>
+  <link rel="stylesheet" href="code/css/styles_produc.css">
 </head>
 
 <body>
   <!--Nav-->
   <?php
-  $d = __DIR__;
-  include "../code/php/route.php";
-  include "../code/php/navbar_store.php";
+  
+  include "code/php/navbar_store.php";
 
   ?>
 
@@ -30,7 +29,7 @@
     <div class="row">
       <!--Imagen-->
       <div class="col-lg-4 col-md-6 col-" id="imagen">
-        <img src="products/camiseta2.webp" id="proPrincipal">
+        <img src="assets/products/camiseta2.webp" id="proPrincipal">
       </div>
       <!--Info-->
       <div class="col-lg-6 col-md-6" id="info">
@@ -104,7 +103,7 @@
           </select>
         </div>
         <!--Con este boton se envia la informacion al carrito  -->
-        <input class="btn" name="añadir" onclick="pasarInfo()" id="botoncarrito" type="submit" value="Añadir al carrito">
+        <input class="btn" name="añadir" onclick="pasarInfoProduct()" id="botoncarrito" type="submit" value="Añadir al carrito">
         <div class="form-check">
           <input class="form-check-input" id="ticketregalo" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" id="textoTicketRegalo" for="flexCheckDefault">
@@ -122,15 +121,15 @@
       <h2>Productos relacionados con este producto</h2>
       <?php
       $relacionados = array(
-        "producto1" => array("nombre" => "Sudadera Informatico", "precio" => "25,95", "imagen" => "products/sudadera3.webp"),
-        "producto2" => array("nombre" => "Camiseta Ingeniero", "precio" => "13,95", "imagen" => "products/camiseta.webp"),
-        "producto3" => array("nombre" => "Sudadera Programacion", "precio" => "23,95", "imagen" => "products/sudadesra.webp"),
-        "producto4" => array("nombre" => "Sudadera Ingeniero", "precio" => "21,95", "imagen" => "products/ingeniero-informatico-ingeniero-informatico.webp")
+        "producto1" => array("nombre" => "Sudadera Informatico", "precio" => "25,95", "imagen" => "assets/products/sudadera3.webp"),
+        "producto2" => array("nombre" => "Camiseta Ingeniero", "precio" => "13,95", "imagen" => "assets/products/camiseta.webp"),
+        "producto3" => array("nombre" => "Sudadera Programacion", "precio" => "23,95", "imagen" => "assets/products/sudadesra.webp"),
+        "producto4" => array("nombre" => "Sudadera Ingeniero", "precio" => "21,95", "imagen" => "assets/products/ingeniero-informatico-ingeniero-informatico.webp")
       );
       foreach ($relacionados as $producto => $elemento) {
       ?>
-        <div class="col-lg-3 col-md-6 col-sm-12" id="producRel">
-          <a href="#" class="card card__link">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" id="producRel">
+          <a href="product.php" class="card card__link">
             <div class="card" style="width: 18rem;">
               <img src="<?= $elemento['imagen'] ?>" class="card-img-top" alt="...">
               <div class="card-body">
@@ -195,6 +194,8 @@
   </div>
   <!--Footer-->
   <?php
+  $d = __DIR__;
+  include "../code/php/route.php";
   include "../code/php/footer.php";
   ?>
 
