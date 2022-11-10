@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="../store/code/css/tramitarPedido.css">
+    <link rel="stylesheet" href="./code/css/tramitarPedido.css">
 </head>
 <!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
     • Naranja: #F5A25D un 10% para aquello que llama a la acción.
@@ -172,16 +172,16 @@
                         <div class="contacto__pago-body">
                             <form action="#" method="post" id="form_tarjeta">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="nombreYapellidos" placeholder="Nombre y apellidos" required pattern="[a-zA-Z]">
+                                    <input type="text" class="form-control" id="nombreYapellidos" placeholder="Nombre y Apellidos" required>
                                 </div>
                                 <div class=" mb-3">
-                                    <input type="text" class="form-control" id="nTarjeta" placeholder="0000 0000 0000 0000" minlength="19" maxlength="19" required pattern="[0-9]+">
+                                    <input type="text" class="form-control" id="nTarjeta" placeholder="0000000000000000" minlength="16" maxlength="16" required pattern="[0-9]+">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="month" class="form-control" id="mes" placeholder="MM/AA" required>
+                                    <input type="month" class="form-control" id="mesano" placeholder="MM/AA" required maxlength="5">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="cvc" placeholder="123" required pattern="[0-9]{3}" minlength="3" maxlength="3">
+                                    <input type="text" class="form-control" id="cvc" placeholder="123" required pattern="[0-9]+" minlength="3" maxlength="3">
                                 </div>
                                 <!-- mensaje de información, alerta -->
                                 <div class="footer_pago">
