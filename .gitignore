@@ -134,6 +134,7 @@ private
 */private
 *.private
 *.private.*
+private.*
 
 # Ignore big files 
 *.zip
