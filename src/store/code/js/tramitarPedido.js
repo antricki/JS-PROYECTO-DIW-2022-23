@@ -102,7 +102,7 @@ botonValida.addEventListener("click", (e) => {
     alert("EL número de la tarjeta es incorrecto");
   } else if (validaCaducidad(caducidad)) {
     alert("La caducidad no es correcta");
-  } else if (isNaN(cvc)) {
+  } else if (!isNaN(cvc)) {
     alert("Error en CVV");
   } else {
     alert("Tarjeta válida");
