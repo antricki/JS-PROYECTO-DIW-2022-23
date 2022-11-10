@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="../store/css/tramitarPedido.css">
+    <link rel="stylesheet" href="../store/code/css/tramitarPedido.css">
 </head>
 <!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
     • Naranja: #F5A25D un 10% para aquello que llama a la acción.
@@ -25,8 +25,8 @@
         <!-- navegador -->
         <?php
         $d = __DIR__;
-        include "../code/php/route.php";
-        include "../code/php/navbar_store.php";
+        // include "./code/php/route.php";
+        include "./code/php/navbar_store.php";
         ?>
 
         <!-- banner -->
@@ -55,6 +55,7 @@
                         </div>
                         <!-- cuerpo / primer formulario-->
                         <div class="contacto__direccion-body">
+                            <div class="direccion__body" id="direccion_escrita"></div>
                             <form action="#" method="post" id="form_inicial" name="fInicial">
                                 <div class="mb-3">
                                     <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" required>
@@ -92,7 +93,7 @@
                                 <input type="checkbox" class="custom-control-input" id="guardar-informacion">
                                 <label for="guardar-informacion" class="custom-control-label">Guardar informacion para la siguiente compra</label>
                             </div>
-                            <!-- formulario de faturacion que se ve y hago click desaparece -->
+                            <!-- formulario de faturacion que se ve y si hago click desaparece -->
                             <div id="datos_facturacion_ver" class="datos_facturacion_ver">
                                 <h3 class="contacto__direccion-title__text">Datos de envío</h3>
                                 <form action="#" method="post" class="datos_facturacion_envio">
@@ -169,22 +170,31 @@
                         </div>
                         <!-- formulario de pago, cuerpo -->
                         <div class="contacto__pago-body">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre y apellidos" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0000 0000 0000 0000" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="MM/AA" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123" required>
-                            </div>
-                            <!-- mensaje de información, alerta -->
-                            <div class="mb-3">
-                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece." class="metodo__pago_link">¿Qué es CVC/CVV?</a>
-                            </div>
+                            <form action="#" method="post" id="form_tarjeta">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="nombreYapellidos" placeholder="Nombre y apellidos" required pattern="[a-zA-Z]">
+                                </div>
+                                <div class=" mb-3">
+                                    <input type="text" class="form-control" id="nTarjeta" placeholder="0000 0000 0000 0000" minlength="19" maxlength="19" required pattern="[0-9]+">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="month" class="form-control" id="mes" placeholder="MM/AA" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="cvc" placeholder="123" required pattern="[0-9]{3}" minlength="3" maxlength="3">
+                                </div>
+                                <!-- mensaje de información, alerta -->
+                                <div class="footer_pago">
+                                    <div class="mb-3">
+                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece." class="metodo__pago_link">¿Qué es CVC/CVV?</a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="submit" value="Valida" id="valida_tarjeta" class="btn valida_tarjeta">
+                                    </div>
+                                </div>
+
+                            </form>
+
                         </div>
                     </div>
                     <!-- fin método de pago -->
@@ -272,7 +282,7 @@
     include "../code/php/footer.php";
     ?>
     <!-- ENLACE PARA EL JS -->
-    <script src="./js/tramitarPedido.js"></script>
+    <script src="./code/js/tramitarPedido.js"></script>
 </body>
 
 </html>

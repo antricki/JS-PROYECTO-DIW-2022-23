@@ -22,14 +22,31 @@ const tipo_entrega2 = document.getElementById('tipo__entrega2');
 
 entrega1.addEventListener('click', (e) => {
     //si hago click en el radio primero, se añade la clase tipo_entrega1 en el primer 
-    //contenedor y cambia el fondo a gris.
+    //contenedor y cambia el fondo a verde.
     tipo_entrega1.classList.add('tipo__entrega1');
     tipo_entrega2.classList.remove('tipo__entrega1');
+    tipo_entrega2.classList.add('hidden')
+})
+entrega1.addEventListener('dblclick', (e) => {
+    //si hago doble click en el radio primero, aliminamos el hidden en el primer
+    //contenedor. Y de ese modo volvera aparecer las dos elecciones
+    tipo_entrega1.classList.add('tipo__entrega1');
+    tipo_entrega2.classList.remove('tipo__entrega1');
+    tipo_entrega2.classList.remove('hidden')
 })
 entrega2.addEventListener('click', (e) => {
-    //lo mismo que el anterior pero con el segundo contenedor y segundo rario.
+    //lo mismo que el anterior pero con el segundo contenedor y segundo radio.
     tipo_entrega2.classList.add('tipo__entrega1');
     tipo_entrega1.classList.remove('tipo__entrega1');
+    tipo_entrega1.classList.add('hidden')
+})
+entrega2.addEventListener('dblclick', (e) => {
+    //si hago doble click en el segundo primero, aliminamos el hidden en el primer
+    //contenedor. Y de ese modo volvera aparecer las dos elecciones
+    tipo_entrega2.classList.add('tipo__entrega1');
+    tipo_entrega1.classList.remove('tipo__entrega1');
+    tipo_entrega1.classList.remove('hidden')
+
 })
 
 // comprobar formulario de datos de contacto
@@ -38,7 +55,6 @@ const boton = document.getElementById('enviar');
 
 boton.addEventListener('click', (e) => {
     e.preventDefault();
-    const letras = new RegExp('/^[a-zA-Z]/g')
     // variables del primer formulario
     let nombre = document.getElementById('nombre').value;
     let apellidos = document.getElementById('apellidos').value;
@@ -47,28 +63,64 @@ boton.addEventListener('click', (e) => {
     let ciudad = document.getElementById('ciudad').value;
     let cp = document.getElementById('codigoPostal').value;
     let pais = document.getElementById('pais').value;
-    if (letras.test(nombre)) {
-        alert("El nombre no puede estar vacío y no puede contener números")
-    }
-    if (letras.test(apellidos)) {
+
+    if (!/^[a-zA-Z]/.test(nombre)) {
+        alert("El nombre no puede estar vacío o no puede contener números")
+    } else if (!/^[a-zA-Z]/.test(apellidos)) {
         alert("Los apellidos son necesarios")
-    }
-    if (!isNaN(tlf)) {
+    } else if (isNaN(tlf)) {
         alert("El telefono deben ser todo números")
-    }
-    if (!isNaN(cp)) {
+    } else if (isNaN(cp)) {
         alert("El Código Postal no es válido")
-    }
-    if (!letras.test(ciudad)) {
+    } else if (!/^[a-zA-Z]/.test(ciudad)) {
         alert("La ciudad no puede contener números")
-    }
-    if (!letras.test(pais)) {
+    } else if (!/^[a-zA-Z]/.test(pais)) {
         alert("El país no puede contener números")
+    } else {
+        alert("Todos los datos se han enviado correctamente")
+        escribirDireccion(nombre, apellidos, tlf, calle, ciudad, cp, pais)
     }
-
-
 
 })
+const formuInicial = document.getElementById('form_inicial')
+function escribirDireccion(nombre, apellidos, tlf, calle, ciudad, cp, pais) {
+    formuInicial.classList.add('hidden')
+    const caja = document.getElementById('direccion_escrita')
+    let p1 = document.createElement("p")
+    p1.textContent = `${nombre} ${apellidos}`
+    let p2 = document.createElement("p")
+    p2.textContent = `${tlf}`
+    let p3 = document.createElement("p")
+    p3.textContent = `${calle}  ${cp}`
+    let p4 = document.createElement("p")
+    p4.textContent = `${ciudad}  ${pais}`
+    caja.appendChild(p1)
+    caja.appendChild(p2)
+    caja.appendChild(p3)
+    caja.appendChild(p4)
+}
+
+//  comprobar formulario de metodo de pago "la tarjeta"
+
+const botonValida = document.getElementById('valida_tarjeta')
+
+botonValida.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log('validando')
+    // variables del formulario tarjeta
+    let nom = document.getElementById('nombreYapellidos').value
+    let nTarjeta = document.getElementById('nTarjeta').value
+    let mes = document.getElementById('mes').value
+    let cvc = document.getElementById('cvc')
+    if (!/^[a-zA-Z]/.test(nom)) {
+        alert('El nombre de la tarjeta no es correcto')
+    }
+})
+
+function validaTarjeta(nTarjeta) {
+    numT = nTarjeta.replace('-', '');
+}
+
 
 
 
