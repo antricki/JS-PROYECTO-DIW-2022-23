@@ -105,47 +105,12 @@ function mostrarProducto(producto, contenedor, index) {
 }
 function cantidadproducto(cantidad) {
   var html = "";
-  switch (cantidad) {
-    case '1':
-      html =
-        "<option selected value='1'>1</option>" +
-        "<option value='2'>2</option>" +
-        "<option value='3'>3</option>" +
-        "<option value='4'>4</option>" +
-        "<option value='5'>5</option>";
-      break;
-    case '2':
-      html =
-        "<option  value='1'>1</option>" +
-        "<option selected value='2'>2</option>" +
-        "<option value='3'>3</option>" +
-        "<option value='4'>4</option>" +
-        "<option value='5'>5</option>";
-      break;
-    case '3':
-      html =
-        "<option  value='1'>1</option>" +
-        "<option value='2'>2</option>" +
-        "<option selected value='3'>3</option>" +
-        "<option value='4'>4</option>" +
-        "<option value='5'>5</option>";
-      break;
-    case '4':
-      html =
-        "<option  value='1'>1</option>" +
-        "<option value='2'>2</option>" +
-        "<option value='3'>3</option>" +
-        "<option selected value='4'>4</option>" +
-        "<option value='5'>5</option>";
-      break;
-    case '5':
-      html =
-        "<option  value='1'>1</option>" +
-        "<option value='2'>2</option>" +
-        "<option value='3'>3</option>" +
-        "<option value='4'>4</option>" +
-        "<option selected value='5'>5</option>";
-      break;
+  for (let index = 1; index <= 5; index++) {
+    if (cantidad==index) {
+     html+= "<option selected value='"+index+"'>"+index+"</option>" ;
+    }else{
+      html+= "<option value='"+index+"'>"+index+"</option>" ;
+    }
   }
   return html;
 }
