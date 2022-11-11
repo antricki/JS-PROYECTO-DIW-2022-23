@@ -19,8 +19,8 @@
     <!-- navegador -->
     <?php
     $d = __DIR__;
-    include "../code/php/route.php";
-    include "../code/php/navbar_store.php";
+    // include "./code/php/route.php";
+    include "./code/php/navbar_store.php";
     ?>
     <main class="container-fluid">
         <div class="row d-flex justify-content-md-around">

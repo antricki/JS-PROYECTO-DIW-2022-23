@@ -95,15 +95,14 @@ botonValida.addEventListener("click", (e) => {
   let nom = document.getElementById("nombreYapellidos").value;
   let nTarjeta = document.getElementById("nTarjeta").value;
   let caducidad = document.getElementById("mesano").value;
-  let cvc = document.getElementById("cvc");
-
+  let cvc = document.getElementById("cvc").value;
   if (!/^[a-zA-Z]/.test(nom)) {
     alert("El nombre de la tarjeta no es correcto");
   } else if (!validaTarjeta(nTarjeta)) {
     alert("EL número de la tarjeta es incorrecto");
-  } else if (validaCaducidad(caducidad)) {
+  } else if (!validaCaducidad(caducidad)) {
     alert("La caducidad no es correcta");
-  } else if (!isNaN(cvc)) {
+  } else if (!/[0-9]+/.test(cvc)) {
     alert("Error en CVV");
   } else {
     alert("Tarjeta válida");
@@ -130,9 +129,10 @@ function validaTarjeta(numberCard) {
   } else return false;
 }
 function validaCaducidad(caducidad) {
-  let mes = caducidad.substr(0, 1);
+  if (caducidad === '') return false
+  let mes = caducidad.substr(0, 2);
   let ano = caducidad.substr(3, 4);
-  if (/^(0[0-9]|1[0-2])$/.test(mes) && /^(20)?([0-9]{2})$/.test(ano)) {
+  if (/^(0[0-9]|1[0-2])$/.test(mes) && /^\d{2}$/.test(ano)) {
     return true;
   } else return false;
 }

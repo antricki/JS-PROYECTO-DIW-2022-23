@@ -14,11 +14,7 @@
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="./code/css/tramitarPedido.css">
 </head>
-<!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
-    • Naranja: #F5A25D un 10% para aquello que llama a la acción.
-    • Rojo: #FA7F72 solo para pequeños detalles o pequeños bloques de texto
-    • Azul: #389393 para el footer 
-    https://www.shutterstock.com/es/create/home para crear imagenes-->
+
 
 <body class="body__tramitar_pedido">
     <header>

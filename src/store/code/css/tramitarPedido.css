@@ -1,3 +1,10 @@
+/* Gris : #EBEBEB un 60% de la página,
+el fondo y lo menos important. • Naranja: #F5A25D un 10% 
+para aquello que llama a la acción. • Rojo: #FA7F72 solo 
+para pequeños detalles o pequeños bloques de texto • Azul: #389393 
+para el footer https: //www.shutterstock.com/es/create/home para crear imagenes */
+
+
 * {
   box-sizing: border-box;
 }
@@ -58,11 +65,11 @@ body {
 }
 
 .form-control:valid {
-  border: 1px solid #276969;
+  border: 3px solid #276969;
 }
 
 .form-control:required:invalid {
-  border: 1px solid #FA7F72;
+  border: 3px solid #FA7F72;
 }
 
 .form__enviar {
@@ -160,15 +167,14 @@ body {
 }
 
 .datos__contacto-envío,
-.metodo__envio {
+.metodo__envio,
+.metodo__pago {
   border: 1px solid #FA7F72;
-  border-radius: 15px;
+  border-radius: 1em;
 }
 
 .metodo__pago {
-  border: 1px solid #FA7F72;
-  border-radius: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 2em;
 }
 
 .metodo__pago_link {
@@ -181,10 +187,15 @@ body {
 }
 
 .pedido_total-pie {
+
   text-align: right;
 }
 
 .pedido_total-pie,
 .tramitar__pedido-text {
   color: grey;
+}
+
+.tramitar__pedido_compraSegura {
+  margin-top: 0.5em;
 }
