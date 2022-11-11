@@ -96,6 +96,7 @@ botonValida.addEventListener("click", (e) => {
   let nTarjeta = document.getElementById("nTarjeta").value;
   let caducidad = document.getElementById("mesano").value;
   let cvc = document.getElementById("cvc");
+
   if (!/^[a-zA-Z]/.test(nom)) {
     alert("El nombre de la tarjeta no es correcto");
   } else if (!validaTarjeta(nTarjeta)) {
