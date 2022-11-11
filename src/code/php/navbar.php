@@ -34,7 +34,7 @@
 
             <!-- User icon sm -->
             <div>
-                <a href="<?php echo $dir . 'login/login.html'?>" class="nav-link">
+                <a href="<?php echo $dir . 'login/login.php'?>" class="nav-link">
                     <img src="<?php echo $dir . 'assets/icons/circle-user-regular.svg'?>" alt=""
                         class="icon-allnav allnav">
                     <span>Julisito</span>
@@ -70,20 +70,20 @@
 
                     <!-- dropdown items  -->
                     <li class="nav-item allnav">
-                        <a class="nav-link" href="#">Tienda</a>
+                        <a class="nav-link" href="<?php echo $dir . 'store/store.php'?>">Tienda</a>
                     </li>
                     <li class="nav-item allnav">
-                        <a class="nav-link" href="<?php echo $dir . 'courses/courses.html'?>">Oferta Formativa</a>
+                        <a class="nav-link" href="<?php echo $dir . 'courses/courses.php'?>">Oferta Formativa</a>
                     </li>
                     <li class="nav-item allnav">
-                        <a class="nav-link" href="<?php echo $dir . 'gallery/gallery.html'?>">Galería</a>
+                        <a class="nav-link" href="<?php echo $dir . 'gallery/gallery.php'?>">Galería</a>
                     </li>
                 </ul>
             </div>
         </div>
         <!-- User icon md/lg-->
         <div class="d-none d-md-block ms-4">
-            <a href="<?php echo $dir . 'login/login.html'?>" class="nav-link">
+            <a href="<?php echo $dir . 'login/login.php'?>" class="nav-link">
                 <img src="<?php echo $dir . 'assets/icons/circle-user-regular.svg'?>" alt="" class="icon-allnav allnav">
                 <span>Julisito</span>
             </a>
