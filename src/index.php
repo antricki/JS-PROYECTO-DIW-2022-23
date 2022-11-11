@@ -155,9 +155,6 @@
     </section>
     <?php include "code/php/footer.php"; ?>
 </body>
-<<<<<<< Updated upstream
-</html>
-=======
 
 </html>
 
@@ -211,4 +208,3 @@ function repeatString(string $string = '?', int $num = 1): string
 {
   return str_repeat($string, $num);
 }
->>>>>>> Stashed changes
