@@ -29,6 +29,10 @@ div#info {
   display: flex;
   flex-direction: column;
 }
+/*imagen*/
+#proPrincipal{
+  box-shadow: 2px 2px 3px #fa7f72;
+}
 /*selects*/
 #tallas {
   height: 125%;

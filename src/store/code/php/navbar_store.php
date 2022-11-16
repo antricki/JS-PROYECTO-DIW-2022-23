@@ -19,7 +19,7 @@
 <nav class="navbar navbar-light allnav">
     <div class="container-fluid">
         <!-- Navbar brand-->
-        <a class="navbar-brand allnav" href=""><img src="assets/icons/logo_store.svg" alt=""></a>
+        <a class="navbar-brand allnav" href="/src/store/store.php"><img src="assets/icons/logo_store.svg" alt=""></a>
 
         <!-- md search-->
         <form class="d-none d-md-block d-lg-none ms-4">
