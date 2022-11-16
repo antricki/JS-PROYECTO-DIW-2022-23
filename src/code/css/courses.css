@@ -6,8 +6,7 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(0deg, 0%, 100%)), color-stop(27%, hsl(20deg, 60%, 99%)), color-stop(47%, hsl(26deg, 64%, 98%)), color-stop(60%, hsl(30deg, 63%, 97%)), color-stop(69%, hsl(28deg, 62%, 96%)), color-stop(76%, hsl(28deg, 63%, 95%)), color-stop(81%, hsl(28deg, 58%, 94%)), color-stop(86%, hsl(27deg, 58%, 93%)), color-stop(90%, hsl(29deg, 58%, 92%)), color-stop(95%, hsl(29deg, 59%, 90%)), to(hsl(28deg, 59%, 89%)));
-  background-image: linear-gradient(180deg, hsl(0deg, 0%, 100%) 0%, hsl(20deg, 60%, 99%) 27%, hsl(26deg, 64%, 98%) 47%, hsl(30deg, 63%, 97%) 60%, hsl(28deg, 62%, 96%) 69%, hsl(28deg, 63%, 95%) 76%, hsl(28deg, 58%, 94%) 81%, hsl(27deg, 58%, 93%) 86%, hsl(29deg, 58%, 92%) 90%, hsl(29deg, 59%, 90%) 95%, hsl(28deg, 59%, 89%) 100%);
+  background-image: linear-gradient(100deg, hsl(0deg, 0%, 100%) 0%, hsl(20deg, 60%, 99%) 20%, hsl(26deg, 64%, 98%) 29%, hsl(30deg, 63%, 97%) 36%, hsl(28deg, 62%, 96%) 43%, hsl(28deg, 63%, 95%) 50%, hsl(28deg, 58%, 94%) 57%, hsl(27deg, 58%, 93%) 64%, hsl(29deg, 58%, 92%) 71%, hsl(29deg, 59%, 90%) 80%, hsl(28deg, 59%, 89%) 100%);
   color: aliceblue;
 }
 
