@@ -28,7 +28,6 @@ body {
     margin-bottom: 1em;
     max-width: 90%;
     padding: 0.8em;
-    
 
     /* Estilos de los contenedores activos */
     &:hover .courses__title,
@@ -167,7 +166,7 @@ body {
 }
 
 .modal-title {
-  color: map-get($colors, orange );
+  color: map-get($colors, orange);
   font-weight: 700;
 }
 
@@ -186,7 +185,7 @@ body {
 
 .modal__item::before {
   content: url(../../assets/icons/caret-right-fill.svg);
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 .modal__item {
