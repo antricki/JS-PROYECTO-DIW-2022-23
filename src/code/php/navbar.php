@@ -73,10 +73,10 @@
                         <a class="nav-link" href="#">Tienda</a>
                     </li>
                     <li class="nav-item allnav">
-                        <a class="nav-link" href="<?php echo $dir . 'courses/courses.html'?>">Oferta Formativa</a>
+                        <a class="nav-link" href="<?php echo $dir . 'courses/courses.php'?>">Oferta Formativa</a>
                     </li>
                     <li class="nav-item allnav">
-                        <a class="nav-link" href="<?php echo $dir . 'gallery/gallery.html'?>">Galería</a>
+                        <a class="nav-link" href="<?php echo $dir . 'gallery/gallery.php'?>">Galería</a>
                     </li>
                 </ul>
             </div>

@@ -3,18 +3,18 @@
 ::before,
 ::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #EBEBEB;
+  background-color: #f2be93;
   color: aliceblue;
 }
 
 .row {
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 /* Establece el margen superior del contenedor con todos los cursos */
@@ -31,17 +31,62 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 1em;
   max-width: 90%;
   padding: 0.8em;
+  /* Estilos de los contenedores activos */
+}
+.courses__box:hover .courses__title,
+.courses__box:active .courses__title {
+  position: absolute;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateY(-130px);
+  transform: translateY(-130px);
+  color: #fa7f72;
+}
+.courses__box:hover .courses__img,
+.courses__box:active .courses__img {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  -webkit-filter: blur(3px) contrast(20%);
+  filter: blur(3px) contrast(20%);
+}
+.courses__box:hover article,
+.courses__box:active article {
+  margin-top: 1.5em;
+  text-align: center;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-shadow: 1px 1px 1px black;
+  -webkit-transition-property: opacity, z-index;
+  transition-property: opacity, z-index;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  .courses__box {
+    height: 400px;
+  }
+}
+@media (min-width: 993px) {
+  .courses__box {
+    height: 350px;
+  }
 }
 @media (max-width: 992px) {
   .courses__box {
@@ -59,12 +104,12 @@ body {
   top: 0;
   left: 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   z-index: -10;
   border-radius: 15px;
   -webkit-box-shadow: 5px 5px 10px #9d9d9d, -5px -5px 10px #fbfbfb;
-          box-shadow: 5px 5px 10px #9d9d9d, -5px -5px 10px #fbfbfb;
+  box-shadow: 5px 5px 10px #9d9d9d, -5px -5px 10px #fbfbfb;
   opacity: 0.9;
 }
 @media (max-width: 992px) {
@@ -77,11 +122,12 @@ body {
     height: 350px;
   }
 }
-.courses__box:hover .courses__img, .courses__box:active .courses__img {
+.courses__box:hover .courses__img,
+.courses__box:active .courses__img {
   -webkit-transition: all 1s linear;
   transition: all 1s linear;
   -webkit-filter: blur(3px) contrast(20%);
-          filter: blur(3px) contrast(20%);
+  filter: blur(3px) contrast(20%);
 }
 .courses__title {
   font-size: 3rem;
@@ -89,13 +135,14 @@ body {
   text-shadow: 3px 2px 2px #333;
   /* Estilos de los títulos activos */
 }
-.courses__box:hover .courses__title, .courses__box:active .courses__title {
+.courses__box:hover .courses__title,
+.courses__box:active .courses__title {
   position: absolute;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   -webkit-transform: translateY(-130px);
-          transform: translateY(-130px);
-  color: #FA7F72;
+  transform: translateY(-130px);
+  color: #fa7f72;
 }
 .courses__text {
   font-size: 0.8rem;
@@ -106,31 +153,32 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 1rem;
 }
 .courses__btn {
   display: inline-block;
   min-width: 11rem;
   padding: 0.5em 2em;
-  background-color: #F5A25D;
+  background-color: #f5a25d;
   border: none;
   border-radius: 7px;
   -webkit-box-shadow: 1px 1px 2px #ccc inset, -1px -1px 2px #f2be93 inset;
-          box-shadow: 1px 1px 2px #ccc inset, -1px -1px 2px #f2be93 inset;
+  box-shadow: 1px 1px 2px #ccc inset, -1px -1px 2px #f2be93 inset;
   font-size: 0.8rem;
   color: aliceblue;
   font-weight: 500;
 }
-.courses__btn:hover, .courses__btn:active {
-  background-color: #FA7F72;
+.courses__btn:hover,
+.courses__btn:active {
+  background-color: #fa7f72;
 }
 
 /* Estilos del article, por defecto ocultos */
@@ -140,13 +188,13 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   height: 200px;
   z-index: -10;
@@ -154,46 +202,74 @@ body {
 }
 .article__title {
   font-size: 1rem;
-  color: #F5A25D;
+  color: #f5a25d;
 }
 .article__subtitle {
   font-size: 0.9rem;
   color: #f2be93;
 }
-.courses__box:hover .article, .courses__box:active .article {
+
+/* Estilos de los contenedores activos */
+.courses__box:hover .courses__title,
+.courses__box:active .courses__title {
+  position: absolute;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateY(-130px);
+  transform: translateY(-130px);
+  color: var(--red);
+}
+
+.courses__box:hover .courses__img,
+.courses__box:active .courses__img {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  -webkit-filter: blur(3px) contrast(20%);
+  filter: blur(3px) contrast(20%);
+}
+
+.courses__box:hover article,
+.courses__box:active article {
   margin-top: 1.5em;
   text-align: center;
   margin-left: 0.5em;
   margin-right: 0.5em;
+  text-shadow: 1px 1px 1px black;
   -webkit-transition-property: opacity, z-index;
   transition-property: opacity, z-index;
   -webkit-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  transition-duration: 0.8s;
   -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  transition-delay: 0.5s;
   -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
   opacity: 1;
   z-index: 1;
+}
+
+.courses__btn:hover,
+.courses__btn:active {
+  background-color: var(--red);
 }
 
 .modal-dialog {
   max-width: 60%;
 }
 .modal__window {
+  background-color: var(--grey);
   color: #333;
   background: #f7f1f3;
   -webkit-box-shadow: inset 5px 5px 10px #bebabb, inset -5px -5px 10px #ffffff;
-          box-shadow: inset 5px 5px 10px #bebabb, inset -5px -5px 10px #ffffff;
+  box-shadow: inset 5px 5px 10px #bebabb, inset -5px -5px 10px #ffffff;
   border: none;
 }
 .modal-title {
-  color: #F5A25D;
+  color: #f5a25d;
   font-weight: 700;
 }
 .modal-header {
   border-bottom: 0;
-  padding: 1.5em 2.5em 0 3.1em;
+  padding: 1.5em 2.5em 1em 3.1em;
 }
 .modal-body {
   padding-right: 2em;
@@ -202,7 +278,7 @@ body {
   border-top: 0;
 }
 .modal__item::before {
-  content: url(../../assets/icons/caret-right-fill.svg);
+  content: url(../assets/icons/caret-right-fill.svg);
 }
 .modal__item {
   list-style: none;
@@ -214,3 +290,15 @@ body {
 }
 
 /* Media Queries */
+@media (max-width: 992px) {
+  .courses__box,
+  .courses__img {
+    height: 400px;
+  }
+}
+@media (min-width: 993px) {
+  .courses__box,
+  .courses__img {
+    height: 350px;
+  }
+}
