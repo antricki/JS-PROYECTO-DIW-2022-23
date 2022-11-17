@@ -23,21 +23,17 @@ div#imagen {
   width: 95%;
 }
 div#imagen img#proPrincipal {
-  border-radius: 5px;
+  border-radius: 12px;
 }
 div#info {
   display: flex;
   flex-direction: column;
 }
-/*imagen*/
-#proPrincipal{
-  box-shadow: 2px 2px 3px #fa7f72;
-}
 /*selects*/
 #tallas {
   height: 125%;
   width: 40%;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #389393;
   border: 1px solid #fa7f72;
 }
@@ -49,7 +45,7 @@ div#info {
 #cantidades {
   height: 125%;
   width: 60%;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #389393;
   border: 1px solid #fa7f72;
 }
@@ -111,7 +107,7 @@ div.aside {
   flex-direction: column;
   border: 1px solid #fa7f72;
   padding-top: 10px;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 div.aside input {
   margin-top: 8%;
@@ -129,6 +125,7 @@ h5.enStock {
 #botoncarrito {
   color: white;
   cursor: no-drop;
+  border-radius: 12px;
   background-color: #389393;
 }
 #botoncarrito:hover {
