@@ -69,7 +69,6 @@
     <!-- Background image -->
   </header>
   <!-- sección 1: PRODUCTO ESTRELLA -->
-  <hr class="raya" />
   <section class="oferta">
     <a href="#" class="container-fluid oferta__link">
       <div class="oferta_container_title">
