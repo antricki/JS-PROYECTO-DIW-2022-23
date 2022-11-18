@@ -46,7 +46,9 @@
                 </div>
 
                 <div class="tempText">
-                  <span class="textoTemporal"> Correo electrónico </span>
+                  <span class="textoTemporal">
+                    Correo electrónico
+                  </span>
                 </div>
               </div>
 
@@ -90,64 +92,12 @@
                 >
               </div>
               <div class="col-7">
-                <a href="#" class="enlace" id="eRecover"
-                  >¿Olvidaste la contraseña?</a
-                >
+                <a href="#" class="enlace">¿Olvidaste la contraseña?</a>
               </div>
             </div>
 
             <div class="form-group">
-              <button type="button" class="btn1 mt-3 mb-5" name="logInBtn">
-                Login
-              </button>
-            </div>
-
-            <br />
-
-            <div class="secundario">
-              <span>¿Todavía no estás registrado?</span>
-              <a href="#" class="enlace" onclick="showRegis()" id="bSignup-show"
-                >Regístrate aquí</a
-              >
-            </div>
-          </form>
-        </div>
-
-        <div class="form-box recover-form" id="recover-form">
-          <div class="form-title">
-            <h2 class="fw-bold mb-3">Recupera tu contaseña</h2>
-          </div>
-          <form class="col-12" id="formulario">
-            <div class="form-group" id="user-group">
-              <div
-                class="userPlaceholderRecover dummytext"
-                id="userPlaceholderRecover"
-              >
-                <div class="tempIcon">
-                  <img
-                    src="../assets/icons/circle-user-solid.svg"
-                    alt=""
-                    class="userIcon"
-                  />
-                </div>
-
-                <div class="tempText">
-                  <span class="textoTemporal"> Correo electrónico </span>
-                </div>
-              </div>
-
-              <input
-                id="emailRecover"
-                type="email"
-                placeholder=""
-                class="form-control my-3 p-2"
-              />
-            </div>
-
-            <div class="form-group">
-              <button type="button" class="btn1 mt-3 mb-5" name="logInBtn">
-                Recuperar
-              </button>
+              <button type="button" class="btn1 mt-3 mb-5" name="logInBtn">Login</button>
             </div>
 
             <br />
@@ -268,6 +218,7 @@
                 <div class="tempText">
                   <span class="textoTemporal"> Contraseña </span>
                 </div>
+                
               </div>
               <div class="campoValido campoValidoPassRegis dummytext">
                 <div class="tempIcon">
@@ -298,9 +249,7 @@
               />
             </div>
             <div class="form-group">
-              <button type="button" class="btn1 mt-3 mb-5" name="signUpBtn">
-                Sign up
-              </button>
+              <button type="button" class="btn1 mt-3 mb-5" name="signUpBtn">Sign up</button>
             </div>
 
             <span>¿Ya tienes cuenta?</span>
@@ -323,6 +272,7 @@
     <br />
 
     <script src="login.js"></script>
+ 
 
     <?php
   include "../code/php/footer.php";
