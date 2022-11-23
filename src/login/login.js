@@ -208,6 +208,16 @@ function passValidation() {
   showPassPlaceholderRegis()
   checkPassRegis()
 }
+
+let passPlaceholderRegis2 = document.querySelector('.passPlaceholderRegis2')
+let passInputRegis2 = document.getElementById('passRegis2')
+
+passInputRegis2.addEventListener('focus', event => {
+  passPlaceholderRegis2.style.display = 'none'
+})
+passInputRegis2.addEventListener('blur', event => {
+  passPlaceholderRegis2.style.display = 'block'
+})
 // [FIN]
 
 let userPlaceholderRecover = document.getElementById('userPlaceholderRecover')
