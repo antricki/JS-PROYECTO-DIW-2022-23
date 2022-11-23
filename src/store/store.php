@@ -108,7 +108,6 @@
     </a>
   </section>
 
-  <hr class="raya" />
   <!-- sección 2: LO QUE MÁS GUSTA -->
   <section class="gusta">
     <div class="container-fluid destacados-container_title">
@@ -219,7 +218,6 @@
       </div>
   </section>
 
-  <hr class="raya" />
   <!-- sección 3: OTROS PRODUCTOS -->
   <section class="otros_productos container-fluid ">
     <div class="otros__container_title">

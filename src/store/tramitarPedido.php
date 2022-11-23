@@ -21,7 +21,6 @@
         <!-- navegador -->
         <?php
         $d = __DIR__;
-        // include "./code/php/route.php";
         include "./code/php/navbar_store.php";
         ?>
 
@@ -72,9 +71,6 @@
                                     <input type="text" class="form-control" id="codigoPostal" placeholder="Código Postal" name="cp" maxlength="5" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="pais" placeholder="País" name="pais" required>
-                                </div>
-                                <div class="mb-3">
                                     <input type="submit" class="form__enviar" id="enviar" value="Enviar" name="enviar">
                                 </div>
                             </form>
@@ -110,9 +106,6 @@
                                     </div>
                                     <div class="mb-3">
                                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Código Postal" required maxlength="5">
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="País" pattern="[a-zA-Z]">
                                     </div>
                                 </form>
                             </div>

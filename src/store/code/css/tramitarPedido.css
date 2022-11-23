@@ -65,11 +65,11 @@ body {
 }
 
 .form-control:valid {
-  border: 3px solid #276969;
+  border: 1px solid #276969;
 }
 
 .form-control:required:invalid {
-  border: 3px solid #FA7F72;
+  border: 1px solid #FA7F72;
 }
 
 .form__enviar {
@@ -138,7 +138,7 @@ body {
   width: 100%;
   background-color: #389393;
   color: #EBEBEB;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 1px 1px 3px black;
   font-size: 1.5em;
 }
