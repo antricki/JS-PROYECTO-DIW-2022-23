@@ -1,3 +1,7 @@
+* {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
 #main {
     height: 100vh;
     max-height: 100vh;
@@ -32,19 +36,14 @@
     color: #fa7f72;
 }
 
-#info-vessel h1,
-#info-vessel h2,
-#info-vessel h3,
-#info-vessel h4,
-#info-vessel h5,
-#info-vessel h6 {
+h1, h2, h3, h4, h5, h6 {
     color: #F5A25D;
 }
 
 #contactForm input,
 #contactForm textarea {
     color: #F5A25D;
-    border: 2.5px solid #F5A25D;
+    border: 1px solid #F5A25D;
 }
 
 #contactForm input:focus,
@@ -95,7 +94,7 @@ nav {
     width: 200px;
     background-color: #F5A25D;
     color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
 }
 
@@ -113,6 +112,14 @@ img.dropdown-caret {
 
 .rotate {
     transform: rotate(180deg);
+}
+
+#info-vessel ul {
+    list-style-type: none;
+}
+
+#info-vessel ul li::before {
+    content: url('../../assets/icons/caret-right-fill.svg');
 }
 
 /*Pau*/

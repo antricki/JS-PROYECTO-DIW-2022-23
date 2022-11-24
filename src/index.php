@@ -16,6 +16,9 @@
     <script type="module" src="code/js/index.js"></script>
     <script src="code/js/information-content.js" defer></script>
     <link rel="stylesheet" href="code/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet"> 
     <title>Index</title>
 </head>
 
