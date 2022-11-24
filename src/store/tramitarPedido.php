@@ -12,21 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="../store/css/tramitarPedido.css">
+    <link rel="stylesheet" href="./code/css/tramitarPedido.css">
 </head>
-<!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
-    • Naranja: #F5A25D un 10% para aquello que llama a la acción.
-    • Rojo: #FA7F72 solo para pequeños detalles o pequeños bloques de texto
-    • Azul: #389393 para el footer 
-    https://www.shutterstock.com/es/create/home para crear imagenes-->
+
 
 <body class="body__tramitar_pedido">
     <header>
         <!-- navegador -->
         <?php
         $d = __DIR__;
-        include "../code/php/route.php";
-        include "../code/php/navbar_store.php";
+        include "./code/php/navbar_store.php";
         ?>
 
         <!-- banner -->
@@ -55,6 +50,7 @@
                         </div>
                         <!-- cuerpo / primer formulario-->
                         <div class="contacto__direccion-body">
+                            <div class="direccion__body" id="direccion_escrita"></div>
                             <form action="#" method="post" id="form_inicial" name="fInicial">
                                 <div class="mb-3">
                                     <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" required>
@@ -75,9 +71,6 @@
                                     <input type="text" class="form-control" id="codigoPostal" placeholder="Código Postal" name="cp" maxlength="5" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="pais" placeholder="País" name="pais" required>
-                                </div>
-                                <div class="mb-3">
                                     <input type="submit" class="form__enviar" id="enviar" value="Enviar" name="enviar">
                                 </div>
                             </form>
@@ -85,15 +78,15 @@
                         <!-- segundo formulario -->
                         <div class="custom-control custom-checkbox">
                             <div class="container_checkbox">
-                                <input type="checkbox" class="custom-control-input check_form" id="checkbox" value="" onclick="ocultaForm()">
-                                <label for="misma-direccion" class="custom-control-label" id="datos_facturacion_envio">Los datos de facturación y envío son los mismos.</label>
+                                <input type="checkbox" class="custom-control-input" id="checkfact">
+                                <label for="misma-direccion" class="custom-control-label">Los datos de facturación y envío NO son los mismos.</label>
                             </div>
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="guardar-informacion">
                                 <label for="guardar-informacion" class="custom-control-label">Guardar informacion para la siguiente compra</label>
                             </div>
-                            <!-- formulario de faturacion que se ve y hago click desaparece -->
-                            <div id="datos_facturacion_ver" class="datos_facturacion_ver">
+                            <!-- formulario de faturacion que se ve y si hago click desaparece -->
+                            <div id="datos_facturacion_ver" class="datos_facturacion_ver hidden">
                                 <h3 class="contacto__direccion-title__text">Datos de envío</h3>
                                 <form action="#" method="post" class="datos_facturacion_envio">
                                     <div class="mb-3">
@@ -114,9 +107,6 @@
                                     <div class="mb-3">
                                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Código Postal" required maxlength="5">
                                     </div>
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="País" pattern="[a-zA-Z]">
-                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -135,8 +125,8 @@
                             <!-- cuerpo -->
                             <div class="col tipo__entrega1 metodo__envio-entregas" id="tipo__entrega1">
                                 <div class="form-check_input">
-                                    <input class="form-check-label check_entrega1" type="radio" name="flexRadioDefault" id="flexRadioDefault1 check_entrega1">
-                                    <label for="flexRadioDefault1" class="form-check-label">Entrega a domicilio</label>
+                                    <!-- <input class="form-check-label check_entrega1" type="radio" name="flexRadioDefault" id="flexRadioDefault1 check_entrega1"> -->
+                                    <h4 for="flexRadioDefault1" class="form-check-label">Entrega a domicilio</label>
                                 </div>
                                 <div class="form-check_input">
                                     <img src="products/icons/GLS.png" alt="" class="contacto__envio-pago__img">
@@ -147,8 +137,8 @@
                             </div>
                             <div class="col metodo__envio-entregas" id="tipo__entrega2">
                                 <div class="form-check_input">
-                                    <input class="form-check-label check_entrega2" type="radio" name="flexRadioDefault" id="flexRadioDefault2 check_entrega2">
-                                    <label for="flexRadioDefault2" class="form-check-label">Punto de recogida</label>
+                                    <!-- <input class="form-check-label check_entrega2" type="radio" name="flexRadioDefault" id="flexRadioDefault2 check_entrega2"> -->
+                                    <h4 for="flexRadioDefault2" class="form-check-label">Punto de recogida</label>
                                 </div>
                                 <div class="form-check_img">
                                     <img src="products/icons/inpost-seeklogo.com.png" alt="" class="contacto__envio-pago__img">
@@ -169,22 +159,31 @@
                         </div>
                         <!-- formulario de pago, cuerpo -->
                         <div class="contacto__pago-body">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre y apellidos" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0000 0000 0000 0000" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="MM/AA" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123" required>
-                            </div>
-                            <!-- mensaje de información, alerta -->
-                            <div class="mb-3">
-                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece." class="metodo__pago_link">¿Qué es CVC/CVV?</a>
-                            </div>
+                            <form action="#" method="post" id="form_tarjeta">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="nombreYapellidos" placeholder="Nombre y Apellidos" required>
+                                </div>
+                                <div class=" mb-3">
+                                    <input type="text" class="form-control" id="nTarjeta" placeholder="0000000000000000" minlength="16" maxlength="16" required pattern="[0-9]+">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="month" class="form-control" id="mesano" placeholder="MM/AA" required maxlength="5">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="cvc" placeholder="123" required pattern="[0-9]+" minlength="3" maxlength="3">
+                                </div>
+                                <!-- mensaje de información, alerta -->
+                                <div class="footer_pago">
+                                    <div class="mb-3">
+                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece." class="metodo__pago_link">¿Qué es CVC/CVV?</a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="submit" value="Valida" id="valida_tarjeta" class="form__enviar">
+                                    </div>
+                                </div>
+
+                            </form>
+
                         </div>
                     </div>
                     <!-- fin método de pago -->
@@ -272,7 +271,7 @@
     include "../code/php/footer.php";
     ?>
     <!-- ENLACE PARA EL JS -->
-    <script src="./js/tramitarPedido.js"></script>
+    <script src="./code/js/tramitarPedido.js"></script>
 </body>
 
 </html>

@@ -1,203 +1,154 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-  <title>Index</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-
-  <script src="code/js/wScript.js"></script>
-  <link rel="stylesheet" href="code/css/wStyles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script type="module" src="code/js/index.js"></script>
+    <script src="code/js/information-content.js" defer></script>
+    <link rel="stylesheet" href="code/css/index.css">
+    <title>Index</title>
 </head>
 
 <body>
-  <?php
-  $d = __DIR__;
-  include "code/php/route.php";
-  include "code/php/navbar.php";
-  ?>
+    <section id="main">
+        <?php
+        $d = __DIR__;
+        include "code/php/route.php";
+        include "code/php/navbar.php";
+        require 'code/php/generateOpinions.php';
+        ?>
 
-
-  <div id="video">
-    <video controls class="video">
-      <source src="assets/videos/movie.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <div id="presentation" class="container text-center">
-    <div class="row m-5">
-      <div class="col tmp">
-        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium, repellat
-          blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-          odit. Nesciunt facere dolores non?</p>
-      </div>
-      <div class="col tmp">
-        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium, repellat
-          blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-          odit. Nesciunt facere dolores non?</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col tmp">
-        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium, repellat
-          blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-          odit. Nesciunt facere dolores non?</p>
-      </div>
-      <div class="col tmp">
-        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium, repellat
-          blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-          odit. Nesciunt facere dolores non?</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="carouselExampleControls" class="carousel slide container" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://picsum.photos/1600/900/?random&1" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://picsum.photos/1600/900/?random&2" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://picsum.photos/1600/900/?random&3" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-  <div id="contact">
-    <div class="container text-center">
-      <a class="btn btn-primary m-5 px-5" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-        Contact Us
-      </a>
-    </div>
-
-    <div class="collapse container text-center" id="collapseExample">
-      <div class="row mb-5">
-        <div class="col-4 bg-danger p-1 text-center">
-          <div class="m-1 p-1 bg-success">
-            <div class="m-2">
-              <select class="form-select" id="main-selector" onchange="toggleExtraInfoSelector(this)">
-                <option value="none" selected>[None]</option>
-                <option value="course-selector">[Courses]</option>
-                <option value="second-selector">[Second]</option>
-                <option value="third-selector">[Third]</option>
-              </select>
-            </div>
-
-            <div class="m-2">
-              <select class="form-select display-none children-selector" id="course-selector" onchange="toggleInfoPanel(this)">
-                <option value="none" selected>[None]</option>
-                <option value="smr-info">[SMR]</option>
-                <option value="dam-info">[DAM]</option>
-                <option value="daw-info">[DAW]</option>
-                <option value="asir-info">[ASIR]</option>
-              </select>
-
-              <select class="form-select display-none children-selector" id="second-selector" onchange="toggleInfoPanel(this)">
-                <option value="none" selected>[None]</option>
-                <option value="hydrogen-info">[Hydrogen]</option>
-                <option value="helium-info">[Helium]</option>
-                <option value="lithium-info">[Lithium]</option>
-                <option value="beryllium-info">[Beryllium]</option>
-              </select>
-
-              <select class="form-select display-none children-selector" id="third-selector" onchange="toggleInfoPanel(this)">
-                <option value="none" selected>[None]</option>
-                <option value="boron-info">[Boron]</option>
-                <option value="carbon-info">[Carbon]</option>
-                <option value="nitrogen-info">[Nitrogen]</option>
-                <option value="oxygen-info">[Oxygen]</option>
-              </select>
-            </div>
-          </div>
+        <div class="video-container">
+            <video class="d-block m-auto" id="vid" controls autoplay muted>
+                <source src="assets/videos/movie.mp4" type="video/mp4">
+                <source src="assets/videos/movie.ogv" type="video/ogg" />
+                <source src="assets/videos/movie.webm" type="video/webm" />
+            </video>
         </div>
+        <script>
+            document.getElementById('vid').play();
+        </script>
+    </section>
 
-        <div class="col-8 bg-danger p-1 text-center">
-          <div class="m-1 bg-success text-center p-5" id="test">
-            <div class="info-panel bg-warning" id="none">[None]</div>
-
-            <div class="display-none info-panel bg-warning" id="smr-info">[SMR]</div>
-            <div class="display-none info-panel bg-warning" id="dam-info">[DAM]</div>
-            <div class="display-none info-panel bg-warning" id="daw-info">[DAW]</div>
-            <div class="display-none info-panel bg-warning" id="asir-info">[ASIR]</div>
-
-            <div class="display-none info-panel bg-warning" id="hydrogen-info">[Hydrogen]</div>
-            <div class="display-none info-panel bg-warning" id="helium-info">[Helium]</div>
-            <div class="display-none info-panel bg-warning" id="lithium-info">[Lithium]</div>
-            <div class="display-none info-panel bg-warning" id="beryllium-info">[Beryllium]</div>
-
-            <div class="display-none info-panel bg-warning" id="boron-info">[Boron]</div>
-            <div class="display-none info-panel bg-warning" id="carbon-info">[Carbon]</div>
-            <div class="display-none info-panel bg-warning" id="nitrogen-info">[Nitrogen]</div>
-            <div class="display-none info-panel bg-warning" id="oxygen-info">[Oxygen]</div>
-          </div>
+    <!-- Why choose us section -->
+    <section id="whyUs" class="text-center py-5">
+        <h1 class="py-3">¿Por qué elegirnos?</h1>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h2>Reconocimiento</h2>
+                    <p>Somos un centro con reconocimiento internacional, en gran parte gracias a nuestro equipo de relaciones europeas</p>
+                </div>
+                <div class="d-block d-md-none mt-4"></div>
+                <div class="col-md-6">
+                    <h2>Calidad</h2>
+                    <p>En nuestro centro solo contratamos a los mejores profesores, los mejores cualificados para el correcto desarrollo del alumnado.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h2>Instalaciones</h2>
+                    <p>Contamos con instalaciones recien reformadas y con visión moderna que permiten al alumnado un desarrollo magnífico de sus habilidades.</p>
+                </div>
+                <div class="d-block d-md-none mt-4"></div>
+                <div class="col-md-6">
+                    <h2>Comunicación</h2>
+                    <p>El centro se situa en Cheste, en una zona tranquila en la que los alumnos pueden estudiar relajadamente y está bien comunicada gracias al sistema de autobuses.</p>
+                </div>
+            </div>
         </div>
-      </div>
+        <!--  -->
+    </section>
 
-      <!-- <form>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form> -->
+    <!-- Opinions carousel -->
+    <div id="carousel" class="carousel slide container my-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <?php echo getFormattedOpinions(3); ?>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-  </div>
-  <!-- <div id="presentation" class="container text-center">
-    <div class="row">
-      <div class="col bg-danger">
-        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium, repellat
-          blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-          odit. Nesciunt facere dolores non?</p>
-      </div>
-      <div class="col bg-danger">
-        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium, repellat
-          blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-          odit. Nesciunt facere dolores non?</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col bg-danger">
-        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium, repellat
-          blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-          odit. Nesciunt facere dolores non?</p>
-      </div>
-      <div class="col bg-danger">
-        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas praesentium, repellat
-          blanditiis, molestias dolorem modi, dolore nulla nihil sequi voluptate dolores quidem ut quaerat
-          odit. Nesciunt facere dolores non?</p>
-      </div>
-    </div>
-  </div> -->
-  <?php include "code/php/footer.php"; ?>
 
+    <!-- Dropdown information section -->
+    <section id="information" class="text-center">
+        <a class="btn infoButton btn-lg mb-5" data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse" onclick="">
+            ¡Infórmate!
+        </a>
+
+        <div class="collapse container mt-5" id="collapse">
+            <div class="row info-collapse">
+                <div class="col-md-3" id="info-menu">
+                    <div class="flex-shrink-0 p-3">
+                        <ul class="list-unstyled ps-0">
+                            <?php
+                            $menus = [
+                                'El departamento' => ['Objetivo', 'Horario', 'Innovación'],
+                                'Cursos' => ['Oferta Formativa', 'Semipresencial', 'Certificado profesionalidad'],
+                                'Localización' => [],
+                                'Contacto' => []
+                            ];
+                            $cont = 0;
+
+                            foreach ($menus as $nomMenu => $submenus) {
+                                $cont++;
+                                switch ($nomMenu) {
+                                    case 'El departamento':
+                                    case 'Cursos':
+                            ?>
+                                        <button class="btn btn-toggle align-items-center rounded collapsed w-100 text-start" data-bs-toggle="collapse" data-bs-target="#<?php echo str_replace(' ', '', $nomMenu) ?>-collapse" aria-expanded="false">
+                                            <span class="d-flex" onclick="toggleClass(document.getElementById('caret<?php echo $cont; ?>'),'rotate')">
+                                                <span><?php echo $nomMenu ?></span>
+                                                <img class="ms-auto dropdown-caret" src="assets/icons/line-angle-down-icon.svg" id="caret<?php echo $cont; ?>">
+                                            </span>
+                                        </button>
+                                        <!-- WITH CLASS SHOW IT OPENS -->
+                                        <div class="collapse" id="<?php echo str_replace(' ', '', $nomMenu) ?>-collapse">
+                                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small text-start">
+                                                <?php
+                                                for ($e = 0; $e < count($submenus); $e++) {
+                                                ?>
+                                                    <li class="ms-3">
+                                                        <input class="form-check-input js-radio" type="radio" name="infoRadio" onclick="<?php echo strtolower(str_replace(' ', '', $submenus[$e])) ?>()">
+                                                        <label class="form-check-label"><?php echo $submenus[$e]; ?></label>
+                                                    </li>
+                                                <?php
+                                                }
+                                                ?>
+                                            </ul>
+                                        </div>
+                                    <?php
+                                        break;
+                                    case 'Localización':
+                                    case 'Contacto':
+                                    ?>
+                                        <button class="btn align-items-center rounded w-100 text-start" onclick="<?php echo ($nomMenu === "Contacto") ? "contact()" : "showMap()"; ?>">
+                                            <span><?php echo $nomMenu ?></span>
+                                        </button>
+                            <?php
+                                        break;
+                                }
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 bg-white" id="info-vessel"></div>
+            </div>
+        </div>
+    </section>
+    <?php include "code/php/footer.php"; ?>
 </body>
 
 </html>

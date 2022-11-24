@@ -13,7 +13,7 @@ function showLogin() {
 
 // [START]Relacionado con mostrar y ocultar el placeholder de USUARIO en el LOGIN.
 let userPlaceholderLogin = document.querySelector(".userPlaceholderLogin");
-let userInputLogin = document.getElementById("userLogin");
+let userInputLogin = document.getElementById("emailLogin");
 
 function hideUserPlaceholderLogin(){
     userPlaceholderLogin.style.display = "none";
@@ -51,9 +51,14 @@ function showPassPlaceholderLogin(){
 // [START]Relacionado con mostrar y ocultar el placeholder de USUARIO en el SIGNUP.
 let userPlaceholderRegis = document.querySelector(".userPlaceholderRegis");
 let userInputRegis = document.getElementById("userRegis");
+let campoValidoUserRegis = document.querySelector(".campoValidoUserRegis");
+let campoInValidoUserRegis = document.querySelector(".campoInValidoUserRegis");
 
 function hideUserPlaceholderRegis(){
     userPlaceholderRegis.style.display = "none";
+    userInputRegis.value = "";
+    campoInValidoUserRegis.style.display ="none";
+    campoValidoUserRegis.style.display ="none";
 }
 
 
@@ -62,16 +67,45 @@ function showUserPlaceholderRegis(){
 
     if(userInputRegis.value == ""){
     userPlaceholderRegis.style.display = "block";
-    campoInValido.style.display ="none";
-    campoValido.style.display ="none";
+    campoInValidoUserRegis.style.display ="none";
+    campoValidoUserRegis.style.display ="none";
     }
     
+}
+
+function checkUserRegis(){
+let user = userInputRegis.value;
+
+
+
+    if(user != "" ){
+        if(user.length <6){
+            campoValidoUserRegis.style.display = "none";
+            campoInValidoUserRegis.style.display = "block";
+            alert("El nombre de usuario debe contener 6 o más carácteres.")         
+            userInputRegis.value = "Invalido";
+            campoInValidoUserRegis.style.display ="block";
+
+        }else if(user != "Invalido"){
+            campoValidoUserRegis.style.display = "block";
+            campoInValidoUserRegis.style.display = "none";
+        }
+    }else{
+        campoValidoUserRegis.style.display = "none";
+        campoInValidoUserRegis.style.display = "none";
+    }
+}
+
+function userValidationRegis(){
+    showUserPlaceholderRegis();
+    checkUserRegis();
 }
 // [FIN]
 
 // [START]Relacionado con mostrar y ocultar el placeholder de EMAIL en el SIGNUP.
 let emailPlaceholderRegis = document.querySelector(".emailPlaceholderRegis");
 let emailInputRegis = document.getElementById("emailRegis");
+let emailInputLogin = document.getElementById("emailLogin");
 
 function hideEmailPlaceholderRegis(){
     emailPlaceholderRegis.style.display = "none";
@@ -87,27 +121,41 @@ function showEmailPlaceholderRegis(){
     }
 }
 
-function checkEmail(){
-    let correo = emailInputRegis.value;
+function checkEmailRegis(){
+    let correoRegis = emailInputRegis.value;
     const patron =/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    let campoValido = document.querySelector(".campoValido");
-    let campoInValido = document.querySelector(".campoInValido");
+    let campoValidoEmailRegis = document.querySelector(".campoValidoEmailRegis");
+    let campoInValidoEmailRegis = document.querySelector(".campoInValidoEmailRegis");
 
 
-    if(correo.match(patron)){
-        campoValido.style.display = "block";
-        campoInValido.style.display ="none";
+    if(correoRegis.match(patron)){
+        campoValidoEmailRegis.style.display = "block";
+        campoInValidoEmailRegis.style.display ="none";
     }else{
-        campoValido.style.display = "none";
+        campoValidoEmailRegis.style.display = "none";
 
         if(emailInputRegis.value != ""){
         emailInputRegis.value = "Invalido";
-        campoInValido.style.display ="block";
+        campoInValidoEmailRegis.style.display ="block";
         }else{
-            campoInValido.style.display ="none";
+            campoInValidoEmailRegis.style.display ="none";
             
         }
     }
+}
+
+function checkEmailLogin(){
+    let correoLogin = emailInputLogin.value;
+    const patron =/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if(!correoLogin.match(patron) && correoLogin != ""){
+        emailInputLogin.value = "";
+        alert("Introduzca un correo electrónico válido");
+    }
+}
+function emailLoginValidation(){
+    checkEmailLogin();
+    showUserPlaceholderLogin();
 }
 
 function resetEmailInput(){
@@ -116,7 +164,7 @@ function resetEmailInput(){
 
 function emailValidation(){
     showEmailPlaceholderRegis();
-    checkEmail();
+    checkEmailRegis();
 }
 // [FIN]
 
@@ -127,6 +175,9 @@ let passInputRegis = document.getElementById("passRegis");
 
 function hidePassPlaceholderRegis(){
     passPlaceholderRegis.style.display = "none";
+    passInputRegis.value = "";
+    campoInValidoPassRegis.style.display ="none";
+    campoValidoPassRegis.style.display ="none";
 }
 
 
@@ -136,5 +187,33 @@ function showPassPlaceholderRegis(){
     if(passInputRegis.value ==""){
         passPlaceholderRegis.style.display = "block";
     }
+}
+
+function checkPassRegis(){
+    let pass = passInputRegis.value;
+
+    let campoValidoPassRegis = document.querySelector(".campoValidoPassRegis");
+    let campoInValidoPassRegis = document.querySelector(".campoInValidoPassRegis");
+
+    if(pass != ""){
+        if(pass.length < 8){
+            campoInValidoPassRegis.style.display = "block";
+            campoValidoPassRegis.style.display = "none";
+            alert("La contraseña debe contener 8 o más carácteres.")
+        }
+        else{
+            campoValidoPassRegis.style.display = "block";
+            campoInValidoPassRegis.style.display = "none";
+       
+        }
+    }else{
+        campoValidoPassRegis.style.display = "none";
+        campoInValidoPassRegis.style.display = "none";
+    }
+}
+
+function passValidation(){
+    showPassPlaceholderRegis();
+    checkPassRegis();
 }
 // [FIN]
