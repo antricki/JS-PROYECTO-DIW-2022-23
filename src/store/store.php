@@ -27,24 +27,6 @@
 
 <body>
   <header>
-    <div class="banner_linea_aparece banner_aparece" id="banner_aparece">
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner banner_carousel_aparece d-flex">
-          <div class="carousel-item active">
-            <a href="#" class="d-block banner__aparece_link">OFERTA FLASH!!! -30%</a>
-          </div>
-          <div class="carousel-item">
-            <a href="politicas.php" class="d-block banner__aparece_link">ENVÍO GRATIS CON 2 O MÁS ARTÍCULOS</a>
-          </div>
-          <div class="carousel-item">
-            <a href="politicas.php" class="d-block banner__aparece_link">TU PEDIDO EN 24 HRS</a>
-          </div>
-          <div class="carousel-item">
-            <a href="politicas.php" class="d-block banner__aparece_link">DEVOLUCIONES</a>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Navbar -->
     <?php
     $d = __DIR__;
@@ -52,22 +34,24 @@
     include "./code/php/navbar_store.php";
     ?>
     <!-- Navbar -->
-
-    <!-- Background image -->
-    <div class="fondo__banner p-4 text-center" id="banner_desaparece">
-      <div class="">
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="texto__banner">
-            <h1 class="mb-3">OFERTA FLASH!!!</h1>
+    <div class="banner_linea_aparece banner_aparece" id="banner_aparece">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner banner_carousel_aparece">
+          <div class="carousel-item active">
+            <h2 class="mb-3">OFERTA FLASH!!!</h2>
             <h4 class="mb-3">Por tiempo limitado en todas tus compras</h4>
-            <h1 class="mb-3">-30%</h1>
-            <a class="btn btn-lg" href="#!">Call to action</a>
+            <h2 class="mb-3">-30%</h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="mb-3">DESCUENTOS PERSONALIZADOS!!!</h2>
+            <h4 class="mb-3">Registrate en nuestra web para conseguir descuentos</h4>
+            <h2 class="mb-3">Registrate</h2>
           </div>
         </div>
       </div>
     </div>
-    <!-- Background image -->
   </header>
+
   <!-- sección 1: PRODUCTO ESTRELLA -->
   <section class="oferta">
     <a href="#" class="container-fluid oferta__link">
