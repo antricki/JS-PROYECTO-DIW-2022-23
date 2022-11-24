@@ -1,40 +1,41 @@
 @charset "UTF-8";
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Orbitron", "Barlow Semi Condensed", sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 /*css banner*/
 .fondo__banner {
+  top: 10px;
+  position: sticky;
   color: #EBEBEB;
   background-image: url(../../assets/backgrounds/fondo-tecnologia-abstracta-ciencia-tecnologia-conexion_42705-96.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.texto__banner {
-  text-shadow: 3px 20px 10px #ebebe0;
-  font-weight: 900;
-}
-
 .banner_aparece {
-  display: none;
-}
-
-.banner_linea_aparece {
-  position: fixed;
-  z-index: 20;
-  width: 100%;
-  height: 30px;
-  background-color: #020f58;
+  color: #EBEBEB;
+  font-family: "Orbitron", sans-serif;
+  background-image: url(../../assets/backgrounds/fondo-tecnologia-abstracta-ciencia-tecnologia-conexion_42705-96.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 10px 10px 10px #EBEBEB;
+  font-weight: 900;
 }
 
 .banner__aparece_link {
   text-decoration: none;
+  font-family: "Orbitron", "Barlow Semi Condensed", sans-serif;
   color: #F5A25D;
+}
+
+.banner__aparece_link:hover {
+  color: #f76a5a;
 }
 
 .banner_carousel_aparece {
@@ -81,6 +82,7 @@ body {
 }
 
 .explicacion {
+  font-family: 'Barlow Semi Condensed', sans-serif;
   position: relative;
   margin-top: 3.5em;
   width: 35rem;
@@ -116,11 +118,11 @@ body {
 }
 
 .estrellas__label:hover,
-.estrellas__label:hover ~ .estrellas__label {
+.estrellas__label:hover~.estrellas__label {
   color: orange;
 }
 
-.estrellas:checked ~ .estrellas__label {
+.estrellas:checked~.estrellas__label {
   color: orange;
 }
 
@@ -156,7 +158,12 @@ body {
 
 /* css sección 3: OTROS PRODUCTOS */
 .otros_productos {
-  background-image: radial-gradient(#389393, #EBEBEB);
+  color: #ebebe0;
+  background-image: linear-gradient(90deg, #1a5757, #389393, #76a5a5, #EBEBEB);
+}
+
+.otros__container_title {
+  padding: 1.5em 0em;
 }
 
 .otros_productos__figure {
