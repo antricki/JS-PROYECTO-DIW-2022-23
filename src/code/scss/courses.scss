@@ -6,21 +6,8 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(
-    100deg,
-    hsl(0deg 0% 92%) 0%,
-    hsl(20deg 7% 92%) 20%,
-    hsl(24deg 12% 92%) 29%,
-    hsl(30deg 18% 91%) 36%,
-    hsl(27deg 24% 91%) 43%,
-    hsl(28deg 28% 91%) 50%,
-    hsl(28deg 35% 90%) 57%,
-    hsl(27deg 40% 90%) 64%,
-    hsl(29deg 49% 90%) 71%,
-    hsl(28deg 54% 90%) 80%,
-    hsl(28deg 59% 89%) 100%
-  );
-
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2000' height='900' preserveAspectRatio='none' viewBox='0 0 2000 900'%3e%3cg clip-path='url(%26quot%3b%23SvgjsClipPath1145%26quot%3b)' fill='none'%3e%3crect width='2000' height='900' x='0' y='0' fill='url(%23SvgjsRadialGradient1146)'%3e%3c/rect%3e%3ccircle r='150' cx='73.97' cy='-21.34' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3ccircle r='150' cx='606.05' cy='530.85' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3ccircle r='150' cx='1162.51' cy='1246.81' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3ccircle r='117.315' cx='1708.6' cy='830.67' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3ccircle r='227.69' cx='1826.18' cy='258.25' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3ccircle r='88.28' cx='66.91' cy='649.85' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3ccircle r='157.88' cx='1879.88' cy='396.73' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3ccircle r='113.24' cx='1690.43' cy='71.29' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3ccircle r='193.665' cx='1229.63' cy='506.08' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3ccircle r='275.67' cx='995.96' cy='309.6' stroke='%23f2be93' stroke-opacity='0.16' stroke-width='2'%3e%3c/circle%3e%3c/g%3e%3cdefs%3e%3cclipPath id='SvgjsClipPath1145'%3e%3crect width='2000' height='900' x='0' y='0'%3e%3c/rect%3e%3c/clipPath%3e%3cradialGradient cx='50%25' cy='0%25' r='1345.36' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1146'%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(235%2c 235%2c 235%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
   color: aliceblue;
 }
 
@@ -40,7 +27,7 @@ body {
     position: relative;
     @include centerFlex;
     margin-bottom: 1em;
-    max-width: 90%;
+    max-width: 100%;
     padding: 0.8em;
 
     /* Estilos de los contenedores activos */
@@ -48,7 +35,7 @@ body {
     &:active .courses__title {
       position: absolute;
       transition: all 1s ease-in-out;
-      transform: translateY(-130px);
+      transform: translateY(-140px);
       color: map-get($colors, red);
     }
 
@@ -64,7 +51,7 @@ body {
       text-align: center;
       margin-left: 0.5em;
       margin-right: 0.5em;
-      text-shadow: 1px 1px 1px black;
+      // text-shadow: 1px 1px 1px black;
       transition-property: opacity, z-index;
       transition-duration: 0.8s;
       transition-delay: 0.5s;
@@ -82,7 +69,7 @@ body {
     object-fit: cover;
     width: 100%;
     z-index: -10;
-    border-radius: 15px;
+    border-radius: 12px;
     box-shadow: 5px 5px 4px rgb(0 0 0 / 0.5);
     opacity: 0.9;
   }
@@ -90,7 +77,7 @@ body {
   &__title {
     font-size: map-get($fontSize, title);
     color: inherit;
-    text-shadow: 3px 2px 2px #333;
+    // text-shadow: 3px 2px 2px #333;
   }
 
   &__text {
@@ -106,7 +93,7 @@ body {
     padding: 0.5em 2em;
     background-color: map-get($colors, orange);
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
     font-size: 0.7rem;
     color: aliceblue;
     font-weight: 500;
@@ -212,7 +199,7 @@ body {
 @media (max-width: 992px) {
   .courses__box,
   .courses__img {
-    height: 400px;
+    height: 430px;
   }
   .modal-dialog {
     margin: 0 2em;

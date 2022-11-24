@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet"> 
+
     <link
       rel="stylesheet"
       href="../../node_modules/bootstrap/dist/css/bootstrap.css"
     />
 
     <link rel="stylesheet" href="../code/css/courses.css" />
+    <link rel="stylesheet" href="../code/css/styles.css">
   </head>
   <body>
   <?php
@@ -26,11 +31,11 @@
         <!-- Estable tamaño del grid, a partir de 992px, 2 ítems por columna, si no 1 ítem -->
         <div class="row">
           <div class="courses__box col-md-12 col-lg-5">
-            <h3 class="courses__title">SMR</h3>
+            <h2 class="h2 courses__title">SMR</h2>
             <article class="article">
-              <h4 class="article__title">Sistemas Microinformáticos y Redes</h4>
-              <h5 class="article__subtitle">Grado Medio</h5>
-              <p class="courses__text">
+              <h3 class="h3 article__title">Sistemas Microinformáticos y Redes</h3>
+              <h4 class="h4 article__subtitle">Grado Medio</h4>
+              <p class="p courses__text">
                 Este ciclo te permite un primer contacto “serio” con el mundo de
                 la informática. La ventaja es que es abarca buena parte de las
                 principales áreas que cubre la informática.
@@ -38,7 +43,7 @@
               <div class="courses__buttons">
                 <button
                   type="button"
-                  class="courses__btn"
+                  class="courses__btn button"
                   data-bs-toggle="modal"
                   data-bs-target="#smrEstudiar"
                 >
@@ -46,7 +51,7 @@
                 </button>
                 <button
                   type="button"
-                  class="courses__btn"
+                  class="courses__btn button"
                   data-bs-toggle="modal"
                   data-bs-target="#smrTrabajar"
                 >
@@ -62,22 +67,19 @@
           </div>
 
           <div class="courses__box col-md-12 col-lg-5">
-            <h3 class="courses__title">ASIR</h3>
+            <h2 class="h2 courses__title">ASIR</h2>
             <article class="article">
-              <h4 class="article__title">
+              <h3 class="h3 article__title">
                 Administración de Sistemas Informáticos en Red
-              </h4>
-              <h5 class="article__subtitle">Grado Superior</h5>
-              <p class="courses__text">
-                En este ciclo te permitirá trabajar en empresas de distintos
-                sectores dentro del departamento de informática o de procesos de
-                datos, desempeñando funciones tales como instalación,
-                mantenimiento, explotación y soporte del usuario informático.
+              </h3>
+              <h4 class="h4 article__subtitle">Grado Superior</h4>
+              <p class="p courses__text">
+                En este ciclo te permitirá trabajar en empresas de distintos sectores informáticos desempeñando funciones tales como instalación, mantenimiento, explotación y soporte del usuario informático.
               </p>
               <div class="courses__buttons">
                 <button
                   type="button"
-                  class="courses__btn"
+                  class="courses__btn button"
                   data-bs-toggle="modal"
                   data-bs-target="#asirEstudiar"
                 >
@@ -85,7 +87,7 @@
                 </button>
                 <button
                   type="button"
-                  class="courses__btn"
+                  class="courses__btn button"
                   data-bs-toggle="modal"
                   data-bs-target="#asirTrabajar"
                 >
@@ -103,11 +105,11 @@
         <!-- Segunda fila de items -->
         <div class="row">
           <div class="courses__box col-md-12 col-lg-5">
-            <h3 class="courses__title">DAW</h3>
+            <h2 class="h2 courses__title">DAW</h2>
             <article class="article">
-              <h4 class="article__title">Desarrollo de Aplicaciones Web</h4>
-              <h5 class="article__subtitle">Grado Superior</h5>
-              <p class="courses__text">
+              <h3 class="h3 article__title">Desarrollo de Aplicaciones Web</h3>
+              <h4 class="h4 article__subtitle">Grado Superior</h4>
+              <p class="p courses__text">
                 Este ciclo está orientado al desarrollo, programación e
                 implementación de actividades informáticas en todo tipo de de
                 entornos web.
@@ -115,7 +117,7 @@
               <div class="courses__buttons">
                 <button
                   type="button"
-                  class="courses__btn"
+                  class="courses__btn button"
                   data-bs-toggle="modal"
                   data-bs-target="#dawEstudiar"
                 >
@@ -123,7 +125,7 @@
                 </button>
                 <button
                   type="button"
-                  class="courses__btn"
+                  class="courses__btn button"
                   data-bs-toggle="modal"
                   data-bs-target="#dawTrabajar"
                 >
@@ -138,22 +140,19 @@
             />
           </div>
           <div class="courses__box col-md-12 col-lg-5">
-            <h3 class="courses__title">DAM</h3>
+            <h2 class="h2 courses__title">DAM</h2>
             <article class="article">
-              <h4 class="article__title">
+              <h3 class="h3 article__title">
                 Desarrollo de Aplicaciones Multiplataforma
-              </h4>
-              <h5 class="article__subtitle">Grado Superior</h5>
-              <p class="courses__text">
-                Aprenderás a programar y diseñar aplicaciones para distintos
-                sistemas (Windows, Android, Linux…). Se trata de un ciclo
-                formativo con una gran demanda en la actualidad y con muchas
-                posibilidades de futuro.
+              </h3>
+              <h4 class="h4 article__subtitle">Grado Superior</h4>
+              <p class="p courses__text">
+                Aprenderás a programar y diseñar aplicaciones para distintos sistemas. Se trata de un ciclo formativo con una gran demanda en la actualidad y con muchas posibilidades de futuro.
               </p>
               <div class="courses__buttons">
                 <button
                   type="button"
-                  class="courses__btn"
+                  class="courses__btn button"
                   data-bs-toggle="modal"
                   data-bs-target="#damEstudiar"
                 >
@@ -161,7 +160,7 @@
                 </button>
                 <button
                   type="button"
-                  class="courses__btn"
+                  class="courses__btn button"
                   data-bs-toggle="modal"
                   data-bs-target="#damTrabajar"
                 >
@@ -190,9 +189,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal__window">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h4 class="h4 modal-title" id="exampleModalLabel">
               En SMR estudiarás, entre otras cosas
-            </h5>
+            </h4>
             <button
               type="button"
               class="btn-close"
@@ -228,7 +227,7 @@
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="courses__btn" data-bs-dismiss="modal">
+            <button type="button" class="courses__btn button" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
@@ -246,10 +245,10 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal__window">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h4 class="h4 modal-title" id="exampleModalLabel">
               Una vez termines tu formación profesional en SMR, estarás
               preparado para trabajar como:
-            </h5>
+            </h4>
             <button
               type="button"
               class="btn-close"
@@ -269,7 +268,7 @@
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="courses__btn" data-bs-dismiss="modal">
+            <button type="button" class="courses__btn button" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
@@ -289,9 +288,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal__window">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h4 class=" h4 modal-title" id="exampleModalLabel">
               En ASIR estudiarás, entre otras cosas
-            </h5>
+            </h4>
             <button
               type="button"
               class="btn-close"
@@ -329,7 +328,7 @@
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="courses__btn" data-bs-dismiss="modal">
+            <button type="button" class="courses__btn button" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
@@ -347,10 +346,10 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal__window">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h4 class="h4 modal-title" id="exampleModalLabel">
               Una vez termines tu formación profesional en ASIR, estarás
               preparado para trabajar como:
-            </h5>
+            </h4>
             <button
               type="button"
               class="btn-close"
@@ -370,7 +369,7 @@
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="courses__btn" data-bs-dismiss="modal">
+            <button type="button" class="courses__btn button" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
@@ -390,9 +389,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal__window">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h4 class="h4 modal-title" id="exampleModalLabel">
               En DAW estudiarás, entre otras cosas:
-            </h5>
+            </h4>
             <button
               type="button"
               class="btn-close"
@@ -429,7 +428,7 @@
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="courses__btn" data-bs-dismiss="modal">
+            <button type="button" class="courses__btn button" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
@@ -447,10 +446,10 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal__window">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h4 class="h4 modal-title" id="exampleModalLabel">
               Una vez termines tu formación profesional en DAW, estarás
               preparado para trabajar como:
-            </h5>
+            </h4>
             <button
               type="button"
               class="btn-close"
@@ -467,7 +466,7 @@
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="courses__btn" data-bs-dismiss="modal">
+            <button type="button" class="courses__btn button" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
@@ -486,9 +485,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal__window">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h4 class="h4 modal-title" id="exampleModalLabel">
               En DAM estudiarás, entre otras cosas:
-            </h5>
+            </h4>
             <button
               type="button"
               class="btn-close"
@@ -526,7 +525,7 @@
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="courses__btn" data-bs-dismiss="modal">
+            <button type="button" class="courses__btn button" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
@@ -544,10 +543,10 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal__window">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h4 class="h4 modal-title" id="exampleModalLabel">
               Una vez termines tu formación profesional en DAM, estarás
               preparado para trabajar como:
-            </h5>
+            </h4>
             <button
               type="button"
               class="btn-close"
@@ -568,7 +567,7 @@
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="courses__btn" data-bs-dismiss="modal">
+            <button type="button" class="courses__btn button" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
