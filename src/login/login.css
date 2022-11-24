@@ -10,7 +10,7 @@
 .main-section{
     background: rgba(118, 165, 165, 0.75);
     border-radius: 30px;
-    box-shadow: 12px 12px 12px #205454;
+    box-shadow: 6px 6px 10px 5px #205454;
     margin: 0 auto;
     margin-top: 10%;
     padding: 15px;
@@ -39,7 +39,7 @@
     width: 100%;
     background-color: #F5A25D;
     color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
 }
 
@@ -62,6 +62,10 @@
 
 .registration-form{
 
+    display: none;
+}
+
+.recover-form{
     display: none;
 }
 
