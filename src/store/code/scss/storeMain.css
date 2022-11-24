@@ -1,0 +1,204 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", "Barlow Semi Condensed", sans-serif;
+}
+
+/*css banner*/
+.fondo__banner {
+  color: #EBEBEB;
+  background-image: url(../products/fondos/fondo-tecnologia-conexion-red-tierra-digital-global_1017-23328.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.texto__banner {
+  text-shadow: 3px 20px 10px #ebebe0;
+  font-weight: 900;
+}
+
+.banner_aparece {
+  display: none;
+}
+
+.banner_linea_aparece {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 30px;
+  background-color: #020f58;
+}
+
+.banner__aparece_link {
+  text-decoration: none;
+  color: #F5A25D;
+}
+
+.banner_carousel_aparece {
+  text-align: center;
+}
+
+/* FIN css banner */
+/* css sección 1: Nuestro producto estrella */
+.oferta__link {
+  text-decoration: none;
+  color: #EBEBEB;
+}
+
+.oferta_container_title,
+.destacados-container_title,
+.otros__container_title {
+  margin: 1.5em;
+}
+
+.figure-img {
+  width: 30rem;
+  height: 30rem;
+  box-shadow: 2px 2px 30px rgba(215, 240, 240, 0.5568627451);
+}
+
+.raya {
+  height: 2px;
+  width: 75%;
+  size: "10";
+  background-color: #276969;
+  margin: 50px auto;
+}
+
+.oferta {
+  color: #EBEBEB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #389393;
+}
+
+.oferta__title {
+  color: #FA7F72;
+}
+
+.explicacion {
+  position: relative;
+  margin-top: 3.5em;
+  width: 35rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #EBEBEB;
+  font-size: 1.5em;
+  /* background-color: rgba(235, 235, 235,.3);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(209, 213, 219, 0.3); */
+  border-radius: 0.3em;
+}
+
+.explicacion_title {
+  color: #FA7F72;
+}
+
+/* css de la clasificación por estrellas */
+.estrellas {
+  display: none;
+}
+
+.estrellas__label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.estrellas__label:hover,
+.estrellas__label:hover ~ .estrellas__label {
+  color: orange;
+}
+
+.estrellas:checked ~ .estrellas__label {
+  color: orange;
+}
+
+/* css seccion 2: lo que más gusta a otros clientes */
+.destacados {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card__link {
+  text-decoration: none;
+  color: #f76a5a;
+}
+
+.card {
+  width: 350px;
+  height: 500px;
+  font-size: large;
+  border: 1px solid #FA7F72;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 30px #389393;
+  color: #389393;
+}
+
+.card-body {
+  font-size: larger;
+  text-align: center;
+}
+
+/* css sección 3: OTROS PRODUCTOS */
+.otros_productos {
+  background-image: radial-gradient(#F5A25D, #EBEBEB);
+}
+
+.otros_productos__figure {
+  width: 15rem;
+  height: 15rem;
+  transition: transform 0.5s;
+}
+
+.otros_productos__figure:hover {
+  transform: scale(1.5);
+}
+
+/* css pre-footer */
+.pre_footer__card {
+  color: #f76a5a;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: small;
+  width: 30rem;
+  height: 11rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-footer_img {
+  width: 3rem;
+}
+
+.pre-footer__title {
+  font-family: "Orbitron", sans-serif;
+  color: rgba(250, 128, 114, 0.8);
+}
+
+.pre_footer__card-link {
+  color: #FA7F72;
+  text-decoration: none;
+}
+
+.pre_footer__card-link:hover {
+  color: #389393;
+}
+
+/* css footer *//*# sourceMappingURL=storeMain.css.map */

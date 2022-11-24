@@ -17,11 +17,13 @@
 </head>
 
 <body>
-    <!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
+    <!--
+    • Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
     • Naranja: #F5A25D un 10% para aquello que llama a la acción.
     • Rojo: #FA7F72 solo para pequeños detalles o pequeños bloques de texto
     • Azul: #389393 para el footer 
-    https://www.shutterstock.com/es/create/home para crear imagenes-->
+    https://www.shutterstock.com/es/create/home para crear imagenes
+    -->
     <?php
     $d = __DIR__;
     include "../code/php/route.php";
