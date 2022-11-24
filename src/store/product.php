@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <link rel="stylesheet" href="../code/css/navbar.css">
+  <link rel="stylesheet" href="code/css/navbar_store.css">
   <script defer src="code/js/product.js"></script>
   <link rel="stylesheet" href="code/css/styles_produc.css">
 </head>
@@ -28,7 +28,7 @@
   <div class="container">
     <div class="row">
       <!--Imagen-->
-      <div class="col-lg-4 col-md-6 col-" id="imagen">
+      <div class="col-lg-4 col-md-6" id="imagen">
         <img src="assets/products/camiseta2.webp" id="proPrincipal">
       </div>
       <!--Info-->

@@ -30,15 +30,17 @@ function inicializarPagina() {
 
 function añadirProductos() {
   if (typeof Storage !== "undefined") {
-    if (localStorage.getItem("producto") != null) {
+    /*if (localStorage.getItem("producto") != null) {
       propiedades = localStorage.getItem("producto").split(",");
       var numproduc = localStorage.clickcount;
       if (numproduc >= 1) {
         localStorage.setItem(numproduc, propiedades);
       }
-    }
+    }*/
     if (localStorage.clickcount>0) {
       document.getElementById('basket-items-allnav').textContent=localStorage.clickcount;
+    }else{
+      document.getElementById('basket-items-allnav').textContent='';
     }
     mostrarProductos();
     localStorage.removeItem("producto");
@@ -117,7 +119,6 @@ function cantidadproducto(cantidad) {
 
 /*eliminar producto de la LocalStorage*/
 function eliminar(index) {
-  alert(index);
   if (localStorage.clickcount) {
     localStorage.removeItem(localStorage.clickcount);
     if (localStorage.clickcount > 0) {
@@ -175,8 +176,4 @@ function quitarProductoAside(producto) {
     }
   });
 }
-/*let datosProducto = JSON.parse(window.localStorage.getItem("form"));
-datosProducto.forEach(element => {
-  alert(element.value);
-})*/
 document.designMode = "off";
