@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   <link rel="stylesheet" href="../code/css/navbar.css">
-  <script src="code/js/product.js"></script>
+  <script defer src="code/js/product.js"></script>
   <link rel="stylesheet" href="code/css/styles_produc.css">
 </head>
 
@@ -102,6 +102,17 @@
             <option value="5">5</option>
           </select>
         </div>
+        <dialog id="modal">
+        <div class="row">
+          <div class="col-10">
+          <h2 id="tituloVentana"></h2>
+            <h3 id="tituloVentana2"></h3>
+          </div>
+          <div class="col-2"><button id="cerrar-modal">&times;</button></div>
+        </div>
+        <p id="contenido">
+        </p>
+      </dialog>
         <!--Con este boton se envia la informacion al carrito  -->
         <input class="btn" name="añadir" onclick="pasarInfoProduct()" id="botoncarrito" type="submit" value="Añadir al carrito">
         <div class="form-check">

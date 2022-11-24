@@ -149,6 +149,37 @@ h5.enStock {
   color: #fa7f72;
 }
 
+/*pop up Añadir producto*/
+#modal {
+  border-radius: 10px;
+  border: 2px solid #fa7f72;
+  background-color: white;
+  width: 700px;
+  font-size: 30px;
+  vertical-align: middle;
+  color: #389393;
+  height: 450px;
+}
+#tituloVentana {
+  font-size: 40px;
+  text-align: center;
+}
+#contenido {
+  padding-left: 8%;
+}
+#cerrar-modal {
+  color: #fa7f72;
+  font-size: 40px;
+  border: 0px;
+  text-align: center;
+  height: 40px;
+  background-color: white;
+}
+#imagenPopUP {
+  width: 80%; 
+  height: 95%;
+}
+
 /*relacionados*/
 div#relacionados {
   background-color: #ebebeb;

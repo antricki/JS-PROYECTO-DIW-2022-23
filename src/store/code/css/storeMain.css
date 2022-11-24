@@ -32,17 +32,23 @@ body {
   text-decoration: none;
   font-family: "Orbitron", "Barlow Semi Condensed", sans-serif;
   color: #F5A25D;
-}
-
-.banner__aparece_link:hover {
-  color: #f76a5a;
+  display: block;
+  line-height: 30px;
 }
 
 .banner_carousel_aparece {
   text-align: center;
 }
 
-/* FIN css banner */
+div#mainBanner span {
+  color: #EBEBEB;
+  text-shadow: 3px 3px 5px #ebebe0;
+  font-weight: 900;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
 /* css sección 1: Nuestro producto estrella */
 .oferta__link {
   text-decoration: none;

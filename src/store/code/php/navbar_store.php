@@ -38,7 +38,7 @@
         <!-- Right side -->
         <div class="ms-auto d-flex">
             <div class="p-1 me-3"><a href="../index.php" class="nav-link">Departamento</a></div>
-            <div class="p-1 me-3"><a href="cart.php" class="nav-link"><span id="basket-items-allnav">2</span>
+            <div class="p-1 me-3"><a href="cart.php" class="nav-link"><span id="basket-items-allnav"></span>
                 <img class="icon-allnav" src="assets/icons/cart.svg" alt=""></a></div>
             <div class="p-1 me-2"><a class="nav-link" href="../login/login.php"><img class="icon-allnav"
                 src="assets/icons/circle-user-regular.svg" alt=""><span class="d-none d-md-inline ms-2">Julisito</span></a></div>
