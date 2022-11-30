@@ -43,19 +43,9 @@
             <div class="col-lg-1"></div>
             <!--Asisde-->
             <div class="col-lg-3 col-xs-12" id="aside">
-
                 <p class="subtotal">Subtotal (<span class="numProductos"></span> productos):<span class="preciosubtotal">0</span>€</p>
-                <div class="container-fluid">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col-10">
-                                    Camiseta de programacion
-                                </div>
-                                <div class="col-2"><span class="badge rounded-pill" id="cantidadProd1">1</span></div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="container-fluid" id="listaProductos">
+                    <!-- productos del aside, se introducen desde el dom-->
                 </div>
                 <br>
                 <input class="btn" src="tramitarPedido.php" id="botonpagar" type="submit" value="Tramitar pedido">

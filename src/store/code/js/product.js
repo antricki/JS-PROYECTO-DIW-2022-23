@@ -16,7 +16,13 @@ function añadircolor(boton) {
   /*para cambiar el cursor */
   document.getElementById("botoncarrito").style.cursor = "pointer";
 }
-
+window.addEventListener('load',()=>{
+  if (localStorage.clickcount > 0) {
+    document.getElementById("basket-items-allnav").textContent =localStorage.clickcount;
+  } else {
+    document.getElementById("basket-items-allnav").textContent = "";
+  }
+})
 function pasarInfoProduct() {
   if (typeof Storage !== "undefined") {
     if (color == "") {
@@ -42,14 +48,14 @@ function pasarInfoProduct() {
       } else {
         localStorage.clickcount = 1;
       }
+      abrirModal(producto);
+      localStorage.setItem("producto", producto.propiedades);
+      propiedades = localStorage.getItem("producto").split(",");
       if (localStorage.clickcount > 0) {
         document.getElementById("basket-items-allnav").textContent =localStorage.clickcount;
       } else {
         document.getElementById("basket-items-allnav").textContent = "";
       }
-      abrirModal(producto);
-      localStorage.setItem("producto", producto.propiedades);
-      propiedades = localStorage.getItem("producto").split(",");
       var numproduc = localStorage.clickcount;
       if (numproduc >= 1) {
         localStorage.setItem(numproduc, propiedades);

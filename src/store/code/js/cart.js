@@ -11,8 +11,9 @@ function contarProductos() {
     ) {
     } else {
       if (checks[index].checked) {
-        prodSubtotal++;
-        prodprecio += parseFloat(precios[index].textContent);
+        var producto = localStorage.getItem(index+1).split(",");
+        prodSubtotal=prodSubtotal+(1*(producto[3]));
+        prodprecio += parseFloat(precios[index].textContent*(producto[3]));
       }
     }
   }
@@ -27,22 +28,36 @@ function inicializarPagina() {
   añadirProductos();
   contarProductos();
 }
+const ul = document.getElementById("listaProductos");
+function mostrarAside() {
+  var lis='';
+  for (let index = 1; index <= localStorage.clickcount; index++) {
+    var producto = localStorage.getItem(index).split(",");
+    lis+="<li class='list-group-item'>"+
+        "<div class='row'>"+
+          "<div class='col-10'>"+producto[0]+"</div>"+
+          "<div class='col-2'>"+
+            "<span class='badge rounded-pill' id='cantidadProd"+index+"'>"+
+            producto[3]+
+           "</span>"+
+          "</div>"+
+        "</div>"+
+      "</li>"
+  }
+  ul.innerHTML='<ul class="list-group list-group-flush">'+lis+'</ul>'
+  
+}
 
 function añadirProductos() {
   if (typeof Storage !== "undefined") {
-    /*if (localStorage.getItem("producto") != null) {
-      propiedades = localStorage.getItem("producto").split(",");
-      var numproduc = localStorage.clickcount;
-      if (numproduc >= 1) {
-        localStorage.setItem(numproduc, propiedades);
-      }
-    }*/
-    if (localStorage.clickcount>0) {
-      document.getElementById('basket-items-allnav').textContent=localStorage.clickcount;
-    }else{
-      document.getElementById('basket-items-allnav').textContent='';
+    if (localStorage.clickcount > 0) {
+      document.getElementById("basket-items-allnav").textContent =
+        localStorage.clickcount;
+    } else {
+      document.getElementById("basket-items-allnav").textContent = "";
     }
     mostrarProductos();
+    mostrarAside();
     localStorage.removeItem("producto");
   } else {
     document.getElementById("resul").innerHTML =
@@ -80,7 +95,7 @@ function mostrarProducto(producto, contenedor, index) {
       "<b> Color:</b>" +
       producto[2] +
       " <br>" +
-      "<select class='form-contol cantidades' onchange='cantidades(this.id)'' id='cantidades1' aria-label='select example'>" +
+      "<select class='form-contol cantidades' onchange='cantidades(this.id)'' id='cantidades"+index+"' aria-label='select example'>" +
       cantidadproducto(producto[3]) +
       "</select>" +
       "<input class='eliminar' type='submit' name='eliminar' value='Eliminar' onclick='eliminar(" +
@@ -108,10 +123,10 @@ function mostrarProducto(producto, contenedor, index) {
 function cantidadproducto(cantidad) {
   var html = "";
   for (let index = 1; index <= 5; index++) {
-    if (cantidad==index) {
-     html+= "<option selected value='"+index+"'>"+index+"</option>" ;
-    }else{
-      html+= "<option value='"+index+"'>"+index+"</option>" ;
+    if (cantidad == index) {
+      html += "<option selected value='" + index + "'>" + index + "</option>";
+    } else {
+      html += "<option value='" + index + "'>" + index + "</option>";
     }
   }
   return html;
@@ -124,8 +139,11 @@ function eliminar(index) {
     if (localStorage.clickcount > 0) {
       localStorage.removeItem(localStorage.getItem(index));
       localStorage.clickcount = Number(localStorage.clickcount) - 1;
-      if (localStorage.clickcount>0) {
-        document.getElementById('basket-items-allnav').textContent=localStorage.clickcount;
+      if (localStorage.clickcount > 0) {
+        document.getElementById("basket-items-allnav").textContent =
+          localStorage.clickcount;
+      } else {
+        document.getElementById("basket-items-allnav").textContent = "";
       }
       lanzar("producto" + index, "enlace" + index);
     }
