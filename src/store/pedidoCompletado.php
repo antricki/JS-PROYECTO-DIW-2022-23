@@ -12,21 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="./code/css/styles.css">
+    <link rel="stylesheet" href="./code/css/storeMain.css">
 </head>
 
 <body>
     <!-- navegador -->
     <?php
     $d = __DIR__;
-    // include "./code/php/route.php";
     include "./code/php/navbar_store.php";
     ?>
-    <main class="container-fluid">
+    <main class="container-fluid pedidoCompletado">
         <div class="row d-flex justify-content-md-around">
             <div class="col col-md-auto">
                 <h1 class="pedido__completado_title">¡PEDIDO COMPLETADO! Gracias.</h1>
-                <input type="button" value="Continuar comprando" class="tramitar__pedido-btn" onclick="location.href='store1.php'">
+                <input type="button" value="Continuar comprando" class="tramitar__pedido-btn" onclick="location.href='store.php'">
             </div>
         </div>
     </main>
