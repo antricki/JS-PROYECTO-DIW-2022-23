@@ -37,6 +37,12 @@ p, .p {
   font-size: 1.2rem;
 }
 
+.small {
+  font-size: .8rem;
+  color: #444;
+
+}
+
 button, .button {
   font-size: 1.2rem;
 }
