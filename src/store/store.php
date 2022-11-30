@@ -54,7 +54,7 @@
 
   <!-- sección 1: PRODUCTO ESTRELLA -->
   <section class="oferta">
-    <a href="#" class="container-fluid oferta__link">
+    <a href="product.php" class="container-fluid oferta__link">
       <div class="oferta_container_title">
         <h2 class="oferta__title">Nuestro Producto Estrella...</h2>
       </div>
@@ -100,7 +100,7 @@
     <div class="container-fluid destacados">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 rounded d-flex d-inline-flex">
         <div class="col">
-          <a href="#" class="card card__link">
+          <a href="product.php" class="card card__link">
             <img src="products/camiseta.webp" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Sudadera con capucha unisex.</p>
@@ -125,7 +125,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#" class="card card__link">
+          <a href="product.php" class="card card__link">
             <img src="products/sudadera3.webp" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Sudadera con capucha unisex.</p>
@@ -150,7 +150,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#" class="card card__link">
+          <a href="product.php" class="card card__link">
             <img src="products/sudadesra.webp" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Sudadera con capucha unisex.</p>
@@ -175,7 +175,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#" class="card card__link">
+          <a href="product.php" class="card card__link">
             <img src="products/camiseta2.webp" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Sudadera con capucha unisex.</p>
@@ -210,7 +210,7 @@
     <div class="container-fluid otros_productos__container">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 justify-content-center">
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/botella.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Botella</figcaption>
@@ -218,7 +218,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/puff.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Puff para móvil</figcaption>
@@ -226,7 +226,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/taza2.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Taza</figcaption>
@@ -236,7 +236,7 @@
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 justify-content-center">
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/alfombrilla.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Alfombrilla para ratón</figcaption>
@@ -244,7 +244,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/cargador.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Cargador</figcaption>
@@ -252,7 +252,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/pen2.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Pen 32GB</figcaption>
@@ -262,7 +262,7 @@
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 justify-content-center">
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/fundaPortatil.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Funda para pórtatil</figcaption>
@@ -270,7 +270,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/manta.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Manta</figcaption>
@@ -278,7 +278,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/powerbank.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">PowerBank</figcaption>
