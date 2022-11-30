@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="code/css/navbar_store.css">
     <script defer src="code/js/cart.js"></script>
     <link rel="stylesheet" href="code/css/cart.css">
 </head>
@@ -49,7 +50,7 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-10">
-                                    Pen de programador
+                                    Camiseta de programacion
                                 </div>
                                 <div class="col-2"><span class="badge rounded-pill" id="cantidadProd1">1</span></div>
                             </div>
