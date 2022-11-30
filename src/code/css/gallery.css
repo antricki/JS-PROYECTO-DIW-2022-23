@@ -63,9 +63,6 @@ body {
   width: 100%;
   margin-left: 3em;
   font-size: 3rem;
-  font-weight: 700;
-  color: var(--red);
-  text-shadow: 3px 2px 2px #333;
 }
 
 .title {
@@ -74,9 +71,7 @@ body {
   width: 100%;
   margin-left: 3em;
   font-size: 3rem;
-  font-weight: 700;
-  color: var(--red);
-  text-shadow: 3px 2px 2px #333;
+
 }
 
 .carrusel__big {
