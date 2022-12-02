@@ -21,7 +21,6 @@
         <!-- navegador -->
         <?php
         $d = __DIR__;
-        // include "./code/php/route.php";
         include "./code/php/navbar_store.php";
         ?>
 
@@ -72,9 +71,6 @@
                                     <input type="text" class="form-control" id="codigoPostal" placeholder="Código Postal" name="cp" maxlength="5" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="pais" placeholder="País" name="pais" required>
-                                </div>
-                                <div class="mb-3">
                                     <input type="submit" class="form__enviar" id="enviar" value="Enviar" name="enviar">
                                 </div>
                             </form>
@@ -82,15 +78,15 @@
                         <!-- segundo formulario -->
                         <div class="custom-control custom-checkbox">
                             <div class="container_checkbox">
-                                <input type="checkbox" class="custom-control-input check_form" id="checkbox" value="" onclick="ocultaForm()">
-                                <label for="misma-direccion" class="custom-control-label" id="datos_facturacion_envio">Los datos de facturación y envío son los mismos.</label>
+                                <input type="checkbox" class="custom-control-input" id="checkfact">
+                                <label for="misma-direccion" class="custom-control-label">Los datos de facturación y envío NO son los mismos.</label>
                             </div>
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="guardar-informacion">
                                 <label for="guardar-informacion" class="custom-control-label">Guardar informacion para la siguiente compra</label>
                             </div>
                             <!-- formulario de faturacion que se ve y si hago click desaparece -->
-                            <div id="datos_facturacion_ver" class="datos_facturacion_ver">
+                            <div id="datos_facturacion_ver" class="datos_facturacion_ver hidden">
                                 <h3 class="contacto__direccion-title__text">Datos de envío</h3>
                                 <form action="#" method="post" class="datos_facturacion_envio">
                                     <div class="mb-3">
@@ -111,9 +107,6 @@
                                     <div class="mb-3">
                                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Código Postal" required maxlength="5">
                                     </div>
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="País" pattern="[a-zA-Z]">
-                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -132,8 +125,8 @@
                             <!-- cuerpo -->
                             <div class="col tipo__entrega1 metodo__envio-entregas" id="tipo__entrega1">
                                 <div class="form-check_input">
-                                    <input class="form-check-label check_entrega1" type="radio" name="flexRadioDefault" id="flexRadioDefault1 check_entrega1">
-                                    <label for="flexRadioDefault1" class="form-check-label">Entrega a domicilio</label>
+                                    <!-- <input class="form-check-label check_entrega1" type="radio" name="flexRadioDefault" id="flexRadioDefault1 check_entrega1"> -->
+                                    <h4 for="flexRadioDefault1" class="form-check-label">Entrega a domicilio</label>
                                 </div>
                                 <div class="form-check_input">
                                     <img src="products/icons/GLS.png" alt="" class="contacto__envio-pago__img">
@@ -144,8 +137,8 @@
                             </div>
                             <div class="col metodo__envio-entregas" id="tipo__entrega2">
                                 <div class="form-check_input">
-                                    <input class="form-check-label check_entrega2" type="radio" name="flexRadioDefault" id="flexRadioDefault2 check_entrega2">
-                                    <label for="flexRadioDefault2" class="form-check-label">Punto de recogida</label>
+                                    <!-- <input class="form-check-label check_entrega2" type="radio" name="flexRadioDefault" id="flexRadioDefault2 check_entrega2"> -->
+                                    <h4 for="flexRadioDefault2" class="form-check-label">Punto de recogida</label>
                                 </div>
                                 <div class="form-check_img">
                                     <img src="products/icons/inpost-seeklogo.com.png" alt="" class="contacto__envio-pago__img">
@@ -185,7 +178,7 @@
                                         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="El Código de Seguridad de la Tarjeta (CVC/CVV) es un código de seguridad adicional de cuatro o tres dígitos que está impreso (no grabado) en la parte delantera o trasera de tu tarjeta. El Código CVC/CVV/CID es una medida extra de seguridad para asegurar que esta tarjeta te pertenece." class="metodo__pago_link">¿Qué es CVC/CVV?</a>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="submit" value="Valida" id="valida_tarjeta" class="btn valida_tarjeta">
+                                        <input type="submit" value="Valida" id="valida_tarjeta" class="form__enviar">
                                     </div>
                                 </div>
 

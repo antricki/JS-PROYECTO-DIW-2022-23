@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="<?php echo $dir . 'code/css/footer.css'?>">
+<link rel="stylesheet" href="<?php echo $dir . 'code/css/styles.css'?>">
+
 <footer class="allfooter">
     <div class="container allfooter">
         <div class="row footer-up-allfooter">

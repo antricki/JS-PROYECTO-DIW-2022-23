@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="code/css/navbar_store.css">
     <script defer src="code/js/cart.js"></script>
     <link rel="stylesheet" href="code/css/cart.css">
 </head>
@@ -42,19 +43,9 @@
             <div class="col-lg-1"></div>
             <!--Asisde-->
             <div class="col-lg-3 col-xs-12" id="aside">
-
                 <p class="subtotal">Subtotal (<span class="numProductos"></span> productos):<span class="preciosubtotal">0</span>€</p>
-                <div class="container-fluid">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col-10">
-                                    Pen de programador
-                                </div>
-                                <div class="col-2"><span class="badge rounded-pill" id="cantidadProd1">1</span></div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="container-fluid" id="listaProductos">
+                    <!-- productos del aside, se introducen desde el dom-->
                 </div>
                 <br>
                 <input class="btn" src="tramitarPedido.php" id="botonpagar" type="submit" value="Tramitar pedido">

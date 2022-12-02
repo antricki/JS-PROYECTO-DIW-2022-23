@@ -1,32 +1,32 @@
-const checkbox = document.querySelector("check_form"); //checkbox
-const datos_fact_ver = document.getElementById("datos_facturacion_ver"); //formulario facturacion
 
+//formulario facturacion
+const checkDatos = document.getElementById("checkfact");
+const datos_fact_ver = document.getElementById('datos_facturacion_ver')
 // funcion para que desaparezca y desaparezca el formulario de datos de envío
-function ocultaForm() {
-  if (datos_fact_ver.style.display === "none") {
-    //si no se ve
-    datos_fact_ver.style.display = "block";
+
+checkDatos.addEventListener('click', () => {
+  console.log('hola')
+  if (checkDatos.checked) {
+    datos_fact_ver.classList.remove('hidden');
   } else {
-    datos_fact_ver.style.display = "none"; //si se ve
+    datos_fact_ver.classList.add('hidden');
   }
-}
+})
+
 // función y variables para pintar el fondo verde del método de pago según el que elija
 // variables de los radios, que me sirven para añadirles el evento posterior
-const entrega1 = document.querySelector(".check_entrega1");
-const entrega2 = document.querySelector(".check_entrega2");
 
 // variables del contenedor donde están los radios
 const tipo_entrega1 = document.getElementById("tipo__entrega1");
 const tipo_entrega2 = document.getElementById("tipo__entrega2");
-
-entrega1.addEventListener("click", (e) => {
-  //si hago click en el radio primero, se añade la clase tipo_entrega1 en el primer
-  //contenedor y cambia el fondo a verde.
+tipo_entrega1.addEventListener("click", (e) => {
+  e.preventDefault()
   tipo_entrega1.classList.add("tipo__entrega1");
   tipo_entrega2.classList.remove("tipo__entrega1");
-});
+})
 
-entrega2.addEventListener("click", (e) => {
+tipo_entrega2.addEventListener("click", (e) => {
+  e.preventDefault()
   //lo mismo que el anterior pero con el segundo contenedor y segundo radio.
   tipo_entrega2.classList.add("tipo__entrega1");
   tipo_entrega1.classList.remove("tipo__entrega1");

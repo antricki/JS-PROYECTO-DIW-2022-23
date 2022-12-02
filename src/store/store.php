@@ -17,7 +17,7 @@
 
   <!-- fin fuentes -->
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <link rel="stylesheet" href="./code/css/styles__web_princ_store.css">
+  <link rel="stylesheet" href="./code/css/storeMain.css">
 </head>
 <!--• Gris : #EBEBEB  un 60% de la página, el fondo y lo menos important.
     • Naranja: #F5A25D un 10% para aquello que llama a la acción.
@@ -27,24 +27,6 @@
 
 <body>
   <header>
-    <div class="banner_linea_aparece banner_aparece" id="banner_aparece">
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner banner_carousel_aparece d-flex">
-          <div class="carousel-item active">
-            <a href="#" class="d-block banner__aparece_link">OFERTA FLASH!!! -30%</a>
-          </div>
-          <div class="carousel-item">
-            <a href="politicas.php" class="d-block banner__aparece_link">ENVÍO GRATIS CON 2 O MÁS ARTÍCULOS</a>
-          </div>
-          <div class="carousel-item">
-            <a href="politicas.php" class="d-block banner__aparece_link">TU PEDIDO EN 24 HRS</a>
-          </div>
-          <div class="carousel-item">
-            <a href="politicas.php" class="d-block banner__aparece_link">DEVOLUCIONES</a>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Navbar -->
     <?php
     $d = __DIR__;
@@ -52,26 +34,27 @@
     include "./code/php/navbar_store.php";
     ?>
     <!-- Navbar -->
-
-    <!-- Background image -->
-    <div class="fondo__banner p-4 text-center" id="banner_desaparece">
-      <div class="">
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="texto__banner">
-            <h1 class="mb-3">OFERTA FLASH!!!</h1>
+    <div class="banner_linea_aparece banner_aparece" id="banner_aparece">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner banner_carousel_aparece">
+          <div class="carousel-item active">
+            <h2 class="mb-3">OFERTA FLASH!!!</h2>
             <h4 class="mb-3">Por tiempo limitado en todas tus compras</h4>
-            <h1 class="mb-3">-30%</h1>
-            <a class="btn btn-lg" href="#!">Call to action</a>
+            <h2 class="mb-3">-30%</h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="mb-3">DESCUENTOS PERSONALIZADOS!!!</h2>
+            <h4 class="mb-3">Registrate en nuestra web para conseguir descuentos</h4>
+            <h2 class="mb-3">Registrate</h2>
           </div>
         </div>
       </div>
     </div>
-    <!-- Background image -->
   </header>
+
   <!-- sección 1: PRODUCTO ESTRELLA -->
-  <hr class="raya" />
   <section class="oferta">
-    <a href="#" class="container-fluid oferta__link">
+    <a href="product.php" class="container-fluid oferta__link">
       <div class="oferta_container_title">
         <h2 class="oferta__title">Nuestro Producto Estrella...</h2>
       </div>
@@ -109,7 +92,6 @@
     </a>
   </section>
 
-  <hr class="raya" />
   <!-- sección 2: LO QUE MÁS GUSTA -->
   <section class="gusta">
     <div class="container-fluid destacados-container_title">
@@ -118,7 +100,7 @@
     <div class="container-fluid destacados">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 rounded d-flex d-inline-flex">
         <div class="col">
-          <a href="#" class="card card__link">
+          <a href="product.php" class="card card__link">
             <img src="products/camiseta.webp" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Sudadera con capucha unisex.</p>
@@ -143,7 +125,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#" class="card card__link">
+          <a href="product.php" class="card card__link">
             <img src="products/sudadera3.webp" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Sudadera con capucha unisex.</p>
@@ -168,7 +150,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#" class="card card__link">
+          <a href="product.php" class="card card__link">
             <img src="products/sudadesra.webp" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Sudadera con capucha unisex.</p>
@@ -193,7 +175,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#" class="card card__link">
+          <a href="product.php" class="card card__link">
             <img src="products/camiseta2.webp" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Sudadera con capucha unisex.</p>
@@ -220,7 +202,6 @@
       </div>
   </section>
 
-  <hr class="raya" />
   <!-- sección 3: OTROS PRODUCTOS -->
   <section class="otros_productos container-fluid ">
     <div class="otros__container_title">
@@ -229,7 +210,7 @@
     <div class="container-fluid otros_productos__container">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 justify-content-center">
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/botella.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Botella</figcaption>
@@ -237,7 +218,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/puff.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Puff para móvil</figcaption>
@@ -245,7 +226,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/taza2.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Taza</figcaption>
@@ -255,7 +236,7 @@
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 justify-content-center">
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/alfombrilla.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Alfombrilla para ratón</figcaption>
@@ -263,7 +244,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/cargador.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Cargador</figcaption>
@@ -271,7 +252,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/pen2.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Pen 32GB</figcaption>
@@ -281,7 +262,7 @@
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 justify-content-center">
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/fundaPortatil.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Funda para pórtatil</figcaption>
@@ -289,7 +270,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/manta.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">Manta</figcaption>
@@ -297,7 +278,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#">
+          <a href="product.php">
             <figure class="figure">
               <img src="products/powerbank.jpg" class="figure-img img-fluid rounded  otros_productos__figure" alt="...">
               <figcaption class="figure-caption text-end">PowerBank</figcaption>

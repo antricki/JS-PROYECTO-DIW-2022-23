@@ -23,7 +23,7 @@ div#imagen {
   width: 95%;
 }
 div#imagen img#proPrincipal {
-  border-radius: 5px;
+  border-radius: 12px;
 }
 div#info {
   display: flex;
@@ -32,8 +32,8 @@ div#info {
 /*selects*/
 #tallas {
   height: 125%;
-  width: 40%;
-  border-radius: 3px;
+  width: 44%;
+  border-radius: 6px;
   color: #389393;
   border: 1px solid #fa7f72;
 }
@@ -45,7 +45,7 @@ div#info {
 #cantidades {
   height: 125%;
   width: 60%;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #389393;
   border: 1px solid #fa7f72;
 }
@@ -107,7 +107,7 @@ div.aside {
   flex-direction: column;
   border: 1px solid #fa7f72;
   padding-top: 10px;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 div.aside input {
   margin-top: 8%;
@@ -125,6 +125,7 @@ h5.enStock {
 #botoncarrito {
   color: white;
   cursor: no-drop;
+  border-radius: 12px;
   background-color: #389393;
 }
 #botoncarrito:hover {
@@ -146,6 +147,53 @@ h5.enStock {
 
 #textoTicketRegalo:hover {
   color: #fa7f72;
+}
+
+/*pop up Añadir producto*/
+#modal {
+  border-radius: 12px;
+  border: 2px solid #fa7f72;
+  background-color: white;
+  width: 700px;
+  font-size: 30px;
+  vertical-align: middle;
+  color: #389393;
+  height: 450px;
+}
+#tituloVentana {
+  font-size: 40px;
+  text-align: center;
+}
+#tituloVentana2 {
+  text-align: center;
+  margin-top:10px;
+  margin-bottom:25px;
+}
+#contenido {
+  padding-left: 8%;
+}
+#contenido .col-sm-6{
+  padding-left: 8%;
+}
+#contenido .col-sm-6 .row{
+  display: block;
+}
+#cerrar-modal {
+  color: #fa7f72;
+  font-size: 40px;
+  border: 0px;
+  text-align: center;
+  height: 40px;
+  background-color: white;
+}
+#imagenPopUP {
+  width: 235px; 
+  height: 260px;
+  border-radius: 12px;
+}
+.propiedadesPOP{
+  color: black;
+  font-size: 25px;
 }
 
 /*relacionados*/

@@ -354,7 +354,7 @@
             <br />
 
             <div class="secundario">
-              <p>
+              <p class="small">
                 Al registrarte aceptas nuestra
                 <a href="#" class="enlace">política de privacidad</a> y
                 <a href="#" class="enlace">política de cookies</a>

@@ -27,17 +27,17 @@
     <?php
     $d = __DIR__;
     include "../code/php/route.php";
-    include "../code/php/navbar_store.php";
+    include "./code/php/navbar_store.php";
     ?>
 
     <main class="informacion">
         <hr class="raya" />
         <div class="container-fluid lista">
             <div class="row lista__row justify-content-center">
-                <div class="col col-4 lista__col align-self-start">
+                <div class="col col-lg-4 col-md-4 col-sm-12 lista__col align-self-start">
                     <h1 class="lista__title-1">Devoluciones y reembolsos</h1>
                 </div>
-                <div class="col col-4">
+                <div class="col col-lg-4 col-md-4 col-sm-12">
                     <p class="title_lista">Elige un tema:</p>
                     <ul class="lista__preguntas">
                         <li><a href="#devolver" class="lista__preguntas-link">¿Cómo puedo devolver un artículo?</a></li>
@@ -52,10 +52,10 @@
         <hr class="raya" />
         <div class="container-fluid">
             <div class="row preguntas__soluciones justify-content-center">
-                <div class="col col-4 col__text align-self-start">
+                <div class="col col-lg-4 col-md-4 col-sm-12 col__text align-self-start">
                     <h2 class="title" id="devolver">¿Cómo puedo devolver un artículo?</h2>
                 </div>
-                <div class="col col-4 col__text">
+                <div class="col col-lg-4 col-md-4 col-sm-12 col__text">
                     <p class="text">
                     <h3>Política de devoluciones en los lugares de recogida</h3>
                     <p>Las devoluciones se pueden dejar en cualquier lugar de recogida una vez imprimida la etiqueta de devolución desde el sitio web de autoservicio.
@@ -70,10 +70,10 @@
         <hr class="raya" />
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col col-4  align-self-start">
+                <div class="col col-lg-4 col-md-4 col-sm-12  align-self-start">
                     <h2 class="title" id="reembolsos">Reembolsos</h2>
                 </div>
-                <div class="col col-4">
+                <div class="col col-lg-4 col-md-4 col-sm-12">
                     <p class="text">Cuando recibimos tu artículo, se tramita un reembolso inmediatamente. Si has cancelado un artículo de recogida y ya te lo hemos facturado,
                         tramitamos un reembolso en cuantoenvías tu solicitud de cancelación. La forma de procesar el reembolso depende del método de pago empleado:
                         Si has pagado con tarjeta de crédito o débito, el reembolso se remite a la entidad emisora de la tarjeta en un plazo de cinco días laborables a partir de la recepción
@@ -85,10 +85,10 @@
         <hr class="raya" />
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col col-4 align-self-start">
+                <div class="col col-lg-4 col-md-4 col-sm-12 align-self-start">
                     <h2 class="title" id="tardar">¿Cuánto tardarán en procesar el reembolso?</h2>
                 </div>
-                <div class="col col-4">
+                <div class="col col-lg-4 col-md-4 col-sm-12">
                     <p class="text">Procesaremos la devolución una vez los artículos hayan regresado a nuestros almacenes. La transferencia tardará de 5 a 7 días en hacerse efectiva.</p>
                 </div>
             </div>
@@ -98,10 +98,10 @@
         <hr class="raya" />
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col col-4 align-self-start">
+                <div class="col col-lg-4 col-md-4 col-sm-12 align-self-start">
                     <h2 class="title" id="defectuoso">¿Qué ocurre si recibo un artículo defectuoso?</h2>
                 </div>
-                <div class="col col-4">
+                <div class="col col-lg-4 col-md-4 col-sm-12">
                     <p class="text">Si tienes algún problema con tu nuevo producto o crees que presenta algún defecto, llama a <span class="tlf_defectuoso">687 123 788</span> lo antes posible para informarnos.
                         Si el problema o el defecto es con productos de otros fabricantes,
                         llama al servicio de atención al cliente de nuestra tienda online lo antes posible para informarnos</p>
@@ -113,10 +113,10 @@
         <hr class="raya" />
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col col-4 align-self-start">
+                <div class="col col-lg-4 col-md-4 col-sm-12 align-self-start">
                     <h2 class="title" id="factura">¿Mi factura no se envía junto con el pedido?</h2>
                 </div>
-                <div class="col col-4">
+                <div class="col col-lg-4 col-md-4 col-sm-12">
                     <p class="text">Recibirás la factura por email entre dos y tres días después de que te enviemos el pedido.
                         Si no recibes esta factura o si necesitas una copia extra para tu archivo, podrás imprimir la factura en nuestra página web de autoservicio.
                         Si tienes alguna otra duda acerca del IVA, haz clic aquí.</p>
@@ -147,8 +147,8 @@
 
             </div>
         </div>
-
         <hr class="raya" />
+
     </main>
 
     <?php

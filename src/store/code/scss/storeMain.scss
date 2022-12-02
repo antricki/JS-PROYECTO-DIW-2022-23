@@ -2,39 +2,50 @@
     box-sizing: border-box;
 }
 body{
-    
     font-family: 'Orbitron', 'Barlow Semi Condensed', sans-serif;
 }
-/*css banner*/
-.fondo__banner{
-  color: #EBEBEB;
-  background-image: url(../products/fondos/fondo-tecnologia-conexion-red-tierra-digital-global_1017-23328.webp) ;
+
+//line banner
+#lineBanner {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+  height: 0px;
+  overflow: hidden;
+  background-color: #020f58;
+  text-align: center;
+  transition: all .5s linear;
+
+  a {
+    text-decoration: none;
+    color:#F5A25D;
+    display: block;
+    line-height: 30px;
+  }
+}
+
+//main banner
+div#mainBanner {
+  background-image: url(../../assets/backgrounds/fondo-tecnologia-conexion-red-tierra-digital-global_1017-23328.webp) ;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.texto__banner{
-  text-shadow: 3px 20px 10px #ebebe0;
-  font-weight: 900;
-}
-.banner_aparece{
-  display:none ;
-}
-.banner_linea_aparece{
-  position: fixed;
-  z-index: 20;
-  width: 100%;
-  height: 30px;
-  background-color: #020f58;
 
-}
-.banner__aparece_link{
-  text-decoration: none;
-  color:#F5A25D;
-}
-.banner_carousel_aparece{
+  height: 55vh;
+  line-height: 50vh;
   text-align: center;
+
+  span {
+    color: #EBEBEB;
+    text-shadow: 3px 3px 5px #ebebe0;
+    font-weight: 900;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
 }
-/* FIN css banner */
+
+
 /* css sección 1: Nuestro producto estrella */
 .oferta__link{
   text-decoration: none;
