@@ -48,7 +48,7 @@
                     <!-- productos del aside, se introducen desde el dom-->
                 </div>
                 <br>
-                <input class="btn" src="tramitarPedido.php" id="botonpagar" type="submit" value="Tramitar pedido">
+                <a class="btn" href="tramitarPedido.php" id="botonpagar">Tramitar Pedido</a>
             </div>
         </div>
 
