@@ -1,22 +1,21 @@
-let vessel = document.getElementById("info-vessel");
-let radios = document.querySelectorAll(".js-radio");
+let vessel = document.getElementById('info-vessel')
+let radios = document.querySelectorAll('.js-radio')
 
 function setVessel(str) {
-    vessel.innerHTML = '';
-    vessel.innerHTML = str;
+  vessel.innerHTML = ''
+  vessel.innerHTML = str
 }
 
 function uncheckRadios() {
-    radios.forEach(radio => {
-        radio.checked = false;
-    });
+  radios.forEach(radio => {
+    radio.checked = false
+  })
 }
 
 //El departamento section
 //objetivo radio
 function objetivo() {
-
-    const str = `<h1 class="mt-2">Objetivo</h1>
+  const str = `<h1 class="mt-2">Objetivo</h1>
     <h3>Del centro</h3>
     <h3 class="mt-4">
         Misión <span>(Presente)</span>
@@ -42,16 +41,14 @@ function objetivo() {
         <li><span>integridad</span> Profesional</li>
         <li><span>Innovación</span></li>
         <li><span>Diversidad</span></li>
-    </ul>`;
+    </ul>`
 
-    setVessel(str)
-
+  setVessel(str)
 }
 
 //horario radio
 function horario() {
-
-    const str = `<h1 class="mt-2">Horario</h1>
+  const str = `<h1 class="mt-2">Horario</h1>
     <h3>Del centro</h3>
     <p class="mt-4">
         Se imparten en <span>turno de mañanas</span> las siguientes enseñanzas:
@@ -69,16 +66,14 @@ function horario() {
         <li>Enseñanzas <span>deportivas</span> de régimen especial</li>
         <li>Cursos de formación para el <span>empleo</span></li>
     </ul>
-    `;
+    `
 
-    setVessel(str)
-
+  setVessel(str)
 }
 
 //innovacion radio
 function innovación() {
-
-    const str = `<h1 class="mt-2">Innovación</h1>
+  const str = `<h1 class="mt-2">Innovación</h1>
         <h3>En el Centro Integrado de FP de Cheste</h3>
         <p class="mt-4">
             Desde el centro integrado de FP de Cheste se <span>ponen en marcha</span> cada curso escolar, desde los distintos departamentos, <span>innumerables 
@@ -91,18 +86,15 @@ function innovación() {
             <br>
             La zona de innovación de la página Web del Centro Integrado de FP de Cheste pretende <span>mostrar</span> a toda la comunidad educativa distintas <span>iniciativas
             </span> de innovación realizadas desde este centro.
-        </p>`;
+        </p>`
 
-    setVessel(str)
-
+  setVessel(str)
 }
-
 
 //cursos section
 //ofertaformativa radio
 function ofertaformativa() {
-
-    const str = `<h1 class="mt-2">Grado Superior</h1>
+  const str = `<h1 class="mt-2">Grado Superior</h1>
         <h3>Estudios semipresenciales</h3>
         <p class="mt-4">
             Según el <span>decreto</span> 115/2008 del 1 de agosto del <span>consell</span> por el que se regulan los centros de formación profesional en la 
@@ -114,74 +106,67 @@ function ofertaformativa() {
             <li><span>ASIR</span> Administración de Sistemas Informáticos en Red</li>
             <li><span>SMR</span> Sistemas Microinformáticos y Redes</li>
         </ul>
-        <span><a href="../courses/courses.html">Mas información</a></span>`;
+        <span><a href="courses/courses.php">Mas información</a></span>`
 
-    setVessel(str)
-
+  setVessel(str)
 }
 
 //semipresencial radio
 function semipresencial() {
-
-    const str = `<h1 class="mt-2">Grado Superior</h1>
+  const str = `<h1 class="mt-2">Grado Superior</h1>
         <h3>Estudios semipresenciales</h3>
         <p class="mt-4">
             En el centro proporcionamos la oportunidad de que los alumnos estudien de forma semipresencial el grado de DAM (Diseño de aplicaciones Multiplataforma)
         </p>
-        `;
+        `
 
-    setVessel(str)
-
+  setVessel(str)
 }
 //certificadoprofesionalidad radio
 function certificadoprofesionalidad() {
+  const str =
+    '<h1 class="mt-2">Formación para el empleo</h1>' +
+    '<h3>Certificados de profesionalidad</h3>' +
+    '<p class="mt-4">Un <span>Certificado de Profesionalidad</span> es aquel documento mediante el que se <span>acredita </span>' +
+    'oficialmente las <span>competencias </span>necesarias <span>para el desarrollo de una actividad laboral.</span> El certificado reconoce un ' +
+    'determinado perfil profesional que comprende un conjunto de competencias identificables dentro del sistema productivo ' +
+    'y que son reconocidas y valoradas en el mercado laboral. Una vía para la obtención de estos certificados son los <span>cursos ' +
+    'de formación para el empleo </span>que se imparten todos los años en el CIPFP CHESTE en colaboración con el Servicio Valenciano ' +
+    'de Empleo y Formación y la Oficina de empleo de Chiva, totalmente gratuitos, con beca de transporte y que van dirigidos ' +
+    '<span>preferentemente</span> a desempleados, aunque podemos tener una visión más amplia y pensar en ellos como una oportunidad para una ' +
+    'formación continua de todos nosotros, incluso como una especialización dentro de nuestro sector.</p>'
 
-    const str = '<h1 class="mt-2">Formación para el empleo</h1>' +
-        '<h3>Certificados de profesionalidad</h3>' +
-        '<p class="mt-4">Un <span>Certificado de Profesionalidad</span> es aquel documento mediante el que se <span>acredita </span>' +
-        'oficialmente las <span>competencias </span>necesarias <span>para el desarrollo de una actividad laboral.</span> El certificado reconoce un ' +
-        'determinado perfil profesional que comprende un conjunto de competencias identificables dentro del sistema productivo ' +
-        'y que son reconocidas y valoradas en el mercado laboral. Una vía para la obtención de estos certificados son los <span>cursos ' +
-        'de formación para el empleo </span>que se imparten todos los años en el CIPFP CHESTE en colaboración con el Servicio Valenciano ' +
-        'de Empleo y Formación y la Oficina de empleo de Chiva, totalmente gratuitos, con beca de transporte y que van dirigidos ' +
-        '<span>preferentemente</span> a desempleados, aunque podemos tener una visión más amplia y pensar en ellos como una oportunidad para una ' +
-        'formación continua de todos nosotros, incluso como una especialización dentro de nuestro sector.</p>';
-
-    setVessel(str)
+  setVessel(str)
 }
-
 
 //Location map
 function showMap() {
+  uncheckRadios()
+  vessel.innerHTML = ''
 
-    uncheckRadios();
-    vessel.innerHTML = '';
+  let mapContainer = document.createElement('div')
+  mapContainer.setAttribute('id', 'mapContainer')
 
-    let mapContainer = document.createElement("div");
-    mapContainer.setAttribute("id", "mapContainer");
+  let div = document.createElement('div')
+  div.setAttribute('id', 'map')
+  div.style.border = '2.5px solid #F5A25D'
 
-    let div = document.createElement("div");
-    div.setAttribute("id", "map");
-    div.style.border = "2.5px solid #F5A25D";
+  mapContainer.appendChild(div)
+  vessel.appendChild(mapContainer)
 
-    mapContainer.appendChild(div);
-    vessel.appendChild(mapContainer);
+  let map = L.map('map').setView([39.4788225, -0.6453598], 13)
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map)
 
-    let map = L.map('map').setView([39.4788225, -0.6453598], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19
-    }).addTo(map);
-
-    L.marker([39.4788225, -0.6453598]).addTo(map)
-        .bindPopup('CIPFP FP Cheste');
+  L.marker([39.4788225, -0.6453598]).addTo(map).bindPopup('CIPFP FP Cheste')
 }
 
 //contact form
 function contact() {
+  uncheckRadios()
 
-    uncheckRadios();
-
-    let form = `
+  let form = `
     <div class="row" id="contactForm">
         <div class="col-xl-6">
             <form action="" class="text-start p-4">
@@ -220,7 +205,7 @@ function contact() {
         <img src="assets/images/contactSection.png" class="w-100 d-block">
         </div>
     </div>
-    `;
+    `
 
-    setVessel(form)
+  setVessel(form)
 }

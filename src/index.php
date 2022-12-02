@@ -12,6 +12,9 @@
     <script type="module" src="code/js/index.js"></script>
     <script src="code/js/information-content.js" defer></script>
     <link rel="stylesheet" href="code/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet"> 
     <title>Index</title>
 </head>
 
@@ -38,12 +41,12 @@
 
     <!-- Why choose us section -->
     <section id="whyUs" class="text-center py-5">
-        <h1 class="py-3">¿Por qué elegirnos?</h1>
+        <h1 class="py-3 h1">¿Por qué elegirnos?</h1>
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-6">
-                    <h2>Reconocimiento</h2>
-                    <p>Somos un centro con reconocimiento internacional, en gran parte gracias a nuestro equipo de relaciones europeas</p>
+                    <h2 class="h2">Reconocimiento</h2>
+                    <p class="p">Somos un centro con reconocimiento internacional, en gran parte gracias a nuestro equipo de relaciones europeas</p>
                 </div>
                 <div class="d-block d-md-none mt-4"></div>
                 <div class="col-md-6">

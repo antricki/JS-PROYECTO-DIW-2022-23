@@ -1,7 +1,11 @@
 footer.allfooter {
     background-color: #389393;
-    color: white;
+    color: white !important;
     text-align: center;
+}
+
+footer.allfooter h3 {
+    color: white !important;
 }
 
 a.allfooter {
