@@ -16,13 +16,19 @@ function añadircolor(boton) {
   /*para cambiar el cursor */
   document.getElementById("botoncarrito").style.cursor = "pointer";
 }
-window.addEventListener('load',()=>{
+window.addEventListener("load", () => {
   if (localStorage.clickcount > 0) {
-    document.getElementById("basket-items-allnav").textContent =localStorage.clickcount;
+    var cantidades = 0;
+    for (let index = 1; index <= localStorage.clickcount; index++) {
+      console.log(localStorage.getItem(index));
+      var productoo = localStorage.getItem(index).split(",");
+      cantidades += parseInt(productoo[3]);
+    }
+    document.getElementById("basket-items-allnav").textContent = cantidades;
   } else {
     document.getElementById("basket-items-allnav").textContent = "";
   }
-})
+});
 function pasarInfoProduct() {
   if (typeof Storage !== "undefined") {
     if (color == "") {
@@ -51,14 +57,20 @@ function pasarInfoProduct() {
       abrirModal(producto);
       localStorage.setItem("producto", producto.propiedades);
       propiedades = localStorage.getItem("producto").split(",");
-      if (localStorage.clickcount > 0) {
-        document.getElementById("basket-items-allnav").textContent =localStorage.clickcount;
-      } else {
-        document.getElementById("basket-items-allnav").textContent = "";
-      }
       var numproduc = localStorage.clickcount;
       if (numproduc >= 1) {
         localStorage.setItem(numproduc, propiedades);
+      }
+      if (localStorage.clickcount > 0) {
+        var cantidades = 0;
+        for (let index = 1; index <= localStorage.clickcount; index++) {
+          console.log(localStorage.getItem(index));
+          var productoo = localStorage.getItem(index).split(",");
+          cantidades += parseInt(productoo[3]);
+        }
+        document.getElementById("basket-items-allnav").textContent = cantidades;
+      } else {
+        document.getElementById("basket-items-allnav").textContent = "";
       }
     }
   } else {
